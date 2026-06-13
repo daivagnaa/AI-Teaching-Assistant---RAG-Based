@@ -1,0 +1,2665 @@
+{
+    "chunks": [
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 0.0,
+            "end": 4.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 4.0,
+            "end": 8.0,
+            "text": " In this video also we will continue our deep learning course."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 8.0,
+            "end": 12.0,
+            "text": " As I told you that we will do three small projects"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 12.0,
+            "end": 15.0,
+            "text": " after doing which we will get an idea"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 15.0,
+            "end": 18.0,
+            "text": " that how you can solve classification and regression problems"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 18.0,
+            "end": 22.0,
+            "text": " by making artificial neural networks in deep learning."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 22.0,
+            "end": 25.0,
+            "text": " So we have already solved two problems."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 25.0,
+            "end": 29.0,
+            "text": " In last video we saw binary classification"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 29.0,
+            "end": 32.0,
+            "text": " when we worked on customer churn data set."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 32.0,
+            "end": 36.0,
+            "text": " In last video we did multiclass classification on MNIST data set"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 36.0,
+            "end": 38.0,
+            "text": " where there were 10 categories."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 38.0,
+            "end": 42.0,
+            "text": " And today we will work on a regression problem."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 42.0,
+            "end": 45.0,
+            "text": " We will learn that if you have a regression problem"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 45.0,
+            "end": 50.0,
+            "text": " then how you can work on it by making an artificial neural network."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 50.0,
+            "end": 55.0,
+            "text": " The data set we will use is a very simple data set"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 55.0,
+            "end": 58.0,
+            "text": " where you have some student's data"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 58.0,
+            "end": 62.0,
+            "text": " and that data set is about graduate admission."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 62.0,
+            "end": 65.0,
+            "text": " Basically, it is a data set of GRE"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 65.0,
+            "end": 70.0,
+            "text": " that how much score your candidates got for GRE, TOEFL,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 70.0,
+            "end": 73.0,
+            "text": " apart from that how much strength they have in their resume."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 73.0,
+            "end": 75.0,
+            "text": " It is a data like this and we have to predict"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 75.0,
+            "end": 78.0,
+            "text": " that what is the chance of their admission."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 78.0,
+            "end": 80.0,
+            "text": " So this is a regression problem"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 80.0,
+            "end": 83.0,
+            "text": " and we would use a neural network to solve this problem."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 83.0,
+            "end": 85.0,
+            "text": " So let's start the video."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 86.0,
+            "end": 89.0,
+            "text": " So guys, as I told you that in this video"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 89.0,
+            "end": 91.0,
+            "text": " we will solve a regression problem"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 91.0,
+            "end": 94.0,
+            "text": " with the help of an artificial neural network."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 94.0,
+            "end": 97.0,
+            "text": " And the data set is in front of us."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 97.0,
+            "end": 100.0,
+            "text": " Our data set is a graduate admission data set"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 100.0,
+            "end": 103.0,
+            "text": " where we have some columns."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 103.0,
+            "end": 105.0,
+            "text": " This data set is basically for those people"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 105.0,
+            "end": 108.0,
+            "text": " who apply for foreign universities."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 108.0,
+            "end": 110.0,
+            "text": " They have to give GRE and TOEFL exam"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 110.0,
+            "end": 113.0,
+            "text": " and apart from that they have to make their profile"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 113.0,
+            "end": 116.0,
+            "text": " to apply for those universities."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 116.0,
+            "end": 118.0,
+            "text": " So if you notice here,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 118.0,
+            "end": 120.0,
+            "text": " we have 7 columns."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 120.0,
+            "end": 124.0,
+            "text": " So first is GRE score which is max up to 340."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 124.0,
+            "end": 127.0,
+            "text": " TOEFL score is 120."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 127.0,
+            "end": 130.0,
+            "text": " University rating, which university you are from,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 130.0,
+            "end": 131.0,
+            "text": " what is its rating."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 131.0,
+            "end": 134.0,
+            "text": " Your statement of purpose."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 134.0,
+            "end": 137.0,
+            "text": " Also your letter of recommendation strength."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 137.0,
+            "end": 139.0,
+            "text": " So whenever you apply,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 139.0,
+            "end": 143.0,
+            "text": " you have to write a cover letter about yourself"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 143.0,
+            "end": 146.0,
+            "text": " that why do you want to pursue that particular course."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 146.0,
+            "end": 150.0,
+            "text": " Also you need a letter of recommendation"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 150.0,
+            "end": 152.0,
+            "text": " to apply for these universities."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 152.0,
+            "end": 155.0,
+            "text": " So this recommendation can be of your professors"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 155.0,
+            "end": 160.0,
+            "text": " or someone else who has a very strong personality in your field."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 160.0,
+            "end": 163.0,
+            "text": " After that, how much CGPA was there in your undergraduate,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 163.0,
+            "end": 165.0,
+            "text": " whether you have research experience or not."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 165.0,
+            "end": 167.0,
+            "text": " These are all your input columns."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 167.0,
+            "end": 170.0,
+            "text": " And your output column is chance of admit."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 170.0,
+            "end": 174.0,
+            "text": " Whether you will be admitted to that university or not."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 174.0,
+            "end": 176.0,
+            "text": " Between 0 and 1."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 176.0,
+            "end": 178.0,
+            "text": " So you can see this is a regression problem"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 178.0,
+            "end": 181.0,
+            "text": " where the output is a number."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 181.0,
+            "end": 184.0,
+            "text": " So we have to work on this data set."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 184.0,
+            "end": 186.0,
+            "text": " We have to make an artificial neural network"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 186.0,
+            "end": 189.0,
+            "text": " which can achieve the maximum R2 score."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 189.0,
+            "end": 192.0,
+            "text": " So what we will do is we will code in Kaggle."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 192.0,
+            "end": 194.0,
+            "text": " We will click on new notebook."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 194.0,
+            "end": 196.0,
+            "text": " I will run the first cell."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 198.0,
+            "end": 201.0,
+            "text": " Meanwhile, I will write this code."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 201.0,
+            "end": 203.0,
+            "text": " DF is equal to PD dot."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 203.0,
+            "end": 205.0,
+            "text": " Read CSV."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 205.0,
+            "end": 207.0,
+            "text": " So there are two files here."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 207.0,
+            "end": 209.0,
+            "text": " The second file is the updated file."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 209.0,
+            "end": 211.0,
+            "text": " It has 500 records."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 211.0,
+            "end": 213.0,
+            "text": " The first file has 400 records."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 213.0,
+            "end": 215.0,
+            "text": " So the second one is updated."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 215.0,
+            "end": 217.0,
+            "text": " We will use the second one."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 217.0,
+            "end": 220.0,
+            "text": " And let me show you how our data is looking."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 221.0,
+            "end": 224.0,
+            "text": " So you can see this is our data."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 224.0,
+            "end": 227.0,
+            "text": " If you look at the shape of the data,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 227.0,
+            "end": 229.0,
+            "text": " then that is 500 comma 9."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 229.0,
+            "end": 231.0,
+            "text": " We have data of 500 students."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 231.0,
+            "end": 233.0,
+            "text": " I have already explained the columns to you."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 233.0,
+            "end": 235.0,
+            "text": " So I won't do it again."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 235.0,
+            "end": 236.0,
+            "text": " What will we do?"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 236.0,
+            "end": 237.0,
+            "text": " We will write."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 237.0,
+            "end": 238.0,
+            "text": " First of all,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 238.0,
+            "end": 240.0,
+            "text": " we will check whether there are missing values or not."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 240.0,
+            "end": 243.0,
+            "text": " So I can just check for info."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 244.0,
+            "end": 246.0,
+            "text": " So you can see clearly here"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 246.0,
+            "end": 249.0,
+            "text": " that there are no missing values in any column."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 249.0,
+            "end": 251.0,
+            "text": " Also, if you want to see"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 251.0,
+            "end": 253.0,
+            "text": " what is the data type of different columns,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 253.0,
+            "end": 255.0,
+            "text": " then GRE score is integer."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 255.0,
+            "end": 257.0,
+            "text": " TOEFL score is integer."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 257.0,
+            "end": 259.0,
+            "text": " University ranking is also integer."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 259.0,
+            "end": 263.0,
+            "text": " SOP is float."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 263.0,
+            "end": 267.0,
+            "text": " Because 4.5, 3.5 type of ratings are there."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 267.0,
+            "end": 269.0,
+            "text": " CGPA is also float."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 269.0,
+            "end": 271.0,
+            "text": " Because again anything can happen in decimal."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 271.0,
+            "end": 274.0,
+            "text": " And research is integer."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 274.0,
+            "end": 276.0,
+            "text": " Category can be made."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 276.0,
+            "end": 278.0,
+            "text": " And chance of admit is float."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 278.0,
+            "end": 279.0,
+            "text": " Okay, so it's okay."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 279.0,
+            "end": 281.0,
+            "text": " We won't make any changes here."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 281.0,
+            "end": 283.0,
+            "text": " I am checking one more thing."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 283.0,
+            "end": 287.0,
+            "text": " That there is no duplicate row somewhere."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 289.0,
+            "end": 292.0,
+            "text": " So you can see there are no duplicate rows either."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 292.0,
+            "end": 296.0,
+            "text": " Okay, so see again as I have told you"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 296.0,
+            "end": 299.0,
+            "text": " that our end goal is not to get the best model."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 299.0,
+            "end": 301.0,
+            "text": " Now we are learning"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 301.0,
+            "end": 303.0,
+            "text": " how to use artificial neural network"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 303.0,
+            "end": 305.0,
+            "text": " in regression setting."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 305.0,
+            "end": 307.0,
+            "text": " So my job is to make it and show you."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 307.0,
+            "end": 308.0,
+            "text": " Okay, so what will I do?"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 308.0,
+            "end": 310.0,
+            "text": " I will tell you step by step."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 310.0,
+            "end": 311.0,
+            "text": " First of all,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 311.0,
+            "end": 313.0,
+            "text": " we will remove this serial number column."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 313.0,
+            "end": 314.0,
+            "text": " Because common sense says"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 314.0,
+            "end": 316.0,
+            "text": " that this work is not going to come."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 316.0,
+            "end": 318.0,
+            "text": " The remaining 7 columns"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 318.0,
+            "end": 320.0,
+            "text": " we will take them as input."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 320.0,
+            "end": 322.0,
+            "text": " Okay, we will make chance of admit"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 322.0,
+            "end": 324.0,
+            "text": " as our output."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 324.0,
+            "end": 326.0,
+            "text": " Apart from that, we will do one more thing."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 326.0,
+            "end": 327.0,
+            "text": " As I have told you"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 327.0,
+            "end": 329.0,
+            "text": " that whenever you train neural networks,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 329.0,
+            "end": 331.0,
+            "text": " then generally it is said"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 331.0,
+            "end": 333.0,
+            "text": " this is a common wisdom"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 333.0,
+            "end": 335.0,
+            "text": " that you bring your inputs"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 335.0,
+            "end": 336.0,
+            "text": " on the same scale."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 336.0,
+            "end": 338.0,
+            "text": " Like here the score of GRE"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 338.0,
+            "end": 340.0,
+            "text": " is also 337."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 340.0,
+            "end": 341.0,
+            "text": " But here it is also 4,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 341.0,
+            "end": 342.0,
+            "text": " it is also 4.5."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 342.0,
+            "end": 344.0,
+            "text": " So what does this indifference of scale do?"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 344.0,
+            "end": 346.0,
+            "text": " It delays your training process."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 346.0,
+            "end": 348.0,
+            "text": " There is a problem in converting"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 348.0,
+            "end": 349.0,
+            "text": " your weights."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 349.0,
+            "end": 351.0,
+            "text": " So what will we do here?"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 351.0,
+            "end": 353.0,
+            "text": " We will scale our values."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 353.0,
+            "end": 355.0,
+            "text": " The scaling that we will use here"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 355.0,
+            "end": 356.0,
+            "text": " is min-max scaling."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 356.0,
+            "end": 358.0,
+            "text": " We will not use standard scaling."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 358.0,
+            "end": 360.0,
+            "text": " Because again as it is said"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 360.0,
+            "end": 361.0,
+            "text": " that min-max scaling"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 361.0,
+            "end": 363.0,
+            "text": " should be used when you"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 363.0,
+            "end": 365.0,
+            "text": " know upper bound and lower bound"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 365.0,
+            "end": 366.0,
+            "text": " of the values."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 366.0,
+            "end": 367.0,
+            "text": " So whatever values are here,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 367.0,
+            "end": 368.0,
+            "text": " there is an upper bound,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 368.0,
+            "end": 369.0,
+            "text": " tight upper bound."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 369.0,
+            "end": 371.0,
+            "text": " It can be 340 in GRE,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 371.0,
+            "end": 373.0,
+            "text": " it can be 120 in TOEFL."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 373.0,
+            "end": 375.0,
+            "text": " So we will use min-max scaling."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 375.0,
+            "end": 377.0,
+            "text": " After that we will make"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 377.0,
+            "end": 379.0,
+            "text": " a very simple neural network."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 379.0,
+            "end": 381.0,
+            "text": " Where we will do"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 381.0,
+            "end": 383.0,
+            "text": " that we will keep"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 383.0,
+            "end": 385.0,
+            "text": " an input layer,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 385.0,
+            "end": 387.0,
+            "text": " a hidden layer and an output"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 387.0,
+            "end": 389.0,
+            "text": " layer. Okay."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 389.0,
+            "end": 391.0,
+            "text": " So guys this is the architecture of our neural network."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 391.0,
+            "end": 393.0,
+            "text": " So you can see here we have"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 393.0,
+            "end": 395.0,
+            "text": " 7 inputs"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " and here we have 7 nodes"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " in the hidden layer."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " And there is 1 node in the output."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 401.0,
+            "end": 403.0,
+            "text": " So if you want to calculate"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 403.0,
+            "end": 405.0,
+            "text": " trainable parameters, then in this layer"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 405.0,
+            "end": 407.0,
+            "text": " there will be 7x7 weights,"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 407.0,
+            "end": 409.0,
+            "text": " which means 49 weights and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 409.0,
+            "end": 411.0,
+            "text": " 7 biases. So in total"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 411.0,
+            "end": 413.0,
+            "text": " there will be 56 parameters."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 413.0,
+            "end": 415.0,
+            "text": " If you want to talk"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 415.0,
+            "end": 417.0,
+            "text": " here, then here the total"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 417.0,
+            "end": 419.0,
+            "text": " weights will be 7x1 which means 7"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 419.0,
+            "end": 421.0,
+            "text": " and it will be 1"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 421.0,
+            "end": 423.0,
+            "text": " so it will be 8 in total."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 423.0,
+            "end": 425.0,
+            "text": " So in total we will have"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 425.0,
+            "end": 427.0,
+            "text": " 64 parameters."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 427.0,
+            "end": 429.0,
+            "text": " Okay. So I have explained"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 429.0,
+            "end": 431.0,
+            "text": " the whole setup to you. Now we will"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 431.0,
+            "end": 433.0,
+            "text": " go back and we will code. So guys"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 433.0,
+            "end": 435.0,
+            "text": " first of all we will"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 435.0,
+            "end": 437.0,
+            "text": " remove the serial number"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 437.0,
+            "end": 439.0,
+            "text": " column from our data."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 439.0,
+            "end": 441.0,
+            "text": " For that we will have to write this code."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 441.0,
+            "end": 443.0,
+            "text": " df.drop"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 443.0,
+            "end": 445.0,
+            "text": " columns equals"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " here I will pass serial"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " number."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 451.0,
+            "end": 453.0,
+            "text": " And here I would"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 453.0,
+            "end": 455.0,
+            "text": " write in place equals"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 455.0,
+            "end": 457.0,
+            "text": " true."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 457.0,
+            "end": 459.0,
+            "text": " Here is my"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 459.0,
+            "end": 461.0,
+            "text": " data without the serial number"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 461.0,
+            "end": 463.0,
+            "text": " column."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 463.0,
+            "end": 465.0,
+            "text": " Now what we will do, first of all"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 465.0,
+            "end": 467.0,
+            "text": " we will split our data into train test."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 467.0,
+            "end": 469.0,
+            "text": " And after that we will do min max"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 469.0,
+            "end": 471.0,
+            "text": " scaling. So I would write"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 471.0,
+            "end": 473.0,
+            "text": " this code. First of all we are extracting"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 473.0,
+            "end": 475.0,
+            "text": " x. For that"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 475.0,
+            "end": 477.0,
+            "text": " we will see this code. All rows"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 477.0,
+            "end": 479.0,
+            "text": " from 0 to"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 479.0,
+            "end": 481.0,
+            "text": " minus 1 all columns."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 481.0,
+            "end": 483.0,
+            "text": " And"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 483.0,
+            "end": 485.0,
+            "text": " y is equal to df."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " I lock"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " all the rows with minus"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " 1 column. This is my x"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " and this is my"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " y. Okay."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " Now we will write from"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 501.0,
+            "end": 503.0,
+            "text": " sklearn.model"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " selection."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 505.0,
+            "end": 509.0,
+            "text": " Import"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " train test"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " split x"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " x test"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " y train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " y test"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " here"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " we will pass our x and y."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " Test"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " size equals"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " 0.2"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " random state"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " equals 1."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " Here is my x train."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " You can"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " see randomly rows have come."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 543.0,
+            "end": 545.0,
+            "text": " 400 rows in training and 100"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " rows in test."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " Now we have to do min max scaling."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " So we would write from sklearn."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " preprocessing"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " import"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " minmax"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " scalar."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " We will create an object of minmax"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " scalar class"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " and we"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " would write this code x"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " train scaled"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " is equal to"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " scalar."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " fit transform"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 575.0,
+            "end": 577.0,
+            "text": " and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " we will pass our x"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " x test scaled"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " a new variable"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " this will be equal to"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " scalar."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " transform"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " x"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " test"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " after doing this"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " when you print your x train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " I'm sorry"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " when you print your x train scaled"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " you will have a numpy"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " array in which"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " your entire x train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " has been scaled in similar"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " values."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " Now what we have to do is build our neural network"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " architecture."
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " We will import this"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " we would write"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " import"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " tensorflow"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " We have imported all the libraries"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " now"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " we will make our architecture here"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " so"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " here tensor will be"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " we will write"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " model is equal to sequential"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " object class and now"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " we will add our layers"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " first of all we are"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 675.0,
+            "end": 679.0,
+            "text": " first hidden layer will be added in which there will be seven nodes"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 679.0,
+            "end": 682.5,
+            "text": " Activation function for now"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 682.5,
+            "end": 687.5,
+            "text": " let's assume that it is value and our input dimension"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 687.5,
+            "end": 691.0,
+            "text": " will be the values we will get from the input column"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 691.0,
+            "end": 695.5,
+            "text": " it will be seven after this"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 695.5,
+            "end": 699.5,
+            "text": " we will add our output layer"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 699.5,
+            "end": 704.0,
+            "text": " in which there is only one node and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 704.0,
+            "end": 708.0,
+            "text": " the activation function is linear"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 708.0,
+            "end": 712.0,
+            "text": " always remember that if you are working with a regression problem"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 712.0,
+            "end": 716.0,
+            "text": " the activation function of the output layer node"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 716.0,
+            "end": 720.0,
+            "text": " should be linear, we will run this code"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 720.0,
+            "end": 724.0,
+            "text": " and we will search model.summary"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 724.0,
+            "end": 728.0,
+            "text": " model.summary"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 728.0,
+            "end": 732.0,
+            "text": " model.summary"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 732.0,
+            "end": 736.0,
+            "text": " and you can see we have total 64 parameters"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 736.0,
+            "end": 740.0,
+            "text": " which we discussed earlier, 56 between first and second input and hidden"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 740.0,
+            "end": 744.0,
+            "text": " 8 between hidden and output"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 744.0,
+            "end": 748.0,
+            "text": " now we will compile our model"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 748.0,
+            "end": 752.0,
+            "text": " we have to tell three things, first we have to tell loss"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 752.0,
+            "end": 756.0,
+            "text": " so there are different losses in regression, the one we will use is"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 756.0,
+            "end": 760.0,
+            "text": " mean squared loss"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 760.0,
+            "end": 764.0,
+            "text": " the optimizer we will keep as Adam"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 764.0,
+            "end": 768.0,
+            "text": " and here in matrix"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 768.0,
+            "end": 772.0,
+            "text": " we don't need to tell anything, our model"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 772.0,
+            "end": 776.0,
+            "text": " has been compiled and now what we will do in the last state"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 776.0,
+            "end": 780.0,
+            "text": " model.fit will pass our data"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 780.0,
+            "end": 784.0,
+            "text": " X train"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 784.0,
+            "end": 788.0,
+            "text": " I am sorry, here we will pass X train scaled"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 788.0,
+            "end": 792.0,
+            "text": " we will pass Y train, number of epochs"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 792.0,
+            "end": 796.0,
+            "text": " we will keep 10 and we will take a validation split"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 796.0,
+            "end": 800.0,
+            "text": " at the same time, let's take 0.2"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 800.0,
+            "end": 804.0,
+            "text": " also whatever the output"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 804.0,
+            "end": 808.0,
+            "text": " I want to store all the stages in between so that I"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 808.0,
+            "end": 812.0,
+            "text": " can plot the graph, so I made a variable by saying history"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 812.0,
+            "end": 816.0,
+            "text": " and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 816.0,
+            "end": 820.0,
+            "text": " there is some error and the error is that its name is"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 820.0,
+            "end": 824.0,
+            "text": " not mean squared loss, it will be mean squared error"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 824.0,
+            "end": 828.0,
+            "text": " let's run it again and here is our code"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 828.0,
+            "end": 832.0,
+            "text": " since the data is very less, we converged very quickly"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 832.0,
+            "end": 836.0,
+            "text": " our model has been trained, let's do one thing quickly"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 836.0,
+            "end": 840.0,
+            "text": " let's get predictions from the model"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 840.0,
+            "end": 844.0,
+            "text": " by passing X test scaled"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 844.0,
+            "end": 848.0,
+            "text": " here are my predictions"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 848.0,
+            "end": 852.0,
+            "text": " I am storing them in white bread and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 852.0,
+            "end": 856.0,
+            "text": " after doing this i would write from sklearn"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 856.0,
+            "end": 860.0,
+            "text": " dot matrix import"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 860.0,
+            "end": 864.0,
+            "text": " r2 score"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 864.0,
+            "end": 868.0,
+            "text": " and in r2 score i would pass my"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 868.0,
+            "end": 872.0,
+            "text": " actual data white test and my predictions"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 872.0,
+            "end": 876.0,
+            "text": " and you can see at this point the performance of our"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 876.0,
+            "end": 880.0,
+            "text": " model is very bad, so we"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 880.0,
+            "end": 884.0,
+            "text": " can improve it if we want, there are certain techniques"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 884.0,
+            "end": 888.0,
+            "text": " maybe we didn't give enough epochs"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 888.0,
+            "end": 892.0,
+            "text": " so we can increase the epochs also we can"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 892.0,
+            "end": 896.0,
+            "text": " improve the model architecture, let's say I am doing one thing"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 896.0,
+            "end": 900.0,
+            "text": " I am adding one more dense layer"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 900.0,
+            "end": 904.0,
+            "text": " basically I am adding one more hidden layer in which there will be 7"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 904.0,
+            "end": 908.0,
+            "text": " nodes, so we will train this new architecture"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 908.0,
+            "end": 912.0,
+            "text": " so you can see"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 912.0,
+            "end": 916.0,
+            "text": " your parameters have increased, everything is same"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 916.0,
+            "end": 920.0,
+            "text": " we will do one more change, increase the number of epochs"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 920.0,
+            "end": 924.0,
+            "text": " from 10 to 100 so that we get a little more time"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 924.0,
+            "end": 928.0,
+            "text": " on the data and now we are training this model again"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 928.0,
+            "end": 934.0,
+            "text": " so you can see"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 934.0,
+            "end": 938.0,
+            "text": " our loss has reduced a lot"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 938.0,
+            "end": 942.0,
+            "text": " see a lot, we will take out the predictions again"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 942.0,
+            "end": 946.0,
+            "text": " and again"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 946.0,
+            "end": 950.0,
+            "text": " we will take out the r2 score and you can see"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 950.0,
+            "end": 954.0,
+            "text": " that after doing these changes, our model"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 954.0,
+            "end": 958.0,
+            "text": " has improved a lot, it has reached 0.76"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 958.0,
+            "end": 962.0,
+            "text": " so this is what I wanted to show you"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 962.0,
+            "end": 966.0,
+            "text": " how you can make an artificial neural network in regression"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 966.0,
+            "end": 970.0,
+            "text": " and solve your problem, now we will do one last thing"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 970.0,
+            "end": 974.0,
+            "text": " and that is that we will plot"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 974.0,
+            "end": 978.0,
+            "text": " our training loss and validation loss"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 978.0,
+            "end": 982.0,
+            "text": " and you should always do this"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 982.0,
+            "end": 986.0,
+            "text": " matplotlib"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 986.0,
+            "end": 990.0,
+            "text": " and i would write this code"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 990.0,
+            "end": 994.0,
+            "text": " plt.plot"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 994.0,
+            "end": 998.0,
+            "text": " history.history"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 998.0,
+            "end": 1002.0,
+            "text": " and"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1002.0,
+            "end": 1006.0,
+            "text": " val loss"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1006.0,
+            "end": 1010.0,
+            "text": " and this is our curve"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1010.0,
+            "end": 1014.0,
+            "text": " you can see that the training has been done very well"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1014.0,
+            "end": 1018.0,
+            "text": " it is not overfitting, the loss has decreased very fast in the beginning"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1018.0,
+            "end": 1022.0,
+            "text": " and after a point it is steadily decreasing"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1022.0,
+            "end": 1026.0,
+            "text": " maybe if we train this model a little more then we will be able to decrease the loss"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1026.0,
+            "end": 1030.0,
+            "text": " so I will share this notebook with you, you can experiment with it"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1030.0,
+            "end": 1034.0,
+            "text": " so that was the video guys, so we have done these three problems"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1034.0,
+            "end": 1038.0,
+            "text": " now we will move towards our training"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1038.0,
+            "end": 1042.0,
+            "text": " how to train a neural network, before that we will cover two more videos"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1042.0,
+            "end": 1046.0,
+            "text": " where in one video we will learn about loss functions"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1046.0,
+            "end": 1050.0,
+            "text": " and in another video we will learn about activation functions"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1050.0,
+            "end": 1054.0,
+            "text": " and as soon as we cover these two topics, we will start with backpropagation"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1054.0,
+            "end": 1058.0,
+            "text": " so I hope you are liking this playlist, if so please consider liking this video"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1058.0,
+            "end": 1062.0,
+            "text": " and please do subscribe my channel, that's it from my side"
+        },
+        {
+            "number": "13",
+            "title": "Graduate Admission Prediction using ANN",
+            "start": 1062.0,
+            "end": 1064.0,
+            "text": " bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. In this video also we will continue our deep learning course. As I told you that we will do three small projects after doing which we will get an idea that how you can solve classification and regression problems by making artificial neural networks in deep learning. So we have already solved two problems. In last video we saw binary classification when we worked on customer churn data set. In last video we did multiclass classification on MNIST data set where there were 10 categories. And today we will work on a regression problem. We will learn that if you have a regression problem then how you can work on it by making an artificial neural network. The data set we will use is a very simple data set where you have some student's data and that data set is about graduate admission. Basically, it is a data set of GRE that how much score your candidates got for GRE, TOEFL, apart from that how much strength they have in their resume. It is a data like this and we have to predict that what is the chance of their admission. So this is a regression problem and we would use a neural network to solve this problem. So let's start the video. So guys, as I told you that in this video we will solve a regression problem with the help of an artificial neural network. And the data set is in front of us. Our data set is a graduate admission data set where we have some columns. This data set is basically for those people who apply for foreign universities. They have to give GRE and TOEFL exam and apart from that they have to make their profile to apply for those universities. So if you notice here, we have 7 columns. So first is GRE score which is max up to 340. TOEFL score is 120. University rating, which university you are from, what is its rating. Your statement of purpose. Also your letter of recommendation strength. So whenever you apply, you have to write a cover letter about yourself that why do you want to pursue that particular course. Also you need a letter of recommendation to apply for these universities. So this recommendation can be of your professors or someone else who has a very strong personality in your field. After that, how much CGPA was there in your undergraduate, whether you have research experience or not. These are all your input columns. And your output column is chance of admit. Whether you will be admitted to that university or not. Between 0 and 1. So you can see this is a regression problem where the output is a number. So we have to work on this data set. We have to make an artificial neural network which can achieve the maximum R2 score. So what we will do is we will code in Kaggle. We will click on new notebook. I will run the first cell. Meanwhile, I will write this code. DF is equal to PD dot. Read CSV. So there are two files here. The second file is the updated file. It has 500 records. The first file has 400 records. So the second one is updated. We will use the second one. And let me show you how our data is looking. So you can see this is our data. If you look at the shape of the data, then that is 500 comma 9. We have data of 500 students. I have already explained the columns to you. So I won't do it again. What will we do? We will write. First of all, we will check whether there are missing values or not. So I can just check for info. So you can see clearly here that there are no missing values in any column. Also, if you want to see what is the data type of different columns, then GRE score is integer. TOEFL score is integer. University ranking is also integer. SOP is float. Because 4.5, 3.5 type of ratings are there. CGPA is also float. Because again anything can happen in decimal. And research is integer. Category can be made. And chance of admit is float. Okay, so it's okay. We won't make any changes here. I am checking one more thing. That there is no duplicate row somewhere. So you can see there are no duplicate rows either. Okay, so see again as I have told you that our end goal is not to get the best model. Now we are learning how to use artificial neural network in regression setting. So my job is to make it and show you. Okay, so what will I do? I will tell you step by step. First of all, we will remove this serial number column. Because common sense says that this work is not going to come. The remaining 7 columns we will take them as input. Okay, we will make chance of admit as our output. Apart from that, we will do one more thing. As I have told you that whenever you train neural networks, then generally it is said this is a common wisdom that you bring your inputs on the same scale. Like here the score of GRE is also 337. But here it is also 4, it is also 4.5. So what does this indifference of scale do? It delays your training process. There is a problem in converting your weights. So what will we do here? We will scale our values. The scaling that we will use here is min-max scaling. We will not use standard scaling. Because again as it is said that min-max scaling should be used when you know upper bound and lower bound of the values. So whatever values are here, there is an upper bound, tight upper bound. It can be 340 in GRE, it can be 120 in TOEFL. So we will use min-max scaling. After that we will make a very simple neural network. Where we will do that we will keep an input layer, a hidden layer and an output layer. Okay. So guys this is the architecture of our neural network. So you can see here we have 7 inputs and here we have 7 nodes in the hidden layer. And there is 1 node in the output. So if you want to calculate trainable parameters, then in this layer there will be 7x7 weights, which means 49 weights and 7 biases. So in total there will be 56 parameters. If you want to talk here, then here the total weights will be 7x1 which means 7 and it will be 1 so it will be 8 in total. So in total we will have 64 parameters. Okay. So I have explained the whole setup to you. Now we will go back and we will code. So guys first of all we will remove the serial number column from our data. For that we will have to write this code. df.drop columns equals here I will pass serial number. And here I would write in place equals true. Here is my data without the serial number column. Now what we will do, first of all we will split our data into train test. And after that we will do min max scaling. So I would write this code. First of all we are extracting x. For that we will see this code. All rows from 0 to minus 1 all columns. And y is equal to df. I lock all the rows with minus 1 column. This is my x and this is my y. Okay. Now we will write from sklearn.model selection. Import train test split x train x test y train y test and here we will pass our x and y. Test size equals 0.2 random state equals 1. Here is my x train. You can see randomly rows have come. 400 rows in training and 100 rows in test. Now we have to do min max scaling. So we would write from sklearn. preprocessing import minmax scalar. We will create an object of minmax scalar class and we would write this code x train scaled is equal to scalar. fit transform and we will pass our x train x test scaled a new variable this will be equal to scalar. transform x test after doing this when you print your x train I'm sorry when you print your x train scaled you will have a numpy array in which your entire x train has been scaled in similar values. Now what we have to do is build our neural network architecture. We will import this we would write import tensorflow We have imported all the libraries now we will make our architecture here so here tensor will be we will write model is equal to sequential object class and now we will add our layers first of all we are first hidden layer will be added in which there will be seven nodes Activation function for now let's assume that it is value and our input dimension will be the values we will get from the input column it will be seven after this we will add our output layer in which there is only one node and the activation function is linear always remember that if you are working with a regression problem the activation function of the output layer node should be linear, we will run this code and we will search model.summary model.summary model.summary and you can see we have total 64 parameters which we discussed earlier, 56 between first and second input and hidden 8 between hidden and output now we will compile our model we have to tell three things, first we have to tell loss so there are different losses in regression, the one we will use is mean squared loss the optimizer we will keep as Adam and here in matrix we don't need to tell anything, our model has been compiled and now what we will do in the last state model.fit will pass our data X train I am sorry, here we will pass X train scaled we will pass Y train, number of epochs we will keep 10 and we will take a validation split at the same time, let's take 0.2 also whatever the output I want to store all the stages in between so that I can plot the graph, so I made a variable by saying history and there is some error and the error is that its name is not mean squared loss, it will be mean squared error let's run it again and here is our code since the data is very less, we converged very quickly our model has been trained, let's do one thing quickly let's get predictions from the model by passing X test scaled here are my predictions I am storing them in white bread and after doing this i would write from sklearn dot matrix import r2 score and in r2 score i would pass my actual data white test and my predictions and you can see at this point the performance of our model is very bad, so we can improve it if we want, there are certain techniques maybe we didn't give enough epochs so we can increase the epochs also we can improve the model architecture, let's say I am doing one thing I am adding one more dense layer basically I am adding one more hidden layer in which there will be 7 nodes, so we will train this new architecture so you can see your parameters have increased, everything is same we will do one more change, increase the number of epochs from 10 to 100 so that we get a little more time on the data and now we are training this model again so you can see our loss has reduced a lot see a lot, we will take out the predictions again and again we will take out the r2 score and you can see that after doing these changes, our model has improved a lot, it has reached 0.76 so this is what I wanted to show you how you can make an artificial neural network in regression and solve your problem, now we will do one last thing and that is that we will plot our training loss and validation loss and you should always do this matplotlib and i would write this code plt.plot history.history and val loss and this is our curve you can see that the training has been done very well it is not overfitting, the loss has decreased very fast in the beginning and after a point it is steadily decreasing maybe if we train this model a little more then we will be able to decrease the loss so I will share this notebook with you, you can experiment with it so that was the video guys, so we have done these three problems now we will move towards our training how to train a neural network, before that we will cover two more videos where in one video we will learn about loss functions and in another video we will learn about activation functions and as soon as we cover these two topics, we will start with backpropagation so I hope you are liking this playlist, if so please consider liking this video and please do subscribe my channel, that's it from my side bye"
+}
