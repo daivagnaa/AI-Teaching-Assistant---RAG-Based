@@ -1,0 +1,1727 @@
+{
+    "chunks": [
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 0.0,
+            "end": 4.0,
+            "text": " Hi guys, my name is Ritesh and you are welcome to my YouTube channel"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 4.0,
+            "end": 9.0,
+            "text": " In the last video, we took an intuition of Multilayer Perceptron"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 9.0,
+            "end": 16.0,
+            "text": " We tried to understand how Multilayer Perceptrons work and why they can work"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 16.0,
+            "end": 20.0,
+            "text": " In the end, I gave you some examples on Tensorflow Playground"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 20.0,
+            "end": 27.0,
+            "text": " Now, slowly we will try to understand Multilayer Perceptron in a deeper way"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 27.0,
+            "end": 34.0,
+            "text": " To understand Multilayer Perceptron, the most difficult thing is to train the algorithm"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 34.0,
+            "end": 36.0,
+            "text": " which is called Back Propagation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 36.0,
+            "end": 43.0,
+            "text": " So, everyone who has worked in deep learning knows that it is very difficult to understand Back Propagation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 43.0,
+            "end": 44.0,
+            "text": " I have also experienced it"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 44.0,
+            "end": 48.0,
+            "text": " And I think the biggest reason for it is that beginners make a mistake"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 48.0,
+            "end": 52.0,
+            "text": " And that mistake is that when you make a neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 52.0,
+            "end": 56.0,
+            "text": " then many weights and biases come in that neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 56.0,
+            "end": 61.0,
+            "text": " So, if we don't learn to denote those weights and biases properly"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 61.0,
+            "end": 67.0,
+            "text": " If we don't learn their notation, then while doing Back Propagation, there is a lot of confusion"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 67.0,
+            "end": 71.0,
+            "text": " So, I made this mistake and I don't want you to make this mistake"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 71.0,
+            "end": 75.0,
+            "text": " That's why in today's video, our whole goal would be actually two things"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 75.0,
+            "end": 81.0,
+            "text": " First, I want to teach you that by looking at any neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 81.0,
+            "end": 87.0,
+            "text": " First of all, you should be able to calculate the number of trainable parameters in it"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 87.0,
+            "end": 92.0,
+            "text": " The number of trainable parameters means that when you train that model"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 92.0,
+            "end": 97.0,
+            "text": " then what is the total number of weights and biases you have to find the value of"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 97.0,
+            "end": 103.0,
+            "text": " So, the first thing we will learn in today's video is that if you are being given a neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 103.0,
+            "end": 107.0,
+            "text": " then you should calculate it quickly that there are so many weights and biases in it"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 107.0,
+            "end": 113.0,
+            "text": " The second thing we will learn is that how do you denote those weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 113.0,
+            "end": 117.0,
+            "text": " What do you name them? We have to learn their notation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 117.0,
+            "end": 120.0,
+            "text": " And we will learn a standard notation which is followed in the industry"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 120.0,
+            "end": 125.0,
+            "text": " So, what will happen is that in the future when you are studying a difficult algorithm like Back Propagation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 125.0,
+            "end": 131.0,
+            "text": " then you will never get confused by looking at any weight that which layer is this weight"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 131.0,
+            "end": 136.0,
+            "text": " So, that's the whole idea of this video. It is a small video but trust me it is very important"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 136.0,
+            "end": 142.0,
+            "text": " Please don't skip this one. So, that's it for the introduction. Let's start the video"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 142.0,
+            "end": 147.0,
+            "text": " So, guys let's start. First of all, let me explain you the setup"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 147.0,
+            "end": 152.0,
+            "text": " What you are seeing on the screen is the neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 152.0,
+            "end": 156.0,
+            "text": " I will explain you the whole notation by using this architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 156.0,
+            "end": 161.0,
+            "text": " So, there are 4 layers in total. Yes, 4 layers are there"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 161.0,
+            "end": 164.0,
+            "text": " So, there is an input layer which you are calling layer 0"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 164.0,
+            "end": 170.0,
+            "text": " Hidden layer 1 is layer 1, hidden layer 2 is layer 2 and output layer is layer 3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 170.0,
+            "end": 176.0,
+            "text": " Also, the data that we have here is 4 dimensional data"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 176.0,
+            "end": 183.0,
+            "text": " You can see where M denotes the number of rows and the value of N is 4"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 183.0,
+            "end": 187.0,
+            "text": " So, if you have data it will look like this"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 187.0,
+            "end": 199.0,
+            "text": " There would be column 1, column 2, column 3, column 4 and finally your output column"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 199.0,
+            "end": 203.0,
+            "text": " So, what I am doing is that I will insert row by row data here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 203.0,
+            "end": 207.0,
+            "text": " So, x i1 is the value of the first column of the ith row"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 207.0,
+            "end": 215.0,
+            "text": " This is the value of the ith row and this is the value of the ith row"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 215.0,
+            "end": 222.0,
+            "text": " So, when I will provide one row I will insert these values here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 222.0,
+            "end": 233.0,
+            "text": " Now, the question is that how many trainable parameters do you have?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 233.0,
+            "end": 239.0,
+            "text": " This is the first question that how many trainable parameters do you have?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 239.0,
+            "end": 245.0,
+            "text": " Trainable parameters means that when you will train on it"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 246.0,
+            "end": 253.0,
+            "text": " So, your back propagation algorithm will find out the value of weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 253.0,
+            "end": 258.0,
+            "text": " So, you should be able to calculate this by looking at the neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 258.0,
+            "end": 261.0,
+            "text": " So, let me show you"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 261.0,
+            "end": 267.0,
+            "text": " If you focus here, let's count the number of weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 267.0,
+            "end": 274.0,
+            "text": " So, clearly if you see the combination here, there are 4 nodes and 3 nodes"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 274.0,
+            "end": 278.0,
+            "text": " So, 4 multiplied by 3, there are 12 weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 278.0,
+            "end": 284.0,
+            "text": " You can see, if you count all these weights, there are 12 weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 284.0,
+            "end": 290.0,
+            "text": " Also, one more thing, if you see this color encoding, I have created these weights in such a way"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 290.0,
+            "end": 300.0,
+            "text": " that all the weights that you are getting from the previous layer are encoded in one color"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 300.0,
+            "end": 303.0,
+            "text": " So, all the weights that you are getting from the previous layer are in black color"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 303.0,
+            "end": 306.0,
+            "text": " All the weights that you are getting from the previous layer are in red color"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 306.0,
+            "end": 309.0,
+            "text": " All the weights that you are getting from the previous layer are in green color"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 309.0,
+            "end": 313.0,
+            "text": " Also, I have used the same color encoding so that you can easily understand"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 313.0,
+            "end": 319.0,
+            "text": " So, coming back, we have to count the total number of weights and biases in this neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 319.0,
+            "end": 326.0,
+            "text": " So, here there are 12 weights and its bias, its bias and its bias"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 326.0,
+            "end": 329.0,
+            "text": " So, we have 3 biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 329.0,
+            "end": 333.0,
+            "text": " Now, if we come here, there are 3 and 2 here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 333.0,
+            "end": 338.0,
+            "text": " So, we will have total weights, 6 weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 338.0,
+            "end": 343.0,
+            "text": " And then its bias and its bias, 2 biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 343.0,
+            "end": 349.0,
+            "text": " After that, if we come here, we will have 2 weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 349.0,
+            "end": 353.0,
+            "text": " We can understand by counting and then its bias"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 353.0,
+            "end": 356.0,
+            "text": " So, here total is 15"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 356.0,
+            "end": 358.0,
+            "text": " Here total is 8"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 358.0,
+            "end": 360.0,
+            "text": " And here total is 3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 360.0,
+            "end": 364.0,
+            "text": " If we add these 3, 15 plus 8, 23 plus 3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 364.0,
+            "end": 369.0,
+            "text": " There are 26 trainable parameters"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 369.0,
+            "end": 372.0,
+            "text": " This means that when you train this neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 372.0,
+            "end": 380.0,
+            "text": " So, your back propagation algorithm will try to find out the value of 26 weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 380.0,
+            "end": 385.0,
+            "text": " You should always understand this by looking at the neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 385.0,
+            "end": 388.0,
+            "text": " Now, coming back to the original question"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 388.0,
+            "end": 395.0,
+            "text": " How do you denote weights and biases in multilayer perceptron?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 395.0,
+            "end": 397.0,
+            "text": " What is the notation?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 397.0,
+            "end": 399.0,
+            "text": " We will solve this now"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 399.0,
+            "end": 401.0,
+            "text": " Actually, I will show you 3 things"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 401.0,
+            "end": 406.0,
+            "text": " I will show you how to denote weights, how to denote biases and how to denote outputs"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 406.0,
+            "end": 412.0,
+            "text": " The output coming out of this node is the input for the next node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 412.0,
+            "end": 414.0,
+            "text": " So, it is important to know that"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 414.0,
+            "end": 416.0,
+            "text": " So, we will see the notation of output"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 416.0,
+            "end": 421.0,
+            "text": " So, let's start with biases because they are the easiest"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 421.0,
+            "end": 430.0,
+            "text": " So, the notation to denote bias is Bij"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 430.0,
+            "end": 433.0,
+            "text": " Where i represents the layer number"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 433.0,
+            "end": 438.0,
+            "text": " And j represents the node number in that layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 438.0,
+            "end": 441.0,
+            "text": " For example, if you talk about this node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 441.0,
+            "end": 445.0,
+            "text": " So, its bias will be 1,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 445.0,
+            "end": 447.0,
+            "text": " Because it is in layer number 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 447.0,
+            "end": 449.0,
+            "text": " And it is the first node of layer number 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 449.0,
+            "end": 452.0,
+            "text": " Similarly, it will be 1,2"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 452.0,
+            "end": 454.0,
+            "text": " Because it is the second node in the first layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 454.0,
+            "end": 456.0,
+            "text": " It will be 1,3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 456.0,
+            "end": 458.0,
+            "text": " Because it is the third node in the first layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 458.0,
+            "end": 460.0,
+            "text": " If you talk about this node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 460.0,
+            "end": 462.0,
+            "text": " It will be 2,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 462.0,
+            "end": 464.0,
+            "text": " Because it is the first node in the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 464.0,
+            "end": 466.0,
+            "text": " It will be 2,2"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 466.0,
+            "end": 468.0,
+            "text": " Because it is the second node in the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 468.0,
+            "end": 470.0,
+            "text": " And it will be 3,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 470.0,
+            "end": 472.0,
+            "text": " Because it is the first node in the third layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 472.0,
+            "end": 476.0,
+            "text": " So, that is how you denote biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 476.0,
+            "end": 478.0,
+            "text": " Now, the question arises"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 478.0,
+            "end": 480.0,
+            "text": " How will you denote the output?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 480.0,
+            "end": 482.0,
+            "text": " It is very simple to denote the output"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 482.0,
+            "end": 485.0,
+            "text": " Again, you use Oij"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 485.0,
+            "end": 487.0,
+            "text": " Which is exactly the same"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 487.0,
+            "end": 489.0,
+            "text": " i represents the layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 489.0,
+            "end": 491.0,
+            "text": " And j represents the node number"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 491.0,
+            "end": 493.0,
+            "text": " So, don't think too much"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 493.0,
+            "end": 495.0,
+            "text": " The output of any node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 495.0,
+            "end": 497.0,
+            "text": " Follows the same notation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 497.0,
+            "end": 499.0,
+            "text": " Which denotes the bias"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 499.0,
+            "end": 501.0,
+            "text": " For example, if you talk about this node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 501.0,
+            "end": 503.0,
+            "text": " So, it produces two outputs"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 503.0,
+            "end": 505.0,
+            "text": " This and this"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 505.0,
+            "end": 507.0,
+            "text": " The output of these two will be O,1,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 507.0,
+            "end": 509.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 509.0,
+            "end": 511.0,
+            "text": " This node produces two outputs"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 511.0,
+            "end": 513.0,
+            "text": " The output of these two will be O,1,2"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 513.0,
+            "end": 515.0,
+            "text": " And two of these are producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 515.0,
+            "end": 517.0,
+            "text": " O,1,3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 517.0,
+            "end": 519.0,
+            "text": " One of these is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 519.0,
+            "end": 521.0,
+            "text": " O,2,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 521.0,
+            "end": 523.0,
+            "text": " One of these is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 523.0,
+            "end": 525.0,
+            "text": " O,2,2"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 525.0,
+            "end": 527.0,
+            "text": " One of these is producing O,3,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 527.0,
+            "end": 529.0,
+            "text": " And O,3,1 is your prediction"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 529.0,
+            "end": 531.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 531.0,
+            "end": 533.0,
+            "text": " So, that is how you denote the output"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 533.0,
+            "end": 535.0,
+            "text": " Now, the last and the most tricky thing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 535.0,
+            "end": 537.0,
+            "text": " How to denote weights?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 537.0,
+            "end": 539.0,
+            "text": " To denote weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 539.0,
+            "end": 541.0,
+            "text": " You need three things"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 541.0,
+            "end": 543.0,
+            "text": " i, j and k"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 543.0,
+            "end": 545.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 545.0,
+            "end": 547.0,
+            "text": " So, what does k mean?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 547.0,
+            "end": 549.0,
+            "text": " It means the weight"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 549.0,
+            "end": 551.0,
+            "text": " Which is entering which layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 551.0,
+            "end": 553.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 553.0,
+            "end": 555.0,
+            "text": " Remember"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 555.0,
+            "end": 557.0,
+            "text": " i means"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 557.0,
+            "end": 559.0,
+            "text": " Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 559.0,
+            "end": 561.0,
+            "text": " Which number in the current layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 561.0,
+            "end": 563.0,
+            "text": " And j means"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 563.0,
+            "end": 565.0,
+            "text": " Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 565.0,
+            "end": 567.0,
+            "text": " Which number in the current layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 567.0,
+            "end": 569.0,
+            "text": " I know it is a bit difficult"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 569.0,
+            "end": 571.0,
+            "text": " Let me give you an example"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 571.0,
+            "end": 573.0,
+            "text": " Let's say I want to find this"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 573.0,
+            "end": 575.0,
+            "text": " So, the weight will be"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 575.0,
+            "end": 577.0,
+            "text": " Which layer is it entering"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 577.0,
+            "end": 579.0,
+            "text": " Layer number 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 579.0,
+            "end": 581.0,
+            "text": " So, 1 will come here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 581.0,
+            "end": 583.0,
+            "text": " Now, what will happen in i"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 583.0,
+            "end": 585.0,
+            "text": " What will happen in i"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 585.0,
+            "end": 587.0,
+            "text": " In the previous layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 587.0,
+            "end": 589.0,
+            "text": " Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 589.0,
+            "end": 591.0,
+            "text": " 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 591.0,
+            "end": 593.0,
+            "text": " And in the next layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 593.0,
+            "end": 595.0,
+            "text": " Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 595.0,
+            "end": 597.0,
+            "text": " 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 597.0,
+            "end": 599.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 599.0,
+            "end": 601.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 601.0,
+            "end": 603.0,
+            "text": " Again, 1 will come here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 603.0,
+            "end": 605.0,
+            "text": " Because it is entering the first layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 605.0,
+            "end": 607.0,
+            "text": " 4 will come here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 607.0,
+            "end": 609.0,
+            "text": " Because it is exiting the fourth node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 609.0,
+            "end": 611.0,
+            "text": " And 2 will come here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 611.0,
+            "end": 613.0,
+            "text": " Because it is entering the second node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 613.0,
+            "end": 615.0,
+            "text": " I am talking about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 615.0,
+            "end": 617.0,
+            "text": " If you want to write this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 617.0,
+            "end": 619.0,
+            "text": " It will be w1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 619.0,
+            "end": 621.0,
+            "text": " Because it is entering the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 621.0,
+            "end": 623.0,
+            "text": " 1 because it is coming from the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 623.0,
+            "end": 625.0,
+            "text": " 3 because it is entering the third one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 625.0,
+            "end": 627.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 627.0,
+            "end": 629.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 629.0,
+            "end": 631.0,
+            "text": " Weight"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 631.0,
+            "end": 633.0,
+            "text": " Now, it is entering the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 633.0,
+            "end": 635.0,
+            "text": " So, 2 will come here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 635.0,
+            "end": 637.0,
+            "text": " And it is exiting the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 637.0,
+            "end": 639.0,
+            "text": " And going to the second one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 639.0,
+            "end": 641.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 641.0,
+            "end": 643.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 643.0,
+            "end": 645.0,
+            "text": " This one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 645.0,
+            "end": 647.0,
+            "text": " So, it is also"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 647.0,
+            "end": 649.0,
+            "text": " Entering the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 649.0,
+            "end": 651.0,
+            "text": " It is exiting the second one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 651.0,
+            "end": 653.0,
+            "text": " And going to the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 653.0,
+            "end": 655.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 655.0,
+            "end": 657.0,
+            "text": " It is entering the third layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 657.0,
+            "end": 659.0,
+            "text": " It is exiting the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 659.0,
+            "end": 661.0,
+            "text": " And going to the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 661.0,
+            "end": 663.0,
+            "text": " Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 663.0,
+            "end": 665.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 665.0,
+            "end": 667.0,
+            "text": " I will give you 3-4 examples"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 667.0,
+            "end": 669.0,
+            "text": " It is entering the first layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 669.0,
+            "end": 671.0,
+            "text": " It is exiting the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 671.0,
+            "end": 673.0,
+            "text": " And going to the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 673.0,
+            "end": 675.0,
+            "text": " Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 675.0,
+            "end": 677.0,
+            "text": " This one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 679.0,
+            "end": 681.0,
+            "text": " It is going to the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 681.0,
+            "end": 684.0,
+            "text": " and that is how you denote weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 684.0,
+            "end": 687.08,
+            "text": " and that is how you denote weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 687.08,
+            "end": 690.08,
+            "text": " so I would recommend that you go and"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 690.08,
+            "end": 693.08,
+            "text": " make a more complex neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 693.08,
+            "end": 696.08,
+            "text": " make a more complex neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 696.08,
+            "end": 699.08,
+            "text": " something like this"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 699.08,
+            "end": 702.08,
+            "text": " in which there are more hidden layers"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 702.08,
+            "end": 705.08,
+            "text": " in which there are more hidden layers"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 705.08,
+            "end": 708.08,
+            "text": " and pick up a copy pen"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 708.1600000000001,
+            "end": 711.1600000000001,
+            "text": " and try to write the weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 711.1600000000001,
+            "end": 714.1600000000001,
+            "text": " that would be the best exercise"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 714.1600000000001,
+            "end": 717.1600000000001,
+            "text": " whenever there is confusion, come back to the video"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 717.1600000000001,
+            "end": 720.1600000000001,
+            "text": " once you learn this"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 720.1600000000001,
+            "end": 723.1600000000001,
+            "text": " trust me, when you study how to train"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 723.1600000000001,
+            "end": 726.1600000000001,
+            "text": " how to train"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 726.1600000000001,
+            "end": 729.1600000000001,
+            "text": " through back propagation algorithm"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 729.1600000000001,
+            "end": 732.1600000000001,
+            "text": " you will not have any problem in understanding notation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 732.1600000000001,
+            "end": 735.1600000000001,
+            "text": " many people make a mistake"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 735.16,
+            "end": 738.16,
+            "text": " and start studying a complex algorithm"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 738.16,
+            "end": 741.16,
+            "text": " which is not good"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 741.16,
+            "end": 744.16,
+            "text": " so I hope this part is clear"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 744.16,
+            "end": 747.16,
+            "text": " so that was the video guys"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 747.16,
+            "end": 750.16,
+            "text": " I hope you understood"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 750.16,
+            "end": 753.16,
+            "text": " I personally enjoyed creating this video"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 753.16,
+            "end": 756.16,
+            "text": " because things were interesting"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 756.16,
+            "end": 759.16,
+            "text": " I had to run examples and tell you the conclusions"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 759.16,
+            "end": 762.16,
+            "text": " I hope you developed an understanding"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 762.16,
+            "end": 765.16,
+            "text": " now in the next video"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 765.16,
+            "end": 768.16,
+            "text": " we will learn more about perceptron"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 768.16,
+            "end": 771.16,
+            "text": " we will learn about multilayer perceptron notation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 771.16,
+            "end": 774.16,
+            "text": " how to name weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 774.16,
+            "end": 777.16,
+            "text": " and then we will learn how to train"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 777.16,
+            "end": 780.16,
+            "text": " our multilayer perceptron"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 780.16,
+            "end": 783.16,
+            "text": " and there we will learn our back propagation algorithm"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 783.16,
+            "end": 786.16,
+            "text": " which is very important and the backbone of deep learning"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 786.16,
+            "end": 789.16,
+            "text": " so that's it from my side"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 789.16,
+            "end": 792.16,
+            "text": " please do like this video"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 792.16,
+            "end": 795.16,
+            "text": " also if you haven't subscribed to the channel"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 795.16,
+            "end": 798.16,
+            "text": " please press that red button"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 798.16,
+            "end": 801.16,
+            "text": " it really motivates me"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 801.16,
+            "end": 804.16,
+            "text": " so that's it from my side, bye"
+        }
+    ],
+    "text": " Hi guys, my name is Ritesh and you are welcome to my YouTube channel In the last video, we took an intuition of Multilayer Perceptron We tried to understand how Multilayer Perceptrons work and why they can work In the end, I gave you some examples on Tensorflow Playground Now, slowly we will try to understand Multilayer Perceptron in a deeper way To understand Multilayer Perceptron, the most difficult thing is to train the algorithm which is called Back Propagation So, everyone who has worked in deep learning knows that it is very difficult to understand Back Propagation I have also experienced it And I think the biggest reason for it is that beginners make a mistake And that mistake is that when you make a neural network then many weights and biases come in that neural network So, if we don't learn to denote those weights and biases properly If we don't learn their notation, then while doing Back Propagation, there is a lot of confusion So, I made this mistake and I don't want you to make this mistake That's why in today's video, our whole goal would be actually two things First, I want to teach you that by looking at any neural network architecture First of all, you should be able to calculate the number of trainable parameters in it The number of trainable parameters means that when you train that model then what is the total number of weights and biases you have to find the value of So, the first thing we will learn in today's video is that if you are being given a neural network architecture then you should calculate it quickly that there are so many weights and biases in it The second thing we will learn is that how do you denote those weights and biases What do you name them? We have to learn their notation And we will learn a standard notation which is followed in the industry So, what will happen is that in the future when you are studying a difficult algorithm like Back Propagation then you will never get confused by looking at any weight that which layer is this weight So, that's the whole idea of this video. It is a small video but trust me it is very important Please don't skip this one. So, that's it for the introduction. Let's start the video So, guys let's start. First of all, let me explain you the setup What you are seeing on the screen is the neural network architecture I will explain you the whole notation by using this architecture So, there are 4 layers in total. Yes, 4 layers are there So, there is an input layer which you are calling layer 0 Hidden layer 1 is layer 1, hidden layer 2 is layer 2 and output layer is layer 3 Also, the data that we have here is 4 dimensional data You can see where M denotes the number of rows and the value of N is 4 So, if you have data it will look like this There would be column 1, column 2, column 3, column 4 and finally your output column So, what I am doing is that I will insert row by row data here So, x i1 is the value of the first column of the ith row This is the value of the ith row and this is the value of the ith row So, when I will provide one row I will insert these values here Now, the question is that how many trainable parameters do you have? This is the first question that how many trainable parameters do you have? Trainable parameters means that when you will train on it So, your back propagation algorithm will find out the value of weights and biases So, you should be able to calculate this by looking at the neural network architecture So, let me show you If you focus here, let's count the number of weights and biases So, clearly if you see the combination here, there are 4 nodes and 3 nodes So, 4 multiplied by 3, there are 12 weights You can see, if you count all these weights, there are 12 weights Also, one more thing, if you see this color encoding, I have created these weights in such a way that all the weights that you are getting from the previous layer are encoded in one color So, all the weights that you are getting from the previous layer are in black color All the weights that you are getting from the previous layer are in red color All the weights that you are getting from the previous layer are in green color Also, I have used the same color encoding so that you can easily understand So, coming back, we have to count the total number of weights and biases in this neural network So, here there are 12 weights and its bias, its bias and its bias So, we have 3 biases Now, if we come here, there are 3 and 2 here So, we will have total weights, 6 weights And then its bias and its bias, 2 biases After that, if we come here, we will have 2 weights We can understand by counting and then its bias So, here total is 15 Here total is 8 And here total is 3 If we add these 3, 15 plus 8, 23 plus 3 There are 26 trainable parameters This means that when you train this neural network So, your back propagation algorithm will try to find out the value of 26 weights and biases You should always understand this by looking at the neural network architecture Now, coming back to the original question How do you denote weights and biases in multilayer perceptron? What is the notation? We will solve this now Actually, I will show you 3 things I will show you how to denote weights, how to denote biases and how to denote outputs The output coming out of this node is the input for the next node So, it is important to know that So, we will see the notation of output So, let's start with biases because they are the easiest So, the notation to denote bias is Bij Where i represents the layer number And j represents the node number in that layer For example, if you talk about this node So, its bias will be 1,1 Because it is in layer number 1 And it is the first node of layer number 1 Similarly, it will be 1,2 Because it is the second node in the first layer It will be 1,3 Because it is the third node in the first layer If you talk about this node It will be 2,1 Because it is the first node in the second layer It will be 2,2 Because it is the second node in the second layer And it will be 3,1 Because it is the first node in the third layer So, that is how you denote biases Now, the question arises How will you denote the output? It is very simple to denote the output Again, you use Oij Which is exactly the same i represents the layer And j represents the node number So, don't think too much The output of any node Follows the same notation Which denotes the bias For example, if you talk about this node So, it produces two outputs This and this The output of these two will be O,1,1 Ok This node produces two outputs The output of these two will be O,1,2 And two of these are producing O,1,3 One of these is producing O,2,1 One of these is producing O,2,2 One of these is producing O,3,1 And O,3,1 is your prediction Ok So, that is how you denote the output Now, the last and the most tricky thing How to denote weights? To denote weights You need three things i, j and k Ok So, what does k mean? It means the weight Which is entering which layer Ok Remember i means Which node is producing Which number in the current layer And j means Which node is producing Which number in the current layer I know it is a bit difficult Let me give you an example Let's say I want to find this So, the weight will be Which layer is it entering Layer number 1 So, 1 will come here Now, what will happen in i What will happen in i In the previous layer Which node is producing 1 And in the next layer Which node is producing 1 Let's talk about this one Ok Again, 1 will come here Because it is entering the first layer 4 will come here Because it is exiting the fourth node And 2 will come here Because it is entering the second node I am talking about this one If you want to write this one It will be w1 Because it is entering the first one 1 because it is coming from the first one 3 because it is entering the third one Ok Let's talk about this one Weight Now, it is entering the second layer So, 2 will come here And it is exiting the second layer And going to the second one Ok Let's talk about this one This one So, it is also Entering the second layer It is exiting the second one And going to the first one Let's talk about this one It is entering the third layer It is exiting the first one And going to the first one Ok Let's talk about this one I will give you 3-4 examples It is entering the first layer It is exiting the second layer And going to the first one Let's talk about this one This one It is going to the second layer and that is how you denote weights and that is how you denote weights so I would recommend that you go and make a more complex neural network make a more complex neural network something like this in which there are more hidden layers in which there are more hidden layers and pick up a copy pen and try to write the weights that would be the best exercise whenever there is confusion, come back to the video once you learn this trust me, when you study how to train how to train through back propagation algorithm you will not have any problem in understanding notation many people make a mistake and start studying a complex algorithm which is not good so I hope this part is clear so that was the video guys I hope you understood I personally enjoyed creating this video because things were interesting I had to run examples and tell you the conclusions I hope you developed an understanding now in the next video we will learn more about perceptron we will learn about multilayer perceptron notation how to name weights and biases and then we will learn how to train our multilayer perceptron and there we will learn our back propagation algorithm which is very important and the backbone of deep learning so that's it from my side please do like this video also if you haven't subscribed to the channel please press that red button it really motivates me so that's it from my side, bye"
+}
