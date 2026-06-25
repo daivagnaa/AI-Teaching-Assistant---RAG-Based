@@ -1,0 +1,1524 @@
+{
+    "chunks": [
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 0.0,
+            "end": 22.0,
+            "text": " Hi guys, my name is Nitish and you are welcome to my YouTube channel. So we are continuing our deep learning playlist in this video. We have covered two topics, as in two videos on backpropagation. The what, the how, this is the third video, the why. This is going to be the most conceptual video and whatever you have read in the last two videos"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 22.0,
+            "end": 47.0,
+            "text": " and whatever doubts you have in your mind, we will clear them in this video. So trust me, if you watch these three videos, then you should not have any problem in backpropagation. So let's start the video. So guys, let's start with the first topic of this video. Here we will learn what is the intuition behind our backpropagation algorithm."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 47.0,
+            "end": 64.0,
+            "text": " Honestly speaking, in the last two videos, we kept a very how approach, as in how things are working, we focused on that. But now we will focus on why things are working. Why does the backpropagation algorithm work? Why does it give you the right results?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 64.0,
+            "end": 84.0,
+            "text": " We will discuss this. So again for reference, I have kept our backpropagation algorithm here. I am making you revise once more. So what happens is that you basically decide an epoch number. Basically how many times you want to go on your data."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 84.0,
+            "end": 111.0,
+            "text": " Then every time in the epoch, you run the loop as many times as the number of rows in your data. So the total number of times the loop will run is epochs multiplied by rows. It is a nested loop, it will run so many times. Now every time in the inner loop, you choose a point randomly. For that, you make a prediction using forward propagation."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 112.0,
+            "end": 139.0,
+            "text": " And then the prediction that comes, which we are calling y hat. By holding its corresponding y, you calculate its loss using a loss function. Which was MSC in regression and binary cross entropy in classification. And once you get this loss, what do you do now? You update all your weights and biases using this rule."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 140.0,
+            "end": 167.0,
+            "text": " So all the magic is happening in this step. I am sorry, all the magic is happening in this step. And we have to understand this step that why are we doing minus with this thing. How by doing minus with this thing, eventually, gradually, we are getting our correct weight and bias. So our entire focus will be for the next 10-15 minutes."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 167.0,
+            "end": 189.0,
+            "text": " Why is this thing right? Why should we use this thing? Now we will take it step by step. If you want to understand intuition, then we will take it step by step. First, I will clear some of your concepts. The first concept is that the loss function is a function of all the parameters."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 189.0,
+            "end": 209.0,
+            "text": " I have to explain this to you. What I mean to say is that suppose you are working on the same dataset. CGPA, Profile Score and how much is the package. Suppose you are working on this data. Now here you have made a simple neural network in which there are 3 nodes in total."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 212.0,
+            "end": 232.0,
+            "text": " This is the neural network. Now here you will get y hat and you will put it in the loss function. Since this is a regression problem, the loss function is this. I will write it properly. Our loss function is y minus y hat whole square."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 232.0,
+            "end": 258.0,
+            "text": " Now first of all, you understand that this is a mathematical function. Like any mathematical function, this is also a mathematical function. Generally, mathematical functions are in this form. Now what does it mean to say that y is a function of x? It means that if you plot a graph, then if x changes, y changes."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 258.0,
+            "end": 274.0,
+            "text": " This is the meaning of this whole thing. So I just want to ask you, think a little and tell me whose function is L? Like here y is the function of x. Similarly, whose function is L here? You have to think about this. Pause the video and think."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 275.0,
+            "end": 291.0,
+            "text": " This is the value of L. Now if you look at this, then what is this y? This is basically the value of the target column in your data. Basically the value of LPA. So this is a constant."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 293.0,
+            "end": 303.0,
+            "text": " In this formula, this is a constant. I can write it like this. L is equal to c minus y hat square. This is a constant. I can replace it with a number. There will be no difference."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 303.0,
+            "end": 318.0,
+            "text": " So clearly there is only one thing left whose function can be this. And that is y hat. And it is true that L is a function of y hat. But what is y hat? If you ask yourself that this is a neural network."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 318.0,
+            "end": 328.0,
+            "text": " If we assume that the activation function of all nodes is linear. It is linear everywhere. So what is y hat? This is the question. Think."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 328.0,
+            "end": 344.0,
+            "text": " How will y hat come out? How will the y hat of this node come out? The y hat of this node will come out using this formula. W211 multiplied by its output O11. Plus this weight W221."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 344.0,
+            "end": 358.0,
+            "text": " Its output O12. Plus its bias B21. Okay. But it has not been solved yet. Now here these three have become weights and biases."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 358.0,
+            "end": 372.0,
+            "text": " What is O11? Think about this. What is its output? So I would write it like this. Y hat will be W211 multiplied by this weight."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 372.0,
+            "end": 388.0,
+            "text": " Multiplied by the value of CGPA which we will call Xi1. And this is the value of the profile which we will call Xi2. Okay. So I am writing this. W111 multiplied by Xi1."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 388.0,
+            "end": 408.0,
+            "text": " Plus W121 Xi2. Plus its bias B11. Okay. Plus W221. Now again I can write O12."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 408.0,
+            "end": 427.0,
+            "text": " How can we write its output? This weight, this weight. So I would write W112 Xi1. Plus W122 Xi2. Plus B12."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 427.0,
+            "end": 441.0,
+            "text": " Plus this bias. Are you getting it? So basically if you see. Now this is the equation of L. I mean this is not the equation of L."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 441.0,
+            "end": 454.0,
+            "text": " The value of Y hat in L is this. Such a complex thing. Now in this complex thing I will show you. That this Xi1 is constant because it is coming from data. This is also constant."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 454.0,
+            "end": 462.0,
+            "text": " It is coming from data. This is also constant. And this is also constant. Apart from this if you notice. So this thing."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 462.0,
+            "end": 468.0,
+            "text": " This thing. This. This. This. This."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 468.0,
+            "end": 481.0,
+            "text": " This and this. All these things are variable. If you put this Y hat in this formula. Then you will understand. That your loss function."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 481.0,
+            "end": 493.0,
+            "text": " It is basically a function of 9 things. Like here. There is a function of one thing. X. Here you have a function of 9 things."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 493.0,
+            "end": 511.0,
+            "text": " All the weights and all the biases. So what I had to explain to you was. That loss function is a function of all the trainable parameters. First of all you should have this intuition. That in these 9 weights and biases."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 511.0,
+            "end": 526.0,
+            "text": " If you change anyone or everyone. Then the loss will change. And you have to tune all of them in such a way. That your loss function becomes minimum. Imagine that your neural network."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 526.0,
+            "end": 538.0,
+            "text": " It is basically a box. It is basically a box. On which there are 9 knobs. There are 9 knobs which you can rotate. And you have to rotate them in this way."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 538.0,
+            "end": 549.0,
+            "text": " You have to increase or decrease. You have to rotate it in such a way. That the L is minimized. You should have this first intuition. I hope you understood this."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 549.0,
+            "end": 559.0,
+            "text": " So guys the next concept you have to learn. What is gradient? I hope you already know. If you don't know. Then I will quickly convey to you."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 559.0,
+            "end": 570.0,
+            "text": " What does gradient mean? In fact this word is so important. That our algorithm is also called gradient descent. Let me explain what gradient is. So it is a very simple concept."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 570.0,
+            "end": 583.0,
+            "text": " I will tell you in a single line. First of all gradient is just a fancy word. It is just a fancy word. For derivative. It is nothing else."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 583.0,
+            "end": 593.0,
+            "text": " It is just a derivative. Listen carefully. Suppose you have a function y. It is a function of x. And its equation is x square plus x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 593.0,
+            "end": 603.0,
+            "text": " Now if I tell you. That you have to differentiate y. With respect to x. So you write this. dy by dx."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 603.0,
+            "end": 614.0,
+            "text": " Is equal to. d by dx of fx. Or fx. Or you will write it like this. d by dx of x square plus x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 614.0,
+            "end": 626.0,
+            "text": " And you will get 2x plus 1. Okay. So here it is called derivative. So listen carefully. What is the difference between derivative and gradient?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 626.0,
+            "end": 637.0,
+            "text": " When your function. It is depending on only one parameter. Like here y is depending on x. So you call this derivative. To differentiate you say derivative."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 637.0,
+            "end": 647.0,
+            "text": " Okay. So it is denoted by d notation. But sometimes what happens. That your function. It depends on more than one parameter."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 647.0,
+            "end": 659.0,
+            "text": " Like here your function. It is depending on both x and y. So here when you are told to derive derivative. Suppose this function was x square plus y square. So here when you are told to differentiate."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 659.0,
+            "end": 668.0,
+            "text": " So you write this. Del x by del. Like the name of this function is z. Okay. Del z by del x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 668.0,
+            "end": 678.0,
+            "text": " So what will this be? 2x. You have differentiated it in respect of x. And when you will derive this. Del z by del x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 678.0,
+            "end": 686.0,
+            "text": " Sorry del y. So this will be 2y. Now you have differentiated the same function in respect of y. Okay. So the concept is very simple."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 686.0,
+            "end": 696.0,
+            "text": " Now the thing you have derived. It is called gradient by not saying derivative. And it is denoted by this del notation. Okay. So this is the difference."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 696.0,
+            "end": 706.0,
+            "text": " Now understand this. Our loss function. Our loss function. It is a very complex function. It is a complex mathematical function."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 706.0,
+            "end": 722.0,
+            "text": " Which is depending on 9 things. W1, W1, W1, W2. Take all the weights. And take all the biases. It is depending on these things."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 722.0,
+            "end": 732.0,
+            "text": " So here when it will be said. Take the derivative of L. So you will take partial derivatives. In respect of every weight. And in respect of every bias."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 732.0,
+            "end": 743.0,
+            "text": " That is why it is called gradient. That you are calculating gradient. For 9 parameters. So you should know one thing. What is gradient?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 743.0,
+            "end": 751.0,
+            "text": " It is occurring in so many places. You should know. I will summarize once. If your mathematical function. It depends on only one thing."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 751.0,
+            "end": 763.0,
+            "text": " It is a function of only one thing. So you take derivative by putting dy, dx. If it is a function of more than one thing. So you take gradient by putting del. The loss function we have."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 763.0,
+            "end": 771.0,
+            "text": " Our neural network. It has 9 parameters. It means L is a function of 9 different things. So when it will be said. Differentiate L."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 771.0,
+            "end": 779.0,
+            "text": " So you actually. You will differentiate L. 9 times. And it will be said. You are taking gradient."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 779.0,
+            "end": 787.0,
+            "text": " Okay. If you want its geometric intuition. So if you are in one dimension. Means there is such a function. y is equal to fx."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 787.0,
+            "end": 796.0,
+            "text": " And your function is x square. So this is your function. So what is the meaning of taking derivative here? That you are calculating slope. At any point."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 796.0,
+            "end": 807.0,
+            "text": " Okay. Whereas if you. Talk about such a function. Just one second. If you talk about such a function."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 807.0,
+            "end": 816.0,
+            "text": " Which is. In 3D. Assume that z is equal to. x square plus y square. So here z is a function of."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 816.0,
+            "end": 824.0,
+            "text": " x and y. So here you have to understand. That your. Function will be. It will be kind of 3D."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 824.0,
+            "end": 831.0,
+            "text": " I am not able to draw here. But you get the idea. This is a 3D function. Imagine in the room. And what are you doing?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 831.0,
+            "end": 842.0,
+            "text": " You are taking the slope of this 3D function. With respect to x. And with respect to y. So our loss function. It is a complex 9 dimensional."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 842.0,
+            "end": 854.0,
+            "text": " Function. And when I am taking its derivative. I am calculating 9 different slopes. With respect to. Each dimension."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 854.0,
+            "end": 863.0,
+            "text": " You will have to understand this. This is the intuition part of this. Okay. I hope you understood this concept. So guys the third concept."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 863.0,
+            "end": 870.0,
+            "text": " We will discuss. That is. Concept of a derivative. So we. Start differentiating from the 11th class."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 870.0,
+            "end": 880.0,
+            "text": " And we. Learn to find the differentiation. Of different types of mathematical functions. We learn a lot of formulas. But we miss one important thing in it."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 880.0,
+            "end": 890.0,
+            "text": " What is the intuition of the derivative? What is the meaning of differentiating? We should know this. Especially today. When we want to understand the intuition of back propagation."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 890.0,
+            "end": 898.0,
+            "text": " We should know the intuition of the derivative. Okay. So we will learn first. What is the concept of derivative? Or we will learn what is intuition?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 898.0,
+            "end": 909.0,
+            "text": " Also we will learn one more thing. What is the meaning of derivative at a point? What is the meaning of derivative at a point? Okay. Let's go."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 909.0,
+            "end": 918.0,
+            "text": " So generally. It is denoted in this way. Your derivative. Dy by dx. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 918.0,
+            "end": 925.0,
+            "text": " Where y. Is a function. Of x. And x. Itself is a quantity."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 925.0,
+            "end": 933.0,
+            "text": " So x and y are two quantities. Okay. So what is the simple meaning? You might have heard this word. Especially if you have studied physics."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 933.0,
+            "end": 944.0,
+            "text": " Then it is called rate of change. Rate of change. So this derivative is nothing but rate of change. It basically means. Suppose this is our y."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 944.0,
+            "end": 952.0,
+            "text": " And this is our x. Okay. Now listen carefully. This is y. And this is x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 952.0,
+            "end": 962.0,
+            "text": " Since y depends on x. So when you change even a little in x. Suppose you were here. And you brought x here. So corresponding change."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 962.0,
+            "end": 973.0,
+            "text": " You will also see in y. Suppose what did you do here? You increased from 1. So here it increased by 2 times. So here you can say."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 973.0,
+            "end": 981.0,
+            "text": " dy by dx is 2. Okay. So the basic meaning is. When you change one quantity. What effect does it have on the other quantity?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 981.0,
+            "end": 991.0,
+            "text": " That is called derivative. And it is denoted in the form of dy by dx. Okay. So if dy by dx means. Means when calculating it is 2."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 991.0,
+            "end": 1001.0,
+            "text": " It basically means. When you change x by 1 unit. In y. The positive change of 2 units is coming. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1001.0,
+            "end": 1011.0,
+            "text": " If your dy by dx is negative. It means. When you change 1 unit positive in x. In y. The negative change of minus 2 units is coming."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1011.0,
+            "end": 1021.0,
+            "text": " So not only this magnitude. Magnitude is important. But this sign is also important. Both of them are telling us. That by changing in x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1021.0,
+            "end": 1031.0,
+            "text": " What is happening in y. I hope you are understanding this. Now if you understand. What is the meaning of derivative at a point. That is also a very simple concept."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1031.0,
+            "end": 1041.0,
+            "text": " Suppose we had. This was x. This was y. x square plus 2x. I have to find out at x is equal to 5."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1041.0,
+            "end": 1051.0,
+            "text": " What is the derivative. So what we will do. First of all we will find dy by dx. From which we will get. 2x plus 1."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1051.0,
+            "end": 1061.0,
+            "text": " Now we will put the value of x here. 5. So as soon as we put the value of x here 5. It will become 11. So basically we are saying dy by dx."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1061.0,
+            "end": 1071.0,
+            "text": " At x is equal to 5 is. 11. Or you can say. This graph. At x is equal to 5 is 11."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1071.0,
+            "end": 1081.0,
+            "text": " Or rate of change of y. With respect to x. At x is equal to 5 is 11. I hope you are understanding this concept. I am summarizing."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1081.0,
+            "end": 1091.0,
+            "text": " Derivative simply means. By changing in x. How much is changing in y. That's it. Here magnitude and sign are both important."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1091.0,
+            "end": 1101.0,
+            "text": " Magnitude tells how much quantity. Is increasing or decreasing. Whether it is increasing in positive or negative. So if we were taking here. Del L by."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1101.0,
+            "end": 1111.0,
+            "text": " Let's take an example. So what we were trying to find. That. W11. When you are changing one unit."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1111.0,
+            "end": 1121.0,
+            "text": " So what effect is it having on L. Both magnitude wise. And sign wise. Okay. This is what we got."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1121.0,
+            "end": 1131.0,
+            "text": " When we did derivative. So our equation is. W new is equal to. W old minus. Learning rate times."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1131.0,
+            "end": 1141.0,
+            "text": " Del L by del W. So what we are doing here. Derivative wise. We are reducing our weight old. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1141.0,
+            "end": 1151.0,
+            "text": " I hope you understood this. Before going to main topic. Let's understand one last concept. The concept of minima. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1151.0,
+            "end": 1161.0,
+            "text": " Assume I have a graph. This is a 2D graph. And here is this graph. And this is y. This is x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1161.0,
+            "end": 1171.0,
+            "text": " If I ask you. Tell me where is the minima of this graph. I guess you will easily say. It is at this place. Right."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1171.0,
+            "end": 1181.0,
+            "text": " Because we have eyes. We can see and tell. That this function. Minimum is occurring at this point. You are sitting with your eyes closed."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1181.0,
+            "end": 1191.0,
+            "text": " And if someone asks you. Tell me. Where is the minima of the function. You will not be able to tell. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1191.0,
+            "end": 1203.0,
+            "text": " Similarly when we algorithmically. Find the minima of our function. There is a simple way to find it. You find dy by dx. Okay."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1203.0,
+            "end": 1213.0,
+            "text": " And. You make it equal to 0. And from there whatever value of x. Your minima lies there. We learned this concept in school."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1213.0,
+            "end": 1223.0,
+            "text": " Okay. Take this example. You can already see. This is parabola equation. You can say y is equal to x square."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1223.0,
+            "end": 1233.0,
+            "text": " If I want to know. Where is the minima of this equation. Or this function. I have to find dy by dx. Which is 2x."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1233.0,
+            "end": 1243.0,
+            "text": " And make it equal to 0. And from there whatever value of x. My minima lies there. And see this. x is equal to 0."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1243.0,
+            "end": 1253.0,
+            "text": " Now what if the function we have. Is in more than one variable. Suppose we have this function. z is equal to x square plus y square. Means this will be in 3D."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1253.0,
+            "end": 1263.0,
+            "text": " You can understand. This will be in 3D. Now what I have to do. I have to find the minima of this function. Means I have to find the value of x and y."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1263.0,
+            "end": 1273.0,
+            "text": " If the value of z is minimum. Then what I will do. I will find del z by del x. And I will find. del z by del y."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1273.0,
+            "end": 1283.0,
+            "text": " And make them equal to 0. From here I will get the value of x. And from there I will get the value of y. So when you find this. Then this will be 2x equal to 0."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1283.0,
+            "end": 1293.0,
+            "text": " This means x is equal to 0. And from this. 2y is equal to 0. Which means y is equal to 0. So x and y."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1293.0,
+            "end": 1303.0,
+            "text": " When both are 0. Then z is minimum. So you have to remember this concept. Because we. The loss function with which we are working."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1303.0,
+            "end": 1313.0,
+            "text": " It depends on 9 parameters. And what we have to do. If you remember. We have to minimize our loss function. Means we have to find its minima."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1313.0,
+            "end": 1323.0,
+            "text": " And what is the meaning of finding minima. I have to find 9 derivatives. 9 derivatives. And then. I have to make those 9 derivatives."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1323.0,
+            "end": 1333.0,
+            "text": " Equal to 0. And then I will get the value. Of every parameter. I will get the value of all the weights. And biases."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1333.0,
+            "end": 1343.0,
+            "text": " For which the value of loss. Will be minimum. So basically I have to find minima. In 9 dimensional space. I hope you understood this too."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1343.0,
+            "end": 1353.0,
+            "text": " Now we have. All the concepts. Which are required. To understand the intuition of back propagation. So what we will do."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1353.0,
+            "end": 1369.0,
+            "text": " This update step. Just one second. We will understand this step. Where we take this update. This is our target."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1369.0,
+            "end": 1379.0,
+            "text": " To understand why this formula is like this. Also. We will take some assumptions. Our first assumption is. Learning rate is 1."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1379.0,
+            "end": 1395.0,
+            "text": " So our formula will be like this. Ok. Second assumption is. Our neural network. Is like this."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1395.0,
+            "end": 1405.0,
+            "text": " Ok. So we have to do these steps. 9 times. 9 steps. 1 for each parameter."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1405.0,
+            "end": 1415.0,
+            "text": " There are 6 weights. And 3 biases. So we are going to do this 9 times. So what I am going to do. I am taking a small assumption."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1415.0,
+            "end": 1425.0,
+            "text": " And my assumption is. All the weights and biases. Their value at this point. Is a constant. But this bias."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1425.0,
+            "end": 1435.0,
+            "text": " You can change this. I mean to say. Your loss function. Which till now. Was depending on 9 things."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1435.0,
+            "end": 1445.0,
+            "text": " Now out of those 8 things. Has become a constant. This is our assumption. It basically means. Loss is a function of B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1445.0,
+            "end": 1455.0,
+            "text": " That's it. I took this step on purpose. Because. The next discussion will be easy. When you will understand."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1455.0,
+            "end": 1465.0,
+            "text": " The whole discussion. Assume that this is not a constant. Then you will understand everything. So watch carefully. Our loss function is."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1465.0,
+            "end": 1475.0,
+            "text": " Y minus Y hat whole square. But this Y hat. In this. This is the only term which is not a constant. So Y hat basically depends on B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1475.0,
+            "end": 1485.0,
+            "text": " And that is why L depends on B21. Okay. Now watch carefully. Here the main thing starts. So now we have to."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1485.0,
+            "end": 1495.0,
+            "text": " Update B. So B21 will be. Old value of B21. Minus this. Now we have to think."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1495.0,
+            "end": 1505.0,
+            "text": " We have to think. Why did we subtract this. Initially let's say. We started with a value of B21. Assume from 5."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1505.0,
+            "end": 1515.0,
+            "text": " So why are we subtracting this. We have to understand this. Also why is this minus sign. So watch carefully. In L and B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1515.0,
+            "end": 1525.0,
+            "text": " There is a square relationship. So roughly this plot will be. Something like this. Means here your B21 will be. Here your loss will be."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1525.0,
+            "end": 1535.0,
+            "text": " So roughly something like this. Now see what we have to do. We have to minimize our loss. Basically we need a value of B21. For which the value of loss."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1535.0,
+            "end": 1545.0,
+            "text": " Minimum. So now here the main concept. Starts. So watch carefully. I told you a little while ago."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1545.0,
+            "end": 1559.0,
+            "text": " That this quantity. What is this. This is L's derivative. Or you can say gradient. With respect to B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1559.0,
+            "end": 1569.0,
+            "text": " What does this quantity mean. That if you. Change one unit in B21. So how much will change in L. Both magnitude and sign."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1569.0,
+            "end": 1579.0,
+            "text": " Now watch carefully. What I have to do. I have to reduce L. I have to reduce L. Now think about it."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1579.0,
+            "end": 1589.0,
+            "text": " If my derivative. When I calculated. So it came positive. What does it mean. It means."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1589.0,
+            "end": 1599.0,
+            "text": " That. If you are increasing B21. So L is also increasing. But what do we have to do. But what do we have to do."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1599.0,
+            "end": 1609.0,
+            "text": " We have to reduce the loss. So what do we have to do. We have to reduce B21. If this quantity is positive. It means."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1609.0,
+            "end": 1619.0,
+            "text": " Initially whatever is the value of B21. Assume you took 5. Initial value. So to reduce the loss. You have to reduce this value."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1619.0,
+            "end": 1629.0,
+            "text": " You have to bring less than 5. That is why. Notice here. You are subtracting. I hope you are understanding."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1629.0,
+            "end": 1639.0,
+            "text": " If it is positive. Then you are reducing it. Now take another case. Assume. Del L by del B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1639.0,
+            "end": 1649.0,
+            "text": " Is negative. It means. When you reduce B21. When you reduce B21. When you increase B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1649.0,
+            "end": 1659.0,
+            "text": " When you increase B21. Then the loss is reduced. And you have to reduce the loss. Then you will increase B21. Which means."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1659.0,
+            "end": 1669.0,
+            "text": " Whatever is the value of B21. Whatever is the value of B21. You will increase it. That is why. You need something which is added in B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1669.0,
+            "end": 1679.0,
+            "text": " Notice here. This minus sign. How smartly. I would like to write smart word here. Smartly it is handling both the cases."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1679.0,
+            "end": 1689.0,
+            "text": " If this derivative. Is positive. Then you are subtracting. From the current value of B21. And if it is negative."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1689.0,
+            "end": 1699.0,
+            "text": " Then automatically it will be plus. And you are adding something in B21. And increasing B21. But can you see. The whole game here."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1699.0,
+            "end": 1711.0,
+            "text": " Is on the sign of derivative. That you have to increase. Or you have to reduce B21. From what we are getting to know. We are finding out."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1711.0,
+            "end": 1723.0,
+            "text": " The negative of the gradient. This is what you have done. You have added B21. Minus what. Del L by del B21."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1723.0,
+            "end": 1733.0,
+            "text": " What is this whole thing. It is negative of the gradient. If I want this thing. Then I can explain you graphically. I have explained this logically."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1733.0,
+            "end": 1743.0,
+            "text": " Now I will explain you graphically. So. Assume. This is the curve of B21. And this is your loss."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1743.0,
+            "end": 1753.0,
+            "text": " Now when you started. What was the value of B? The value of B was 5. And you were at this place. You have to reach here."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1753.0,
+            "end": 1763.0,
+            "text": " Because. This is the value where your loss. Is minimum. And you have to find the value of B. Corresponding to this."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1763.0,
+            "end": 1773.0,
+            "text": " You are starting from here. You have to reach here. Now I have eyes. I can see how this function is. And I can reach from here to here."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1773.0,
+            "end": 1783.0,
+            "text": " But my back propagation algorithm. It does not have eyes. It is sitting here with the value of B. Now it has two possibilities. Either it can increase B."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1783.0,
+            "end": 1793.0,
+            "text": " Can go in this direction. Or can reduce B. And can go in this direction. What will our algorithm do? It will calculate the derivative."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1797.0,
+            "end": 1807.0,
+            "text": " It will calculate the derivative. Basically it will find the slope. It will find the slope at this point. This is the slope. Now see carefully."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1807.0,
+            "end": 1817.0,
+            "text": " If the slope is positive. As it is here. Then you will go in its negative direction. Basically in this direction. This means you will reduce B."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1817.0,
+            "end": 1827.0,
+            "text": " Then you will reach here. Suppose you would have started from here. The initial value of B would have been minus 5. When you would have calculated the derivative here. When you would have calculated the derivative at this point."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1827.0,
+            "end": 1837.0,
+            "text": " Then it would have been negative. Because the slope here is negative. Now you would have gone to the negative side of this negative slope. You would have gone to the positive side."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1837.0,
+            "end": 1847.0,
+            "text": " Always remember. You will find the slope on this curve. Which you will call gradient. And you will go in its negative direction."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1847.0,
+            "end": 1857.0,
+            "text": " That is why it is negative. And this is the logic. This is the logic. Which we are following here. Now the thing is."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1857.0,
+            "end": 1867.0,
+            "text": " If I am here. If I am at this point. Then how far should I go from here? This is my question. How far should I go?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1867.0,
+            "end": 1877.0,
+            "text": " People said that you should go as far as the value of your current slope. That is why you took this magnitude and put it here. And that is why"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1877.0,
+            "end": 1887.0,
+            "text": " this formula became this. W new is equal to W old value minus this. So what you are saying is"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1887.0,
+            "end": 1897.0,
+            "text": " the more the slope in the negative direction the more I should go ahead. I hope you are understanding this. Now we will discuss what is the fund of"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1897.0,
+            "end": 1907.0,
+            "text": " learning rate? What is the need of learning rate? Why our equation is this? What is this learning rate adding in this logic?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1907.0,
+            "end": 1917.0,
+            "text": " That we need to keep learning rate. We will discuss this. I hope you understood this part. Why is update possible in backpropagation?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1917.0,
+            "end": 1927.0,
+            "text": " Update is possible because the maths behind this is like this. So let's discuss what is the effect of learning rate? I will tell you first."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1927.0,
+            "end": 1937.0,
+            "text": " What is the work of learning rate? What is your basic goal? Suppose you are starting from random point and you have to reach here. So you take steps."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1937.0,
+            "end": 1949.0,
+            "text": " You take steps. So what does learning rate do? It makes those steps smooth. I will explain you through an example. Suppose you started"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1949.0,
+            "end": 1959.0,
+            "text": " from minus 5. B equal to minus 5. So what did you do? When you took this out you came to know that it is"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1959.0,
+            "end": 1969.0,
+            "text": " negative slope. Minus 50. Slope is negative. You had to update. New bias will be"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1969.0,
+            "end": 1979.0,
+            "text": " old bias minus slope. How much is this? This is 45."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1979.0,
+            "end": 1989.0,
+            "text": " B value will be 45. You will come here. At this place. Suppose this is B's 45."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1989.0,
+            "end": 1999.0,
+            "text": " Now when you again took slope at this place. Let's say 50. Now your new bias will be"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 1999.0,
+            "end": 2009.0,
+            "text": " current value minus this. Now you are here. This is B equal to minus 5. Basically what is happening is"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2009.0,
+            "end": 2019.0,
+            "text": " zigzag motion like this. This is not good. Sometimes you can shoot out. You can go out of this curve. You can reach here."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2019.0,
+            "end": 2029.0,
+            "text": " This is not good. That is why you need smooth motion like this. What you do is multiply your slope by a factor. That factor"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2029.0,
+            "end": 2039.0,
+            "text": " is generally 0.1 or 0.01. This makes your steps smooth. You take small steps. Let's take"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2039.0,
+            "end": 2049.0,
+            "text": " same example. This is value of minus 5. Our slope is let's say minus 50."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2049.0,
+            "end": 2059.0,
+            "text": " But what you are doing is learning rate. Now what will happen? New bias will be minus 5 minus"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2059.0,
+            "end": 2069.0,
+            "text": " learning rate times 0.01 multiplied by 50. This will be plus. This would be like 5."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2069.0,
+            "end": 2079.0,
+            "text": " 5. It would be 0.5. Now what you are doing is going to minus 0.45. You took small jump."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2079.0,
+            "end": 2089.0,
+            "text": " As you go ahead, these jumps will be smaller because value of slope will be reduced. Eventually you will reach the minimum. That is the benefit of"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2089.0,
+            "end": 2099.0,
+            "text": " learning rate. If you keep learning rate too high, let's say if you are taking 1 as default then this kind of motion will come. If I take very small learning rate"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2099.0,
+            "end": 2109.0,
+            "text": " then what will happen? These steps will be very small and it will take a lot of time to converge. Your algorithm will take a lot of time"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2109.0,
+            "end": 2119.0,
+            "text": " to train. Learning rate is a tunable parameter and it is very very crucial. It is very important to tune it properly."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2119.0,
+            "end": 2131.0,
+            "text": " Let me show you a demonstration of this. This is a Google tool and in this tool you can change the learning rate and see how you are"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2131.0,
+            "end": 2141.0,
+            "text": " reaching to the star. Notice that they have reduced it to 0.01. As I will go ahead step by step, see how small the steps are."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2141.0,
+            "end": 2151.0,
+            "text": " As you are reaching near the minimum, every next step is closer. See how much time it takes to converge."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2151.0,
+            "end": 2161.0,
+            "text": " If your learning rate is very small it will take a lot of time to train your machine learning model. If you tune it a little bit,"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2161.0,
+            "end": 2171.0,
+            "text": " let's say I am taking it to 0.1 this is 0.1 Now see, I am starting and you have reached this far and now you are getting closer"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2171.0,
+            "end": 2185.0,
+            "text": " and taking gradual steps and you have reached here. If you increase it a lot, let's say you have made it 0.1 It is not happening."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2185.0,
+            "end": 2199.0,
+            "text": " Just one second. This is fine, it is 1.10 Now see what will happen. You have reached here"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2199.0,
+            "end": 2209.0,
+            "text": " on the other side. This function is left far behind and you are moving ahead. See how fast the value is increasing. This is the problem."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2209.0,
+            "end": 2219.0,
+            "text": " That is why this learning rate is very very important. This is very very important. I hope you understood this concept."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2219.0,
+            "end": 2229.0,
+            "text": " The last thing I want to discuss with you is that how many times do we run our backpropagation algorithm. I showed you the backpropagation"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2229.0,
+            "end": 2239.0,
+            "text": " algorithm a while ago. If you remember, I set an epoch value here and the loop outside is running the same number of times."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2239.0,
+            "end": 2249.0,
+            "text": " But actually what happens is how many times you have to run the loop depends on the convergence or not. You might ask what is convergence?"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2249.0,
+            "end": 2259.0,
+            "text": " If you notice, what was our formula? W's new value is equal to W's old value minus learning rate times"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2259.0,
+            "end": 2269.0,
+            "text": " this. Convergence means as soon as you see this roughly the new value"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2269.0,
+            "end": 2279.0,
+            "text": " you are getting is very close to the old value. This basically means that this whole term is getting closer to 0. Means"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2279.0,
+            "end": 2289.0,
+            "text": " slope is coming to 0. And this slope is coming to 0 means you are reaching your minima. Theoretically speaking, if someone asks you"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2289.0,
+            "end": 2299.0,
+            "text": " how long will you keep updating? The answer is as soon as you start reaching minima. There will be no benefit in updating. Wn and W old"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2299.0,
+            "end": 2309.0,
+            "text": " will be the same. But what people do is rather than writing this while convergence condition, they just run a for loop"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2309.0,
+            "end": 2319.0,
+            "text": " for let's say 100 times or 1000 times. In this, convergence happens. But actually this is the right condition. Convergence. But we"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2319.0,
+            "end": 2329.0,
+            "text": " practically write it as as long as epoch will run for 100 times, convergence will happen. We have put some government style logic."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2329.0,
+            "end": 2339.0,
+            "text": " I hope you understood. We wanted to discuss this whole thing with you. I have got this tool with which you can visualize"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2339.0,
+            "end": 2349.0,
+            "text": " back propagation. This is a very good tool made by Google developers. This is a single web page where they have taken a neural network architecture and trained it"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2349.0,
+            "end": 2359.0,
+            "text": " with back propagation. This is a very good animation. They have defined everything here. This is their neural network. After that,"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2359.0,
+            "end": 2369.0,
+            "text": " they are showing everything one by one. Error function, forward propagation, then basically they are showing"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2369.0,
+            "end": 2379.0,
+            "text": " the whole maths. After that, they are showing the error, calculating derivatives, then full fledged back propagation. And"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2379.0,
+            "end": 2389.0,
+            "text": " that's it. By looking at this diagram, you will get a better idea how things can work. In fact, I would say"
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2389.0,
+            "end": 2399.0,
+            "text": " that this is a very good project. Many people ask me what project should I make. If you know a little bit of web development, you should try out this project."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2399.0,
+            "end": 2409.0,
+            "text": " You have learned back propagation. You can try to animate it. Yeah, that's it. So that was the video guys. I hope you liked it."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2409.0,
+            "end": 2419.0,
+            "text": " If you liked it, please do like the video. Also, please do subscribe the channel if you haven't done it yet. We will continue deep learning in the next videos."
+        },
+        {
+            "number": "17",
+            "title": "Backpropagation Part 3 | The Why | Complete Deep Learning Playlist",
+            "start": 2419.0,
+            "end": 2421.0,
+            "text": " That's it from my side. Thanks for watching. Bye."
+        }
+    ],
+    "text": " Hi guys, my name is Nitish and you are welcome to my YouTube channel. So we are continuing our deep learning playlist in this video. We have covered two topics, as in two videos on backpropagation. The what, the how, this is the third video, the why. This is going to be the most conceptual video and whatever you have read in the last two videos and whatever doubts you have in your mind, we will clear them in this video. So trust me, if you watch these three videos, then you should not have any problem in backpropagation. So let's start the video. So guys, let's start with the first topic of this video. Here we will learn what is the intuition behind our backpropagation algorithm. Honestly speaking, in the last two videos, we kept a very how approach, as in how things are working, we focused on that. But now we will focus on why things are working. Why does the backpropagation algorithm work? Why does it give you the right results? We will discuss this. So again for reference, I have kept our backpropagation algorithm here. I am making you revise once more. So what happens is that you basically decide an epoch number. Basically how many times you want to go on your data. Then every time in the epoch, you run the loop as many times as the number of rows in your data. So the total number of times the loop will run is epochs multiplied by rows. It is a nested loop, it will run so many times. Now every time in the inner loop, you choose a point randomly. For that, you make a prediction using forward propagation. And then the prediction that comes, which we are calling y hat. By holding its corresponding y, you calculate its loss using a loss function. Which was MSC in regression and binary cross entropy in classification. And once you get this loss, what do you do now? You update all your weights and biases using this rule. So all the magic is happening in this step. I am sorry, all the magic is happening in this step. And we have to understand this step that why are we doing minus with this thing. How by doing minus with this thing, eventually, gradually, we are getting our correct weight and bias. So our entire focus will be for the next 10-15 minutes. Why is this thing right? Why should we use this thing? Now we will take it step by step. If you want to understand intuition, then we will take it step by step. First, I will clear some of your concepts. The first concept is that the loss function is a function of all the parameters. I have to explain this to you. What I mean to say is that suppose you are working on the same dataset. CGPA, Profile Score and how much is the package. Suppose you are working on this data. Now here you have made a simple neural network in which there are 3 nodes in total. This is the neural network. Now here you will get y hat and you will put it in the loss function. Since this is a regression problem, the loss function is this. I will write it properly. Our loss function is y minus y hat whole square. Now first of all, you understand that this is a mathematical function. Like any mathematical function, this is also a mathematical function. Generally, mathematical functions are in this form. Now what does it mean to say that y is a function of x? It means that if you plot a graph, then if x changes, y changes. This is the meaning of this whole thing. So I just want to ask you, think a little and tell me whose function is L? Like here y is the function of x. Similarly, whose function is L here? You have to think about this. Pause the video and think. This is the value of L. Now if you look at this, then what is this y? This is basically the value of the target column in your data. Basically the value of LPA. So this is a constant. In this formula, this is a constant. I can write it like this. L is equal to c minus y hat square. This is a constant. I can replace it with a number. There will be no difference. So clearly there is only one thing left whose function can be this. And that is y hat. And it is true that L is a function of y hat. But what is y hat? If you ask yourself that this is a neural network. If we assume that the activation function of all nodes is linear. It is linear everywhere. So what is y hat? This is the question. Think. How will y hat come out? How will the y hat of this node come out? The y hat of this node will come out using this formula. W211 multiplied by its output O11. Plus this weight W221. Its output O12. Plus its bias B21. Okay. But it has not been solved yet. Now here these three have become weights and biases. What is O11? Think about this. What is its output? So I would write it like this. Y hat will be W211 multiplied by this weight. Multiplied by the value of CGPA which we will call Xi1. And this is the value of the profile which we will call Xi2. Okay. So I am writing this. W111 multiplied by Xi1. Plus W121 Xi2. Plus its bias B11. Okay. Plus W221. Now again I can write O12. How can we write its output? This weight, this weight. So I would write W112 Xi1. Plus W122 Xi2. Plus B12. Plus this bias. Are you getting it? So basically if you see. Now this is the equation of L. I mean this is not the equation of L. The value of Y hat in L is this. Such a complex thing. Now in this complex thing I will show you. That this Xi1 is constant because it is coming from data. This is also constant. It is coming from data. This is also constant. And this is also constant. Apart from this if you notice. So this thing. This thing. This. This. This. This. This and this. All these things are variable. If you put this Y hat in this formula. Then you will understand. That your loss function. It is basically a function of 9 things. Like here. There is a function of one thing. X. Here you have a function of 9 things. All the weights and all the biases. So what I had to explain to you was. That loss function is a function of all the trainable parameters. First of all you should have this intuition. That in these 9 weights and biases. If you change anyone or everyone. Then the loss will change. And you have to tune all of them in such a way. That your loss function becomes minimum. Imagine that your neural network. It is basically a box. It is basically a box. On which there are 9 knobs. There are 9 knobs which you can rotate. And you have to rotate them in this way. You have to increase or decrease. You have to rotate it in such a way. That the L is minimized. You should have this first intuition. I hope you understood this. So guys the next concept you have to learn. What is gradient? I hope you already know. If you don't know. Then I will quickly convey to you. What does gradient mean? In fact this word is so important. That our algorithm is also called gradient descent. Let me explain what gradient is. So it is a very simple concept. I will tell you in a single line. First of all gradient is just a fancy word. It is just a fancy word. For derivative. It is nothing else. It is just a derivative. Listen carefully. Suppose you have a function y. It is a function of x. And its equation is x square plus x. Now if I tell you. That you have to differentiate y. With respect to x. So you write this. dy by dx. Is equal to. d by dx of fx. Or fx. Or you will write it like this. d by dx of x square plus x. And you will get 2x plus 1. Okay. So here it is called derivative. So listen carefully. What is the difference between derivative and gradient? When your function. It is depending on only one parameter. Like here y is depending on x. So you call this derivative. To differentiate you say derivative. Okay. So it is denoted by d notation. But sometimes what happens. That your function. It depends on more than one parameter. Like here your function. It is depending on both x and y. So here when you are told to derive derivative. Suppose this function was x square plus y square. So here when you are told to differentiate. So you write this. Del x by del. Like the name of this function is z. Okay. Del z by del x. So what will this be? 2x. You have differentiated it in respect of x. And when you will derive this. Del z by del x. Sorry del y. So this will be 2y. Now you have differentiated the same function in respect of y. Okay. So the concept is very simple. Now the thing you have derived. It is called gradient by not saying derivative. And it is denoted by this del notation. Okay. So this is the difference. Now understand this. Our loss function. Our loss function. It is a very complex function. It is a complex mathematical function. Which is depending on 9 things. W1, W1, W1, W2. Take all the weights. And take all the biases. It is depending on these things. So here when it will be said. Take the derivative of L. So you will take partial derivatives. In respect of every weight. And in respect of every bias. That is why it is called gradient. That you are calculating gradient. For 9 parameters. So you should know one thing. What is gradient? It is occurring in so many places. You should know. I will summarize once. If your mathematical function. It depends on only one thing. It is a function of only one thing. So you take derivative by putting dy, dx. If it is a function of more than one thing. So you take gradient by putting del. The loss function we have. Our neural network. It has 9 parameters. It means L is a function of 9 different things. So when it will be said. Differentiate L. So you actually. You will differentiate L. 9 times. And it will be said. You are taking gradient. Okay. If you want its geometric intuition. So if you are in one dimension. Means there is such a function. y is equal to fx. And your function is x square. So this is your function. So what is the meaning of taking derivative here? That you are calculating slope. At any point. Okay. Whereas if you. Talk about such a function. Just one second. If you talk about such a function. Which is. In 3D. Assume that z is equal to. x square plus y square. So here z is a function of. x and y. So here you have to understand. That your. Function will be. It will be kind of 3D. I am not able to draw here. But you get the idea. This is a 3D function. Imagine in the room. And what are you doing? You are taking the slope of this 3D function. With respect to x. And with respect to y. So our loss function. It is a complex 9 dimensional. Function. And when I am taking its derivative. I am calculating 9 different slopes. With respect to. Each dimension. You will have to understand this. This is the intuition part of this. Okay. I hope you understood this concept. So guys the third concept. We will discuss. That is. Concept of a derivative. So we. Start differentiating from the 11th class. And we. Learn to find the differentiation. Of different types of mathematical functions. We learn a lot of formulas. But we miss one important thing in it. What is the intuition of the derivative? What is the meaning of differentiating? We should know this. Especially today. When we want to understand the intuition of back propagation. We should know the intuition of the derivative. Okay. So we will learn first. What is the concept of derivative? Or we will learn what is intuition? Also we will learn one more thing. What is the meaning of derivative at a point? What is the meaning of derivative at a point? Okay. Let's go. So generally. It is denoted in this way. Your derivative. Dy by dx. Okay. Where y. Is a function. Of x. And x. Itself is a quantity. So x and y are two quantities. Okay. So what is the simple meaning? You might have heard this word. Especially if you have studied physics. Then it is called rate of change. Rate of change. So this derivative is nothing but rate of change. It basically means. Suppose this is our y. And this is our x. Okay. Now listen carefully. This is y. And this is x. Since y depends on x. So when you change even a little in x. Suppose you were here. And you brought x here. So corresponding change. You will also see in y. Suppose what did you do here? You increased from 1. So here it increased by 2 times. So here you can say. dy by dx is 2. Okay. So the basic meaning is. When you change one quantity. What effect does it have on the other quantity? That is called derivative. And it is denoted in the form of dy by dx. Okay. So if dy by dx means. Means when calculating it is 2. It basically means. When you change x by 1 unit. In y. The positive change of 2 units is coming. Okay. If your dy by dx is negative. It means. When you change 1 unit positive in x. In y. The negative change of minus 2 units is coming. So not only this magnitude. Magnitude is important. But this sign is also important. Both of them are telling us. That by changing in x. What is happening in y. I hope you are understanding this. Now if you understand. What is the meaning of derivative at a point. That is also a very simple concept. Suppose we had. This was x. This was y. x square plus 2x. I have to find out at x is equal to 5. What is the derivative. So what we will do. First of all we will find dy by dx. From which we will get. 2x plus 1. Now we will put the value of x here. 5. So as soon as we put the value of x here 5. It will become 11. So basically we are saying dy by dx. At x is equal to 5 is. 11. Or you can say. This graph. At x is equal to 5 is 11. Or rate of change of y. With respect to x. At x is equal to 5 is 11. I hope you are understanding this concept. I am summarizing. Derivative simply means. By changing in x. How much is changing in y. That's it. Here magnitude and sign are both important. Magnitude tells how much quantity. Is increasing or decreasing. Whether it is increasing in positive or negative. So if we were taking here. Del L by. Let's take an example. So what we were trying to find. That. W11. When you are changing one unit. So what effect is it having on L. Both magnitude wise. And sign wise. Okay. This is what we got. When we did derivative. So our equation is. W new is equal to. W old minus. Learning rate times. Del L by del W. So what we are doing here. Derivative wise. We are reducing our weight old. Okay. I hope you understood this. Before going to main topic. Let's understand one last concept. The concept of minima. Okay. Assume I have a graph. This is a 2D graph. And here is this graph. And this is y. This is x. If I ask you. Tell me where is the minima of this graph. I guess you will easily say. It is at this place. Right. Because we have eyes. We can see and tell. That this function. Minimum is occurring at this point. You are sitting with your eyes closed. And if someone asks you. Tell me. Where is the minima of the function. You will not be able to tell. Okay. Similarly when we algorithmically. Find the minima of our function. There is a simple way to find it. You find dy by dx. Okay. And. You make it equal to 0. And from there whatever value of x. Your minima lies there. We learned this concept in school. Okay. Take this example. You can already see. This is parabola equation. You can say y is equal to x square. If I want to know. Where is the minima of this equation. Or this function. I have to find dy by dx. Which is 2x. And make it equal to 0. And from there whatever value of x. My minima lies there. And see this. x is equal to 0. Now what if the function we have. Is in more than one variable. Suppose we have this function. z is equal to x square plus y square. Means this will be in 3D. You can understand. This will be in 3D. Now what I have to do. I have to find the minima of this function. Means I have to find the value of x and y. If the value of z is minimum. Then what I will do. I will find del z by del x. And I will find. del z by del y. And make them equal to 0. From here I will get the value of x. And from there I will get the value of y. So when you find this. Then this will be 2x equal to 0. This means x is equal to 0. And from this. 2y is equal to 0. Which means y is equal to 0. So x and y. When both are 0. Then z is minimum. So you have to remember this concept. Because we. The loss function with which we are working. It depends on 9 parameters. And what we have to do. If you remember. We have to minimize our loss function. Means we have to find its minima. And what is the meaning of finding minima. I have to find 9 derivatives. 9 derivatives. And then. I have to make those 9 derivatives. Equal to 0. And then I will get the value. Of every parameter. I will get the value of all the weights. And biases. For which the value of loss. Will be minimum. So basically I have to find minima. In 9 dimensional space. I hope you understood this too. Now we have. All the concepts. Which are required. To understand the intuition of back propagation. So what we will do. This update step. Just one second. We will understand this step. Where we take this update. This is our target. To understand why this formula is like this. Also. We will take some assumptions. Our first assumption is. Learning rate is 1. So our formula will be like this. Ok. Second assumption is. Our neural network. Is like this. Ok. So we have to do these steps. 9 times. 9 steps. 1 for each parameter. There are 6 weights. And 3 biases. So we are going to do this 9 times. So what I am going to do. I am taking a small assumption. And my assumption is. All the weights and biases. Their value at this point. Is a constant. But this bias. You can change this. I mean to say. Your loss function. Which till now. Was depending on 9 things. Now out of those 8 things. Has become a constant. This is our assumption. It basically means. Loss is a function of B21. That's it. I took this step on purpose. Because. The next discussion will be easy. When you will understand. The whole discussion. Assume that this is not a constant. Then you will understand everything. So watch carefully. Our loss function is. Y minus Y hat whole square. But this Y hat. In this. This is the only term which is not a constant. So Y hat basically depends on B21. And that is why L depends on B21. Okay. Now watch carefully. Here the main thing starts. So now we have to. Update B. So B21 will be. Old value of B21. Minus this. Now we have to think. We have to think. Why did we subtract this. Initially let's say. We started with a value of B21. Assume from 5. So why are we subtracting this. We have to understand this. Also why is this minus sign. So watch carefully. In L and B21. There is a square relationship. So roughly this plot will be. Something like this. Means here your B21 will be. Here your loss will be. So roughly something like this. Now see what we have to do. We have to minimize our loss. Basically we need a value of B21. For which the value of loss. Minimum. So now here the main concept. Starts. So watch carefully. I told you a little while ago. That this quantity. What is this. This is L's derivative. Or you can say gradient. With respect to B21. What does this quantity mean. That if you. Change one unit in B21. So how much will change in L. Both magnitude and sign. Now watch carefully. What I have to do. I have to reduce L. I have to reduce L. Now think about it. If my derivative. When I calculated. So it came positive. What does it mean. It means. That. If you are increasing B21. So L is also increasing. But what do we have to do. But what do we have to do. We have to reduce the loss. So what do we have to do. We have to reduce B21. If this quantity is positive. It means. Initially whatever is the value of B21. Assume you took 5. Initial value. So to reduce the loss. You have to reduce this value. You have to bring less than 5. That is why. Notice here. You are subtracting. I hope you are understanding. If it is positive. Then you are reducing it. Now take another case. Assume. Del L by del B21. Is negative. It means. When you reduce B21. When you reduce B21. When you increase B21. When you increase B21. Then the loss is reduced. And you have to reduce the loss. Then you will increase B21. Which means. Whatever is the value of B21. Whatever is the value of B21. You will increase it. That is why. You need something which is added in B21. Notice here. This minus sign. How smartly. I would like to write smart word here. Smartly it is handling both the cases. If this derivative. Is positive. Then you are subtracting. From the current value of B21. And if it is negative. Then automatically it will be plus. And you are adding something in B21. And increasing B21. But can you see. The whole game here. Is on the sign of derivative. That you have to increase. Or you have to reduce B21. From what we are getting to know. We are finding out. The negative of the gradient. This is what you have done. You have added B21. Minus what. Del L by del B21. What is this whole thing. It is negative of the gradient. If I want this thing. Then I can explain you graphically. I have explained this logically. Now I will explain you graphically. So. Assume. This is the curve of B21. And this is your loss. Now when you started. What was the value of B? The value of B was 5. And you were at this place. You have to reach here. Because. This is the value where your loss. Is minimum. And you have to find the value of B. Corresponding to this. You are starting from here. You have to reach here. Now I have eyes. I can see how this function is. And I can reach from here to here. But my back propagation algorithm. It does not have eyes. It is sitting here with the value of B. Now it has two possibilities. Either it can increase B. Can go in this direction. Or can reduce B. And can go in this direction. What will our algorithm do? It will calculate the derivative. It will calculate the derivative. Basically it will find the slope. It will find the slope at this point. This is the slope. Now see carefully. If the slope is positive. As it is here. Then you will go in its negative direction. Basically in this direction. This means you will reduce B. Then you will reach here. Suppose you would have started from here. The initial value of B would have been minus 5. When you would have calculated the derivative here. When you would have calculated the derivative at this point. Then it would have been negative. Because the slope here is negative. Now you would have gone to the negative side of this negative slope. You would have gone to the positive side. Always remember. You will find the slope on this curve. Which you will call gradient. And you will go in its negative direction. That is why it is negative. And this is the logic. This is the logic. Which we are following here. Now the thing is. If I am here. If I am at this point. Then how far should I go from here? This is my question. How far should I go? People said that you should go as far as the value of your current slope. That is why you took this magnitude and put it here. And that is why this formula became this. W new is equal to W old value minus this. So what you are saying is the more the slope in the negative direction the more I should go ahead. I hope you are understanding this. Now we will discuss what is the fund of learning rate? What is the need of learning rate? Why our equation is this? What is this learning rate adding in this logic? That we need to keep learning rate. We will discuss this. I hope you understood this part. Why is update possible in backpropagation? Update is possible because the maths behind this is like this. So let's discuss what is the effect of learning rate? I will tell you first. What is the work of learning rate? What is your basic goal? Suppose you are starting from random point and you have to reach here. So you take steps. You take steps. So what does learning rate do? It makes those steps smooth. I will explain you through an example. Suppose you started from minus 5. B equal to minus 5. So what did you do? When you took this out you came to know that it is negative slope. Minus 50. Slope is negative. You had to update. New bias will be old bias minus slope. How much is this? This is 45. B value will be 45. You will come here. At this place. Suppose this is B's 45. Now when you again took slope at this place. Let's say 50. Now your new bias will be current value minus this. Now you are here. This is B equal to minus 5. Basically what is happening is zigzag motion like this. This is not good. Sometimes you can shoot out. You can go out of this curve. You can reach here. This is not good. That is why you need smooth motion like this. What you do is multiply your slope by a factor. That factor is generally 0.1 or 0.01. This makes your steps smooth. You take small steps. Let's take same example. This is value of minus 5. Our slope is let's say minus 50. But what you are doing is learning rate. Now what will happen? New bias will be minus 5 minus learning rate times 0.01 multiplied by 50. This will be plus. This would be like 5. 5. It would be 0.5. Now what you are doing is going to minus 0.45. You took small jump. As you go ahead, these jumps will be smaller because value of slope will be reduced. Eventually you will reach the minimum. That is the benefit of learning rate. If you keep learning rate too high, let's say if you are taking 1 as default then this kind of motion will come. If I take very small learning rate then what will happen? These steps will be very small and it will take a lot of time to converge. Your algorithm will take a lot of time to train. Learning rate is a tunable parameter and it is very very crucial. It is very important to tune it properly. Let me show you a demonstration of this. This is a Google tool and in this tool you can change the learning rate and see how you are reaching to the star. Notice that they have reduced it to 0.01. As I will go ahead step by step, see how small the steps are. As you are reaching near the minimum, every next step is closer. See how much time it takes to converge. If your learning rate is very small it will take a lot of time to train your machine learning model. If you tune it a little bit, let's say I am taking it to 0.1 this is 0.1 Now see, I am starting and you have reached this far and now you are getting closer and taking gradual steps and you have reached here. If you increase it a lot, let's say you have made it 0.1 It is not happening. Just one second. This is fine, it is 1.10 Now see what will happen. You have reached here on the other side. This function is left far behind and you are moving ahead. See how fast the value is increasing. This is the problem. That is why this learning rate is very very important. This is very very important. I hope you understood this concept. The last thing I want to discuss with you is that how many times do we run our backpropagation algorithm. I showed you the backpropagation algorithm a while ago. If you remember, I set an epoch value here and the loop outside is running the same number of times. But actually what happens is how many times you have to run the loop depends on the convergence or not. You might ask what is convergence? If you notice, what was our formula? W's new value is equal to W's old value minus learning rate times this. Convergence means as soon as you see this roughly the new value you are getting is very close to the old value. This basically means that this whole term is getting closer to 0. Means slope is coming to 0. And this slope is coming to 0 means you are reaching your minima. Theoretically speaking, if someone asks you how long will you keep updating? The answer is as soon as you start reaching minima. There will be no benefit in updating. Wn and W old will be the same. But what people do is rather than writing this while convergence condition, they just run a for loop for let's say 100 times or 1000 times. In this, convergence happens. But actually this is the right condition. Convergence. But we practically write it as as long as epoch will run for 100 times, convergence will happen. We have put some government style logic. I hope you understood. We wanted to discuss this whole thing with you. I have got this tool with which you can visualize back propagation. This is a very good tool made by Google developers. This is a single web page where they have taken a neural network architecture and trained it with back propagation. This is a very good animation. They have defined everything here. This is their neural network. After that, they are showing everything one by one. Error function, forward propagation, then basically they are showing the whole maths. After that, they are showing the error, calculating derivatives, then full fledged back propagation. And that's it. By looking at this diagram, you will get a better idea how things can work. In fact, I would say that this is a very good project. Many people ask me what project should I make. If you know a little bit of web development, you should try out this project. You have learned back propagation. You can try to animate it. Yeah, that's it. So that was the video guys. I hope you liked it. If you liked it, please do like the video. Also, please do subscribe the channel if you haven't done it yet. We will continue deep learning in the next videos. That's it from my side. Thanks for watching. Bye."
+}

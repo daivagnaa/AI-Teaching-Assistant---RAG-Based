@@ -1,0 +1,1195 @@
+{
+    "chunks": [
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 0.0,
+            "end": 29.0,
+            "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So we have started our 100 days of deep learning course and I have also uploaded the first video in which we covered 2-3 things, what is deep learning, what is the difference between deep learning and machine learning and why deep learning suddenly became famous and what are the factors behind it. Today is our second video of this course and in this also we will cover some theoretical things."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 29.0,
+            "end": 49.0,
+            "text": " Doing this theory is important because I feel that when you will move ahead in the technical side, then the perspective that you are gaining will be useful for you. So in today's video also we will cover 3 topics. First topic will be types of neural networks. So there are many types of neural networks available, we will take an overview of them."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 49.0,
+            "end": 77.0,
+            "text": " Then we will discuss the history of deep learning. Again a topic which will show you a big picture of deep learning and you will have a perspective of things. And third we will cover applications of deep learning where I will tell you how deep learning has penetrated in different fields and how it is changing things. So this is the last theoretical video, after this we will start the practical things."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 77.0,
+            "end": 97.0,
+            "text": " We will start with perceptron in the next video. So it is important to watch today's video. Also I am telling you one thing from the beginning, in today's video I am reusing the content of some of my old videos. So I once started a course of deep learning around a year ago,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 97.0,
+            "end": 116.0,
+            "text": " but unfortunately I could not continue. So there I made some videos on initial topics. So today I will reuse the same content. So I am not making new content because when I saw those old videos, I felt that at this point I do not have anything new to add in those videos."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 116.0,
+            "end": 135.0,
+            "text": " Those videos were already good. So I have made this video by merging 2-3 videos and I hope it will help you. So let's start the video. So now let's discuss about types of artificial neural networks. To be honest, as a beginner if you google then you will be blown away"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 135.0,
+            "end": 152.0,
+            "text": " because there are tens of artificial neural networks. Means you can arrange layers and nodes from different types. You can create different sort of architectures. So there are many types of neural networks. But in this video, just because we are starting,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 152.0,
+            "end": 166.0,
+            "text": " we will only discuss about 5 main types. And that too will be very brief. If you want to read more then I will share links in the description of some blogs from where you will get some idea. But to be honest, if you want to read these 5 types,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 166.0,
+            "end": 178.0,
+            "text": " then there are courses in them. So let's start with the first one. The first one is what you just saw, MLP. Multi-Layer Perceptron. The simplest type of artificial neural network."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 178.0,
+            "end": 197.0,
+            "text": " In fact, till the rest came, these were synonyms. Artificial neural network and MLPs were synonyms. So MLPs is basically Multi-Layer Perceptron. Where you have multiple perceptrons organized in layers. So there is an input layer, there is an output layer,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 197.0,
+            "end": 211.0,
+            "text": " and then there are hidden layers. So where does MLP come in handy? You can apply it in any machine learning problem. Especially in supervised machine learning problem, regression or classification scenarios, MLPs perform very well."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 211.0,
+            "end": 224.0,
+            "text": " Especially if you want to capture non-linear relationship, there MLPs are great. If you add hidden layers, you will be able to capture non-linear relationship better. Why will you be able to do it? We will discuss it."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 224.0,
+            "end": 238.0,
+            "text": " The second type of artificial neural network, which is very famous these days, is CNN. Which stands for Convolutional Neural Network. So Convolutional Neural Network is a special neural network, where you have at least one layer."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 238.0,
+            "end": 253.0,
+            "text": " It is a convolutional layer. Now what is a convolutional layer? You will have to study this a little bit but I will just let you know that CNN is used a lot in image processing and video processing applications."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 253.0,
+            "end": 273.0,
+            "text": " In fact, in today's date, all the major image processing applications, self-driving cars or I don't know, in healthcare, scanning the chest image to tell if there is cancer or not. In such applications, CNN is being used a lot. So CNN is actually a great type of artificial neural network."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 273.0,
+            "end": 286.0,
+            "text": " There was this guy, Yan Li Kun. He is considered to be the father of CNN. So you can read a little bit about him. I will again share the links. The third type of neural network that we are going to discuss is RNN."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 286.0,
+            "end": 300.0,
+            "text": " So RNN stands for Recurrent Neural Network. And what is the specialty of this neural network? Whatever neural networks we have discussed so far, MLPs and CNN, these are all feed-forward neural networks."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 300.0,
+            "end": 317.0,
+            "text": " It means that the information goes from the first layer to the last layer linearly. But in RNN, what happens is that somewhere in the middle, in the hidden layer, the output of the hidden layer is feedbacked and goes to some layer at the back so that the prediction can be improved."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 317.0,
+            "end": 336.0,
+            "text": " And there is a very good variation of this, it is called LSTM, Long Short Term Memory. And both these things, RNN and LSTM, are used a lot in natural language processing based applications. So if you interact with a chatbot like Google Now or Siri or Cortana,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 336.0,
+            "end": 352.0,
+            "text": " so internally they are using RNNs. So again, it's a very famous kind of artificial neural network. The next one is known as autoencoders. So autoencoders to be honest are not as famous as CNN and RNN, but they have a very different application."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 352.0,
+            "end": 367.0,
+            "text": " So what happens here is that the job of autoencoders is that you have an input data, you want to compress it without losing the quality. If you have an image, you want to make it smaller without losing the quality."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 367.0,
+            "end": 386.0,
+            "text": " Same goes with any kind of operation. You want to compress the file or you want to compress the video. So the whole idea is that you want to compress without losing quality. So what happens here is that your input layers and output layers have equal nodes, but your hidden layers have fewer nodes so that you can do this task."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 387.0,
+            "end": 401.0,
+            "text": " So that was autoencoders. The last one is my personal favorite and I have studied a lot about it. It's known as GAN. It stands for Generative Adversarial Network. So what is GAN?"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 401.0,
+            "end": 424.0,
+            "text": " GAN is this great concept. So there is this guy called Ian Goodfellow and he is pretty young actually. He came up with this concept that we can do imagination. Artificial Neural Networks. And he created an architecture where two neural networks compete with each other."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 424.0,
+            "end": 444.0,
+            "text": " So there is one neural network which is called generator. And there is one more neural network which is called discriminator. So what we want to do with our GAN is to generate images of completely new people. People who have never existed before. So what we will do is we will generate photos of a lot of people from the generator."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 444.0,
+            "end": 458.0,
+            "text": " And the task of the generator is to discriminate whether the photo is fake or real. As soon as the generator can fool the discriminator, you will tell that particular image that it's an auto-generated image. As in imagined image. It was never there before."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 458.0,
+            "end": 472.0,
+            "text": " And guess what guys, it's such a wonderful concept. In fact, look at this photo. In this photo, if you can see, it looks like they are real human beings, but actually none of them ever existed. These are all imagined faces."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 472.0,
+            "end": 486.0,
+            "text": " And all this happened with GAN. With GAN, you can also generate music. Or you can also generate stories. So it's a beautiful concept in which you are getting your imagination done through your program. So again, it's a beautiful concept."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 486.0,
+            "end": 496.0,
+            "text": " You should see some beauties on it. I will share some links in the description. So these are the top 5 types of neural networks. There are more. But we will not discuss them at this point."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 496.0,
+            "end": 504.0,
+            "text": " So I will just summarize. So the first one that we discussed was MLP. Then we discussed CNN. Then RNN. Then auto-encoders."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 504.0,
+            "end": 516.0,
+            "text": " And finally GANs. Now we are going to discuss the history of deep learning. Now you might say that I have come to learn deep learning. Teach me deep learning. I mean, teach me concepts."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 516.0,
+            "end": 528.0,
+            "text": " Write programs. History is important. So I will give you two reasons. So the first reason is that deep learning is a new technology. New technology means its history is also of very recent times."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 528.0,
+            "end": 539.0,
+            "text": " In fact, those who are involved in that history, many people are still alive. So you can learn a lot from them. You can get a lot of perspective. That's reason one. Reason two is very interesting."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 539.0,
+            "end": 553.0,
+            "text": " But if you listen, you will understand that yes, there are a lot of twists and turns. There are ups and downs. And it looks like a Bollywood movie. So watch this video once. And I promise you that you will gain a lot of perspective about deep learning."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 553.0,
+            "end": 572.0,
+            "text": " So it all started in 1960s. At that time, the world war was over. Countries were investing a lot in research to establish their supermassive. And US was obviously the main contender for that. So at that time, there was a lot of research in computer science."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 572.0,
+            "end": 593.0,
+            "text": " Computer science and space. So there was this guy called Frank Rosenblatt. So this guy conceptualized the thing, Perceptron. And he said that I have invented something which can learn. And it is very very close to a human neuron."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 593.0,
+            "end": 613.0,
+            "text": " So its learning mechanism and the way it works, it is very very similar to an actual neuron. And this was a big thing back then. It was a big thing. Because a lot of media promoted it. And said that this is the true starting of artificial intelligence."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 613.0,
+            "end": 627.0,
+            "text": " Now from here, we will start making artificial intelligence machines. In fact, Rosenblatt was so very convinced that he has invented something very strong. That he said this. Read this thing once. So he was totally convinced, right?"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 627.0,
+            "end": 639.0,
+            "text": " This was 1960s. For a few years, there was a lot of research on it. And people did a lot of work on it. Small projects were done on it. In 1969, there was this researcher called Marvin Minsky."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 639.0,
+            "end": 651.0,
+            "text": " He said that there is some issue with Perceptron. Everything is not right. There is a big problem. And then he realized. And he published a paper and he wrote that Perceptron can do a lot of things."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 651.0,
+            "end": 663.0,
+            "text": " It can learn a lot of things. But there is a major problem. The major problem is Perceptron cannot learn an XOR function. That was his conclusion. In fact, he even said that no matter how much you train Perceptron,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 663.0,
+            "end": 677.0,
+            "text": " you will never be able to make sure that it can learn an XOR function. It can never happen. And it was actually true. Because we have also read that Perceptron works on linear models. So it is easy to converge on linear functions."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 677.0,
+            "end": 693.0,
+            "text": " But if you give it a non-linear function, then it can never converge. And XOR is a non-linear function. And that thing came and hit. The success that Perceptron got suddenly got diffused. And this is also known as the first AI went deaf."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 693.0,
+            "end": 705.0,
+            "text": " The funding went down. And there was less talk in the media. Few researchers started taking it as a project. And the whole business went deaf. So initial success went deaf."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 705.0,
+            "end": 719.0,
+            "text": " This is 1970s. Around 1978-80s, there was this guy. He was a student back then. Geoff Hilton. So this guy is actually known as the father of deep learning."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 719.0,
+            "end": 733.0,
+            "text": " And currently, he is working at Google. And he was a student back then. And by the way, his great-great grandfather was George Boole. So a great mathematician. So basically, he was in his genes."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 733.0,
+            "end": 756.0,
+            "text": " He was a cipher. So he did research on Perceptron and neural networks from 1978-1986. And in 1986, he published a paper. By the name of Learning Representations Using Backpropagating Errors. And this was a landmark paper."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 756.0,
+            "end": 772.0,
+            "text": " In this, what Geoff Hilton has said is that your single Perceptron can obviously converge to linear functions. But it cannot converge to non-linear functions. But if you use a bunch of Perceptrons together. Basically, you make a neural system, a neural network."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 772.0,
+            "end": 785.0,
+            "text": " And if you add hidden layers to it, it can actually converge to any non-linear function. In fact, given enough hidden layers, you can converge to any mathematical function. This is what we call Universal Apple Observation Theorem."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 785.0,
+            "end": 796.0,
+            "text": " And this was great. The biggest flaw of Perceptron, that you cannot work on non-linear functions, you were able to overcome that. And how were you able to do that?"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 796.0,
+            "end": 807.0,
+            "text": " By adding more Perceptrons in different layers. And how was learning happening here? There was this algorithm called Backpropagation. So whatever was your error function, you took out its differentiation and calculated these weights."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 807.0,
+            "end": 819.0,
+            "text": " We will study this in detail. We will have a complete video on Backpropagation. But the whole idea was that because of this Backpropagation algorithm, you were able to train this large neural network, which in turn can approximate any function."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 819.0,
+            "end": 830.0,
+            "text": " And that was the best part. And as soon as this happened, suddenly the popularity started to pick up again. Suddenly everyone was enthusiastic about neural networks. And people were like,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 830.0,
+            "end": 838.0,
+            "text": " okay, now we are back on track. Now let's do something big. In fact, in 1989, a student of Geoff Hinton, Yang Lee Kun,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 838.0,
+            "end": 848.0,
+            "text": " who is basically right now, the AI head of Facebook, and the father of Convolutional Neural Networks. He is known as the father of Convolutional Neural Networks. What he did in 1989,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 848.0,
+            "end": 858.0,
+            "text": " he recognized zip codes, written zip codes, by taking images. He also used neural networks and this technique known as Backpropagation."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 858.0,
+            "end": 868.0,
+            "text": " And that was in fact the first kind of landmark achievement in computer vision. So this was 1989. So until 1991,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 868.0,
+            "end": 878.0,
+            "text": " things were going up and up. But suddenly people realized that there is still a problem. And the problem was that neural networks were still not performing well"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 878.0,
+            "end": 888.0,
+            "text": " on very large scale problems. After doing some research, it was found that first of all, there was not much labeled data. Second, there was no computation power that you can calculate everything with backpropagation"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 888.0,
+            "end": 898.0,
+            "text": " and can add a lot of layers. That was the second reason. The third reason was that the weights that were initialized in the beginning of the network, there was no technique to initialize them."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 898.0,
+            "end": 908.0,
+            "text": " It was totally random. Because of that also errors were coming. And the fourth reason was that some other algorithms came, like SVM. It was a breakthrough algorithm in machine learning. Similarly, random forest came."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 908.0,
+            "end": 918.0,
+            "text": " And such algorithms came which were converging better on less data. In comparison to neural networks. So again, this was the second AI winner."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 918.0,
+            "end": 928.0,
+            "text": " Here again, there was a dip in neural networks. And for a few days, everything was cool again. Almost 15 years, till 2006. In 2006, Jeff Hilton"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 928.0,
+            "end": 938.0,
+            "text": " published a paper on this thing called unsupervised pre-training and deep belief networks."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 938.0,
+            "end": 948.0,
+            "text": " His idea was this. Now that in 2006, we have improved our computation power and we have good labeled data. He invented this technique using which you can initialize weights."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 948.0,
+            "end": 958.0,
+            "text": " So his idea was that the initially you were initializing weights randomly, instead of initialization, you can use a neural network to initialize weights."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 958.0,
+            "end": 968.0,
+            "text": " And this is known as unsupervised pre-training. I know all the terms are a bit difficult. I will put their description in the description box. You can go and see. In 2006, he proved"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 968.0,
+            "end": 978.0,
+            "text": " that using this technique, you can actually add as many layers as you want. And with this, you can make a deep neural network. And because of this paper, the entire field of neural networks,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 978.0,
+            "end": 988.0,
+            "text": " the entire field of artificial neural networks, we rebranded it to deep learning. From 2006 to 2010, a lot of papers were published."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 988.0,
+            "end": 998.0,
+            "text": " And suddenly, there was a spark in the entire journey. 2012 was the breakthrough year after which deep learning never went down again. In 2012,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 998.0,
+            "end": 1008.0,
+            "text": " Geoff Hinton participated with his team in this competition ImageNet competition. Here you classify images. There is a very big ImageNet dataset."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1008.0,
+            "end": 1018.0,
+            "text": " You have to run a classification on it. And this competition started in 2010. So 2010, 2010, 2011, there were two competitions. And at that time, the error rate was around 28%-26%."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1018.0,
+            "end": 1028.0,
+            "text": " In 2012, Geoff Hinton participated in this. And he used deep learning on top of GPUs. He used GPUs this time."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1028.0,
+            "end": 1038.0,
+            "text": " He thought that GPUs will perform better according to the hardware. And guess what? His error rate was 16%. Almost halved. And everyone was surprised."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1038.0,
+            "end": 1048.0,
+            "text": " The best researchers were not able to bring machine learning algorithms up to 25%. There, Geoff Hinton used GPUs and deep learning algorithms and almost halved it to 16%."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1048.0,
+            "end": 1058.0,
+            "text": " That was insane. The point where it all tipped off. After that, companies like Google and Facebook started paying attention to this technology. And researchers"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1058.0,
+            "end": 1068.0,
+            "text": " started coming more in this field. And papers started getting published. And the whole ecosystem started getting built. Right? Around 2015, Google started working on"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1068.0,
+            "end": 1078.0,
+            "text": " self-driving cars. And in 2016, there is this company, DeepMind. They made an artificial intelligent Go player. Go is this Chinese game"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1078.0,
+            "end": 1088.0,
+            "text": " which is a very complex game. Even more complex than chess. And the world champion of this game, Lee Sedol, this guy from Korea,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1088.0,
+            "end": 1098.0,
+            "text": " he lost to him in 5 straight games. I mean, he lost 4 times. So, that was insane. I will add the documentary link. Just go watch that. It's a beautiful documentary."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1098.0,
+            "end": 1108.0,
+            "text": " Then, a lot of things started happening. There was this guy called TN Goodfellow. He made a new thing called Generative Adversarial Networks."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1108.0,
+            "end": 1118.0,
+            "text": " With this, you can generate images, music, stories. And after that, deep learning never stopped. And now, we are in today's date where"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1118.0,
+            "end": 1128.0,
+            "text": " it's so popular that even colleges are teaching this technology. Almost in every product, this technology is embedded"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1128.0,
+            "end": 1138.0,
+            "text": " and empowering the products. So, if you think about this, it's a beautiful journey. So, if someone asks you, what could be the reason"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1138.0,
+            "end": 1148.0,
+            "text": " that now finally, our deep learning has reached its peak. So, the reason is that in the last 5-10 years, first of all,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1148.0,
+            "end": 1158.0,
+            "text": " data has increased. Data has increased a lot. And what kind of data? Labor data. The social media we use all the time or the apps we use,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1158.0,
+            "end": 1168.0,
+            "text": " we are generating a lot of labor data through those companies. Hardware's complexity has increased. Hardware is more powerful now."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1168.0,
+            "end": 1178.0,
+            "text": " Imagine, 10 years ago, smartphones used to come with less RAM. It used to have less memory and less processing speed."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1178.0,
+            "end": 1188.0,
+            "text": " Now, we have phones in our pocket which have 12 GB of RAM. 10 years ago, no one could have imagined. So, we are getting this much computational power in our pocket."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1188.0,
+            "end": 1198.0,
+            "text": " So, data plus hardware has powered deep learning. And one more reason is these algorithms, the research that has been done in this field,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1198.0,
+            "end": 1208.0,
+            "text": " there are a lot of algorithms, techniques, frameworks like TensorFlow, Keras, PyTorch, Thiano. Even beginners like us can do"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1208.0,
+            "end": 1218.0,
+            "text": " projects in deep learning. The whole community is being built. The ecosystem is being built. The ecosystem is pushing us forward. There is a great chance that"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1218.0,
+            "end": 1228.0,
+            "text": " we will be able to create actual intelligent human-like intelligent systems. We never know."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1228.0,
+            "end": 1238.0,
+            "text": " So, I guess I was able to not bore you. I hope this was interesting. So, now that we are done with history, let's move on to the last"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1238.0,
+            "end": 1248.0,
+            "text": " introductory video which is where we will discuss the application areas where we use deep learning and what is the future of deep learning."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1248.0,
+            "end": 1258.0,
+            "text": " So, now that we know the history of deep learning, let's also discuss the application areas of deep learning. And to be honest, deep learning is everywhere."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1258.0,
+            "end": 1268.0,
+            "text": " In the last 10 years, deep learning has penetrated every area and impacted that area. And there are so many"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1268.0,
+            "end": 1278.0,
+            "text": " typical use cases. Netflix's recommendation engine, chatbots, I don't know. There are so many fields. But what we will discuss here,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1278.0,
+            "end": 1288.0,
+            "text": " these are some curated applications which I find very interesting. So, let's talk about the first one. So, the first one is probably the most famous application area of deep learning."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1288.0,
+            "end": 1298.0,
+            "text": " It's self-driving car. So, what is a self-driving car? It's a car with a brain. It can drive on its own."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1298.0,
+            "end": 1308.0,
+            "text": " It doesn't need a driver. Google has a subsidiary, Waymo. Tesla Motors or Uber. Such companies are in the research of self-driving car."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1308.0,
+            "end": 1318.0,
+            "text": " So, what exactly is a self-driving car? It's a normal car, to be honest, which has some sensors. So, front camera, back camera, right, left camera. There is a sensor called LIDAR."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1318.0,
+            "end": 1328.0,
+            "text": " It stays at the top and measures the proximity to see if there are objects nearby or not. And by combining many other sensors, you take a lot of input of your surrounding. GPS is there."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1328.0,
+            "end": 1338.0,
+            "text": " So, all the input that comes from the sensors, you feed it to the computer. So, behind the car, there is a computer in which you are feeding all the input."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1338.0,
+            "end": 1348.0,
+            "text": " And there, deep learning algorithms are running which eventually control the mechanical system of your car. And because of this, the car drives on its own. In fact, once you type"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1348.0,
+            "end": 1358.0,
+            "text": " self-driving car on YouTube, you will find countless videos where people are sitting in the car and they are not driving it. The car drives on its own. And it's going smooth. That's the best part."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1358.0,
+            "end": 1368.0,
+            "text": " By looking at it, it seems that we have already entered the future. You never know. Get out of the car and book a cab on Uber. A car comes and the driver is not there."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1368.0,
+            "end": 1378.0,
+            "text": " So, I don't know. The way things are running, this could be our future. And that is totally interesting. Now, let's move on to the second application"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1378.0,
+            "end": 1388.0,
+            "text": " area which I find very interesting. So, this is Game Playing Agents. So, here what is happening is that you teach your computer program"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1388.0,
+            "end": 1398.0,
+            "text": " to play a game. Now, this idea existed a long time ago. But recently, because of deep learning and reinforcement learning, in fact, it is called deep reinforcement"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1398.0,
+            "end": 1408.0,
+            "text": " learning after merging. Because of this field, suddenly the Game Playing Agents have increased their intelligence level a lot. In fact, I don't know if you know about AlphaGo or not. So, AlphaGo"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1408.0,
+            "end": 1418.0,
+            "text": " is this algorithm built by DeepBrain. This company acquired by Google. So, they made a Game Playing Agent for the game of Go. It's an ancient Chinese game which is"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1418.0,
+            "end": 1428.0,
+            "text": " more difficult than chess. In this game, there are as many possibilities as there are no atoms in the universe. Imagine that. So, people used to show off"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1428.0,
+            "end": 1438.0,
+            "text": " that AI is not that powerful that it can defeat people in Go. But guess what? In 2016, AlphaGo the AI algorithm created by Google"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1438.0,
+            "end": 1448.0,
+            "text": " DeepMind was able to beat Lee Seulol, the world champion in the game. He played 5 games and defeated him 4 times. I will"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1448.0,
+            "end": 1458.0,
+            "text": " put his documentary link in the description. Check it out. Insane documentary, right? In fact, that guy got so frustrated that he stopped playing games in 2018 by saying that it's not"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1458.0,
+            "end": 1468.0,
+            "text": " possible to beat this AI. So, what can I do by playing games? And that is insane, guys. Never know, in the future, we are seeing robots' IPL and people are playing crazy cricket or football."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1468.0,
+            "end": 1478.0,
+            "text": " That's the next level, right? The third one is virtual assistants. So, if you have used Google Now or Siri or Cortana, they are brilliant, right?"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1478.0,
+            "end": 1488.0,
+            "text": " Sometimes, they reply in a sarcastic way. So, they are actually able to understand what you are talking to them. They can read the context. Sometimes, they talk back and forth. And that is totally"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1488.0,
+            "end": 1498.0,
+            "text": " possible because of RNX or some deep learning algorithms. So, before 2015, their performance was not that good. But as deep learning became a bit mainstream,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1498.0,
+            "end": 1508.0,
+            "text": " more applications came and more researchers started working. Their performance has increased a lot. And now, there are a lot of chatbots and almost every company"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1508.0,
+            "end": 1518.0,
+            "text": " is utilizing chatbots. And they are powering chatbots in deep learning. So, virtual assistants and chatbots is the third application which I like a lot. So, these are some mainstream applications."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1518.0,
+            "end": 1528.0,
+            "text": " Now, I will discuss some off-the-track applications which are not that famous because actually their use case is not that much but they are damn interesting. Okay, let's discuss them."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1528.0,
+            "end": 1538.0,
+            "text": " So, one of them is image colorization. So, imagine that you have a black and white photo and you want to see it in color. Deep learning can do this."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1538.0,
+            "end": 1548.0,
+            "text": " Automatically, when you put that photo in deep learning algorithm, that algorithm will calculate and predict which pixel color should be what."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1548.0,
+            "end": 1558.0,
+            "text": " And it will add that pixel color and give it to the output. And this thing is being used a lot now. In black and white movies, they are trying to add color"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1558.0,
+            "end": 1568.0,
+            "text": " using this technique. So, I don't know. If you like a movie and it is in black and white, just be ready. It can be on Amazon or Netflix and it can be re-released in color."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1568.0,
+            "end": 1578.0,
+            "text": " Similar to this, there is one more technique where researchers are trying to add audio in silent videos and movies where there is no audio."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1578.0,
+            "end": 1588.0,
+            "text": " Meaning, audio is being generated by looking at the scene. I will share a link of this video where researchers have generated audio in a mute video."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1588.0,
+            "end": 1598.0,
+            "text": " That is insane. Similar to this, there is one more thing called image caption generation. So, you are giving an image to your algorithm"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1598.0,
+            "end": 1608.0,
+            "text": " and it is generating a text. What is written in that text? Whatever is happening in that photo. I will share some pictures. You can see on the screen. Here are some pictures in which"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1608.0,
+            "end": 1618.0,
+            "text": " something is happening. My algorithm is able to tell to the point what it is seeing. And that is great. Similarly, by showing"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1618.0,
+            "end": 1630.0,
+            "text": " movie posters, you can generate a tag. A tag for the movie. There are many applications like this. It is not very applicable in many areas."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1630.0,
+            "end": 1640.0,
+            "text": " But these are very interesting use cases. And I find it very interesting. Next is text translation. So, there are some apps"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1640.0,
+            "end": 1650.0,
+            "text": " which you can point directly to a text written in a language which you are not able to understand. They are able to translate it in real time. In fact, a lot of code in Google Translator"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1650.0,
+            "end": 1660.0,
+            "text": " is written in deep learning. Deep learning algorithm is being used for this real time translation. Not only that, you are pointing out on images as well."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1660.0,
+            "end": 1670.0,
+            "text": " You are able to convert the text in real time into some language like English or Hindi or some other language. And this is really really helpful for travellers"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1670.0,
+            "end": 1680.0,
+            "text": " across the world who are not able to understand sign boards or bus numbers. It is very easy for them. You point the camera and you get the translation which is good."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1680.0,
+            "end": 1690.0,
+            "text": " The next one is very interesting. I still remember. There are some photos of my childhood which I try to see now. It is so blurry that I don't understand what is inside it."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1690.0,
+            "end": 1700.0,
+            "text": " And this new technique which I am telling you, In 2016, some researchers of Google Brain started a project called Pixel Restoration. Where they gave a photo of very less pixel"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1700.0,
+            "end": 1710.0,
+            "text": " and converted it into HD to get the output. So the value of the pixels around is automatically calculated by this algorithm. And it is converting your low quality photos"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1710.0,
+            "end": 1720.0,
+            "text": " into high quality. So if you have old photos or very old albums in your house, you take their photo and put it in this application and in turn it will return"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1720.0,
+            "end": 1730.0,
+            "text": " a brand new kind of photo which is looking good. And this again is a great application. Then there is object detection and identification."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1730.0,
+            "end": 1740.0,
+            "text": " If you have used Google Photos, then you would know that what does Google Photos do? It automatically arranges all your photos in folders. So folder of your name, folder of your parents,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1740.0,
+            "end": 1750.0,
+            "text": " folder of your pet, folder of your friends, folder of your college trip. And it is happening automatically. So the algorithm of Google Photos is able to identify that object"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1750.0,
+            "end": 1760.0,
+            "text": " and first it is able to detect that object and then it is able to identify it. And then it clusters it into one group. And what is a very solid example of this? A few days back,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1760.0,
+            "end": 1770.0,
+            "text": " I had a relative who had a baby and they used to take a lot of photos of it. So for the first 1-2 years when the baby was growing, they used to take a lot of photos of it."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1770.0,
+            "end": 1780.0,
+            "text": " One fine day, the mother got a notification from Google Photos that we have a surprise for you. So a 2-minute video was played"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1780.0,
+            "end": 1790.0,
+            "text": " where all the photos of the baby were shown chronologically by Google Photos. And a text was written below they grew up so fast with a smiley."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1790.0,
+            "end": 1800.0,
+            "text": " And all this was automatic. It was not like people do it by adding it in Google. It was that algorithm which automatically thought that let's make our user feel special. And it did it in a perfect way."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1800.0,
+            "end": 1810.0,
+            "text": " And that is insane, right? Making the user feel so personal So I will always use Google Photos, right? Then there are GANs Generative Adversarial Networks."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1810.0,
+            "end": 1820.0,
+            "text": " Using these, you can generate new things. Like you can generate an image like this. Meaning none of these human beings actually existed. This is the wonder of a neural network"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1820.0,
+            "end": 1830.0,
+            "text": " which automatically saw a lot of photos and then started generating photos of new people. I don't know if you have ever used such apps or not. If you give a photo of a couple"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1830.0,
+            "end": 1840.0,
+            "text": " that app will be able to predict how their baby will look. You must have seen a lot of such applications. So they use GAN as a Generative Adversarial Network."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1840.0,
+            "end": 1850.0,
+            "text": " The best part of GAN is that it can generate music by itself. So you never know in the future people will own production houses AI and generate AI"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1850.0,
+            "end": 1860.0,
+            "text": " composition. And people in the future won't be a fan of Badshaah or Honey Singh. They will be a fan of AI. Similarly, it can also generate handwriting."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1860.0,
+            "end": 1870.0,
+            "text": " So if you show a lot of handwriting it can generate the same handwriting. It can also generate stories. A few days ago I got a news that an AI has written a story and people"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1870.0,
+            "end": 1880.0,
+            "text": " have made a short movie on it. So guys, I can talk and talk and talk. There are so many things. Once you Google application areas of deep learning"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1880.0,
+            "end": 1890.0,
+            "text": " you will get a lot of pages and you will keep reading. Things are so interesting over there. There is a concept called deep dreaming. In deep dreaming the computer is made to dream."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1890.0,
+            "end": 1900.0,
+            "text": " I will put this concept in the description. Again, a stunning idea. Apart from this, there are a lot of normal applications which are very useful. Like in medical, there is work on drug research."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1900.0,
+            "end": 1910.0,
+            "text": " There is work on genetics. Or you know there is work on creating vaccines. In finance, there is work on fraud detection. There is work on generating customers."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1910.0,
+            "end": 1920.0,
+            "text": " In education, there is work on measuring students' performance. So there are so many things that are being used in deep learning. Every company's technical person is getting up,"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1920.0,
+            "end": 1930.0,
+            "text": " learning deep learning and using it in their company. And that is why in today's date it is getting so much famous. It has become this hottest technology which is mandatory to learn."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1930.0,
+            "end": 1940.0,
+            "text": " And that is why I am so excited to teach you this technology. So that was the video guys. I hope you understood things. I have talked about giving you"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1940.0,
+            "end": 1950.0,
+            "text": " a lot of links. So check in the description. I have provided all the links. And some links are very interesting. I would recommend you to go and see."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1950.0,
+            "end": 1960.0,
+            "text": " It will be a lot of fun. So whatever theory we had to cover, we did it in these two videos. And now I feel that we are really prepared"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1960.0,
+            "end": 1970.0,
+            "text": " to move to the practical topic. So we will start in the next video Perceptron which is the building block of MLP or ANM."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1970.0,
+            "end": 1980.0,
+            "text": " So that's it from my side. I just have a request. Please like the video as I am saying again and again. Your like makes YouTube feel"
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1980.0,
+            "end": 1990.0,
+            "text": " that this content is good and it reaches more people. And trust me it is very important for me. And this is a favor that I am asking for from your side."
+        },
+        {
+            "number": "3",
+            "title": "Types of Neural Networks | History of Deep Learning | Applications of Deep Learning",
+            "start": 1990.0,
+            "end": 1996.0,
+            "text": " I hope you will press that button. So that's it from my side. See you day after tomorrow. Bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So we have started our 100 days of deep learning course and I have also uploaded the first video in which we covered 2-3 things, what is deep learning, what is the difference between deep learning and machine learning and why deep learning suddenly became famous and what are the factors behind it. Today is our second video of this course and in this also we will cover some theoretical things. Doing this theory is important because I feel that when you will move ahead in the technical side, then the perspective that you are gaining will be useful for you. So in today's video also we will cover 3 topics. First topic will be types of neural networks. So there are many types of neural networks available, we will take an overview of them. Then we will discuss the history of deep learning. Again a topic which will show you a big picture of deep learning and you will have a perspective of things. And third we will cover applications of deep learning where I will tell you how deep learning has penetrated in different fields and how it is changing things. So this is the last theoretical video, after this we will start the practical things. We will start with perceptron in the next video. So it is important to watch today's video. Also I am telling you one thing from the beginning, in today's video I am reusing the content of some of my old videos. So I once started a course of deep learning around a year ago, but unfortunately I could not continue. So there I made some videos on initial topics. So today I will reuse the same content. So I am not making new content because when I saw those old videos, I felt that at this point I do not have anything new to add in those videos. Those videos were already good. So I have made this video by merging 2-3 videos and I hope it will help you. So let's start the video. So now let's discuss about types of artificial neural networks. To be honest, as a beginner if you google then you will be blown away because there are tens of artificial neural networks. Means you can arrange layers and nodes from different types. You can create different sort of architectures. So there are many types of neural networks. But in this video, just because we are starting, we will only discuss about 5 main types. And that too will be very brief. If you want to read more then I will share links in the description of some blogs from where you will get some idea. But to be honest, if you want to read these 5 types, then there are courses in them. So let's start with the first one. The first one is what you just saw, MLP. Multi-Layer Perceptron. The simplest type of artificial neural network. In fact, till the rest came, these were synonyms. Artificial neural network and MLPs were synonyms. So MLPs is basically Multi-Layer Perceptron. Where you have multiple perceptrons organized in layers. So there is an input layer, there is an output layer, and then there are hidden layers. So where does MLP come in handy? You can apply it in any machine learning problem. Especially in supervised machine learning problem, regression or classification scenarios, MLPs perform very well. Especially if you want to capture non-linear relationship, there MLPs are great. If you add hidden layers, you will be able to capture non-linear relationship better. Why will you be able to do it? We will discuss it. The second type of artificial neural network, which is very famous these days, is CNN. Which stands for Convolutional Neural Network. So Convolutional Neural Network is a special neural network, where you have at least one layer. It is a convolutional layer. Now what is a convolutional layer? You will have to study this a little bit but I will just let you know that CNN is used a lot in image processing and video processing applications. In fact, in today's date, all the major image processing applications, self-driving cars or I don't know, in healthcare, scanning the chest image to tell if there is cancer or not. In such applications, CNN is being used a lot. So CNN is actually a great type of artificial neural network. There was this guy, Yan Li Kun. He is considered to be the father of CNN. So you can read a little bit about him. I will again share the links. The third type of neural network that we are going to discuss is RNN. So RNN stands for Recurrent Neural Network. And what is the specialty of this neural network? Whatever neural networks we have discussed so far, MLPs and CNN, these are all feed-forward neural networks. It means that the information goes from the first layer to the last layer linearly. But in RNN, what happens is that somewhere in the middle, in the hidden layer, the output of the hidden layer is feedbacked and goes to some layer at the back so that the prediction can be improved. And there is a very good variation of this, it is called LSTM, Long Short Term Memory. And both these things, RNN and LSTM, are used a lot in natural language processing based applications. So if you interact with a chatbot like Google Now or Siri or Cortana, so internally they are using RNNs. So again, it's a very famous kind of artificial neural network. The next one is known as autoencoders. So autoencoders to be honest are not as famous as CNN and RNN, but they have a very different application. So what happens here is that the job of autoencoders is that you have an input data, you want to compress it without losing the quality. If you have an image, you want to make it smaller without losing the quality. Same goes with any kind of operation. You want to compress the file or you want to compress the video. So the whole idea is that you want to compress without losing quality. So what happens here is that your input layers and output layers have equal nodes, but your hidden layers have fewer nodes so that you can do this task. So that was autoencoders. The last one is my personal favorite and I have studied a lot about it. It's known as GAN. It stands for Generative Adversarial Network. So what is GAN? GAN is this great concept. So there is this guy called Ian Goodfellow and he is pretty young actually. He came up with this concept that we can do imagination. Artificial Neural Networks. And he created an architecture where two neural networks compete with each other. So there is one neural network which is called generator. And there is one more neural network which is called discriminator. So what we want to do with our GAN is to generate images of completely new people. People who have never existed before. So what we will do is we will generate photos of a lot of people from the generator. And the task of the generator is to discriminate whether the photo is fake or real. As soon as the generator can fool the discriminator, you will tell that particular image that it's an auto-generated image. As in imagined image. It was never there before. And guess what guys, it's such a wonderful concept. In fact, look at this photo. In this photo, if you can see, it looks like they are real human beings, but actually none of them ever existed. These are all imagined faces. And all this happened with GAN. With GAN, you can also generate music. Or you can also generate stories. So it's a beautiful concept in which you are getting your imagination done through your program. So again, it's a beautiful concept. You should see some beauties on it. I will share some links in the description. So these are the top 5 types of neural networks. There are more. But we will not discuss them at this point. So I will just summarize. So the first one that we discussed was MLP. Then we discussed CNN. Then RNN. Then auto-encoders. And finally GANs. Now we are going to discuss the history of deep learning. Now you might say that I have come to learn deep learning. Teach me deep learning. I mean, teach me concepts. Write programs. History is important. So I will give you two reasons. So the first reason is that deep learning is a new technology. New technology means its history is also of very recent times. In fact, those who are involved in that history, many people are still alive. So you can learn a lot from them. You can get a lot of perspective. That's reason one. Reason two is very interesting. But if you listen, you will understand that yes, there are a lot of twists and turns. There are ups and downs. And it looks like a Bollywood movie. So watch this video once. And I promise you that you will gain a lot of perspective about deep learning. So it all started in 1960s. At that time, the world war was over. Countries were investing a lot in research to establish their supermassive. And US was obviously the main contender for that. So at that time, there was a lot of research in computer science. Computer science and space. So there was this guy called Frank Rosenblatt. So this guy conceptualized the thing, Perceptron. And he said that I have invented something which can learn. And it is very very close to a human neuron. So its learning mechanism and the way it works, it is very very similar to an actual neuron. And this was a big thing back then. It was a big thing. Because a lot of media promoted it. And said that this is the true starting of artificial intelligence. Now from here, we will start making artificial intelligence machines. In fact, Rosenblatt was so very convinced that he has invented something very strong. That he said this. Read this thing once. So he was totally convinced, right? This was 1960s. For a few years, there was a lot of research on it. And people did a lot of work on it. Small projects were done on it. In 1969, there was this researcher called Marvin Minsky. He said that there is some issue with Perceptron. Everything is not right. There is a big problem. And then he realized. And he published a paper and he wrote that Perceptron can do a lot of things. It can learn a lot of things. But there is a major problem. The major problem is Perceptron cannot learn an XOR function. That was his conclusion. In fact, he even said that no matter how much you train Perceptron, you will never be able to make sure that it can learn an XOR function. It can never happen. And it was actually true. Because we have also read that Perceptron works on linear models. So it is easy to converge on linear functions. But if you give it a non-linear function, then it can never converge. And XOR is a non-linear function. And that thing came and hit. The success that Perceptron got suddenly got diffused. And this is also known as the first AI went deaf. The funding went down. And there was less talk in the media. Few researchers started taking it as a project. And the whole business went deaf. So initial success went deaf. This is 1970s. Around 1978-80s, there was this guy. He was a student back then. Geoff Hilton. So this guy is actually known as the father of deep learning. And currently, he is working at Google. And he was a student back then. And by the way, his great-great grandfather was George Boole. So a great mathematician. So basically, he was in his genes. He was a cipher. So he did research on Perceptron and neural networks from 1978-1986. And in 1986, he published a paper. By the name of Learning Representations Using Backpropagating Errors. And this was a landmark paper. In this, what Geoff Hilton has said is that your single Perceptron can obviously converge to linear functions. But it cannot converge to non-linear functions. But if you use a bunch of Perceptrons together. Basically, you make a neural system, a neural network. And if you add hidden layers to it, it can actually converge to any non-linear function. In fact, given enough hidden layers, you can converge to any mathematical function. This is what we call Universal Apple Observation Theorem. And this was great. The biggest flaw of Perceptron, that you cannot work on non-linear functions, you were able to overcome that. And how were you able to do that? By adding more Perceptrons in different layers. And how was learning happening here? There was this algorithm called Backpropagation. So whatever was your error function, you took out its differentiation and calculated these weights. We will study this in detail. We will have a complete video on Backpropagation. But the whole idea was that because of this Backpropagation algorithm, you were able to train this large neural network, which in turn can approximate any function. And that was the best part. And as soon as this happened, suddenly the popularity started to pick up again. Suddenly everyone was enthusiastic about neural networks. And people were like, okay, now we are back on track. Now let's do something big. In fact, in 1989, a student of Geoff Hinton, Yang Lee Kun, who is basically right now, the AI head of Facebook, and the father of Convolutional Neural Networks. He is known as the father of Convolutional Neural Networks. What he did in 1989, he recognized zip codes, written zip codes, by taking images. He also used neural networks and this technique known as Backpropagation. And that was in fact the first kind of landmark achievement in computer vision. So this was 1989. So until 1991, things were going up and up. But suddenly people realized that there is still a problem. And the problem was that neural networks were still not performing well on very large scale problems. After doing some research, it was found that first of all, there was not much labeled data. Second, there was no computation power that you can calculate everything with backpropagation and can add a lot of layers. That was the second reason. The third reason was that the weights that were initialized in the beginning of the network, there was no technique to initialize them. It was totally random. Because of that also errors were coming. And the fourth reason was that some other algorithms came, like SVM. It was a breakthrough algorithm in machine learning. Similarly, random forest came. And such algorithms came which were converging better on less data. In comparison to neural networks. So again, this was the second AI winner. Here again, there was a dip in neural networks. And for a few days, everything was cool again. Almost 15 years, till 2006. In 2006, Jeff Hilton published a paper on this thing called unsupervised pre-training and deep belief networks. His idea was this. Now that in 2006, we have improved our computation power and we have good labeled data. He invented this technique using which you can initialize weights. So his idea was that the initially you were initializing weights randomly, instead of initialization, you can use a neural network to initialize weights. And this is known as unsupervised pre-training. I know all the terms are a bit difficult. I will put their description in the description box. You can go and see. In 2006, he proved that using this technique, you can actually add as many layers as you want. And with this, you can make a deep neural network. And because of this paper, the entire field of neural networks, the entire field of artificial neural networks, we rebranded it to deep learning. From 2006 to 2010, a lot of papers were published. And suddenly, there was a spark in the entire journey. 2012 was the breakthrough year after which deep learning never went down again. In 2012, Geoff Hinton participated with his team in this competition ImageNet competition. Here you classify images. There is a very big ImageNet dataset. You have to run a classification on it. And this competition started in 2010. So 2010, 2010, 2011, there were two competitions. And at that time, the error rate was around 28%-26%. In 2012, Geoff Hinton participated in this. And he used deep learning on top of GPUs. He used GPUs this time. He thought that GPUs will perform better according to the hardware. And guess what? His error rate was 16%. Almost halved. And everyone was surprised. The best researchers were not able to bring machine learning algorithms up to 25%. There, Geoff Hinton used GPUs and deep learning algorithms and almost halved it to 16%. That was insane. The point where it all tipped off. After that, companies like Google and Facebook started paying attention to this technology. And researchers started coming more in this field. And papers started getting published. And the whole ecosystem started getting built. Right? Around 2015, Google started working on self-driving cars. And in 2016, there is this company, DeepMind. They made an artificial intelligent Go player. Go is this Chinese game which is a very complex game. Even more complex than chess. And the world champion of this game, Lee Sedol, this guy from Korea, he lost to him in 5 straight games. I mean, he lost 4 times. So, that was insane. I will add the documentary link. Just go watch that. It's a beautiful documentary. Then, a lot of things started happening. There was this guy called TN Goodfellow. He made a new thing called Generative Adversarial Networks. With this, you can generate images, music, stories. And after that, deep learning never stopped. And now, we are in today's date where it's so popular that even colleges are teaching this technology. Almost in every product, this technology is embedded and empowering the products. So, if you think about this, it's a beautiful journey. So, if someone asks you, what could be the reason that now finally, our deep learning has reached its peak. So, the reason is that in the last 5-10 years, first of all, data has increased. Data has increased a lot. And what kind of data? Labor data. The social media we use all the time or the apps we use, we are generating a lot of labor data through those companies. Hardware's complexity has increased. Hardware is more powerful now. Imagine, 10 years ago, smartphones used to come with less RAM. It used to have less memory and less processing speed. Now, we have phones in our pocket which have 12 GB of RAM. 10 years ago, no one could have imagined. So, we are getting this much computational power in our pocket. So, data plus hardware has powered deep learning. And one more reason is these algorithms, the research that has been done in this field, there are a lot of algorithms, techniques, frameworks like TensorFlow, Keras, PyTorch, Thiano. Even beginners like us can do projects in deep learning. The whole community is being built. The ecosystem is being built. The ecosystem is pushing us forward. There is a great chance that we will be able to create actual intelligent human-like intelligent systems. We never know. So, I guess I was able to not bore you. I hope this was interesting. So, now that we are done with history, let's move on to the last introductory video which is where we will discuss the application areas where we use deep learning and what is the future of deep learning. So, now that we know the history of deep learning, let's also discuss the application areas of deep learning. And to be honest, deep learning is everywhere. In the last 10 years, deep learning has penetrated every area and impacted that area. And there are so many typical use cases. Netflix's recommendation engine, chatbots, I don't know. There are so many fields. But what we will discuss here, these are some curated applications which I find very interesting. So, let's talk about the first one. So, the first one is probably the most famous application area of deep learning. It's self-driving car. So, what is a self-driving car? It's a car with a brain. It can drive on its own. It doesn't need a driver. Google has a subsidiary, Waymo. Tesla Motors or Uber. Such companies are in the research of self-driving car. So, what exactly is a self-driving car? It's a normal car, to be honest, which has some sensors. So, front camera, back camera, right, left camera. There is a sensor called LIDAR. It stays at the top and measures the proximity to see if there are objects nearby or not. And by combining many other sensors, you take a lot of input of your surrounding. GPS is there. So, all the input that comes from the sensors, you feed it to the computer. So, behind the car, there is a computer in which you are feeding all the input. And there, deep learning algorithms are running which eventually control the mechanical system of your car. And because of this, the car drives on its own. In fact, once you type self-driving car on YouTube, you will find countless videos where people are sitting in the car and they are not driving it. The car drives on its own. And it's going smooth. That's the best part. By looking at it, it seems that we have already entered the future. You never know. Get out of the car and book a cab on Uber. A car comes and the driver is not there. So, I don't know. The way things are running, this could be our future. And that is totally interesting. Now, let's move on to the second application area which I find very interesting. So, this is Game Playing Agents. So, here what is happening is that you teach your computer program to play a game. Now, this idea existed a long time ago. But recently, because of deep learning and reinforcement learning, in fact, it is called deep reinforcement learning after merging. Because of this field, suddenly the Game Playing Agents have increased their intelligence level a lot. In fact, I don't know if you know about AlphaGo or not. So, AlphaGo is this algorithm built by DeepBrain. This company acquired by Google. So, they made a Game Playing Agent for the game of Go. It's an ancient Chinese game which is more difficult than chess. In this game, there are as many possibilities as there are no atoms in the universe. Imagine that. So, people used to show off that AI is not that powerful that it can defeat people in Go. But guess what? In 2016, AlphaGo the AI algorithm created by Google DeepMind was able to beat Lee Seulol, the world champion in the game. He played 5 games and defeated him 4 times. I will put his documentary link in the description. Check it out. Insane documentary, right? In fact, that guy got so frustrated that he stopped playing games in 2018 by saying that it's not possible to beat this AI. So, what can I do by playing games? And that is insane, guys. Never know, in the future, we are seeing robots' IPL and people are playing crazy cricket or football. That's the next level, right? The third one is virtual assistants. So, if you have used Google Now or Siri or Cortana, they are brilliant, right? Sometimes, they reply in a sarcastic way. So, they are actually able to understand what you are talking to them. They can read the context. Sometimes, they talk back and forth. And that is totally possible because of RNX or some deep learning algorithms. So, before 2015, their performance was not that good. But as deep learning became a bit mainstream, more applications came and more researchers started working. Their performance has increased a lot. And now, there are a lot of chatbots and almost every company is utilizing chatbots. And they are powering chatbots in deep learning. So, virtual assistants and chatbots is the third application which I like a lot. So, these are some mainstream applications. Now, I will discuss some off-the-track applications which are not that famous because actually their use case is not that much but they are damn interesting. Okay, let's discuss them. So, one of them is image colorization. So, imagine that you have a black and white photo and you want to see it in color. Deep learning can do this. Automatically, when you put that photo in deep learning algorithm, that algorithm will calculate and predict which pixel color should be what. And it will add that pixel color and give it to the output. And this thing is being used a lot now. In black and white movies, they are trying to add color using this technique. So, I don't know. If you like a movie and it is in black and white, just be ready. It can be on Amazon or Netflix and it can be re-released in color. Similar to this, there is one more technique where researchers are trying to add audio in silent videos and movies where there is no audio. Meaning, audio is being generated by looking at the scene. I will share a link of this video where researchers have generated audio in a mute video. That is insane. Similar to this, there is one more thing called image caption generation. So, you are giving an image to your algorithm and it is generating a text. What is written in that text? Whatever is happening in that photo. I will share some pictures. You can see on the screen. Here are some pictures in which something is happening. My algorithm is able to tell to the point what it is seeing. And that is great. Similarly, by showing movie posters, you can generate a tag. A tag for the movie. There are many applications like this. It is not very applicable in many areas. But these are very interesting use cases. And I find it very interesting. Next is text translation. So, there are some apps which you can point directly to a text written in a language which you are not able to understand. They are able to translate it in real time. In fact, a lot of code in Google Translator is written in deep learning. Deep learning algorithm is being used for this real time translation. Not only that, you are pointing out on images as well. You are able to convert the text in real time into some language like English or Hindi or some other language. And this is really really helpful for travellers across the world who are not able to understand sign boards or bus numbers. It is very easy for them. You point the camera and you get the translation which is good. The next one is very interesting. I still remember. There are some photos of my childhood which I try to see now. It is so blurry that I don't understand what is inside it. And this new technique which I am telling you, In 2016, some researchers of Google Brain started a project called Pixel Restoration. Where they gave a photo of very less pixel and converted it into HD to get the output. So the value of the pixels around is automatically calculated by this algorithm. And it is converting your low quality photos into high quality. So if you have old photos or very old albums in your house, you take their photo and put it in this application and in turn it will return a brand new kind of photo which is looking good. And this again is a great application. Then there is object detection and identification. If you have used Google Photos, then you would know that what does Google Photos do? It automatically arranges all your photos in folders. So folder of your name, folder of your parents, folder of your pet, folder of your friends, folder of your college trip. And it is happening automatically. So the algorithm of Google Photos is able to identify that object and first it is able to detect that object and then it is able to identify it. And then it clusters it into one group. And what is a very solid example of this? A few days back, I had a relative who had a baby and they used to take a lot of photos of it. So for the first 1-2 years when the baby was growing, they used to take a lot of photos of it. One fine day, the mother got a notification from Google Photos that we have a surprise for you. So a 2-minute video was played where all the photos of the baby were shown chronologically by Google Photos. And a text was written below they grew up so fast with a smiley. And all this was automatic. It was not like people do it by adding it in Google. It was that algorithm which automatically thought that let's make our user feel special. And it did it in a perfect way. And that is insane, right? Making the user feel so personal So I will always use Google Photos, right? Then there are GANs Generative Adversarial Networks. Using these, you can generate new things. Like you can generate an image like this. Meaning none of these human beings actually existed. This is the wonder of a neural network which automatically saw a lot of photos and then started generating photos of new people. I don't know if you have ever used such apps or not. If you give a photo of a couple that app will be able to predict how their baby will look. You must have seen a lot of such applications. So they use GAN as a Generative Adversarial Network. The best part of GAN is that it can generate music by itself. So you never know in the future people will own production houses AI and generate AI composition. And people in the future won't be a fan of Badshaah or Honey Singh. They will be a fan of AI. Similarly, it can also generate handwriting. So if you show a lot of handwriting it can generate the same handwriting. It can also generate stories. A few days ago I got a news that an AI has written a story and people have made a short movie on it. So guys, I can talk and talk and talk. There are so many things. Once you Google application areas of deep learning you will get a lot of pages and you will keep reading. Things are so interesting over there. There is a concept called deep dreaming. In deep dreaming the computer is made to dream. I will put this concept in the description. Again, a stunning idea. Apart from this, there are a lot of normal applications which are very useful. Like in medical, there is work on drug research. There is work on genetics. Or you know there is work on creating vaccines. In finance, there is work on fraud detection. There is work on generating customers. In education, there is work on measuring students' performance. So there are so many things that are being used in deep learning. Every company's technical person is getting up, learning deep learning and using it in their company. And that is why in today's date it is getting so much famous. It has become this hottest technology which is mandatory to learn. And that is why I am so excited to teach you this technology. So that was the video guys. I hope you understood things. I have talked about giving you a lot of links. So check in the description. I have provided all the links. And some links are very interesting. I would recommend you to go and see. It will be a lot of fun. So whatever theory we had to cover, we did it in these two videos. And now I feel that we are really prepared to move to the practical topic. So we will start in the next video Perceptron which is the building block of MLP or ANM. So that's it from my side. I just have a request. Please like the video as I am saying again and again. Your like makes YouTube feel that this content is good and it reaches more people. And trust me it is very important for me. And this is a favor that I am asking for from your side. I hope you will press that button. So that's it from my side. See you day after tomorrow. Bye."
+}

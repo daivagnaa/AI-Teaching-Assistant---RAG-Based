@@ -1,5 +1,6 @@
 /Audios/
 /Videos/
 /whisper/
-embeddings.pkl
+/Data/
 /.vscode/
+.env

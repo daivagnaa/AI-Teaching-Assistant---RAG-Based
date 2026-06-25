@@ -1,0 +1,68 @@
+prompt = f"""
+You are an AI assistant helping students navigate a Deep Learning course.
+
+Below are video transcript chunks. Each chunk contains:
+- video_number
+- video_title
+- start (seconds)
+- end (seconds)
+- transcript text
+
+Video Chunks:
+{dff.to_json(orient="records")}
+
+--------------------------------------------------
+
+Student Question:
+"{question}"
+
+Your task:
+
+1. Find all transcript chunks that are relevant to the student's question.
+2. Match using semantic meaning, not just exact keyword matching.
+   - Include synonyms and related concepts whenever appropriate.
+3. Group results by video.
+4. For each relevant video, provide:
+   - Video Number
+   - Video Title
+   - Timestamp in MM:SS format
+   - A very short description (5–15 words) of what is explained there.
+5. Rank results from most relevant to least relevant.
+6. If multiple nearby chunks belong to the same explanation, merge them into one timestamp range.
+7. If only a brief mention exists, explicitly state "Brief mention".
+8. If a concept is explained in depth across multiple timestamps in the same video, mention each important section.
+
+Output format:
+
+Video <number> – <title>
+• MM:SS–MM:SS — <short description>
+
+Video <number> – <title>
+• MM:SS — Brief mention
+
+Rules:
+- Keep the response under 120 words.
+- Do not invent timestamps or explanations.
+- Only use the provided transcript chunks.
+- Convert seconds to MM:SS format.
+- If no relevant content exists, respond exactly:
+No content found
+- Do not ask follow-up questions.
+- Do not add introductory or concluding text.
+"""
+
+promptt = f"""
+Video transcript chunks:
+{dff.to_json(orient="records")}
+
+Question: "{question}"
+
+Find all chunks relevant to the question (semantic match, not just keywords).
+
+Return only:
+Video <number> - <title>
+• MM:SS-MM:SS : <5-10 word description>
+
+Group nearby chunks from the same video. Sort by relevance. Convert seconds to MM:SS. Use only the given data. If no relevant chunk exists, reply exactly:
+No content found
+"""

@@ -1,0 +1,1860 @@
+{
+    "chunks": [
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 0.0,
+            "end": 27.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, in this video also we will progress our 100 days of deep learning course. Today's video's topic is Loss Functions in Perceptron. So, if you remember our last video, there I taught you a trick called Perceptron trick, by using which you can learn the weights and biases of your Perceptron."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 27.0,
+            "end": 54.0,
+            "text": " But I also told you that it is not a perfect method, it is a tricky method. It works, but it will not always work. So, in this video, I will tell you the best way to find the weights and biases of Perceptron. We will start this video by discussing what is the problem in Perceptron trick. And then we will learn about Loss Functions."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 54.0,
+            "end": 74.0,
+            "text": " And we will learn how you can use Loss Functions to train a Perceptron. And the most interesting part of this video will be the last part, where I will tell you one more concept, that how you can apply different Loss Functions on your Perceptron and extract different types of behavior."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 75.0,
+            "end": 97.0,
+            "text": " So, on the whole, my review of this video will be that this video is very important. It will provide you a lot of foundation for the future. So, please do watch this video till the end. So, now let's start the video. So, guys, before starting this video, let's take a little recap."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 97.0,
+            "end": 123.0,
+            "text": " Because it is very important for the things to be covered in this video, that your previous videos are clear. So, when we started Perceptron, we first established that Perceptron is basically a mathematical model, which is based on a neuron, which is in our brain or in humans."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 123.0,
+            "end": 137.0,
+            "text": " So, something like this can be seen. If we take this example and move forward, So, we have CGPA and IQ in the input, two input columns and our output column is placed. Neuron looks like this."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 137.0,
+            "end": 150.0,
+            "text": " Your input moves from here. This is X1, this is X2. CGPA is our X1, IQ is X2. You will insert the information of one row at a time. 7, 78."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 150.0,
+            "end": 166.0,
+            "text": " This is for one bias term. Now, your Perceptron has weights and biases. So, since there are two input columns, there are two weights and one bias. As the input terms increase, the weights will start increasing."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 166.0,
+            "end": 181.0,
+            "text": " There is an operation here. Basically, this operation, dot product. This operation is called Z. And this Z goes to the step function. The simple logic of the step function is that"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 181.0,
+            "end": 198.0,
+            "text": " if Z is greater than or equal to 0, then the output will be 1. And if Z is less than 0, then the output will be 0. This is how our Perceptron classifies. Now, we saw one more thing that the geometric intuition of Perceptron is that"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 198.0,
+            "end": 212.0,
+            "text": " Perceptron is nothing but a line. If you are talking about 2D data, in 3D, it would be a plane. And in a higher dimension, it would be a hyperplane. So, the idea is that whenever you draw a line,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 212.0,
+            "end": 224.0,
+            "text": " two regions are created. One is the positive region and the other is the negative region. And that is why, this binary classification is useful."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 224.0,
+            "end": 234.0,
+            "text": " We had studied all this. Then we learned one more thing that like every machine learning algorithm, there are two stages. One is prediction,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 234.0,
+            "end": 249.0,
+            "text": " which I showed you here. And the second is training. Now, in training, it was told that the work of training is to calculate the value of weights and bias."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 249.0,
+            "end": 263.0,
+            "text": " This is why you do training. So, I explained one technique of training in the last video, which was Perceptron rule. Where we used a very simple algorithm."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 263.0,
+            "end": 274.0,
+            "text": " What were we doing? Randomly, we were doing this a thousand times that we were picking up random points and"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 274.0,
+            "end": 284.0,
+            "text": " we were starting from a random line. Like this is a random line. And every time, we were picking up a point randomly and asking it whether it is the right side of the line or the wrong side."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 284.0,
+            "end": 294.0,
+            "text": " If it is the wrong side, then pull the line towards you. And we were doing this a thousand times. And what was happening with this? After doing this a thousand times,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 294.0,
+            "end": 304.0,
+            "text": " eventually, this line was moving and reaching the right place. And this line reaching the right place means that I was getting an equation AX plus BY plus C equal to 0."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 304.0,
+            "end": 314.0,
+            "text": " Where A was nothing but W1, B was nothing but W2 and C was nothing but our intercept term. So, this was Perceptron rule."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 314.0,
+            "end": 324.0,
+            "text": " We covered this in the last video. So, what I have told you till now, is the summary of what we have studied in the last two videos. Now, we will move ahead from here."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 324.0,
+            "end": 334.0,
+            "text": " So, first of all, I will tell you that the Perceptron rule that we have studied, for all practical purposes, it works properly."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 334.0,
+            "end": 344.0,
+            "text": " I have shown you the code in the last video. I have plotted the output in the graph. And you must have seen that the line is able to distinguish"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 344.0,
+            "end": 354.0,
+            "text": " both the classes correctly. But, there are some problems in the Perceptron rule. So, first of all, we will discuss what those problems are."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 354.0,
+            "end": 364.0,
+            "text": " And then we will discuss their solution. In the process of which, we will study about the loss functions which is the title of this video. So guys, the biggest problem"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 364.0,
+            "end": 374.0,
+            "text": " of the Perceptron trick is that the line that you will get from the Perceptron trick or we can say"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 374.0,
+            "end": 384.0,
+            "text": " the value of W1, W2 and B about that we cannot 100% confidently say that these are the best values of"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 384.0,
+            "end": 394.0,
+            "text": " W1, W2 and B to classify between green and red points. I will explain it to you. The fundamental logic of the Perceptron trick"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 394.0,
+            "end": 404.0,
+            "text": " is that if a point is misclassified, then it will pull the line towards itself. But if it is correctly classified, then it will not"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 404.0,
+            "end": 414.0,
+            "text": " change the line. Not changing the line means there will be no changes in W1, W2 and B. I will say it again. If a point"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 414.0,
+            "end": 424.0,
+            "text": " is correctly classified by the line, then there will be no changes in the value of W1, W2 and B. The line will not move. But if a point is misclassified,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 424.0,
+            "end": 436.0,
+            "text": " then there will be changes in W1, W2 and B and the line will move. Now what is the fundamental flaw in this logic? First of all, how would you differentiate?"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 436.0,
+            "end": 446.0,
+            "text": " Let's say this is a line meaning this is W1, W2 and B value and this is another line."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 448.0,
+            "end": 458.0,
+            "text": " Since this is another line, then W1, W2 and B will be different. With the Perceptron trick, you can get any of these two lines"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 458.0,
+            "end": 468.0,
+            "text": " because you have randomly selected the points and done the whole process. Now think about how would you"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 468.0,
+            "end": 480.0,
+            "text": " know which line is better? For that matter, you can't ensure that every time you run the Perceptron trick, you will get the same line."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 480.0,
+            "end": 490.0,
+            "text": " Maybe the first time you ran it, you got this line and the second time you got this line. The first flaw is that your Perceptron trick does not tell you"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 490.0,
+            "end": 500.0,
+            "text": " how good your classification is. You can't quantify your result."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 500.0,
+            "end": 510.0,
+            "text": " It can't tell you how good it is. The second flaw is that there can be problems in convergence as well. Your Perceptron model"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 510.0,
+            "end": 522.0,
+            "text": " may not converge because you have to pick up the points randomly. Let me tell you another flaw. Let's say"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 522.0,
+            "end": 534.0,
+            "text": " you started with this line. With this line, these points are correctly classified and these points are incorrectly classified."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 534.0,
+            "end": 544.0,
+            "text": " All these are also correctly classified. Now you have to select 1000 points randomly. Think about what is happening every time. You are selecting"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 544.0,
+            "end": 554.0,
+            "text": " the same points every time which are correctly classified. Then this line will not move at all. It won't happen"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 554.0,
+            "end": 564.0,
+            "text": " because you are using a random function. It shouldn't happen but this possibility can happen. Another possibility can be that you select the same point again and again."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 564.0,
+            "end": 574.0,
+            "text": " It won't happen. Again, I am giving you some hypothetical scenarios that there can be problems in convergence as well. Perceptron trick is a great trick. Trick is the right word"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 574.0,
+            "end": 584.0,
+            "text": " to describe Perceptron trick. 99% times it will give you the result. But there are two problems. In 1% cases, there can be no convergence."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 586.0,
+            "end": 596.0,
+            "text": " 100% times, you won't be able to tell that the line you got is the best line or there can be a better line than that."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 598.0,
+            "end": 608.0,
+            "text": " In machine learning, whenever you are looking for things like W2, W1 and W2,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 608.0,
+            "end": 618.0,
+            "text": " you don't use this type of trick. You use loss functions. Because of loss functions,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 618.0,
+            "end": 628.0,
+            "text": " you are able to quantify this word is very important. You are able to quantify the result that you got."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 628.0,
+            "end": 638.0,
+            "text": " We will discuss that that if Perceptron trick is not a perfect solution, then what is a perfect solution? Let's discuss"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 638.0,
+            "end": 648.0,
+            "text": " what is loss function? Honestly, if you have done a lot of work in machine learning, then you would know what is loss function. But still, I will give you"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 648.0,
+            "end": 658.0,
+            "text": " a beginner's perspective. What is loss function? In machine learning, loss function is a way to tell"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 658.0,
+            "end": 668.0,
+            "text": " how good or bad your machine learning model is performing. Let me give you an example. Let's take our Perceptron"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 668.0,
+            "end": 678.0,
+            "text": " example where we have data of two classes. Our job is to find a line which will perfectly"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 678.0,
+            "end": 688.0,
+            "text": " classify these two classes. In this two dimensional space, there can be a lot of lines. There can be a lot of lines. Here, every line"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 688.0,
+            "end": 698.0,
+            "text": " has an equation. There can be W1, W2, and B attached to each line. We need a line which will"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 698.0,
+            "end": 708.0,
+            "text": " classify these two set of points. So, what is loss function? Loss function will give you"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 708.0,
+            "end": 718.0,
+            "text": " a number for every line. And from that number, you will know whether that line is the best or not."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 718.0,
+            "end": 728.0,
+            "text": " So, loss function is basically a function of W1, W2, and B in this case."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 728.0,
+            "end": 738.0,
+            "text": " In the case of Perceptron, the loss function will be a function of W1, W2, and B in three variables. So, if you"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 738.0,
+            "end": 748.0,
+            "text": " change in W1, W2, or B, or in all three, or in any combination of two, then the output of this function"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 748.0,
+            "end": 758.0,
+            "text": " will also change. So, this means that let's say you started from this line."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 758.0,
+            "end": 768.0,
+            "text": " And this line has W1, W2, and B. So, at this point, if you put W1, W2 in this function, then let's say output is 25."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 768.0,
+            "end": 778.0,
+            "text": " So, this 25 in a way tells that this is your error. Okay. Now, what did you do? You pushed this line a little to this side"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 778.0,
+            "end": 788.0,
+            "text": " and caught this line. So, you basically changed in W1, W2, and B. So, again, since W1, W2, and B changed, the output of this function changed and now it is 23."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 788.0,
+            "end": 798.0,
+            "text": " So, now this is again an error. This is 23. But at this point, you are getting to know that since 23 is less than 25, it means"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 798.0,
+            "end": 808.0,
+            "text": " that the error of this line is less than this line. This means that this line is better than this line. So,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 808.0,
+            "end": 818.0,
+            "text": " what you have to do is change the values of W1, W2, and B to such an extent that the output of this particular function"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 818.0,
+            "end": 830.0,
+            "text": " becomes minimum. And the same set of W1, W2, and B would be your final line. And there can be no better line"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 830.0,
+            "end": 840.0,
+            "text": " than that. That is how loss functions work. So, loss function is a method to tell how well a machine learning algorithm"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 840.0,
+            "end": 850.0,
+            "text": " is working on your problem. In fact, you might have seen a lot of loss functions. If you talk about linear regression, there was a mean squared error."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 850.0,
+            "end": 860.0,
+            "text": " yi minus yi hat whole square. Similarly, you might have read logistic regression. There you had"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 860.0,
+            "end": 870.0,
+            "text": " log loss. You might have read SVM. There was hinge loss. There are many more like this."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 870.0,
+            "end": 880.0,
+            "text": " One is 1-0 loss. There are many loss functions like this depending on the problem. The type of problem you are solving, you can use"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 880.0,
+            "end": 890.0,
+            "text": " that type of loss function. The good thing is that by thinking like this, you can make your own loss functions. It is totally possible."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 890.0,
+            "end": 900.0,
+            "text": " Now, we have understood two things. There is a problem in perceptron trick. And the way to solve it is loss functions."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 900.0,
+            "end": 910.0,
+            "text": " What we will do next is we will finalize a loss function for perceptron. We will do that next. So, guys, let's try"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 910.0,
+            "end": 920.0,
+            "text": " to find a loss function for our perceptron. So, as I said, your loss function is actually a mathematical"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 920.0,
+            "end": 930.0,
+            "text": " function of w1, w2 and b. And its work is that for every w1, w2 and b, basically for every"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 930.0,
+            "end": 940.0,
+            "text": " line, it will give you a number. And this number tells you the error of your model. So, I will give you a very simple example"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 940.0,
+            "end": 950.0,
+            "text": " of loss function. A very simple example can be number of misclassified points. This can also"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 950.0,
+            "end": 960.0,
+            "text": " be an error function. Okay. What we will do is when we draw any line, we will count"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 960.0,
+            "end": 970.0,
+            "text": " how many mistakes it has made. Let's say this is your line. So, it will have w1, w2 and b attached to it. Now, if you see,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 970.0,
+            "end": 980.0,
+            "text": " it has made 1, 2, 3, 4, 5, 6 and 7 mistakes. Okay. So, for this line, the output of our error function is 7"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 980.0,
+            "end": 990.0,
+            "text": " because number of misclassified points are 7. Now, what you did is you changed w1, w2 and b. And you came here. Let's say"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 990.0,
+            "end": 1000.0,
+            "text": " you came here. This is your new line. Now, again you will count 1, 2, 3, 4, 5. So, for this new line,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1000.0,
+            "end": 1010.0,
+            "text": " number of misclassified points are 5. So, you can conclude that this white line is better than this blue line. Okay. But this is a very"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1010.0,
+            "end": 1020.0,
+            "text": " simplistic loss function. And you can easily think of a better loss function than this. Like, let me tell you. The problem with this loss function is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1020.0,
+            "end": 1030.0,
+            "text": " that it is giving equal value to all the misclassified points. That's why we are saying 1 plus 1 plus 1 plus 1 plus 1 equal to 5. This means"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1030.0,
+            "end": 1040.0,
+            "text": " that all the mistakes it is making are equal. But this is not the case. If you think about it, the misclassified point which is further away from the line"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1040.0,
+            "end": 1050.0,
+            "text": " is a bigger mistake of this line. And the misclassified point which is closer to the line is a smaller mistake. So, we should also consider the magnitude"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1050.0,
+            "end": 1060.0,
+            "text": " of the mistake. Okay. Now, let me tell you a second loss function. A second loss function could be this. What you should do is calculate the distance of the misclassified point."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1060.0,
+            "end": 1070.0,
+            "text": " For example, you have two misclassified points. This is a red misclassified point. This is a correctly"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1070.0,
+            "end": 1080.0,
+            "text": " classified red point. This is a correctly classified green point. And this is an incorrectly classified green point. Okay. So, there are two mistakes here."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1080.0,
+            "end": 1090.0,
+            "text": " This is one mistake and this is the second mistake. So, what you should do is rather than counting the number of mistakes, you should calculate the"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1090.0,
+            "end": 1100.0,
+            "text": " distance of all the mistakes from this line. Let's call it D1. And this is D2."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1100.0,
+            "end": 1110.0,
+            "text": " Okay. Now, let's say the distance here is 10 and here it is 13. Now, your total error will be"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1110.0,
+            "end": 1120.0,
+            "text": " 10 plus 13. So, this loss function is better than this one. Why? Because the mistake that you are doing"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1120.0,
+            "end": 1130.0,
+            "text": " here, the magnitude of that is also kind of in your loss function. Okay. So, this will guide you in a better way to reach the right line."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1130.0,
+            "end": 1140.0,
+            "text": " Although, the loss function used in perceptron is based on distance. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1140.0,
+            "end": 1150.0,
+            "text": " There, another thing is used. I will tell you what is used. So, let's say we have a line. At this point,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1150.0,
+            "end": 1160.0,
+            "text": " its equation is 2x plus 3y plus 4 equal to 0. Let's assume. Okay. And here, there is a misclassified point"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1160.0,
+            "end": 1170.0,
+            "text": " and there is also a misclassified point here. For a while, let's assume that the coordinate of this misclassified point is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1170.0,
+            "end": 1180.0,
+            "text": " let's say 4, 6. And the coordinate of this misclassified point is 1, 1. Or let's assume"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1180.0,
+            "end": 1192.0,
+            "text": " that it is in negative. Assume it is here. At this place. And its coordinate is minus 2, minus 2."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1192.0,
+            "end": 1202.0,
+            "text": " These are the coordinates of both the points. So, what you do is rather than calculating this distance, what you do is you find something"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1202.0,
+            "end": 1212.0,
+            "text": " else which is actually proportional to this distance. So, what you do is you take the coordinate and put it in the equation of this line. So, you would write for this point"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1212.0,
+            "end": 1222.0,
+            "text": " 2 multiplied by 4 plus 3 multiplied by 6 plus 4. You find this quantity."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1222.0,
+            "end": 1232.0,
+            "text": " And this will be 8 plus 18, 30. Similarly, for this point also, you will find 2 multiplied by minus 2"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1232.0,
+            "end": 1242.0,
+            "text": " plus 3 multiplied by minus 2 plus 4. So, this would be minus 4, minus 6, minus 10, minus 6. Now, what you do is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1242.0,
+            "end": 1252.0,
+            "text": " since it is negative, you take its mod and make it 6. So, to find this error, you will do 30 plus 6."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1252.0,
+            "end": 1262.0,
+            "text": " So, this is used actually. This technique is used in Perceptron's loss function."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1262.0,
+            "end": 1272.0,
+            "text": " And if you want, you can validate that what we have done is proportional to the distance. That means the distance of the point will be more, the operation"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1272.0,
+            "end": 1282.0,
+            "text": " of that point will also be more. You can find this. This thing was implemented over distance calculation because it is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1282.0,
+            "end": 1292.0,
+            "text": " a little complex. And this is a very simple operation. This is basically a dot product. So, that is why you use"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1292.0,
+            "end": 1302.0,
+            "text": " this one rather than using distance. Now, what I will do is I will show you the actual loss function which Scikit-learn has implemented."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1302.0,
+            "end": 1312.0,
+            "text": " I will show you that. And then we will work on it. So, guys, now I will show you what is the actual loss function of Perceptron."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1312.0,
+            "end": 1322.0,
+            "text": " Okay. So, what is on your screen is a page of Scikit-learn documentation where we are on the page of SGD."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1322.0,
+            "end": 1332.0,
+            "text": " SGD is stochastic gradient descent which is an optimization technique which you use to find the best parameters."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1332.0,
+            "end": 1342.0,
+            "text": " We will discuss about it. Here you have a general error function of SGD"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1342.0,
+            "end": 1352.0,
+            "text": " which has two components. One is L function and one is regularization parameter. It is clearly written here that when SGD works"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1352.0,
+            "end": 1362.0,
+            "text": " on Perceptron then its loss function becomes this. Okay. It is very close to"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1362.0,
+            "end": 1372.0,
+            "text": " hinge loss function. If you see this. There is only one difference that here it is 1- and here it is not 1-. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1372.0,
+            "end": 1382.0,
+            "text": " So, I can clearly see that the Perceptron implemented by Skit-learn has this loss function. So, I will do one thing."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1382.0,
+            "end": 1392.0,
+            "text": " I will write it clearly. So, according to that documentation your loss function is the loss function of W1, W2 and B."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1392.0,
+            "end": 1402.0,
+            "text": " And its complete formula is this. L yi"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1402.0,
+            "end": 1412.0,
+            "text": " comma f xi plus alpha r W1"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1412.0,
+            "end": 1422.0,
+            "text": " W2 Okay. We can ignore this term at this point because it is for regularization."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1422.0,
+            "end": 1432.0,
+            "text": " We are assuming that we are not using regularization. Okay. So, our loss function is only this much. Now, let's simplify it a bit."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1432.0,
+            "end": 1444.0,
+            "text": " In this loss function, this thing this thing is actually for Perceptron this which I am writing."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1444.0,
+            "end": 1454.0,
+            "text": " x of 0 comma minus yi f xi Now, I am not able to understand one thing."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1454.0,
+            "end": 1464.0,
+            "text": " What is f xi? f xi is basically W1 x1 plus W2 x2 plus B which we call dot product."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1464.0,
+            "end": 1474.0,
+            "text": " Which we are still calling z. Okay. So, f xi is the same. So, this is the loss function actually. If you want,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1474.0,
+            "end": 1484.0,
+            "text": " you can go up and replace it and write it like this. Our loss function is 1 by n i is equal to 1 to n"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1484.0,
+            "end": 1494.0,
+            "text": " max of 0 comma minus yi Instead of f xi,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1494.0,
+            "end": 1506.0,
+            "text": " I am not writing it right now. I will simply write it like this. This is our loss function guys. This is our loss function. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1506.0,
+            "end": 1516.0,
+            "text": " And obviously, if you understand 1 by n Here n is number of rows"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1516.0,
+            "end": 1526.0,
+            "text": " in data. Okay. So, basically we are taking every row and for that we are subtracting this. And then we are adding"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1526.0,
+            "end": 1536.0,
+            "text": " the number of all the points and dividing it by n. Also, one more thing to understand is that"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1536.0,
+            "end": 1546.0,
+            "text": " this loss function depends on three things. W1, W2 and B. Think about it. What is f xi? These three things."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1546.0,
+            "end": 1556.0,
+            "text": " W1 x1 plus W2 x2 plus B. So, this entire loss function will change its value only when you change it to W1, W2 or B."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1556.0,
+            "end": 1566.0,
+            "text": " Because everything else is constant. So, your yi is constant. What is yi? It is the output in your data. For example,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1566.0,
+            "end": 1576.0,
+            "text": " we had data cgpa, iq and placement. So, this placement is your yi for every row. Similarly,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1576.0,
+            "end": 1586.0,
+            "text": " when you are subtracting f xi, what is x1 and x2? x1 and x2 is the value of cgpa and iq which is constant in data. What can you change?"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1586.0,
+            "end": 1596.0,
+            "text": " You can change W1, W2 and B. And whenever you change them, there will be changes in the value of L. Now, what is our job? We have to find"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1596.0,
+            "end": 1606.0,
+            "text": " the value of W1, W2 and B for which the value of this loss function should be minimum."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1606.0,
+            "end": 1616.0,
+            "text": " If we write it in mathematical form, we have to find arg min of W1, W2, B so that"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1616.0,
+            "end": 1628.0,
+            "text": " the value of this whole expression should be minimum. We need"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1628.0,
+            "end": 1638.0,
+            "text": " to find a value of W1, W2 and B for which the value of this expression should be minimum. This is our mathematical formulation"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1638.0,
+            "end": 1648.0,
+            "text": " of this loss function. And do you know how to do this? To do this, we use gradient descent."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1650.0,
+            "end": 1660.0,
+            "text": " We use gradient descent and we will do the same next. But before that, we will try to understand that this function of"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1660.0,
+            "end": 1672.0,
+            "text": " max which is a kind of hinge loss, how does it work and what is the geometric intuition of this? What is the geometric intuition of this function? We will understand that."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1672.0,
+            "end": 1682.0,
+            "text": " So guys, now I will break down the loss function because honestly it looks a little scary. And we are not able to understand what this loss function wants to say."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1682.0,
+            "end": 1692.0,
+            "text": " So now we will understand what this loss function wants to say. So let's understand the setup first. We will assume that this is a data set which has two input"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1692.0,
+            "end": 1702.0,
+            "text": " columns and one output column. And our data is represented like this that there are n rows first."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1702.0,
+            "end": 1712.0,
+            "text": " And this is the first row, this is the second row and so on. There will be an ith row in between. And we are representing all our values like this. i, j"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1712.0,
+            "end": 1722.0,
+            "text": " where i represents its row number and j represents its column number. So x11 means first row's first column. x12 means first row's second column."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1722.0,
+            "end": 1732.0,
+            "text": " And so on. You have to understand this setup first. After that what I have done is I have written my loss function here. And I have also written here what"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1732.0,
+            "end": 1742.0,
+            "text": " fxi means. fxi means that w1 multiplied by xi1 ith row's first column's value. And xi2"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1742.0,
+            "end": 1752.0,
+            "text": " means ith column's second column's value. You have to understand this first. Now let's break down this loss function first."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1752.0,
+            "end": 1762.0,
+            "text": " The most scary thing in this loss function is this. max 0, minus yi"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1762.0,
+            "end": 1774.0,
+            "text": " fxi. For some time let's consider this whole minus yi fxi as x. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1774.0,
+            "end": 1784.0,
+            "text": " So now this is a simple function. Think about it. What is happening here is if your x value is greater than equal to 0"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1784.0,
+            "end": 1794.0,
+            "text": " then its output will be x. And if x value is less than 0 then output will be 0. That's it. This is a simple"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1794.0,
+            "end": 1804.0,
+            "text": " function. So in short this whole thing if yi fxi its value will be"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1804.0,
+            "end": 1814.0,
+            "text": " greater than equal to 0 then its output will be this number. Okay. And if this whole thing is less than 0"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1814.0,
+            "end": 1824.0,
+            "text": " then its output will be 0. That's it. This function just wants to say this much. Okay. I guess you are understanding till here. Pick up a copy pen once. You will understand. Now what I am doing is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1824.0,
+            "end": 1834.0,
+            "text": " I will break down this loss function. And I will assume that we have only two points. Not n points. We have only two points. So if you break this loss function"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1834.0,
+            "end": 1844.0,
+            "text": " then this will happen. L is equal to 1 by 2 since we have only two points. And then I will break sigma."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1844.0,
+            "end": 1854.0,
+            "text": " First of all I will write for the first point. Max of 0 comma minus y1."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1854.0,
+            "end": 1864.0,
+            "text": " 1 instead of i. fx1 Okay. Plus max of 0 comma minus"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1864.0,
+            "end": 1874.0,
+            "text": " y2 x2. This is for two points. Now you can imagine that if you have n points"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1874.0,
+            "end": 1884.0,
+            "text": " then you will add terms like this and this n will be updated. Okay. Now what will happen to fx2? If you put 2 instead of i then"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1884.0,
+            "end": 1894.0,
+            "text": " fx2 will be w1 x21 plus w2 x22 plus b."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1894.0,
+            "end": 1904.0,
+            "text": " Okay. Now you can see how easily it is being calculated. We are talking about this second row. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1904.0,
+            "end": 1914.0,
+            "text": " So guys we have understood the loss function by breaking it down. Now I will explain you the geometric intuition of this loss function. What this loss function"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1914.0,
+            "end": 1924.0,
+            "text": " like geometrically tells. So what I have done is I have taken a data set which has 4 points."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1924.0,
+            "end": 1934.0,
+            "text": " Only 4 students data. And one thing you will notice here is that the students who have not been placed, I have given them minus 1. I have not given 0. Okay. This is important."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1934.0,
+            "end": 1944.0,
+            "text": " Rest, these numbers have no meaning. I have just put it like this. Like a placeholder. And these are the 4 points. Okay. Out of these, 2 students"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1944.0,
+            "end": 1954.0,
+            "text": " have not been placed. And 2 students have been placed. And let's say currently we have this line. Okay. And it is cutting our data in this way."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1954.0,
+            "end": 1964.0,
+            "text": " And the W1, W2 and B of this line are written here. Okay. Now if you think about it, then in the context of a line, there can be only 4 types of points."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1964.0,
+            "end": 1974.0,
+            "text": " Okay. One point can be like this. Whose data is said to have a placement."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1974.0,
+            "end": 1984.0,
+            "text": " And your line is also saying that it will have a placement. Basically, that point is lying on the green side of the line. Okay."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1984.0,
+            "end": 1994.0,
+            "text": " The second type is that it is said in the data that there will be no placement. And yes, in the first one, basically the point is this. Okay. The second point is"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 1994.0,
+            "end": 2004.0,
+            "text": " in which it is written in the data that there will be no placement. My model also said placement. This is the point. Okay. The third scenario is that it is said in the data that there will be a placement. We said it will not be."
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2004.0,
+            "end": 2052.0,
+            "text": " Okay. point and lastly it will not be said in the data, we said it will be this point, these are the four types, now for these four types What is the meaning of this thing, I will show you this, I will show you this, for these four points, first of all Let's catch this point first, so for this point, the value of yi will be 1, okay, and what will be the value of fxi, the value of fxi will be w into x1, the value of the first column plus w2 into x2 plus b, now think about it, this number is actually"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2052.0,
+            "end": 2105.0,
+            "text": " what you are doing, you are putting the coordinates in the equation of the line, so I have told you earlier that since this point is on the positive side of the line, then this number will be greater than or equal to 0, okay, so this means for this point yi is 1 or you can say it is positive and fxi will also be positive, so the product of these two will also be positive, but you are multiplying it by minus 1, then what will happen to this overall, negative, as the overall becomes negative, then this max will become 0, some negative number, then its output will be 0, this means when you go to calculate this term in the loss function for this point,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2105.0,
+            "end": 2154.0,
+            "text": " it will come equal to 0, this is a very important thing, once you pause the video and understand it yourself, now we take the second example, the second example is this point, or you can say this point, now for this point yi will be minus 1, which means negative, and fxi will also be negative since it is on the negative side of the line, and when you multiply negative negative, it will become positive, but by putting minus 1 in front of positive, it will become negative again, so again max 0 comma something negative would be 0, this means if there is a point which is in the red region, but it is correctly classified, for that also your max term would be 0,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2154.0,
+            "end": 2217.0,
+            "text": " so till here we understood that if your line has classified correctly, then the contribution of that point in the loss function will be 0, now we move to such a point which is misclassified, whose output is 1, but our prediction is minus 1, which means this point, now for this point yi would be positive because it is plus 1, and since fxi is on the negative side of the line, it is negative, so the product of these two will also be negative, and when this negative sign is put in front, it will become positive, so your equation will become some positive number, and the output will be some positive number, which means if a green point is in the red region,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2217.0,
+            "end": 2255.0,
+            "text": " which means it is misclassified, then this term will be a non-zero number, which means it will contribute something in the loss function, let's take the last case, this point, for this point if you see, then yi is negative, which means it is negative in the data, but since fxi is on the positive side of the line, it will be positive, the product of both will be negative again, so when you multiply by minus 1, it will be positive again, so this same thing will hold, and your output will be positive, which means for this point also, there will be some non-zero contribution, so till now it is understood geometrically,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2255.0,
+            "end": 2301.0,
+            "text": " that if the point is correctly classified, then to calculate the loss function, that point has zero contribution, but if the point is misclassified, then what we are doing, we are taking out this term, for that thing, yi fxi, since yi is 1 or minus 1, so its magnitude is 1, so it doesn't matter, so basically the magnitude is coming from fxi, and what is fxi, when in this line equation, we are fitting the coordinates of this red point or this green point, so what I told you a while ago, that we don't use distance, we use another proportional metric,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2301.0,
+            "end": 2331.0,
+            "text": " where we take the coordinate and put it in the line equation, we are actually doing the same, think about it, what we discussed a while ago, in making the loss function, the thing that was discussed, that is implemented here, with the help of this loss function, so all this hard work that is being done, this is just being done to give the form of a good equation, so I hope you have understood, what is the geometric meaning of this loss function, the geometric meaning of this loss function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2331.0,
+            "end": 2366.0,
+            "text": " we have already discussed a while ago, now I have just explained it to you in detail, now we have understood the loss function, now I will tell you, how you will find the value of w1, w2 and b, for which this whole thing will become minimum, so guys what we have to do now, that we have to find the value of w1, w2 and b, for which the value of this whole equation becomes minimum, so I have already explained in my gradient descent video, that you use gradient descent to handle such scenarios,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2367.0,
+            "end": 2402.0,
+            "text": " so what will happen, that L is a function of 3 things, for a while if we assume that w2 and b are constants, and if we assume that it is a function of w1, then you can take any form of that function, like it is possible that this function is between L and w1, so your job is to find the value of w1, for which L is minimum, basically to find this point, to find the value of w1, so I have told you that to do this, you use an optimization algorithm like gradient descent,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2402.0,
+            "end": 2436.0,
+            "text": " so I am not going to explain gradient descent from scratch, if you are interested then watch my gradient descent video, you will understand how gradient descent works, I will just tell you in short form, that what you have to do, you have to run a loop, for i in number of epochs, you can take any value of epoch, 100, 1000, whatever works for you, now what you have to do in this loop, first of all while starting, you can take some value of w1, w2 and b randomly,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2436.0,
+            "end": 2471.0,
+            "text": " like we have assumed that the value of all three is 1, now what we will do, we will keep updating all three in this loop, so the rule of updating will be, value of w1 would be w1 minus learning rate times del L del w1, learning rate is basically something like 0.01, you can also experiment in this, so this update rule is done for w1, similarly for w2 also you have to take w2 minus learning rate times partial derivative of L with respect to w2"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2471.0,
+            "end": 2518.0,
+            "text": " and similarly b is equal to b minus learning rate times del L by del b, so here you have initial values of all three, you also have learning rate, now you just have to calculate three quantities, these three partial derivatives, basically you have to differentiate this function with respect to w1, w2 and b and you will get this whole thing, so now I will show you by differentiating this function with respect to w1, w2 and b,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2518.0,
+            "end": 2550.0,
+            "text": " and then we will implement this in running the code, so guys now we will differentiate our loss function with respect to w1, w2 and b, we will first do it with respect to w1 and after seeing that we will understand what to do with w2 and b, so here is my loss function, I have written here again where fxi is this, now this loss function is not completely differentiable, you must be understanding this,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2550.0,
+            "end": 2595.0,
+            "text": " so if you want to differentiate this, you can apply this chain rule that I have to take del L by del w1, so for that I will take del L by del fxi and then I will differentiate del fxi by del w1 and multiply both, so here I have made two different paths, in this path I have calculated del L by del fxi and here I have calculated del fxi by del w1, this is very easy, think about it, I just have to differentiate this thing with respect to w1, so this simple answer has come, whereas if you go to differentiate del L by del fxi,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2595.0,
+            "end": 2632.0,
+            "text": " then you have to conditionally differentiate, if this number is more than 0, then 0 will come, and if this number is less than 0, then your differentiation would be minus yi, so I have clubbed these two and here is my differentiation del L by del w1, if this number is greater than 0 and minus yi xi1, what is xi1? cgpa iq placed, this is xi1's value, ith column's first column's value which is cgpa,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2633.0,
+            "end": 2661.0,
+            "text": " so this is del L by del w1, so we have to write an if else condition, we have to check this condition and on the basis of that we will either give 0 or calculate this, going by the same logic, your del L by del w2 will also be same, what will come here? xi2 and similarly del L by del b will also be simple, so here will come minus yi, so this is my differentiation,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2661.0,
+            "end": 2688.0,
+            "text": " now I have to convert this into a code using gradient descent and then our work will be done, so guys now we have taken out all the partial derivatives, so now what we will do is we will code gradient descent, by the way I made a mistake, the mistake is that the gradient descent update rule is plus here, so this was a mistake, sorry about this,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2688.0,
+            "end": 2714.0,
+            "text": " so now what we have to do is we have to run this code in epochs, so I have already written the code, I will show you, so I have created a dataset using make classification, there are two columns in x and one column in y, I can quickly show it to you, so this is my data,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2714.0,
+            "end": 2738.0,
+            "text": " this is x, there are 100 points and two columns, its shape would be this and y is basically 1 0, as it is output, its shape would be 100, here I have plotted the graph, here are my two classes, I have to draw a line between them,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2738.0,
+            "end": 2755.0,
+            "text": " so this is my complete code, it is a very simple code, you see once, so I made a function in the name of perceptron in which I will get x and y in the input, first of all I initialized w1, w2 and b with 1, my learning rate is 0.1,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2755.0,
+            "end": 2781.0,
+            "text": " you can see this learning rate is 0.1, also initial value of w1, w2 and this is your 1, now I have run epochs here 1000 times, and every time in every epoch, I am going to every row, and there I am checking this condition,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2781.0,
+            "end": 2796.0,
+            "text": " I am checking this condition, this condition I am checking, just give me one second, this condition, so I am taking out fxi first,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2796.0,
+            "end": 2810.0,
+            "text": " fxi is basically z, where I am multiplying w1 with the value of the first column of the current row, I am multiplying w2 with the second column of the current row, and I am adding b value in it, this is my z,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2810.0,
+            "end": 2828.0,
+            "text": " and then I am multiplying it with yi, to find out what is the sign of this thing, so you can see if it is less than 0, if it is less than 0, then only I am applying this update rule,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2828.0,
+            "end": 2840.0,
+            "text": " and what is the update rule, that in w1, lr multiplied by yi, multiplied by xi's 0th value, and update rule of w2 is this,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2840.0,
+            "end": 2855.0,
+            "text": " update rule of b is this, as this loop is ending, I am returning w1, w2 and b, here I have called the function, I can show you the code in this point,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2855.0,
+            "end": 2866.0,
+            "text": " this is my w1, this is my w2, and this is my b, the code ahead is only to plot the graph, so you can see this code easily,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2866.0,
+            "end": 2875.0,
+            "text": " when I plot the line, so this is the line that I am getting, so this is our loss function, this is working, so guys,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2875.0,
+            "end": 2884.0,
+            "text": " now in this video, one last and most important thing, I have to discuss with you, if you remember, in the first video of perceptron,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2884.0,
+            "end": 2894.0,
+            "text": " I told you one thing, and that was, I said that, perceptron is a mathematical model, it is a mathematical model,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2894.0,
+            "end": 2905.0,
+            "text": " and this is also true, see this, this is the model of perceptron, inputs come from here, here is the summation,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2905.0,
+            "end": 2920.0,
+            "text": " z goes to this activation function, and then y is calculated from here, and then you implement a loss function for training, so we have just done all this, but the good part is,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2920.0,
+            "end": 2932.0,
+            "text": " perceptron is very flexible, because of its design, the way this model is made, it has a lot of flexibility, I will give you an example,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2932.0,
+            "end": 2943.0,
+            "text": " now we have used activation function, step function, but let's say, if someone asks me tomorrow, that rather than output 1 and minus 1,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2943.0,
+            "end": 2954.0,
+            "text": " I want output in probabilities, that what is the probability of 1, and what is the probability of minus 1, so what I can do is, I can easily replace this step function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2954.0,
+            "end": 2983.0,
+            "text": " with a sigmoid function, sigmoid function is this, where z is basically, w1 x1 plus w2 x2 plus v, this will give me a probability,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 2983.0,
+            "end": 3002.0,
+            "text": " and now what I can do is, I can use another loss function, whose name is binary cross entropy, may be you have heard the name, binary cross entropy,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3002.0,
+            "end": 3026.0,
+            "text": " and its formula is like this, the equation of this loss function is, 1 minus yi log yi hat, plus 1 minus yi log 1 minus yi hat, if you use this loss function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3026.0,
+            "end": 3041.0,
+            "text": " in conjunction with this activation function, and apply sgd this time, so you will get probabilities in outputs, and guess what, you have seen this combination earlier also,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3041.0,
+            "end": 3059.0,
+            "text": " in a machine learning algorithm, and the name of that machine learning algorithm is, logistic regression, may be you have heard many people saying, that perceptron is equal to logistic regression,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3059.0,
+            "end": 3076.0,
+            "text": " practically it is true, but technically, perceptron and logistic regression, are the same algorithm, when your activation function is sigmoid,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3076.0,
+            "end": 3090.0,
+            "text": " and your loss function is this, binary cross entropy, so you can see the flexibility, if I want, I can use perceptron with step function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3090.0,
+            "end": 3104.0,
+            "text": " like perceptron, where the output is 1 0, or I can take out the output in the term of probabilities, I just have to do two changes, I have to use my sigmoid function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3104.0,
+            "end": 3115.0,
+            "text": " as my activation function, and I will change the loss function, and use the binary cross entropy function, in fact, the flexibility does not end there,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3115.0,
+            "end": 3128.0,
+            "text": " so if tomorrow, I have to work on a multi class classification problem, where there are more than two classes, so what can I do there also, I can again change this combination,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3128.0,
+            "end": 3152.0,
+            "text": " in activation function, this time I will use softmax, and in loss function, I would use categorical cross entropy, whose formula is this,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3152.0,
+            "end": 3168.0,
+            "text": " sigma of all your classes, from 1 to m, suppose you have three classes, so this will be 3, yj log y hat j,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3168.0,
+            "end": 3187.0,
+            "text": " so basically you have this flexibility, by the way, the function of softmax is this, e to the power zi, divided by sigma j is equal to,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3187.0,
+            "end": 3197.0,
+            "text": " j is equal to, from 1 to k, all the classes you have, e to the power zj, or you can say,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3197.0,
+            "end": 3208.0,
+            "text": " the output of a particular class would be, e to the power z1, suppose you have three classes, this, so now,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3208.0,
+            "end": 3220.0,
+            "text": " this case is, softmax regression, I have also taught you this, in 100 days of machine learning, so again you can see,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3220.0,
+            "end": 3228.0,
+            "text": " what I have changed this time, I have used softmax in activation function, and in loss function, I have used categorical cross entropy, the thing doesn't end here,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3228.0,
+            "end": 3241.0,
+            "text": " if you want, you can use perceptron for regression also, again you don't have to do anything, instead of step function, you have to use activation function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3241.0,
+            "end": 3253.0,
+            "text": " linear, so what does step function do, if z is greater than or equal to 0, it will say 1, if z is less than 0,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3253.0,
+            "end": 3261.0,
+            "text": " it will say minus 1, so what does linear function do, it will take z, and z will give the output, so basically there is no activation function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3261.0,
+            "end": 3274.0,
+            "text": " so if you don't use any activation function, or you can say, that you have used linear activation function, and instead of loss function, if you use mean squared error,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3274.0,
+            "end": 3292.0,
+            "text": " yi minus yi hat whole square, so now this becomes linear regression, this becomes linear regression, so the thing to understand here is, that perceptron is a mathematical model,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3292.0,
+            "end": 3304.0,
+            "text": " which can be used in multiple ways, because it is flexible by design, its design is flexible, so what I will do, I will change my activation function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3304.0,
+            "end": 3316.0,
+            "text": " I will change my loss function, every time I have to use SGD, which is stochastic gradient descent, and I will get my parameters every time, so to summarize,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3316.0,
+            "end": 3330.0,
+            "text": " I will write here, here we will write, loss function, here we will write, activation,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3330.0,
+            "end": 3346.0,
+            "text": " and here we will write, output, so it is very simple, if your activation function is step, and you are using hinge loss,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3346.0,
+            "end": 3361.0,
+            "text": " so it would act as a perceptron, or you can say, binary classifier, whose output will be either 1 or minus 1, if you are using activation function,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3361.0,
+            "end": 3379.0,
+            "text": " sigmoid, and your loss function is log loss, which we also call binary cross entropy, so then, this will act as,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3379.0,
+            "end": 3394.0,
+            "text": " logistic regression, which will give output between 0 and 1, and it is still binary, means it can handle two classes, this is a binary classifier,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3394.0,
+            "end": 3411.0,
+            "text": " going forward, if your activation function is softmax, and your loss function is, categorical, cross,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3411.0,
+            "end": 3423.0,
+            "text": " entropy, then it will work as, softmax regression, and more than 2, as in multi class,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3423.0,
+            "end": 3434.0,
+            "text": " will help in classification, but the output will be, probabilities, just like above case, lastly,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3434.0,
+            "end": 3445.0,
+            "text": " if your activation function is linear, or you can say, no activation function is being used, and if your, loss function is,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3445.0,
+            "end": 3459.0,
+            "text": " mean squared error, then this will act as, linear regression, and your output will be a number, and that number can be anything,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3459.0,
+            "end": 3469.0,
+            "text": " so, these are the four cases in perceptron, now you, will see that, we will use these four cases,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3469.0,
+            "end": 3479.0,
+            "text": " if we are solving regression problem, then we will use this case, if we are using classification, then we will use any of these three, depending on the requirement,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3479.0,
+            "end": 3489.0,
+            "text": " but it is important to understand, that this same mathematical model, this same perceptron, is being used for different things, because its design,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3489.0,
+            "end": 3499.0,
+            "text": " is very flexible, and it is not fixated, on a particular thing, I hope you understood, this whole discussion,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3499.0,
+            "end": 3509.0,
+            "text": " so that was the video guys, I hope you understood everything, it was a little complex, I think if you, watch the video in some complex parts,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3509.0,
+            "end": 3519.0,
+            "text": " then you will understand, also I would recommend, that you download the code, and run it on your machine, now in the next videos,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3519.0,
+            "end": 3529.0,
+            "text": " we will move towards, multilayer perceptron, in the next video we will discuss, what exactly is the problem with perceptron, because of which,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3529.0,
+            "end": 3539.0,
+            "text": " multilayer perceptron is required, so that's it from my side, before leaving, this request, please if you liked the video,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3539.0,
+            "end": 3549.0,
+            "text": " do like and share it, whoever needs it, also if you haven't subscribed to my channel, please do subscribe, so that's it from my side,"
+        },
+        {
+            "number": "6",
+            "title": "Perceptron Loss Function | Hinge Loss | Binary Cross Entropy | Sigmoid Function",
+            "start": 3549.0,
+            "end": 3553.0,
+            "text": " meet you in the next video, bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, in this video also we will progress our 100 days of deep learning course. Today's video's topic is Loss Functions in Perceptron. So, if you remember our last video, there I taught you a trick called Perceptron trick, by using which you can learn the weights and biases of your Perceptron. But I also told you that it is not a perfect method, it is a tricky method. It works, but it will not always work. So, in this video, I will tell you the best way to find the weights and biases of Perceptron. We will start this video by discussing what is the problem in Perceptron trick. And then we will learn about Loss Functions. And we will learn how you can use Loss Functions to train a Perceptron. And the most interesting part of this video will be the last part, where I will tell you one more concept, that how you can apply different Loss Functions on your Perceptron and extract different types of behavior. So, on the whole, my review of this video will be that this video is very important. It will provide you a lot of foundation for the future. So, please do watch this video till the end. So, now let's start the video. So, guys, before starting this video, let's take a little recap. Because it is very important for the things to be covered in this video, that your previous videos are clear. So, when we started Perceptron, we first established that Perceptron is basically a mathematical model, which is based on a neuron, which is in our brain or in humans. So, something like this can be seen. If we take this example and move forward, So, we have CGPA and IQ in the input, two input columns and our output column is placed. Neuron looks like this. Your input moves from here. This is X1, this is X2. CGPA is our X1, IQ is X2. You will insert the information of one row at a time. 7, 78. This is for one bias term. Now, your Perceptron has weights and biases. So, since there are two input columns, there are two weights and one bias. As the input terms increase, the weights will start increasing. There is an operation here. Basically, this operation, dot product. This operation is called Z. And this Z goes to the step function. The simple logic of the step function is that if Z is greater than or equal to 0, then the output will be 1. And if Z is less than 0, then the output will be 0. This is how our Perceptron classifies. Now, we saw one more thing that the geometric intuition of Perceptron is that Perceptron is nothing but a line. If you are talking about 2D data, in 3D, it would be a plane. And in a higher dimension, it would be a hyperplane. So, the idea is that whenever you draw a line, two regions are created. One is the positive region and the other is the negative region. And that is why, this binary classification is useful. We had studied all this. Then we learned one more thing that like every machine learning algorithm, there are two stages. One is prediction, which I showed you here. And the second is training. Now, in training, it was told that the work of training is to calculate the value of weights and bias. This is why you do training. So, I explained one technique of training in the last video, which was Perceptron rule. Where we used a very simple algorithm. What were we doing? Randomly, we were doing this a thousand times that we were picking up random points and we were starting from a random line. Like this is a random line. And every time, we were picking up a point randomly and asking it whether it is the right side of the line or the wrong side. If it is the wrong side, then pull the line towards you. And we were doing this a thousand times. And what was happening with this? After doing this a thousand times, eventually, this line was moving and reaching the right place. And this line reaching the right place means that I was getting an equation AX plus BY plus C equal to 0. Where A was nothing but W1, B was nothing but W2 and C was nothing but our intercept term. So, this was Perceptron rule. We covered this in the last video. So, what I have told you till now, is the summary of what we have studied in the last two videos. Now, we will move ahead from here. So, first of all, I will tell you that the Perceptron rule that we have studied, for all practical purposes, it works properly. I have shown you the code in the last video. I have plotted the output in the graph. And you must have seen that the line is able to distinguish both the classes correctly. But, there are some problems in the Perceptron rule. So, first of all, we will discuss what those problems are. And then we will discuss their solution. In the process of which, we will study about the loss functions which is the title of this video. So guys, the biggest problem of the Perceptron trick is that the line that you will get from the Perceptron trick or we can say the value of W1, W2 and B about that we cannot 100% confidently say that these are the best values of W1, W2 and B to classify between green and red points. I will explain it to you. The fundamental logic of the Perceptron trick is that if a point is misclassified, then it will pull the line towards itself. But if it is correctly classified, then it will not change the line. Not changing the line means there will be no changes in W1, W2 and B. I will say it again. If a point is correctly classified by the line, then there will be no changes in the value of W1, W2 and B. The line will not move. But if a point is misclassified, then there will be changes in W1, W2 and B and the line will move. Now what is the fundamental flaw in this logic? First of all, how would you differentiate? Let's say this is a line meaning this is W1, W2 and B value and this is another line. Since this is another line, then W1, W2 and B will be different. With the Perceptron trick, you can get any of these two lines because you have randomly selected the points and done the whole process. Now think about how would you know which line is better? For that matter, you can't ensure that every time you run the Perceptron trick, you will get the same line. Maybe the first time you ran it, you got this line and the second time you got this line. The first flaw is that your Perceptron trick does not tell you how good your classification is. You can't quantify your result. It can't tell you how good it is. The second flaw is that there can be problems in convergence as well. Your Perceptron model may not converge because you have to pick up the points randomly. Let me tell you another flaw. Let's say you started with this line. With this line, these points are correctly classified and these points are incorrectly classified. All these are also correctly classified. Now you have to select 1000 points randomly. Think about what is happening every time. You are selecting the same points every time which are correctly classified. Then this line will not move at all. It won't happen because you are using a random function. It shouldn't happen but this possibility can happen. Another possibility can be that you select the same point again and again. It won't happen. Again, I am giving you some hypothetical scenarios that there can be problems in convergence as well. Perceptron trick is a great trick. Trick is the right word to describe Perceptron trick. 99% times it will give you the result. But there are two problems. In 1% cases, there can be no convergence. 100% times, you won't be able to tell that the line you got is the best line or there can be a better line than that. In machine learning, whenever you are looking for things like W2, W1 and W2, you don't use this type of trick. You use loss functions. Because of loss functions, you are able to quantify this word is very important. You are able to quantify the result that you got. We will discuss that that if Perceptron trick is not a perfect solution, then what is a perfect solution? Let's discuss what is loss function? Honestly, if you have done a lot of work in machine learning, then you would know what is loss function. But still, I will give you a beginner's perspective. What is loss function? In machine learning, loss function is a way to tell how good or bad your machine learning model is performing. Let me give you an example. Let's take our Perceptron example where we have data of two classes. Our job is to find a line which will perfectly classify these two classes. In this two dimensional space, there can be a lot of lines. There can be a lot of lines. Here, every line has an equation. There can be W1, W2, and B attached to each line. We need a line which will classify these two set of points. So, what is loss function? Loss function will give you a number for every line. And from that number, you will know whether that line is the best or not. So, loss function is basically a function of W1, W2, and B in this case. In the case of Perceptron, the loss function will be a function of W1, W2, and B in three variables. So, if you change in W1, W2, or B, or in all three, or in any combination of two, then the output of this function will also change. So, this means that let's say you started from this line. And this line has W1, W2, and B. So, at this point, if you put W1, W2 in this function, then let's say output is 25. So, this 25 in a way tells that this is your error. Okay. Now, what did you do? You pushed this line a little to this side and caught this line. So, you basically changed in W1, W2, and B. So, again, since W1, W2, and B changed, the output of this function changed and now it is 23. So, now this is again an error. This is 23. But at this point, you are getting to know that since 23 is less than 25, it means that the error of this line is less than this line. This means that this line is better than this line. So, what you have to do is change the values of W1, W2, and B to such an extent that the output of this particular function becomes minimum. And the same set of W1, W2, and B would be your final line. And there can be no better line than that. That is how loss functions work. So, loss function is a method to tell how well a machine learning algorithm is working on your problem. In fact, you might have seen a lot of loss functions. If you talk about linear regression, there was a mean squared error. yi minus yi hat whole square. Similarly, you might have read logistic regression. There you had log loss. You might have read SVM. There was hinge loss. There are many more like this. One is 1-0 loss. There are many loss functions like this depending on the problem. The type of problem you are solving, you can use that type of loss function. The good thing is that by thinking like this, you can make your own loss functions. It is totally possible. Now, we have understood two things. There is a problem in perceptron trick. And the way to solve it is loss functions. What we will do next is we will finalize a loss function for perceptron. We will do that next. So, guys, let's try to find a loss function for our perceptron. So, as I said, your loss function is actually a mathematical function of w1, w2 and b. And its work is that for every w1, w2 and b, basically for every line, it will give you a number. And this number tells you the error of your model. So, I will give you a very simple example of loss function. A very simple example can be number of misclassified points. This can also be an error function. Okay. What we will do is when we draw any line, we will count how many mistakes it has made. Let's say this is your line. So, it will have w1, w2 and b attached to it. Now, if you see, it has made 1, 2, 3, 4, 5, 6 and 7 mistakes. Okay. So, for this line, the output of our error function is 7 because number of misclassified points are 7. Now, what you did is you changed w1, w2 and b. And you came here. Let's say you came here. This is your new line. Now, again you will count 1, 2, 3, 4, 5. So, for this new line, number of misclassified points are 5. So, you can conclude that this white line is better than this blue line. Okay. But this is a very simplistic loss function. And you can easily think of a better loss function than this. Like, let me tell you. The problem with this loss function is that it is giving equal value to all the misclassified points. That's why we are saying 1 plus 1 plus 1 plus 1 plus 1 equal to 5. This means that all the mistakes it is making are equal. But this is not the case. If you think about it, the misclassified point which is further away from the line is a bigger mistake of this line. And the misclassified point which is closer to the line is a smaller mistake. So, we should also consider the magnitude of the mistake. Okay. Now, let me tell you a second loss function. A second loss function could be this. What you should do is calculate the distance of the misclassified point. For example, you have two misclassified points. This is a red misclassified point. This is a correctly classified red point. This is a correctly classified green point. And this is an incorrectly classified green point. Okay. So, there are two mistakes here. This is one mistake and this is the second mistake. So, what you should do is rather than counting the number of mistakes, you should calculate the distance of all the mistakes from this line. Let's call it D1. And this is D2. Okay. Now, let's say the distance here is 10 and here it is 13. Now, your total error will be 10 plus 13. So, this loss function is better than this one. Why? Because the mistake that you are doing here, the magnitude of that is also kind of in your loss function. Okay. So, this will guide you in a better way to reach the right line. Although, the loss function used in perceptron is based on distance. Okay. There, another thing is used. I will tell you what is used. So, let's say we have a line. At this point, its equation is 2x plus 3y plus 4 equal to 0. Let's assume. Okay. And here, there is a misclassified point and there is also a misclassified point here. For a while, let's assume that the coordinate of this misclassified point is let's say 4, 6. And the coordinate of this misclassified point is 1, 1. Or let's assume that it is in negative. Assume it is here. At this place. And its coordinate is minus 2, minus 2. These are the coordinates of both the points. So, what you do is rather than calculating this distance, what you do is you find something else which is actually proportional to this distance. So, what you do is you take the coordinate and put it in the equation of this line. So, you would write for this point 2 multiplied by 4 plus 3 multiplied by 6 plus 4. You find this quantity. And this will be 8 plus 18, 30. Similarly, for this point also, you will find 2 multiplied by minus 2 plus 3 multiplied by minus 2 plus 4. So, this would be minus 4, minus 6, minus 10, minus 6. Now, what you do is since it is negative, you take its mod and make it 6. So, to find this error, you will do 30 plus 6. So, this is used actually. This technique is used in Perceptron's loss function. And if you want, you can validate that what we have done is proportional to the distance. That means the distance of the point will be more, the operation of that point will also be more. You can find this. This thing was implemented over distance calculation because it is a little complex. And this is a very simple operation. This is basically a dot product. So, that is why you use this one rather than using distance. Now, what I will do is I will show you the actual loss function which Scikit-learn has implemented. I will show you that. And then we will work on it. So, guys, now I will show you what is the actual loss function of Perceptron. Okay. So, what is on your screen is a page of Scikit-learn documentation where we are on the page of SGD. SGD is stochastic gradient descent which is an optimization technique which you use to find the best parameters. We will discuss about it. Here you have a general error function of SGD which has two components. One is L function and one is regularization parameter. It is clearly written here that when SGD works on Perceptron then its loss function becomes this. Okay. It is very close to hinge loss function. If you see this. There is only one difference that here it is 1- and here it is not 1-. Okay. So, I can clearly see that the Perceptron implemented by Skit-learn has this loss function. So, I will do one thing. I will write it clearly. So, according to that documentation your loss function is the loss function of W1, W2 and B. And its complete formula is this. L yi comma f xi plus alpha r W1 W2 Okay. We can ignore this term at this point because it is for regularization. We are assuming that we are not using regularization. Okay. So, our loss function is only this much. Now, let's simplify it a bit. In this loss function, this thing this thing is actually for Perceptron this which I am writing. x of 0 comma minus yi f xi Now, I am not able to understand one thing. What is f xi? f xi is basically W1 x1 plus W2 x2 plus B which we call dot product. Which we are still calling z. Okay. So, f xi is the same. So, this is the loss function actually. If you want, you can go up and replace it and write it like this. Our loss function is 1 by n i is equal to 1 to n max of 0 comma minus yi Instead of f xi, I am not writing it right now. I will simply write it like this. This is our loss function guys. This is our loss function. Okay. And obviously, if you understand 1 by n Here n is number of rows in data. Okay. So, basically we are taking every row and for that we are subtracting this. And then we are adding the number of all the points and dividing it by n. Also, one more thing to understand is that this loss function depends on three things. W1, W2 and B. Think about it. What is f xi? These three things. W1 x1 plus W2 x2 plus B. So, this entire loss function will change its value only when you change it to W1, W2 or B. Because everything else is constant. So, your yi is constant. What is yi? It is the output in your data. For example, we had data cgpa, iq and placement. So, this placement is your yi for every row. Similarly, when you are subtracting f xi, what is x1 and x2? x1 and x2 is the value of cgpa and iq which is constant in data. What can you change? You can change W1, W2 and B. And whenever you change them, there will be changes in the value of L. Now, what is our job? We have to find the value of W1, W2 and B for which the value of this loss function should be minimum. If we write it in mathematical form, we have to find arg min of W1, W2, B so that the value of this whole expression should be minimum. We need to find a value of W1, W2 and B for which the value of this expression should be minimum. This is our mathematical formulation of this loss function. And do you know how to do this? To do this, we use gradient descent. We use gradient descent and we will do the same next. But before that, we will try to understand that this function of max which is a kind of hinge loss, how does it work and what is the geometric intuition of this? What is the geometric intuition of this function? We will understand that. So guys, now I will break down the loss function because honestly it looks a little scary. And we are not able to understand what this loss function wants to say. So now we will understand what this loss function wants to say. So let's understand the setup first. We will assume that this is a data set which has two input columns and one output column. And our data is represented like this that there are n rows first. And this is the first row, this is the second row and so on. There will be an ith row in between. And we are representing all our values like this. i, j where i represents its row number and j represents its column number. So x11 means first row's first column. x12 means first row's second column. And so on. You have to understand this setup first. After that what I have done is I have written my loss function here. And I have also written here what fxi means. fxi means that w1 multiplied by xi1 ith row's first column's value. And xi2 means ith column's second column's value. You have to understand this first. Now let's break down this loss function first. The most scary thing in this loss function is this. max 0, minus yi fxi. For some time let's consider this whole minus yi fxi as x. Okay. So now this is a simple function. Think about it. What is happening here is if your x value is greater than equal to 0 then its output will be x. And if x value is less than 0 then output will be 0. That's it. This is a simple function. So in short this whole thing if yi fxi its value will be greater than equal to 0 then its output will be this number. Okay. And if this whole thing is less than 0 then its output will be 0. That's it. This function just wants to say this much. Okay. I guess you are understanding till here. Pick up a copy pen once. You will understand. Now what I am doing is I will break down this loss function. And I will assume that we have only two points. Not n points. We have only two points. So if you break this loss function then this will happen. L is equal to 1 by 2 since we have only two points. And then I will break sigma. First of all I will write for the first point. Max of 0 comma minus y1. 1 instead of i. fx1 Okay. Plus max of 0 comma minus y2 x2. This is for two points. Now you can imagine that if you have n points then you will add terms like this and this n will be updated. Okay. Now what will happen to fx2? If you put 2 instead of i then fx2 will be w1 x21 plus w2 x22 plus b. Okay. Now you can see how easily it is being calculated. We are talking about this second row. Okay. So guys we have understood the loss function by breaking it down. Now I will explain you the geometric intuition of this loss function. What this loss function like geometrically tells. So what I have done is I have taken a data set which has 4 points. Only 4 students data. And one thing you will notice here is that the students who have not been placed, I have given them minus 1. I have not given 0. Okay. This is important. Rest, these numbers have no meaning. I have just put it like this. Like a placeholder. And these are the 4 points. Okay. Out of these, 2 students have not been placed. And 2 students have been placed. And let's say currently we have this line. Okay. And it is cutting our data in this way. And the W1, W2 and B of this line are written here. Okay. Now if you think about it, then in the context of a line, there can be only 4 types of points. Okay. One point can be like this. Whose data is said to have a placement. And your line is also saying that it will have a placement. Basically, that point is lying on the green side of the line. Okay. The second type is that it is said in the data that there will be no placement. And yes, in the first one, basically the point is this. Okay. The second point is in which it is written in the data that there will be no placement. My model also said placement. This is the point. Okay. The third scenario is that it is said in the data that there will be a placement. We said it will not be. Okay. point and lastly it will not be said in the data, we said it will be this point, these are the four types, now for these four types What is the meaning of this thing, I will show you this, I will show you this, for these four points, first of all Let's catch this point first, so for this point, the value of yi will be 1, okay, and what will be the value of fxi, the value of fxi will be w into x1, the value of the first column plus w2 into x2 plus b, now think about it, this number is actually what you are doing, you are putting the coordinates in the equation of the line, so I have told you earlier that since this point is on the positive side of the line, then this number will be greater than or equal to 0, okay, so this means for this point yi is 1 or you can say it is positive and fxi will also be positive, so the product of these two will also be positive, but you are multiplying it by minus 1, then what will happen to this overall, negative, as the overall becomes negative, then this max will become 0, some negative number, then its output will be 0, this means when you go to calculate this term in the loss function for this point, it will come equal to 0, this is a very important thing, once you pause the video and understand it yourself, now we take the second example, the second example is this point, or you can say this point, now for this point yi will be minus 1, which means negative, and fxi will also be negative since it is on the negative side of the line, and when you multiply negative negative, it will become positive, but by putting minus 1 in front of positive, it will become negative again, so again max 0 comma something negative would be 0, this means if there is a point which is in the red region, but it is correctly classified, for that also your max term would be 0, so till here we understood that if your line has classified correctly, then the contribution of that point in the loss function will be 0, now we move to such a point which is misclassified, whose output is 1, but our prediction is minus 1, which means this point, now for this point yi would be positive because it is plus 1, and since fxi is on the negative side of the line, it is negative, so the product of these two will also be negative, and when this negative sign is put in front, it will become positive, so your equation will become some positive number, and the output will be some positive number, which means if a green point is in the red region, which means it is misclassified, then this term will be a non-zero number, which means it will contribute something in the loss function, let's take the last case, this point, for this point if you see, then yi is negative, which means it is negative in the data, but since fxi is on the positive side of the line, it will be positive, the product of both will be negative again, so when you multiply by minus 1, it will be positive again, so this same thing will hold, and your output will be positive, which means for this point also, there will be some non-zero contribution, so till now it is understood geometrically, that if the point is correctly classified, then to calculate the loss function, that point has zero contribution, but if the point is misclassified, then what we are doing, we are taking out this term, for that thing, yi fxi, since yi is 1 or minus 1, so its magnitude is 1, so it doesn't matter, so basically the magnitude is coming from fxi, and what is fxi, when in this line equation, we are fitting the coordinates of this red point or this green point, so what I told you a while ago, that we don't use distance, we use another proportional metric, where we take the coordinate and put it in the line equation, we are actually doing the same, think about it, what we discussed a while ago, in making the loss function, the thing that was discussed, that is implemented here, with the help of this loss function, so all this hard work that is being done, this is just being done to give the form of a good equation, so I hope you have understood, what is the geometric meaning of this loss function, the geometric meaning of this loss function, we have already discussed a while ago, now I have just explained it to you in detail, now we have understood the loss function, now I will tell you, how you will find the value of w1, w2 and b, for which this whole thing will become minimum, so guys what we have to do now, that we have to find the value of w1, w2 and b, for which the value of this whole equation becomes minimum, so I have already explained in my gradient descent video, that you use gradient descent to handle such scenarios, so what will happen, that L is a function of 3 things, for a while if we assume that w2 and b are constants, and if we assume that it is a function of w1, then you can take any form of that function, like it is possible that this function is between L and w1, so your job is to find the value of w1, for which L is minimum, basically to find this point, to find the value of w1, so I have told you that to do this, you use an optimization algorithm like gradient descent, so I am not going to explain gradient descent from scratch, if you are interested then watch my gradient descent video, you will understand how gradient descent works, I will just tell you in short form, that what you have to do, you have to run a loop, for i in number of epochs, you can take any value of epoch, 100, 1000, whatever works for you, now what you have to do in this loop, first of all while starting, you can take some value of w1, w2 and b randomly, like we have assumed that the value of all three is 1, now what we will do, we will keep updating all three in this loop, so the rule of updating will be, value of w1 would be w1 minus learning rate times del L del w1, learning rate is basically something like 0.01, you can also experiment in this, so this update rule is done for w1, similarly for w2 also you have to take w2 minus learning rate times partial derivative of L with respect to w2 and similarly b is equal to b minus learning rate times del L by del b, so here you have initial values of all three, you also have learning rate, now you just have to calculate three quantities, these three partial derivatives, basically you have to differentiate this function with respect to w1, w2 and b and you will get this whole thing, so now I will show you by differentiating this function with respect to w1, w2 and b, and then we will implement this in running the code, so guys now we will differentiate our loss function with respect to w1, w2 and b, we will first do it with respect to w1 and after seeing that we will understand what to do with w2 and b, so here is my loss function, I have written here again where fxi is this, now this loss function is not completely differentiable, you must be understanding this, so if you want to differentiate this, you can apply this chain rule that I have to take del L by del w1, so for that I will take del L by del fxi and then I will differentiate del fxi by del w1 and multiply both, so here I have made two different paths, in this path I have calculated del L by del fxi and here I have calculated del fxi by del w1, this is very easy, think about it, I just have to differentiate this thing with respect to w1, so this simple answer has come, whereas if you go to differentiate del L by del fxi, then you have to conditionally differentiate, if this number is more than 0, then 0 will come, and if this number is less than 0, then your differentiation would be minus yi, so I have clubbed these two and here is my differentiation del L by del w1, if this number is greater than 0 and minus yi xi1, what is xi1? cgpa iq placed, this is xi1's value, ith column's first column's value which is cgpa, so this is del L by del w1, so we have to write an if else condition, we have to check this condition and on the basis of that we will either give 0 or calculate this, going by the same logic, your del L by del w2 will also be same, what will come here? xi2 and similarly del L by del b will also be simple, so here will come minus yi, so this is my differentiation, now I have to convert this into a code using gradient descent and then our work will be done, so guys now we have taken out all the partial derivatives, so now what we will do is we will code gradient descent, by the way I made a mistake, the mistake is that the gradient descent update rule is plus here, so this was a mistake, sorry about this, so now what we have to do is we have to run this code in epochs, so I have already written the code, I will show you, so I have created a dataset using make classification, there are two columns in x and one column in y, I can quickly show it to you, so this is my data, this is x, there are 100 points and two columns, its shape would be this and y is basically 1 0, as it is output, its shape would be 100, here I have plotted the graph, here are my two classes, I have to draw a line between them, so this is my complete code, it is a very simple code, you see once, so I made a function in the name of perceptron in which I will get x and y in the input, first of all I initialized w1, w2 and b with 1, my learning rate is 0.1, you can see this learning rate is 0.1, also initial value of w1, w2 and this is your 1, now I have run epochs here 1000 times, and every time in every epoch, I am going to every row, and there I am checking this condition, I am checking this condition, this condition I am checking, just give me one second, this condition, so I am taking out fxi first, fxi is basically z, where I am multiplying w1 with the value of the first column of the current row, I am multiplying w2 with the second column of the current row, and I am adding b value in it, this is my z, and then I am multiplying it with yi, to find out what is the sign of this thing, so you can see if it is less than 0, if it is less than 0, then only I am applying this update rule, and what is the update rule, that in w1, lr multiplied by yi, multiplied by xi's 0th value, and update rule of w2 is this, update rule of b is this, as this loop is ending, I am returning w1, w2 and b, here I have called the function, I can show you the code in this point, this is my w1, this is my w2, and this is my b, the code ahead is only to plot the graph, so you can see this code easily, when I plot the line, so this is the line that I am getting, so this is our loss function, this is working, so guys, now in this video, one last and most important thing, I have to discuss with you, if you remember, in the first video of perceptron, I told you one thing, and that was, I said that, perceptron is a mathematical model, it is a mathematical model, and this is also true, see this, this is the model of perceptron, inputs come from here, here is the summation, z goes to this activation function, and then y is calculated from here, and then you implement a loss function for training, so we have just done all this, but the good part is, perceptron is very flexible, because of its design, the way this model is made, it has a lot of flexibility, I will give you an example, now we have used activation function, step function, but let's say, if someone asks me tomorrow, that rather than output 1 and minus 1, I want output in probabilities, that what is the probability of 1, and what is the probability of minus 1, so what I can do is, I can easily replace this step function, with a sigmoid function, sigmoid function is this, where z is basically, w1 x1 plus w2 x2 plus v, this will give me a probability, and now what I can do is, I can use another loss function, whose name is binary cross entropy, may be you have heard the name, binary cross entropy, and its formula is like this, the equation of this loss function is, 1 minus yi log yi hat, plus 1 minus yi log 1 minus yi hat, if you use this loss function, in conjunction with this activation function, and apply sgd this time, so you will get probabilities in outputs, and guess what, you have seen this combination earlier also, in a machine learning algorithm, and the name of that machine learning algorithm is, logistic regression, may be you have heard many people saying, that perceptron is equal to logistic regression, practically it is true, but technically, perceptron and logistic regression, are the same algorithm, when your activation function is sigmoid, and your loss function is this, binary cross entropy, so you can see the flexibility, if I want, I can use perceptron with step function, like perceptron, where the output is 1 0, or I can take out the output in the term of probabilities, I just have to do two changes, I have to use my sigmoid function, as my activation function, and I will change the loss function, and use the binary cross entropy function, in fact, the flexibility does not end there, so if tomorrow, I have to work on a multi class classification problem, where there are more than two classes, so what can I do there also, I can again change this combination, in activation function, this time I will use softmax, and in loss function, I would use categorical cross entropy, whose formula is this, sigma of all your classes, from 1 to m, suppose you have three classes, so this will be 3, yj log y hat j, so basically you have this flexibility, by the way, the function of softmax is this, e to the power zi, divided by sigma j is equal to, j is equal to, from 1 to k, all the classes you have, e to the power zj, or you can say, the output of a particular class would be, e to the power z1, suppose you have three classes, this, so now, this case is, softmax regression, I have also taught you this, in 100 days of machine learning, so again you can see, what I have changed this time, I have used softmax in activation function, and in loss function, I have used categorical cross entropy, the thing doesn't end here, if you want, you can use perceptron for regression also, again you don't have to do anything, instead of step function, you have to use activation function, linear, so what does step function do, if z is greater than or equal to 0, it will say 1, if z is less than 0, it will say minus 1, so what does linear function do, it will take z, and z will give the output, so basically there is no activation function, so if you don't use any activation function, or you can say, that you have used linear activation function, and instead of loss function, if you use mean squared error, yi minus yi hat whole square, so now this becomes linear regression, this becomes linear regression, so the thing to understand here is, that perceptron is a mathematical model, which can be used in multiple ways, because it is flexible by design, its design is flexible, so what I will do, I will change my activation function, I will change my loss function, every time I have to use SGD, which is stochastic gradient descent, and I will get my parameters every time, so to summarize, I will write here, here we will write, loss function, here we will write, activation, and here we will write, output, so it is very simple, if your activation function is step, and you are using hinge loss, so it would act as a perceptron, or you can say, binary classifier, whose output will be either 1 or minus 1, if you are using activation function, sigmoid, and your loss function is log loss, which we also call binary cross entropy, so then, this will act as, logistic regression, which will give output between 0 and 1, and it is still binary, means it can handle two classes, this is a binary classifier, going forward, if your activation function is softmax, and your loss function is, categorical, cross, entropy, then it will work as, softmax regression, and more than 2, as in multi class, will help in classification, but the output will be, probabilities, just like above case, lastly, if your activation function is linear, or you can say, no activation function is being used, and if your, loss function is, mean squared error, then this will act as, linear regression, and your output will be a number, and that number can be anything, so, these are the four cases in perceptron, now you, will see that, we will use these four cases, if we are solving regression problem, then we will use this case, if we are using classification, then we will use any of these three, depending on the requirement, but it is important to understand, that this same mathematical model, this same perceptron, is being used for different things, because its design, is very flexible, and it is not fixated, on a particular thing, I hope you understood, this whole discussion, so that was the video guys, I hope you understood everything, it was a little complex, I think if you, watch the video in some complex parts, then you will understand, also I would recommend, that you download the code, and run it on your machine, now in the next videos, we will move towards, multilayer perceptron, in the next video we will discuss, what exactly is the problem with perceptron, because of which, multilayer perceptron is required, so that's it from my side, before leaving, this request, please if you liked the video, do like and share it, whoever needs it, also if you haven't subscribed to my channel, please do subscribe, so that's it from my side, meet you in the next video, bye."
+}

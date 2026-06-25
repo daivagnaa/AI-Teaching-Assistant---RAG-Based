@@ -1,0 +1,1062 @@
+{
+    "chunks": [
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 0.0,
+            "end": 19.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we are continuing with our deep learning course. In the last video, we learned what is the problem with perceptron. And we found that perceptron cannot create non-linear decision boundaries because it is a linear model. It draws a line and does its work."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 19.0,
+            "end": 44.0,
+            "text": " So, what is the solution? The solution is multi-layer perceptron. It means you can connect multiple perceptrons and make a big neural network. And that neural network will work like a universal function approximator and will be able to create any non-linear decision boundary. So, today's video is the first video of this series in the truest sense."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 44.0,
+            "end": 67.0,
+            "text": " Where you will meet the neural network for the first time. And you will learn why it is able to create non-linear decision boundaries. So, in today's video, I will give you an intuition as to how multi-layer perceptron works. And I will give you an intuition from the very first principle. That is, we will create logic from scratch."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 67.0,
+            "end": 89.0,
+            "text": " And I have made a lot of diagrams. With the help of those diagrams, I will try to make you understand the whole concept very easily. Also, at the end, I will show you a very good demo on the tensorflow playground. Where you will enjoy watching that demo even more. So, that's it. Let's start the video."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 89.0,
+            "end": 108.0,
+            "text": " So, guys, let's go back to our problem. Our problem is that we have a perceptron as an algorithm. And it also works. But it has only one problem. If that non-linearity is in your data, then it is not able to capture it."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 108.0,
+            "end": 125.0,
+            "text": " For example, this is an example on your screen. Here is a dataset where there are two classes. Green and red. But you can see that to separate these two classes, you will need a decision boundary like this. Which is actually not a line."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 125.0,
+            "end": 143.0,
+            "text": " Which the perceptron draws. In fact, this is a curve. So, our problem is that we have to somehow make such an algorithm. Which can capture any kind of non-linearity. Which our perceptron cannot do."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 143.0,
+            "end": 174.0,
+            "text": " And the most challenging thing is that we have to make that algorithm using only perceptrons. So, we will try to make such an algorithm using multiple perceptrons. Which can capture any kind of non-linearity. Now, before moving towards multilayer perceptron, I will clear one thing here. In this whole video, the perceptron which I will explain to you."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 174.0,
+            "end": 198.0,
+            "text": " The activation function in that perceptron is not a step function. It is a sigmoid. And the loss function is not a hinge loss but a log loss. Basically, I am using my perceptron like a logistic regression. This clarity is very important."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 198.0,
+            "end": 214.0,
+            "text": " So, now let's see how the perceptron works with the sigmoid. Funda is very simple. Let's take the same example again. I have CGPA and IQ. I have to predict whether there will be a placement or not."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 214.0,
+            "end": 234.0,
+            "text": " Now, how does the sigmoid work? Your output will not be 0 or 1. Or it will not be minus 1 or 1. You will get a probability between 0 and 1. Which will tell whether that child will have a placement or not."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 234.0,
+            "end": 248.0,
+            "text": " For example, let me give you an example. Assume that when you trained this model, you got W1 as 5. W2 as 10 and Bias as 3. This is an example. Now, we have this line."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 248.0,
+            "end": 269.0,
+            "text": " Its equation is 5x plus 10y plus 3 equal to 0. This is the equation of this line. Now, as soon as you give the CGPA of a new child. Assume that CGPA is 8.7 and IQ is 87. So, what will happen?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 269.0,
+            "end": 282.0,
+            "text": " First of all, you will calculate Z. How will Z be calculated? Z will be calculated by this formula. W1 multiplied by CGPA. W2 multiplied by IQ and Bias."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 282.0,
+            "end": 294.0,
+            "text": " W1 is 5. CGPA is 8.7. W2 is 10. IQ is 87 plus 3. This is Z."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 294.0,
+            "end": 314.0,
+            "text": " Now, you will send Z to this sigmoid function. This is the formula of sigmoid function. It will give you a probability between 0 and 1. This probability is the probability of placement. Assume that this probability is 0.8."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 314.0,
+            "end": 334.0,
+            "text": " We will say that the probability of this student being placed is 0.8. Automatically, since only two things are possible. The second possibility is that its probability of not being placed is 0.2. You just have to understand that for every student, we will get two probabilities. The first probability will be the probability of yes."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 334.0,
+            "end": 359.0,
+            "text": " The second probability will be the probability of no. One more thing to understand is that every point here is a student. This line divides this space into two regions. One is this and the other is this. The probability of Y on this line is 0.5."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 359.0,
+            "end": 391.0,
+            "text": " If there is a student on this line, then its probability of being placed and not being placed is 0.5. But as you move away from this line to the green region, the probability of being placed is more than the probability of not being placed. If you talk about this student, then its probability of being placed can be 0.9. Automatically, its probability of not being placed will be 0.1."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 391.0,
+            "end": 418.0,
+            "text": " But if you talk about this student, since it is close to the line, then its probability of being placed will be 0.6 and its probability of not being placed will be 0.4. Similarly, if you talk about this student, since it is very far from the line in this direction, then its probability of being placed will be very less and its probability of not being placed will be more. If you talk about this student, then its probability of being placed will be 0.4"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 418.0,
+            "end": 443.0,
+            "text": " and its probability of not being placed will be 0.6. So, this becomes a sort of gradient. The more you move away from the line, the more your probability increases. For example, if you look at all these lines, then the probability of being placed will be 0.6 because this has 0.5, this has 0.7, this has 0.8, and this has 0.9."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 443.0,
+            "end": 468.0,
+            "text": " Similarly, if you draw parallel lines here, then it will be 0.4 here. If you draw this line, then it will be 0.5 here. If you draw this line, then it will be 0.3 here, 0.2 here, and 0.1 here. So, that is how Perceptron works. So, you just have to understand that for every student, you will get two probabilities."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 468.0,
+            "end": 497.0,
+            "text": " The first probability is your probability of yes, and by subtracting 1 from it, you can get the probability of no. Okay, I had to explain this to you. I hope you understood this. So guys, we have understood how Perceptron works with Sigmoid. Now, what do we do? We try to form an idea of Multilayer Perceptron. So, let's say I have this data, which I showed you a while ago."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 497.0,
+            "end": 531.0,
+            "text": " And let's say I have trained two different Perceptrons on this data. This is my first Perceptron, and this is my second Perceptron. Assume for a while that here W1 is 2, W2 is 3, and Bias is 6 in this model. And in this model, W1 is let's say 5, W2 is let's say 4, and B is 3. So, the line of this Perceptron looks like this."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 531.0,
+            "end": 564.0,
+            "text": " This is the decision boundary of this Perceptron. So, the equation of this line will be 2x plus 3y plus 6. Similarly, this is the decision boundary of the other Perceptron. I got this line, so we can write its equation as 5x plus 4y plus 3 equal to 0. Now, what I am saying is, what if we somehow connect the output of these two Perceptrons, the decision boundary,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 564.0,
+            "end": 587.0,
+            "text": " and by doing so, something like this happens. Now, look at this and you will understand. What I have done is that I have taken this image below and superimposed it on top of this. And I am getting this kind of new decision boundary. Now, what I will do is, I will do a smoothening in this."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 587.0,
+            "end": 611.0,
+            "text": " Now, what is smoothening, you will understand a little later. And as soon as I do smoothening, I will see this output, this one. And guess what, I wanted this decision boundary. So, whatever I have discussed with you, this is the abstract idea of multilayer Perceptrons. Now, whatever we have discussed, there is no mathematical logic behind it."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 611.0,
+            "end": 635.0,
+            "text": " I mean, I have not explained to you how this superimposition is happening or how this smoothening is happening. I have not told you all this. I have not given you its technical details, mathematical details. But I just want to give you an idea, I want to give you an intuition as to what is happening. So, what we are doing is, to solve the same problem, we are taking more than one Perceptron. In our case, we are taking two Perceptrons."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 635.0,
+            "end": 651.0,
+            "text": " The decision boundaries of both are different, as you can see. And now, what we are doing is, first of all, we are superimposing them. We are placing them on top of each other. And then, what we are doing is, we are doing smoothening. Because of which, I am getting my desired output."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 651.0,
+            "end": 675.0,
+            "text": " But whatever we have discussed, this is in the air. There is no mathematical logic behind it, I have not justified it yet. So, now I will show you how this can be achieved mathematically. So, to prove the mathematics behind this, I have placed these two Perceptrons in front of you. Now, let's do one thing."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 675.0,
+            "end": 713.0,
+            "text": " All the points here are basically our students. So, let's say we have caught this student. Now, according to this particular Perceptron, the probability of placement of this student, let's say, is 0.7. Similarly, according to this Perceptron of this student, the probability of placement is 0.8. Similarly, for every student, there will be a probability of placement."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 713.0,
+            "end": 751.0,
+            "text": " Now, what I have done is, I have caught this student again and added the output of these two. So, what I have done is, if I have to find out the probability of placement of this student in my new model, then I will add the output of this Perceptron to the output of this Perceptron and this will be my probability. There is only one problem that here it is 1.5 and you know that the probability is always between 0 and 1. So, this is a problem."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 751.0,
+            "end": 791.0,
+            "text": " But we also have a solution for this. What if I take this probability i and put it in the sigmoid function. The formula for the sigmoid function is 1 plus 1 divided by 1 plus e to the power minus z. So, in this case, if you want to find out, since I have calculated it, it would come out to be 0.82. So, now the combined model that we have made, where I first added these two probabilities and then put it in the sigmoid,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 791.0,
+            "end": 823.0,
+            "text": " so according to that new model, the probability of the placement of this student is coming out to be 0.82. And this is what I will do with every student. Now I will take this student, I will find out its probability of yes given by Perceptron 1. Then I will find out its probability with Perceptron 2. I will add both of them and put them in the sigmoid and I will get its probability of placement."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 823.0,
+            "end": 848.0,
+            "text": " So, that is how you achieve this model. So, here you did two things, first you did addition and then put it back in the sigmoid, because of which the two things behind are happening, superimposition and smoothening. So, I hope you are getting a little clear here that how this whole thing is working mathematically. You are basically finding out the linear combination."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 848.0,
+            "end": 874.0,
+            "text": " You are using the linear combination of two perceptrons to find out the new probability. And this is its resultant. So guys, now the concept that we discussed, the linear combination of two perceptrons, let's extend it a little more. I want to add a little flexibility to it."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 874.0,
+            "end": 909.0,
+            "text": " Let's say I want this decision boundary instead of my decision boundary. So, if you look carefully, this decision boundary is such that the impact of Perceptron 1 is more on it and the impact of Perceptron 2 is less. So, what I mean to say is that can I change something in this model so that the output of Perceptron 1 dominates more than the output of Perceptron 2."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 909.0,
+            "end": 939.0,
+            "text": " The answer is you can definitely do it. What can you do? What were we doing till now? We were picking up any student and taking the probability of yes from both the places. We were adding it and then sending it to sigmoid and that was our probability. What if we make this addition a weighted addition?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 940.0,
+            "end": 963.0,
+            "text": " That means we don't directly send this probability here. We send it through a weight. Let's say I gave this weight of 10 and gave this weight of 5. So, now what I am saying is that my new model, the multi-layer Perceptron model that is being made, the weightage of Perceptron 1 is twice that of Perceptron 2."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 963.0,
+            "end": 986.0,
+            "text": " So, now the new combination that will be made here will look like this. We will take the output of Perceptron 1 and multiply it by 10 because this is its weight. Plus, we will take the output of Perceptron 2 and multiply it by 5. And this number that will come, we are calling it z. Now, we will send it to sigmoid."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 986.0,
+            "end": 1009.0,
+            "text": " And then the probability that will come will be my probability of yes. And I will do this with every point. In fact, what you can do is that you can add bias to this. That means you can say that when the output comes from here, the weight will be 10. When the output comes from here, it will be 5."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1009.0,
+            "end": 1023.0,
+            "text": " And there is a bias in this system whose value is let's say 3. So, now what will happen? Its value is 0.7. Its value is 0.8. So, now this whole expression will become z here."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1023.0,
+            "end": 1044.0,
+            "text": " 0.7 times 10 plus 0.8 times 5 plus this bias. And this bias came here. This is my z. I sent it to sigmoid. And then it will give me a probability from 0 to 1 for this student."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1044.0,
+            "end": 1065.0,
+            "text": " So, for every student here, I will repeat the same thing. Now, if you look carefully. So, what is happening is that this whole thing is itself working as a perceptron. If you think about it. This whole thing, here you are getting the first input."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1065.0,
+            "end": 1075.0,
+            "text": " Here you are getting the second input. This is your W1. This is your W2. And here is a B. And there is a sigmoid in front of it."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1075.0,
+            "end": 1094.0,
+            "text": " And then you are taking out the output. So, in a way, what are you doing? From these two perceptrons, the output coming from this perceptron and this perceptron. You are providing it as input in this new perceptron. So, in a way, what is happening is that you are making a combination of three perceptrons."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1094.0,
+            "end": 1107.0,
+            "text": " Which we can call a multi-layer perceptron. In fact, I do one thing. I draw this whole thing. So, I am getting x1 from here. I am getting x2 from here."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1107.0,
+            "end": 1114.0,
+            "text": " Here is my W1. Sorry, this is my W1. This is my W2. Its value is 5. Its value is 10."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1114.0,
+            "end": 1129.0,
+            "text": " This is my summation here. Where the value of the bias is 3. And from here, we are taking out the sigmoid. This is my z. And this is my y hat."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1129.0,
+            "end": 1137.0,
+            "text": " This is my output. Now, there is only one thing here. This input is not getting from the data. It is getting from perceptron 1. And this is getting from perceptron 2."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1137.0,
+            "end": 1158.0,
+            "text": " So, in a way, you can make a mental picture like this. That perceptron 1 and perceptron 2 is connected to perceptron 3. And over here, you are getting your output. So, now this is actually a multi-layer perceptron. Now, guys, I will draw the whole picture clearly in front of you."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1158.0,
+            "end": 1172.0,
+            "text": " So, this is my perceptron 1. This is my perceptron 2. This is my new result from the linear combination of these two. So, if you want to draw this through nodes, weights, and biases, then how will it look?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1172.0,
+            "end": 1182.0,
+            "text": " First of all, I will show you this perceptron. So, we have the same data. It is CGPA. It is IQ. And in the output, we have the placement or not."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1182.0,
+            "end": 1199.0,
+            "text": " This is the data. So, this perceptron will look something like this. Here, one input will be of CGPA. The other input will be of IQ. By giving bias here rather than 1,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1199.0,
+            "end": 1211.0,
+            "text": " what I will do is that I will keep writing bias inside. By the way, bias in this case will be 6. This weight will be 2. And this weight will be 3. Okay?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1211.0,
+            "end": 1220.0,
+            "text": " And from here, I am getting the output of this perceptron. This perceptron. Okay? Basically, it is a probability because there is a sigmoid. Similarly, if you talk about this perceptron,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1220.0,
+            "end": 1234.0,
+            "text": " then it will look like this. Its bias is 3. It will also get the input of CGPA. And it will also get the input of IQ. And it will also give me the output."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1234.0,
+            "end": 1245.0,
+            "text": " Okay? Now, if you talk about this, this is also a perceptron. The bias of this perceptron is 3. And it will get input from two places."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1245.0,
+            "end": 1254.0,
+            "text": " Basically, one from the output of this perceptron and one from its output. Okay? And it will also give me the output here. Okay?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1254.0,
+            "end": 1271.0,
+            "text": " Also, this weight is 10. And this weight is 5. Now, what we can do is we can redraw this whole thing and write it like this. So, it would be 6, 3."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1272.0,
+            "end": 1284.0,
+            "text": " We have drawn these two connections. 3. Output. CGPA. IQ."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1285.0,
+            "end": 1300.0,
+            "text": " CGPA. IQ. Okay? In fact, we can draw this better here. Bias is 6."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1300.0,
+            "end": 1306.0,
+            "text": " Bias is 3. Bias is 3. This is the connection. Here, weight is 10. Here, weight is 5."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1306.0,
+            "end": 1317.0,
+            "text": " Here, you will get the output. Now, CGPA is also getting this. CGPA is also getting this. So, what we will do is we will make this CGPA."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1318.0,
+            "end": 1333.0,
+            "text": " And we will make this IQ. And the input of CGPA is going to both places. Similarly, the output is also going to both places. Also, the weights are defined here as well. CGPA to first is 2."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1333.0,
+            "end": 1348.0,
+            "text": " And IQ to first is 3. CGPA to second is 5. So, this one will be 5. And this one will be 4. Okay?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1348.0,
+            "end": 1362.0,
+            "text": " And guys, you can see this is what we call a multi-layer perceptron. Because there are multiple layers here. This is what we call an input layer. This is the input layer."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1362.0,
+            "end": 1379.0,
+            "text": " This is what we call an output layer. And this is our hidden layer. Okay? And that's it. This is what you have to understand."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1379.0,
+            "end": 1395.0,
+            "text": " How you can organize more than one perceptron in this way and capture non-linearity. Okay? So, I tried to give you an intuition"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1395.0,
+            "end": 1411.0,
+            "text": " with a kind of first principle approach that how a multi-layer perceptron can capture non-linearity. The concept is very simple. You make linear combinations"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1413.0,
+            "end": 1423.0,
+            "text": " of multiple perceptrons. Okay? I hope this idea is clear to you. Okay? Now, what I will do is"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1423.0,
+            "end": 1437.0,
+            "text": " I will make this structure a little more complex and show you what you can achieve next. Okay? Which will be very, very interesting. Guys, now we will study"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1437.0,
+            "end": 1452.0,
+            "text": " how we can bring changes in the architecture of our neural network to have some additional flexibility. First of all, it is important for you to understand what is the architecture of the neural network."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1452.0,
+            "end": 1463.0,
+            "text": " So, the basic meaning of architecture is that your nodes, which you also call perceptrons, how they are connected to each other. Okay?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1463.0,
+            "end": 1474.0,
+            "text": " The connection between weights and nodes is called architecture. So, what you can do is you can bring changes in your architecture based on your requirement."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1474.0,
+            "end": 1484.0,
+            "text": " So, I will tell you four ways how you can bring changes. So, the first way is that the hidden layer you have, this hidden layer,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1484.0,
+            "end": 1492.0,
+            "text": " you can increase the number of nodes in it. Okay? Increasing nodes means increasing the number of perceptrons. Like this example,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1492.0,
+            "end": 1501.0,
+            "text": " which is on your screen. All the discussions we have done so far, there were a total of two perceptrons in our hidden layer. But in this case, as you can see,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1501.0,
+            "end": 1510.0,
+            "text": " there are three perceptrons. Everything else is the same. The data is the same. What I did this time is I added an extra perceptron in the hidden layer."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1510.0,
+            "end": 1520.0,
+            "text": " Now, what is happening because of that is if I have such data which is very non-linear, then I am able to capture the additional non-linearity."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1520.0,
+            "end": 1528.0,
+            "text": " So, this is the decision boundary of my first perceptron, this is the decision boundary of the second, and this is the decision boundary of the third. When I created a linear combination of these three,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1528.0,
+            "end": 1537.0,
+            "text": " then I got this output. Now, this is not different. It is exactly the same thing. Like, if you capture this point, then the probability of this point being green"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1537.0,
+            "end": 1549.0,
+            "text": " by this perceptron could be, let's say, 0.2. The probability of this being green would be, let's say, 0.3. This could be 0.4."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1549.0,
+            "end": 1559.0,
+            "text": " Here, the weights are given, let's say, 1, 2, 3. So, what did we do again? We calculated Z for the perceptron here. And how did we calculate Z?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1559.0,
+            "end": 1571.0,
+            "text": " 0.2 multiplied by 1, 0.3 multiplied by 2, 0.4 multiplied by 3, plus its own bias, let's say, bias is 10."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1571.0,
+            "end": 1581.0,
+            "text": " So, this is how we calculated Z. Now, to calculate Z, this extra term was used because there was an extra perceptron. Now, I sent Z to the sigmoid"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1581.0,
+            "end": 1593.0,
+            "text": " and the sigmoid, for this point, gave a probability between 0 and 1. Everything is exactly the same, except for this extra term. If we add another node tomorrow,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1593.0,
+            "end": 1603.0,
+            "text": " then we will have to add another term here while calculating Z. So, the thing to understand is that first, you can add nodes in your hidden layer."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1603.0,
+            "end": 1614.0,
+            "text": " You can add as many as you want. And the second thing to understand is that the more nodes you add, the more help you will get in making more complex non-linear decision boundaries"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1614.0,
+            "end": 1629.0,
+            "text": " as I have shown you in this example. The second way to change the architecture of your neural network is to increase the number of nodes in your input layer."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1629.0,
+            "end": 1640.0,
+            "text": " But you will only do this when the input columns in your data increase. Like, till now, we were talking that we have CGPA as input column and IQ as input column."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1640.0,
+            "end": 1650.0,
+            "text": " If we had another input column in our data, which is 12K marks, then in our input column, sorry, in our input layer, we will have 3 nodes."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1650.0,
+            "end": 1660.0,
+            "text": " And now, all this data will go in 3D. So, let's say, on the x-axis, CGPA, on the y-axis, IQ, and on the z-axis,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1660.0,
+            "end": 1670.0,
+            "text": " your 12K marks. Okay? And I told you that if it is in 3D, then your perceptron model will be a plane."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1670.0,
+            "end": 1680.0,
+            "text": " And you can see that this is a plane. Similarly, this is another perceptron model. This is also a plane. Now, what I will do is, I will combine these two planes linearly."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1680.0,
+            "end": 1692.0,
+            "text": " Again, I will get a linear combination. So, if you take any point, then for the probability of that point being green or red, first of all, I will get"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1692.0,
+            "end": 1702.0,
+            "text": " its probability. I will multiply it by W1 and I will do the same thing with W2, its probability. Again, I will calculate Z."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1702.0,
+            "end": 1712.0,
+            "text": " Again, I will calculate Sigma of Z. And for that, I will get a probability between 0 and 1. Okay? So, here, it is a very simple thing that the more"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1712.0,
+            "end": 1722.0,
+            "text": " columns there are in your input, the more nodes there will be in the input layer. Okay? And if there was one more, then it would have become 4D. And then it would have become a hyperplane instead of a plane."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1722.0,
+            "end": 1734.0,
+            "text": " Okay? Obviously, we cannot visualize it. But we can see it up to 3D. Okay? So, this is the second case where you are increasing the number of nodes in the input layer. The third way is to change"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1734.0,
+            "end": 1744.0,
+            "text": " the architecture of the neural network that you increase the number of nodes in your output layer. Okay? So, till now, in all the examples that we have discussed,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1744.0,
+            "end": 1754.0,
+            "text": " we have always noticed that in the last one, there is only one perceptron. But it is not necessary. If you want, you can keep more than one perceptron. Usually, you do this when you are doing"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1754.0,
+            "end": 1764.0,
+            "text": " multi-class classification. For example, you have to look at a photo and tell whether there is a dog in that photo or a cat or a human."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1764.0,
+            "end": 1774.0,
+            "text": " So, what you will do is you will make a perceptron attached to all three. This is for a dog, this is for a cat and this is for a human."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1774.0,
+            "end": 1784.0,
+            "text": " In the end, whichever of these has a higher probability, for that particular photo, you will say that it is a dog or a cat or a human."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1784.0,
+            "end": 1796.0,
+            "text": " So, what you have to learn is that in the case of multi-class classification, you keep multiple nodes in your output layer. Okay? The fourth way is to"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1796.0,
+            "end": 1806.0,
+            "text": " change the architecture of the neural network that you increase the number of hidden layers. Till now, we have not increased a single layer. We were increasing"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1806.0,
+            "end": 1816.0,
+            "text": " nodes in the layer. But if you want, you can increase the number of hidden layers. Here, you see this is the input layer and this is the output layer. But here, I have"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1816.0,
+            "end": 1826.0,
+            "text": " two hidden layers. This is hidden layer 1 and this is my hidden layer 2. Okay? What will be the"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1826.0,
+            "end": 1836.0,
+            "text": " benefit of doing this? The benefit will be that when you have very complex non-linear data which you can get out of a very complex decision boundary,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1836.0,
+            "end": 1846.0,
+            "text": " in that case, you can create such a complex decision boundary only by adding layers. So, you can see that your first layer, hidden layer,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1846.0,
+            "end": 1856.0,
+            "text": " is only creating linear decision boundaries. But as you go deep in your neural network, you will be able to capture complex relationships."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1856.0,
+            "end": 1866.0,
+            "text": " And then, if they have a linear combination, then more complex relationships can be captured. So, for this reason, neural networks are called"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1866.0,
+            "end": 1876.0,
+            "text": " universal function approximators. You can give any complex data which has a lot of non-linearity. If you add enough"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1876.0,
+            "end": 1886.0,
+            "text": " hidden layers in your network, then given enough time, if you give enough time in training, then your neural network will capture that relationship."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1886.0,
+            "end": 1896.0,
+            "text": " Okay? So, this is a very important concept that you can create a deep neural network. Obviously, there are considerations that training time will be more"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1896.0,
+            "end": 1906.0,
+            "text": " and a lot of other things will come in the picture. But this is always true that given enough hidden layers and enough training time,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1906.0,
+            "end": 1916.0,
+            "text": " you can create any mathematical function with your neural network. with your neural network. Guys, to show you this demo, I have again brought you to"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1916.0,
+            "end": 1926.0,
+            "text": " the Tensorflow playground. So, if you remember, I had shown you a demo in Perceptron that how a single"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1926.0,
+            "end": 1936.0,
+            "text": " Perceptron could not converge on this XOR data. Okay? And that was the biggest failure point of Perceptron that it cannot capture non-linearity."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1936.0,
+            "end": 1946.0,
+            "text": " So, now I will show you that even a small multilayer Perceptron can easily handle this data. Okay? So, here you can see"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1946.0,
+            "end": 1958.0,
+            "text": " that we have selected the XOR data and after that here we have two input nodes in the input column."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1958.0,
+            "end": 1968.0,
+            "text": " This is our output node and this is our hidden layer in which there are two Perceptrons at this point. Okay? Rest, you can see"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1968.0,
+            "end": 1978.0,
+            "text": " that we have selected the activation function as sigmoid. And now what we will do with this learning rate. Now, what is the learning rate? That is not your concern. We will discuss it later."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 1978.0,
+            "end": 1988.0,
+            "text": " I am starting the training. And you can see that here you can see all the errors which are reducing over time. And you would see that it will take some time."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2000.0,
+            "end": 2010.0,
+            "text": " So, you can see that it could not capture it very well. So, what we can do is we can do 2-3 things but I am increasing the nodes in this hidden layer."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2010.0,
+            "end": 2026.0,
+            "text": " I have added two more nodes. And now I am training again. And you can see guys that we have captured non-linearity. Okay?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2026.0,
+            "end": 2036.0,
+            "text": " Now, let's see a few more cases. Here, some more data sets are also available. For example, one data set is this one. Okay? It is a data set of concentric circles."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2036.0,
+            "end": 2048.0,
+            "text": " It is completely non-linear. Let's try it with the same architecture. So, if we run it. You can see."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2048.0,
+            "end": 2058.0,
+            "text": " It converged immediately. Okay? If we take one more complex data set. For example, this is a very complex data set. If we train the same architecture on this"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2058.0,
+            "end": 2068.0,
+            "text": " let's see what is the output. So, this is a little difficult data. It won't be able to converge that easily. You can see."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2068.0,
+            "end": 2078.0,
+            "text": " We have run almost 500 epochs. But there hasn't been much convergence yet. So, we will have to make some changes. For example, the first change I am doing is"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2078.0,
+            "end": 2088.0,
+            "text": " I am increasing the hidden layers. So, you can see I am clicking here and let's say I have added 4 hidden layers and added 4-4 nodes in all."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2088.0,
+            "end": 2104.0,
+            "text": " Like this. Okay? Now, what we will do is we will train the model again. And you can see"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2104.0,
+            "end": 2114.0,
+            "text": " there isn't much benefit. In fact, nothing is visible yet. The loss is going very constant. So, what is one way? Since you haven't read all this yet."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2114.0,
+            "end": 2124.0,
+            "text": " You can change the activation function to ReLU. ReLU is the most used activation function in neural networks today."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2124.0,
+            "end": 2134.0,
+            "text": " We will train it once. And you can see we can see the benefit immediately. Error is reducing very fast."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2134.0,
+            "end": 2144.0,
+            "text": " And you can see that changes are coming in our decision boundary. In fact, the good thing about this website is that"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2144.0,
+            "end": 2154.0,
+            "text": " you can check decision boundaries layer by layer. In the first layer, all the decision boundaries are linear. But in the next layer,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2154.0,
+            "end": 2164.0,
+            "text": " we are capturing more complex non-linear decision boundaries. Like this. And here you can see"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2164.0,
+            "end": 2174.0,
+            "text": " it will take some time. We have gone almost 1000 epochs. So, I will pause the video and I will show it to you I will show it to you."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2174.0,
+            "end": 2184.0,
+            "text": " So guys, you can see even after trying a lot, this is what I am getting. There are some misclassifications here."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2184.0,
+            "end": 2194.0,
+            "text": " But you can see the data's essence is being captured by this model. The good thing is that you can see what is going on in the middle."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2194.0,
+            "end": 2204.0,
+            "text": " Look at this. We can see how the perceptrons are looking at the data. So, this is a very good demonstration and this is a very good website"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2204.0,
+            "end": 2214.0,
+            "text": " which you should use. You don't need any coding knowledge to run this. It's a GUI tool. But it will give you a lot of perspective for the future."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2214.0,
+            "end": 2224.0,
+            "text": " So, I will recommend you to add noises from different data sets. You can reduce the batch size. You can also select the regression problem. And you can try this."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2224.0,
+            "end": 2234.0,
+            "text": " The learning thing for us was that it can capture non-linearity and increasingly our hidden layers capture more complex patterns"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2234.0,
+            "end": 2244.0,
+            "text": " in our data. So, I hope you understood everything. So, that was the video guys. How did you like it?"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2244.0,
+            "end": 2254.0,
+            "text": " Let me know in the feedback. Because I worked a lot for this particular video. So, I would like you to like it. If you liked the video,"
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2254.0,
+            "end": 2264.0,
+            "text": " then please like it. And please do subscribe my channel. More content like this will come. So, that's it from my side."
+        },
+        {
+            "number": "9",
+            "title": "Multi Layer Perceptron | MLP Intuition",
+            "start": 2264.0,
+            "end": 2266.0,
+            "text": " Thanks for watching. Bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we are continuing with our deep learning course. In the last video, we learned what is the problem with perceptron. And we found that perceptron cannot create non-linear decision boundaries because it is a linear model. It draws a line and does its work. So, what is the solution? The solution is multi-layer perceptron. It means you can connect multiple perceptrons and make a big neural network. And that neural network will work like a universal function approximator and will be able to create any non-linear decision boundary. So, today's video is the first video of this series in the truest sense. Where you will meet the neural network for the first time. And you will learn why it is able to create non-linear decision boundaries. So, in today's video, I will give you an intuition as to how multi-layer perceptron works. And I will give you an intuition from the very first principle. That is, we will create logic from scratch. And I have made a lot of diagrams. With the help of those diagrams, I will try to make you understand the whole concept very easily. Also, at the end, I will show you a very good demo on the tensorflow playground. Where you will enjoy watching that demo even more. So, that's it. Let's start the video. So, guys, let's go back to our problem. Our problem is that we have a perceptron as an algorithm. And it also works. But it has only one problem. If that non-linearity is in your data, then it is not able to capture it. For example, this is an example on your screen. Here is a dataset where there are two classes. Green and red. But you can see that to separate these two classes, you will need a decision boundary like this. Which is actually not a line. Which the perceptron draws. In fact, this is a curve. So, our problem is that we have to somehow make such an algorithm. Which can capture any kind of non-linearity. Which our perceptron cannot do. And the most challenging thing is that we have to make that algorithm using only perceptrons. So, we will try to make such an algorithm using multiple perceptrons. Which can capture any kind of non-linearity. Now, before moving towards multilayer perceptron, I will clear one thing here. In this whole video, the perceptron which I will explain to you. The activation function in that perceptron is not a step function. It is a sigmoid. And the loss function is not a hinge loss but a log loss. Basically, I am using my perceptron like a logistic regression. This clarity is very important. So, now let's see how the perceptron works with the sigmoid. Funda is very simple. Let's take the same example again. I have CGPA and IQ. I have to predict whether there will be a placement or not. Now, how does the sigmoid work? Your output will not be 0 or 1. Or it will not be minus 1 or 1. You will get a probability between 0 and 1. Which will tell whether that child will have a placement or not. For example, let me give you an example. Assume that when you trained this model, you got W1 as 5. W2 as 10 and Bias as 3. This is an example. Now, we have this line. Its equation is 5x plus 10y plus 3 equal to 0. This is the equation of this line. Now, as soon as you give the CGPA of a new child. Assume that CGPA is 8.7 and IQ is 87. So, what will happen? First of all, you will calculate Z. How will Z be calculated? Z will be calculated by this formula. W1 multiplied by CGPA. W2 multiplied by IQ and Bias. W1 is 5. CGPA is 8.7. W2 is 10. IQ is 87 plus 3. This is Z. Now, you will send Z to this sigmoid function. This is the formula of sigmoid function. It will give you a probability between 0 and 1. This probability is the probability of placement. Assume that this probability is 0.8. We will say that the probability of this student being placed is 0.8. Automatically, since only two things are possible. The second possibility is that its probability of not being placed is 0.2. You just have to understand that for every student, we will get two probabilities. The first probability will be the probability of yes. The second probability will be the probability of no. One more thing to understand is that every point here is a student. This line divides this space into two regions. One is this and the other is this. The probability of Y on this line is 0.5. If there is a student on this line, then its probability of being placed and not being placed is 0.5. But as you move away from this line to the green region, the probability of being placed is more than the probability of not being placed. If you talk about this student, then its probability of being placed can be 0.9. Automatically, its probability of not being placed will be 0.1. But if you talk about this student, since it is close to the line, then its probability of being placed will be 0.6 and its probability of not being placed will be 0.4. Similarly, if you talk about this student, since it is very far from the line in this direction, then its probability of being placed will be very less and its probability of not being placed will be more. If you talk about this student, then its probability of being placed will be 0.4 and its probability of not being placed will be 0.6. So, this becomes a sort of gradient. The more you move away from the line, the more your probability increases. For example, if you look at all these lines, then the probability of being placed will be 0.6 because this has 0.5, this has 0.7, this has 0.8, and this has 0.9. Similarly, if you draw parallel lines here, then it will be 0.4 here. If you draw this line, then it will be 0.5 here. If you draw this line, then it will be 0.3 here, 0.2 here, and 0.1 here. So, that is how Perceptron works. So, you just have to understand that for every student, you will get two probabilities. The first probability is your probability of yes, and by subtracting 1 from it, you can get the probability of no. Okay, I had to explain this to you. I hope you understood this. So guys, we have understood how Perceptron works with Sigmoid. Now, what do we do? We try to form an idea of Multilayer Perceptron. So, let's say I have this data, which I showed you a while ago. And let's say I have trained two different Perceptrons on this data. This is my first Perceptron, and this is my second Perceptron. Assume for a while that here W1 is 2, W2 is 3, and Bias is 6 in this model. And in this model, W1 is let's say 5, W2 is let's say 4, and B is 3. So, the line of this Perceptron looks like this. This is the decision boundary of this Perceptron. So, the equation of this line will be 2x plus 3y plus 6. Similarly, this is the decision boundary of the other Perceptron. I got this line, so we can write its equation as 5x plus 4y plus 3 equal to 0. Now, what I am saying is, what if we somehow connect the output of these two Perceptrons, the decision boundary, and by doing so, something like this happens. Now, look at this and you will understand. What I have done is that I have taken this image below and superimposed it on top of this. And I am getting this kind of new decision boundary. Now, what I will do is, I will do a smoothening in this. Now, what is smoothening, you will understand a little later. And as soon as I do smoothening, I will see this output, this one. And guess what, I wanted this decision boundary. So, whatever I have discussed with you, this is the abstract idea of multilayer Perceptrons. Now, whatever we have discussed, there is no mathematical logic behind it. I mean, I have not explained to you how this superimposition is happening or how this smoothening is happening. I have not told you all this. I have not given you its technical details, mathematical details. But I just want to give you an idea, I want to give you an intuition as to what is happening. So, what we are doing is, to solve the same problem, we are taking more than one Perceptron. In our case, we are taking two Perceptrons. The decision boundaries of both are different, as you can see. And now, what we are doing is, first of all, we are superimposing them. We are placing them on top of each other. And then, what we are doing is, we are doing smoothening. Because of which, I am getting my desired output. But whatever we have discussed, this is in the air. There is no mathematical logic behind it, I have not justified it yet. So, now I will show you how this can be achieved mathematically. So, to prove the mathematics behind this, I have placed these two Perceptrons in front of you. Now, let's do one thing. All the points here are basically our students. So, let's say we have caught this student. Now, according to this particular Perceptron, the probability of placement of this student, let's say, is 0.7. Similarly, according to this Perceptron of this student, the probability of placement is 0.8. Similarly, for every student, there will be a probability of placement. Now, what I have done is, I have caught this student again and added the output of these two. So, what I have done is, if I have to find out the probability of placement of this student in my new model, then I will add the output of this Perceptron to the output of this Perceptron and this will be my probability. There is only one problem that here it is 1.5 and you know that the probability is always between 0 and 1. So, this is a problem. But we also have a solution for this. What if I take this probability i and put it in the sigmoid function. The formula for the sigmoid function is 1 plus 1 divided by 1 plus e to the power minus z. So, in this case, if you want to find out, since I have calculated it, it would come out to be 0.82. So, now the combined model that we have made, where I first added these two probabilities and then put it in the sigmoid, so according to that new model, the probability of the placement of this student is coming out to be 0.82. And this is what I will do with every student. Now I will take this student, I will find out its probability of yes given by Perceptron 1. Then I will find out its probability with Perceptron 2. I will add both of them and put them in the sigmoid and I will get its probability of placement. So, that is how you achieve this model. So, here you did two things, first you did addition and then put it back in the sigmoid, because of which the two things behind are happening, superimposition and smoothening. So, I hope you are getting a little clear here that how this whole thing is working mathematically. You are basically finding out the linear combination. You are using the linear combination of two perceptrons to find out the new probability. And this is its resultant. So guys, now the concept that we discussed, the linear combination of two perceptrons, let's extend it a little more. I want to add a little flexibility to it. Let's say I want this decision boundary instead of my decision boundary. So, if you look carefully, this decision boundary is such that the impact of Perceptron 1 is more on it and the impact of Perceptron 2 is less. So, what I mean to say is that can I change something in this model so that the output of Perceptron 1 dominates more than the output of Perceptron 2. The answer is you can definitely do it. What can you do? What were we doing till now? We were picking up any student and taking the probability of yes from both the places. We were adding it and then sending it to sigmoid and that was our probability. What if we make this addition a weighted addition? That means we don't directly send this probability here. We send it through a weight. Let's say I gave this weight of 10 and gave this weight of 5. So, now what I am saying is that my new model, the multi-layer Perceptron model that is being made, the weightage of Perceptron 1 is twice that of Perceptron 2. So, now the new combination that will be made here will look like this. We will take the output of Perceptron 1 and multiply it by 10 because this is its weight. Plus, we will take the output of Perceptron 2 and multiply it by 5. And this number that will come, we are calling it z. Now, we will send it to sigmoid. And then the probability that will come will be my probability of yes. And I will do this with every point. In fact, what you can do is that you can add bias to this. That means you can say that when the output comes from here, the weight will be 10. When the output comes from here, it will be 5. And there is a bias in this system whose value is let's say 3. So, now what will happen? Its value is 0.7. Its value is 0.8. So, now this whole expression will become z here. 0.7 times 10 plus 0.8 times 5 plus this bias. And this bias came here. This is my z. I sent it to sigmoid. And then it will give me a probability from 0 to 1 for this student. So, for every student here, I will repeat the same thing. Now, if you look carefully. So, what is happening is that this whole thing is itself working as a perceptron. If you think about it. This whole thing, here you are getting the first input. Here you are getting the second input. This is your W1. This is your W2. And here is a B. And there is a sigmoid in front of it. And then you are taking out the output. So, in a way, what are you doing? From these two perceptrons, the output coming from this perceptron and this perceptron. You are providing it as input in this new perceptron. So, in a way, what is happening is that you are making a combination of three perceptrons. Which we can call a multi-layer perceptron. In fact, I do one thing. I draw this whole thing. So, I am getting x1 from here. I am getting x2 from here. Here is my W1. Sorry, this is my W1. This is my W2. Its value is 5. Its value is 10. This is my summation here. Where the value of the bias is 3. And from here, we are taking out the sigmoid. This is my z. And this is my y hat. This is my output. Now, there is only one thing here. This input is not getting from the data. It is getting from perceptron 1. And this is getting from perceptron 2. So, in a way, you can make a mental picture like this. That perceptron 1 and perceptron 2 is connected to perceptron 3. And over here, you are getting your output. So, now this is actually a multi-layer perceptron. Now, guys, I will draw the whole picture clearly in front of you. So, this is my perceptron 1. This is my perceptron 2. This is my new result from the linear combination of these two. So, if you want to draw this through nodes, weights, and biases, then how will it look? First of all, I will show you this perceptron. So, we have the same data. It is CGPA. It is IQ. And in the output, we have the placement or not. This is the data. So, this perceptron will look something like this. Here, one input will be of CGPA. The other input will be of IQ. By giving bias here rather than 1, what I will do is that I will keep writing bias inside. By the way, bias in this case will be 6. This weight will be 2. And this weight will be 3. Okay? And from here, I am getting the output of this perceptron. This perceptron. Okay? Basically, it is a probability because there is a sigmoid. Similarly, if you talk about this perceptron, then it will look like this. Its bias is 3. It will also get the input of CGPA. And it will also get the input of IQ. And it will also give me the output. Okay? Now, if you talk about this, this is also a perceptron. The bias of this perceptron is 3. And it will get input from two places. Basically, one from the output of this perceptron and one from its output. Okay? And it will also give me the output here. Okay? Also, this weight is 10. And this weight is 5. Now, what we can do is we can redraw this whole thing and write it like this. So, it would be 6, 3. We have drawn these two connections. 3. Output. CGPA. IQ. CGPA. IQ. Okay? In fact, we can draw this better here. Bias is 6. Bias is 3. Bias is 3. This is the connection. Here, weight is 10. Here, weight is 5. Here, you will get the output. Now, CGPA is also getting this. CGPA is also getting this. So, what we will do is we will make this CGPA. And we will make this IQ. And the input of CGPA is going to both places. Similarly, the output is also going to both places. Also, the weights are defined here as well. CGPA to first is 2. And IQ to first is 3. CGPA to second is 5. So, this one will be 5. And this one will be 4. Okay? And guys, you can see this is what we call a multi-layer perceptron. Because there are multiple layers here. This is what we call an input layer. This is the input layer. This is what we call an output layer. And this is our hidden layer. Okay? And that's it. This is what you have to understand. How you can organize more than one perceptron in this way and capture non-linearity. Okay? So, I tried to give you an intuition with a kind of first principle approach that how a multi-layer perceptron can capture non-linearity. The concept is very simple. You make linear combinations of multiple perceptrons. Okay? I hope this idea is clear to you. Okay? Now, what I will do is I will make this structure a little more complex and show you what you can achieve next. Okay? Which will be very, very interesting. Guys, now we will study how we can bring changes in the architecture of our neural network to have some additional flexibility. First of all, it is important for you to understand what is the architecture of the neural network. So, the basic meaning of architecture is that your nodes, which you also call perceptrons, how they are connected to each other. Okay? The connection between weights and nodes is called architecture. So, what you can do is you can bring changes in your architecture based on your requirement. So, I will tell you four ways how you can bring changes. So, the first way is that the hidden layer you have, this hidden layer, you can increase the number of nodes in it. Okay? Increasing nodes means increasing the number of perceptrons. Like this example, which is on your screen. All the discussions we have done so far, there were a total of two perceptrons in our hidden layer. But in this case, as you can see, there are three perceptrons. Everything else is the same. The data is the same. What I did this time is I added an extra perceptron in the hidden layer. Now, what is happening because of that is if I have such data which is very non-linear, then I am able to capture the additional non-linearity. So, this is the decision boundary of my first perceptron, this is the decision boundary of the second, and this is the decision boundary of the third. When I created a linear combination of these three, then I got this output. Now, this is not different. It is exactly the same thing. Like, if you capture this point, then the probability of this point being green by this perceptron could be, let's say, 0.2. The probability of this being green would be, let's say, 0.3. This could be 0.4. Here, the weights are given, let's say, 1, 2, 3. So, what did we do again? We calculated Z for the perceptron here. And how did we calculate Z? 0.2 multiplied by 1, 0.3 multiplied by 2, 0.4 multiplied by 3, plus its own bias, let's say, bias is 10. So, this is how we calculated Z. Now, to calculate Z, this extra term was used because there was an extra perceptron. Now, I sent Z to the sigmoid and the sigmoid, for this point, gave a probability between 0 and 1. Everything is exactly the same, except for this extra term. If we add another node tomorrow, then we will have to add another term here while calculating Z. So, the thing to understand is that first, you can add nodes in your hidden layer. You can add as many as you want. And the second thing to understand is that the more nodes you add, the more help you will get in making more complex non-linear decision boundaries as I have shown you in this example. The second way to change the architecture of your neural network is to increase the number of nodes in your input layer. But you will only do this when the input columns in your data increase. Like, till now, we were talking that we have CGPA as input column and IQ as input column. If we had another input column in our data, which is 12K marks, then in our input column, sorry, in our input layer, we will have 3 nodes. And now, all this data will go in 3D. So, let's say, on the x-axis, CGPA, on the y-axis, IQ, and on the z-axis, your 12K marks. Okay? And I told you that if it is in 3D, then your perceptron model will be a plane. And you can see that this is a plane. Similarly, this is another perceptron model. This is also a plane. Now, what I will do is, I will combine these two planes linearly. Again, I will get a linear combination. So, if you take any point, then for the probability of that point being green or red, first of all, I will get its probability. I will multiply it by W1 and I will do the same thing with W2, its probability. Again, I will calculate Z. Again, I will calculate Sigma of Z. And for that, I will get a probability between 0 and 1. Okay? So, here, it is a very simple thing that the more columns there are in your input, the more nodes there will be in the input layer. Okay? And if there was one more, then it would have become 4D. And then it would have become a hyperplane instead of a plane. Okay? Obviously, we cannot visualize it. But we can see it up to 3D. Okay? So, this is the second case where you are increasing the number of nodes in the input layer. The third way is to change the architecture of the neural network that you increase the number of nodes in your output layer. Okay? So, till now, in all the examples that we have discussed, we have always noticed that in the last one, there is only one perceptron. But it is not necessary. If you want, you can keep more than one perceptron. Usually, you do this when you are doing multi-class classification. For example, you have to look at a photo and tell whether there is a dog in that photo or a cat or a human. So, what you will do is you will make a perceptron attached to all three. This is for a dog, this is for a cat and this is for a human. In the end, whichever of these has a higher probability, for that particular photo, you will say that it is a dog or a cat or a human. So, what you have to learn is that in the case of multi-class classification, you keep multiple nodes in your output layer. Okay? The fourth way is to change the architecture of the neural network that you increase the number of hidden layers. Till now, we have not increased a single layer. We were increasing nodes in the layer. But if you want, you can increase the number of hidden layers. Here, you see this is the input layer and this is the output layer. But here, I have two hidden layers. This is hidden layer 1 and this is my hidden layer 2. Okay? What will be the benefit of doing this? The benefit will be that when you have very complex non-linear data which you can get out of a very complex decision boundary, in that case, you can create such a complex decision boundary only by adding layers. So, you can see that your first layer, hidden layer, is only creating linear decision boundaries. But as you go deep in your neural network, you will be able to capture complex relationships. And then, if they have a linear combination, then more complex relationships can be captured. So, for this reason, neural networks are called universal function approximators. You can give any complex data which has a lot of non-linearity. If you add enough hidden layers in your network, then given enough time, if you give enough time in training, then your neural network will capture that relationship. Okay? So, this is a very important concept that you can create a deep neural network. Obviously, there are considerations that training time will be more and a lot of other things will come in the picture. But this is always true that given enough hidden layers and enough training time, you can create any mathematical function with your neural network. with your neural network. Guys, to show you this demo, I have again brought you to the Tensorflow playground. So, if you remember, I had shown you a demo in Perceptron that how a single Perceptron could not converge on this XOR data. Okay? And that was the biggest failure point of Perceptron that it cannot capture non-linearity. So, now I will show you that even a small multilayer Perceptron can easily handle this data. Okay? So, here you can see that we have selected the XOR data and after that here we have two input nodes in the input column. This is our output node and this is our hidden layer in which there are two Perceptrons at this point. Okay? Rest, you can see that we have selected the activation function as sigmoid. And now what we will do with this learning rate. Now, what is the learning rate? That is not your concern. We will discuss it later. I am starting the training. And you can see that here you can see all the errors which are reducing over time. And you would see that it will take some time. So, you can see that it could not capture it very well. So, what we can do is we can do 2-3 things but I am increasing the nodes in this hidden layer. I have added two more nodes. And now I am training again. And you can see guys that we have captured non-linearity. Okay? Now, let's see a few more cases. Here, some more data sets are also available. For example, one data set is this one. Okay? It is a data set of concentric circles. It is completely non-linear. Let's try it with the same architecture. So, if we run it. You can see. It converged immediately. Okay? If we take one more complex data set. For example, this is a very complex data set. If we train the same architecture on this let's see what is the output. So, this is a little difficult data. It won't be able to converge that easily. You can see. We have run almost 500 epochs. But there hasn't been much convergence yet. So, we will have to make some changes. For example, the first change I am doing is I am increasing the hidden layers. So, you can see I am clicking here and let's say I have added 4 hidden layers and added 4-4 nodes in all. Like this. Okay? Now, what we will do is we will train the model again. And you can see there isn't much benefit. In fact, nothing is visible yet. The loss is going very constant. So, what is one way? Since you haven't read all this yet. You can change the activation function to ReLU. ReLU is the most used activation function in neural networks today. We will train it once. And you can see we can see the benefit immediately. Error is reducing very fast. And you can see that changes are coming in our decision boundary. In fact, the good thing about this website is that you can check decision boundaries layer by layer. In the first layer, all the decision boundaries are linear. But in the next layer, we are capturing more complex non-linear decision boundaries. Like this. And here you can see it will take some time. We have gone almost 1000 epochs. So, I will pause the video and I will show it to you I will show it to you. So guys, you can see even after trying a lot, this is what I am getting. There are some misclassifications here. But you can see the data's essence is being captured by this model. The good thing is that you can see what is going on in the middle. Look at this. We can see how the perceptrons are looking at the data. So, this is a very good demonstration and this is a very good website which you should use. You don't need any coding knowledge to run this. It's a GUI tool. But it will give you a lot of perspective for the future. So, I will recommend you to add noises from different data sets. You can reduce the batch size. You can also select the regression problem. And you can try this. The learning thing for us was that it can capture non-linearity and increasingly our hidden layers capture more complex patterns in our data. So, I hope you understood everything. So, that was the video guys. How did you like it? Let me know in the feedback. Because I worked a lot for this particular video. So, I would like you to like it. If you liked the video, then please like it. And please do subscribe my channel. More content like this will come. So, that's it from my side. Thanks for watching. Bye."
+}

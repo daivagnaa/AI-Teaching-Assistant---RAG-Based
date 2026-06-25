@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 0.0,
+            "end": 21.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we will continue our deep learning course in this video. Till now we have studied about Perceptron. First we saw what is Perceptron, then we saw how to train it. First we saw Perceptron trick, then we saw loss functions."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 21.0,
+            "end": 40.0,
+            "text": " So, at this point we have a clarity that what is Perceptron and how does it work. But Perceptron could not become that famous for deep learning. There was a reason for that. The reason was that Perceptron can only work on linear data. It cannot work on non-linear data."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 40.0,
+            "end": 63.0,
+            "text": " So, in today's video, I will show you some codes and some examples practically that Perceptron could not work on non-linear data. So, this is a small video. I didn't want to add it to any other video because I thought it should be treated as an independent topic. That is why this 10-minute video."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 63.0,
+            "end": 83.0,
+            "text": " But in this video, you will learn that, I will show you that if you give non-linear data, no matter how small or big it is, no matter how much time you give Perceptron to train on that data, Perceptron will never be able to converge because essentially Perceptron is a linear model. So, this is what we have to see in this video."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 83.0,
+            "end": 96.0,
+            "text": " So, now let's start the video. So, guys, what is the problem in Perceptron? To show this, I have written a code. And this code is on your screen. So, what I have done is that I have created three different data sets."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 96.0,
+            "end": 116.0,
+            "text": " One of them is OR data, one is AND data, and one is XOR data. I will run the Perceptron algorithm on all three data sets. And I will plot a graph and show you what the output is. So, let's run the code. Here we have imported some libraries."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 116.0,
+            "end": 135.0,
+            "text": " In this cell, we have made three new Pandas data frames. And after that, I have basically created a data set here. Here I have created my OR data. Here I have created my AND data. And here I have created my XOR data."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 135.0,
+            "end": 156.0,
+            "text": " So, I will quickly run all these cells and show you the output. So, you can see this is my AND data. In AND, you know that when both are 1, then the output is 1. In all other cases, the output is 0. There are 4 rows in all three data sets."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 156.0,
+            "end": 173.0,
+            "text": " If you plot this, then this is your AND data. In OR data, if any one is 1, then the output will be 1. If both are 0, then the output will be 0. I have plotted this too. This is our OR data set."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 173.0,
+            "end": 186.0,
+            "text": " And after that, there is XOR. When both are the same, then the output is 0. And when both are different, then the output is 1. Here is its output. This is the graph."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 186.0,
+            "end": 200.0,
+            "text": " Now what I did is I called the Perceptron class from Scikit-learn. And created three different objects. Classifier 1, Classifier 2, Classifier 3. All three are Perceptron. Then I gave different data sets to all three."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 200.0,
+            "end": 217.0,
+            "text": " I gave AND data to Classifier 1. I gave OR data to Classifier 2. And I gave XOR data to Classifier 3. And after that, here are my outputs. Coefficients of Classifier 1 and Intercept of Classifier 1."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 217.0,
+            "end": 236.0,
+            "text": " And when I plotted it, So you can see that my Perceptron ran on AND data. And it easily divided both the classes. Similarly, when I ran Classifier 2 on OR data. So again you can see that a Perceptron, a line."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 236.0,
+            "end": 253.0,
+            "text": " Classified the data set in both the classes. But when I ran Classifier 3 on our XOR data. I did not get any clear cut boundary. And this is the problem of Perceptron. I have told you many times."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 253.0,
+            "end": 264.0,
+            "text": " That it can work only on linear relationships. But I wanted to show you practically. If there is a non-linear relationship. Then it will not be captured. Because if you look at XOR data."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 264.0,
+            "end": 279.0,
+            "text": " You can't draw a single line. Can't separate the two classes. Now I have another very good tool. With which I will show you the same thing on another data. So there is a thing called."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 279.0,
+            "end": 290.0,
+            "text": " Playground. It is called TensorFlow Playground. This is a GUI tool. In this GUI tool, you can create and run neural networks. On different data sets."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 290.0,
+            "end": 305.0,
+            "text": " So here I will show you running Perceptron. So I will select first of all this data set. This data set is linearly separable. Because both the classes are different. Here you make your neural network."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 305.0,
+            "end": 316.0,
+            "text": " So here right now it is a proper neural network. But I don't need a neural network. I just need a Perceptron. So I am removing these hidden layers. This is the Perceptron."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 316.0,
+            "end": 327.0,
+            "text": " And these two are my inputs. X1 and X2. Here I am keeping Sigmoid. And learning rate. Let's do 0.01."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 327.0,
+            "end": 338.0,
+            "text": " And here we can add a little noise. Like this. Okay. And now if I run this code. You can see very quickly."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 338.0,
+            "end": 349.0,
+            "text": " We got our line. And our XOR is giving us the result. Okay. Now what if I. Take this data set."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 349.0,
+            "end": 357.0,
+            "text": " Now if you look at this data set. This is our XOR data set. Okay. Orange in cross. Blue in cross."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 357.0,
+            "end": 367.0,
+            "text": " Okay. This is XOR data. Now see. I will run my code on this. No matter how much time you give."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 367.0,
+            "end": 379.0,
+            "text": " No matter how many epochs you run this code. We will not get our output. We will not be able to separate the two classes. Okay. And the error will be very high."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 379.0,
+            "end": 389.0,
+            "text": " Okay. So if you go to this website. So practically without writing a piece of code. You can check. What is the problem of Perceptron?"
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 389.0,
+            "end": 399.0,
+            "text": " Okay. So we will use this tool a lot in the future. So I just wanted to show you. That such a tool is available. It is a very far tool."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 399.0,
+            "end": 409.0,
+            "text": " We have to use it many times in the future. Okay. So this was a small video. I guess you understood this thing visually. What is the problem with Perceptron?"
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 409.0,
+            "end": 419.0,
+            "text": " So that was the video guys. I know it was not much. But what happens by looking with the eyes. That things sit in the brain. So I thought that I have just said it again and again."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 419.0,
+            "end": 428.0,
+            "text": " Perceptron can only capture linearity. I thought that once I have to show you everything. So that in your mind. Back of the mind. This idea should be established."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 428.0,
+            "end": 437.0,
+            "text": " What was the real problem of Perceptron? Because of which multilayer Perceptron was needed. Okay. Now from the next video. We will start multilayer Perceptron."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 437.0,
+            "end": 448.0,
+            "text": " And things will be more interesting. Okay. So if you have not subscribed to my channel. We are making our 100 days of deep learning course here. And I think a good course is being made."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 448.0,
+            "end": 457.0,
+            "text": " So please do subscribe. You will continue to get this kind of content. And those who have subscribed. Please guys like this video. Okay."
+        },
+        {
+            "number": "7",
+            "title": "Problem with Perceptron",
+            "start": 457.0,
+            "end": 459.0,
+            "text": " Let's go. Bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we will continue our deep learning course in this video. Till now we have studied about Perceptron. First we saw what is Perceptron, then we saw how to train it. First we saw Perceptron trick, then we saw loss functions. So, at this point we have a clarity that what is Perceptron and how does it work. But Perceptron could not become that famous for deep learning. There was a reason for that. The reason was that Perceptron can only work on linear data. It cannot work on non-linear data. So, in today's video, I will show you some codes and some examples practically that Perceptron could not work on non-linear data. So, this is a small video. I didn't want to add it to any other video because I thought it should be treated as an independent topic. That is why this 10-minute video. But in this video, you will learn that, I will show you that if you give non-linear data, no matter how small or big it is, no matter how much time you give Perceptron to train on that data, Perceptron will never be able to converge because essentially Perceptron is a linear model. So, this is what we have to see in this video. So, now let's start the video. So, guys, what is the problem in Perceptron? To show this, I have written a code. And this code is on your screen. So, what I have done is that I have created three different data sets. One of them is OR data, one is AND data, and one is XOR data. I will run the Perceptron algorithm on all three data sets. And I will plot a graph and show you what the output is. So, let's run the code. Here we have imported some libraries. In this cell, we have made three new Pandas data frames. And after that, I have basically created a data set here. Here I have created my OR data. Here I have created my AND data. And here I have created my XOR data. So, I will quickly run all these cells and show you the output. So, you can see this is my AND data. In AND, you know that when both are 1, then the output is 1. In all other cases, the output is 0. There are 4 rows in all three data sets. If you plot this, then this is your AND data. In OR data, if any one is 1, then the output will be 1. If both are 0, then the output will be 0. I have plotted this too. This is our OR data set. And after that, there is XOR. When both are the same, then the output is 0. And when both are different, then the output is 1. Here is its output. This is the graph. Now what I did is I called the Perceptron class from Scikit-learn. And created three different objects. Classifier 1, Classifier 2, Classifier 3. All three are Perceptron. Then I gave different data sets to all three. I gave AND data to Classifier 1. I gave OR data to Classifier 2. And I gave XOR data to Classifier 3. And after that, here are my outputs. Coefficients of Classifier 1 and Intercept of Classifier 1. And when I plotted it, So you can see that my Perceptron ran on AND data. And it easily divided both the classes. Similarly, when I ran Classifier 2 on OR data. So again you can see that a Perceptron, a line. Classified the data set in both the classes. But when I ran Classifier 3 on our XOR data. I did not get any clear cut boundary. And this is the problem of Perceptron. I have told you many times. That it can work only on linear relationships. But I wanted to show you practically. If there is a non-linear relationship. Then it will not be captured. Because if you look at XOR data. You can't draw a single line. Can't separate the two classes. Now I have another very good tool. With which I will show you the same thing on another data. So there is a thing called. Playground. It is called TensorFlow Playground. This is a GUI tool. In this GUI tool, you can create and run neural networks. On different data sets. So here I will show you running Perceptron. So I will select first of all this data set. This data set is linearly separable. Because both the classes are different. Here you make your neural network. So here right now it is a proper neural network. But I don't need a neural network. I just need a Perceptron. So I am removing these hidden layers. This is the Perceptron. And these two are my inputs. X1 and X2. Here I am keeping Sigmoid. And learning rate. Let's do 0.01. And here we can add a little noise. Like this. Okay. And now if I run this code. You can see very quickly. We got our line. And our XOR is giving us the result. Okay. Now what if I. Take this data set. Now if you look at this data set. This is our XOR data set. Okay. Orange in cross. Blue in cross. Okay. This is XOR data. Now see. I will run my code on this. No matter how much time you give. No matter how many epochs you run this code. We will not get our output. We will not be able to separate the two classes. Okay. And the error will be very high. Okay. So if you go to this website. So practically without writing a piece of code. You can check. What is the problem of Perceptron? Okay. So we will use this tool a lot in the future. So I just wanted to show you. That such a tool is available. It is a very far tool. We have to use it many times in the future. Okay. So this was a small video. I guess you understood this thing visually. What is the problem with Perceptron? So that was the video guys. I know it was not much. But what happens by looking with the eyes. That things sit in the brain. So I thought that I have just said it again and again. Perceptron can only capture linearity. I thought that once I have to show you everything. So that in your mind. Back of the mind. This idea should be established. What was the real problem of Perceptron? Because of which multilayer Perceptron was needed. Okay. Now from the next video. We will start multilayer Perceptron. And things will be more interesting. Okay. So if you have not subscribed to my channel. We are making our 100 days of deep learning course here. And I think a good course is being made. So please do subscribe. You will continue to get this kind of content. And those who have subscribed. Please guys like this video. Okay. Let's go. Bye."
+}

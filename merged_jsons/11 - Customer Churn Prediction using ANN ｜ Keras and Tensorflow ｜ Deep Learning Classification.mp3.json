@@ -1,0 +1,1216 @@
+{
+    "chunks": [
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 0.0,
+            "end": 20.0,
+            "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So we are continuing our deep learning playlist. In the last video, we learned how a neural network does prediction. And I also told you in the last video that we are slowly moving towards a very important topic whose name is backpropagation."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 20.0,
+            "end": 43.0,
+            "text": " Backpropagation is the algorithm by which neural networks learn. And it is said that learning and understanding that algorithm is a little difficult. So I don't want to make any mistake. I want to approach that topic very lovingly. And I think you can learn backpropagation better when you use it once before."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 43.0,
+            "end": 65.0,
+            "text": " So my plan is that in today's video and in the next two videos, I will run backpropagation on two real-world data sets in front of you. As in, I will train neural networks. We will use Keras library because it makes things very easy. And you will see firsthand how a neural network architecture is made,"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 65.0,
+            "end": 86.0,
+            "text": " how it is trained and then how it is predicted. Not only that, I will also teach you how you can improve that neural network. I think if you see all these concepts practically once, then when we read backpropagation later, you can understand it a little better. So the plan is very simple."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 86.0,
+            "end": 107.0,
+            "text": " Today we will work on a classification data set. The data set I have chosen is called Customer Churn Prediction. It is a bank data set where customers are leaving the bank. And we have to look at the data and tell which customer will leave the bank in the future. Similarly, in the next video, we will do a different problem."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 107.0,
+            "end": 129.0,
+            "text": " There we will do a multi-class classification problem. Today's problem is binary classification 1-0. We will do a multi-class classification. And then in another video, we will approach a regression problem. The whole idea of these three videos is that I want you to be able to see what happens before reading backpropagation."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 129.0,
+            "end": 147.0,
+            "text": " Making a neural network, training it and predicting it. So that when you read these things, then you can connect dots and learn more correctly. So that's it for the introduction. Let's start the video. So guys this is the data set on which we will work."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 147.0,
+            "end": 171.0,
+            "text": " This is a credit card customer churn prediction data set. So basically this is the data of a bank where they have stored the data of some of their customers. And this data tells whether their customers have left their bank or they are still customers. So machine learning is used a lot in churn prediction. Different companies make machine learning models for churn prediction."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 171.0,
+            "end": 186.0,
+            "text": " So I thought this is a good starting point. This is a good example. So the data set is not very big. We have a total of 14 columns. And the number of rows is also around 10,000."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 186.0,
+            "end": 200.0,
+            "text": " So what we will do, we have not installed anything yet. The secret of tensorflow on our system, we have not learned that. So I will use Kaggle's interface. I will code everything on Kaggle. We will get all the libraries pre-installed there."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 200.0,
+            "end": 218.0,
+            "text": " So there will be no problem of any installation. So we will click on new notebook. And this will create a new notebook. We will write our code here. So let's run the first cell."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 218.0,
+            "end": 244.0,
+            "text": " And while the first cell is running, I will write this code. We will call read csv of pandas. And this should give me the file path. Once you get the file path, here is our file path. We will paste it here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 245.0,
+            "end": 271.0,
+            "text": " And now I will show you how our data looks exactly. Let me also print the shape. So 10,000 by 14. The data of 10,000 customers is across 14 columns. One by one, we will see what our columns are."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 271.0,
+            "end": 286.0,
+            "text": " First is row number, which I don't think is of any use. Second is customer ID, which again I don't think should be of any use. Third is surname. Surname of the customer. So maybe we get something here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 286.0,
+            "end": 306.0,
+            "text": " But since our end goal is to learn how to use Keras and how to build artificial neural networks. So at this point, we don't need to get into the root of this problem. So I think we can also remove the surname. Next is credit score. I guess according to the credibility of the customer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 306.0,
+            "end": 323.0,
+            "text": " We have geography, which is a categorical column. We have gender, age, tenure. I mean, for how many years, I guess the customer is associated with the bank. Balance, account balance is here. How many products are being used by the bank?"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 323.0,
+            "end": 335.0,
+            "text": " I mean, it could be here that you are using a credit card, you are using a debit card. FDRD can be anything, it can be mutual funds. Has credit card. One or zero. It's a simple thing."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 335.0,
+            "end": 348.0,
+            "text": " Is active member. I guess it depends on the number of transactions the customer is performing. Estimated salary. So this bank must have taken it out of itself. I guess by using some other machine learning model."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 348.0,
+            "end": 366.0,
+            "text": " So that they can find out how much is their customer's yearly salary. And finally our target column is exited. So one means the customer left the bank. And zero means it is still there. So let's find out some basic things first."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 366.0,
+            "end": 382.0,
+            "text": " Like are there any missing values? If I run df.info. You can see in any column. We don't have a missing value. Also, the data type looks right."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 382.0,
+            "end": 391.0,
+            "text": " There is an object in two things. Surname, geography and gender. Which is fine. Balance has been told in the float. Estimated salary has been told in the float."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 391.0,
+            "end": 402.0,
+            "text": " Everything else is integer. So there is nothing wrong here. One more thing that should be checked is. What are the duplicated rows? This code will tell us."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 402.0,
+            "end": 413.0,
+            "text": " Is there any duplicated row? Zero means there is no duplicated row. Now let's do one thing. Let's see how many customers have left the bank. How many people are still there?"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 413.0,
+            "end": 432.0,
+            "text": " I would write this code. Exited. Dot value counts. So it is clearly visible that around 8000 people are still there. And 2000 people have left."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 432.0,
+            "end": 448.0,
+            "text": " So this is a little imbalance classification problem. But again at this point our concern. It is not that we make a perfect model. Now we just have to learn. But yes, if we were actually solving this problem."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 448.0,
+            "end": 461.0,
+            "text": " Then we would have to consider this too. Also, I would like to see how many categories are in this geography column. So I will just copy this code. And I will paste it over here. And we write it."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 464.0,
+            "end": 477.0,
+            "text": " Geography. So there are three different geographies here. France, Germany and Spain. And there is a little imbalance here. I guess it should be male and female in gender."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 477.0,
+            "end": 492.0,
+            "text": " Let's write it once again. I'm sorry. We will write gender. So this is fairly balanced. Okay, now we will do one thing."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 492.0,
+            "end": 507.0,
+            "text": " Before moving forward, we will remove the first three columns. Okay, so we can write this code. Df. Drop. We will provide the name of the columns in a list."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 507.0,
+            "end": 533.0,
+            "text": " So the first one is row number. Second is. Customer ID. And the third one is surname. And we will keep it true in place."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 533.0,
+            "end": 552.0,
+            "text": " So that these changes become permanent. And now if we look at our data set. So this is our output. Okay, so now our approach should have been that we perform EDA etc. and find out which of the remaining columns are really useful."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 552.0,
+            "end": 569.0,
+            "text": " Which is not useful. We should have done such things. But unfortunately we cannot do this now. Because I am saying again and again that our end goal is not to get the perfect model. Our end goal is to learn how to build an artificial neural network using Keras."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 569.0,
+            "end": 584.0,
+            "text": " Okay, so I will tell you things in that direction. So first of all, what do we have to do? We have these two categorical columns. First of all, we have to encode them. So its method is very simple."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 584.0,
+            "end": 599.0,
+            "text": " There is a function called. Get dummies. Here we will pass our data frame. Our columns. We will write the name of those columns which we have to transform."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 600.0,
+            "end": 616.0,
+            "text": " Geography. Also gender. And we will make drop first true. What will happen with this? We will get this data."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 616.0,
+            "end": 630.0,
+            "text": " You can see. We have made two columns from our three categories. Geography Germany and Geography Spain. Geography France has been deleted. And we have made one from our two genders."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 630.0,
+            "end": 642.0,
+            "text": " Gender male. So we can show three categories from these two columns. Like 00 means France. Similarly, we can show two categories from one column. Like 0 means female."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 642.0,
+            "end": 657.0,
+            "text": " Okay, so we transformed it. Now I have all the data. It is numerical. It means that we are ready to build our model. Okay, one more thing that we will do before model building."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 657.0,
+            "end": 668.0,
+            "text": " That is that we will scale the values. So if you notice here. Some numbers are very big. Like six digit numbers. And then there are some single digit numbers."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 668.0,
+            "end": 684.0,
+            "text": " So in this way, if you try to train your neural network. So what happens is that the value of your weight. It does not converge quickly. So that's why it is said that whenever you are working with neural networks. Please make sure that you are at the time of model building."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 685.0,
+            "end": 705.0,
+            "text": " Scale all your values. Okay, so what will we do for it? First of all, we will split the train test. We have done all this many times. We would write X train."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 707.0,
+            "end": 732.0,
+            "text": " X test. Why train? Why test? Train to split x, y, let's pass our text. Test size to be 0.2 80% data."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 732.0,
+            "end": 744.0,
+            "text": " We are keeping it for training. Or 20% data. We are keeping it for testing. And obviously sorry. We did not do one thing."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 744.0,
+            "end": 758.0,
+            "text": " We did not separate x and y. So we will write this code. Drop. Columns. We will temporarily drop the last column."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 758.0,
+            "end": 772.0,
+            "text": " And whatever is left, we will store it in x. And we will write in y. Exited. And this is our code. So if you print x."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 772.0,
+            "end": 784.0,
+            "text": " This is our x. It has all the input columns. And if you talk about y. So this is our column. And if you talk about x train."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 784.0,
+            "end": 795.0,
+            "text": " Shape. So here we have 8000. Customers came randomly. And 11 are our input columns. Okay, so at this point."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 795.0,
+            "end": 805.0,
+            "text": " Now we have data. Train and test. Sets. Now what we have to do. Scaling on it."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 805.0,
+            "end": 817.0,
+            "text": " So we would write this code. Pre-processing. Import. Standard scalar class. Let's create an object."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 817.0,
+            "end": 834.0,
+            "text": " Of this class. We are making a new variable. X train scale. Which will be equal to x train. Dot."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 834.0,
+            "end": 844.0,
+            "text": " Scalar. Fit. Transform. Here we will pass. Our extreme."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 844.0,
+            "end": 854.0,
+            "text": " And we will make another variable. X test. Scaled. Scalar. Transform."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 854.0,
+            "end": 864.0,
+            "text": " X test. Okay. And now we will run this code. We have. Transformed values."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 864.0,
+            "end": 874.0,
+            "text": " I can show you. If we run this code. You can see here. And inside it. Every array."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 874.0,
+            "end": 884.0,
+            "text": " We have a customer. And you can see all the values. Very small. Decimal. To supply."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 884.0,
+            "end": 894.0,
+            "text": " To since. Everything is pre-installed here. I'll just import. TensorFlow. From TensorFlow."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 894.0,
+            "end": 912.0,
+            "text": " I'll import Keras. From Keras. From. TensorFlow dot Keras. Import the."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 912.0,
+            "end": 928.0,
+            "text": " Sequential. Class. And from. TensorFlow dot Keras. Dot layers."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 930.0,
+            "end": 940.0,
+            "text": " I will import. Dense layer. Which we are going to use. To make this model. So."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 940.0,
+            "end": 950.0,
+            "text": " After this import. Now we have to build our model. Okay. So you can make two types of models in Keras. One is sequential."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 950.0,
+            "end": 960.0,
+            "text": " And one is non-sequential. Now we are just starting. We will make sequential models. Its code is very simple. You write."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 960.0,
+            "end": 970.0,
+            "text": " Model is equal to. Sequential. You are making an object of it. When your model is made. You add layers to it."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 970.0,
+            "end": 980.0,
+            "text": " So we will start. So we have. One input layer. One hidden layer. And one output layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 980.0,
+            "end": 990.0,
+            "text": " So our hidden layer. For starting. We will keep three nodes there. That is, we will keep three perceptrons. So its code will look like this."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 990.0,
+            "end": 1000.0,
+            "text": " Model dot add. Is a function. We are putting an object of dense class. Dense basically. Creates a dense layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1000.0,
+            "end": 1010.0,
+            "text": " And here right now. By the way, this layer is our input layer. And here is our. Activation function. That will be sigmoid."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1010.0,
+            "end": 1020.0,
+            "text": " Also. Since this hidden layer. Is connected to our input. So we have to tell. How many inputs it will get."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1020.0,
+            "end": 1030.0,
+            "text": " So for now we write here. Input dimensions. Is equal to 11. Because we have 11 input columns. So this is our hidden layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1030.0,
+            "end": 1040.0,
+            "text": " Now we will write. Model dot add. And now our. Output layer will be added. In which there will be one node."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1040.0,
+            "end": 1050.0,
+            "text": " And the activation. That will be sigmoid. Okay. And this is our neural network. Architecture."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1050.0,
+            "end": 1060.0,
+            "text": " So this is some warning. Now what you can do. There is a function called summary. You can run it. And it will give you a summary of your model."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1060.0,
+            "end": 1070.0,
+            "text": " Okay, so if you see. So everything is very simple. What have we done. I will in fact show you. So we are here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1070.0,
+            "end": 1082.0,
+            "text": " Such a neural network. Architecture is made. Here we have a total. 11. Inputs."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1082.0,
+            "end": 1092.0,
+            "text": " Okay. And. All these inputs. Your. In every node."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1092.0,
+            "end": 1104.0,
+            "text": " Okay. Like this. Like this. Okay. After that you can see the architecture clearly."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1104.0,
+            "end": 1114.0,
+            "text": " So. If you talk. How many trainable parameters are there. Here are 11. Multiplied by 3 biases."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1114.0,
+            "end": 1124.0,
+            "text": " Plus 3 biases. So this would be 36. And here are 3 cross. 1 plus 1. So here it came."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1124.0,
+            "end": 1136.0,
+            "text": " 4. So your total trainable parameters have become 40. Which you can see here. Okay. So this is the connection of the first layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1136.0,
+            "end": 1146.0,
+            "text": " And this is the connection of the second layer. So when this neural network will be trained. Then it will do the same. It will take the value of 40 weights and biases. To do the prediction."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1146.0,
+            "end": 1156.0,
+            "text": " Okay. So now see what we have to do. After doing this. We have to compile our model. Okay."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1156.0,
+            "end": 1166.0,
+            "text": " In the model compilation stage. You tell some things. Which optimizer you will use. For gradient descent. You tell all this here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1166.0,
+            "end": 1176.0,
+            "text": " Let's say I wrote model.compile. And. Here I first told. That my loss function. Since this is our."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1176.0,
+            "end": 1186.0,
+            "text": " Binary classification problem. Our loss function. That will be. Binary cross. Entropy."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1186.0,
+            "end": 1196.0,
+            "text": " Which you. Can ask. And here we will use an optimizer. For our gradient descent algorithm. Whose name will be Adam."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1196.0,
+            "end": 1206.0,
+            "text": " So we. Can use a lot of different optimizers. Adam generally performs better. So. This is our model."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1206.0,
+            "end": 1216.0,
+            "text": " Compilation. Now what we will do in the last stage. Will fit the model. Here we will pass our x. Train scaled data."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1216.0,
+            "end": 1226.0,
+            "text": " And here we will pass. Y train. Along with this, you will also tell. How many passes you have to take on your data. How many times you will rotate on your data."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1226.0,
+            "end": 1236.0,
+            "text": " To find out these. Weights and biases. I said rotate 10 times for now. As a result comes in 10 times. We will check ahead."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1236.0,
+            "end": 1246.0,
+            "text": " Now this is the stage where your. Neural network is trained. So if I run this code. You can see one by one. 10 times."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1246.0,
+            "end": 1256.0,
+            "text": " Our whole model. Turned on our data. And every time he calculated a loss. And you would see. In every next epoch."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1256.0,
+            "end": 1266.0,
+            "text": " The loss is decreasing. To a point where. In the last epoch. We have a log loss of 0.42. So after doing this."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1266.0,
+            "end": 1276.0,
+            "text": " Now our model has been trained. All the weights of our model. And biases. Now I will show you. The value of weights and biases."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1276.0,
+            "end": 1286.0,
+            "text": " Where is it stored. So your model. Object. There is an attribute called layers. We have to go to the 0th layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1286.0,
+            "end": 1296.0,
+            "text": " And from there. We have to call this function. And look at this. Here is our output. So here are our 33."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1296.0,
+            "end": 1308.0,
+            "text": " Weights of the first layer. And here are three biases. So basically I will show you. Of this layer. Which is."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1308.0,
+            "end": 1318.0,
+            "text": " 11 x 3 weights. You can see it here. And. Its bias. You can see it here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1318.0,
+            "end": 1328.0,
+            "text": " Similarly if you. Put 1 instead of 0 in the layer. So here are three. Weights. This one, this one and this one."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1328.0,
+            "end": 1338.0,
+            "text": " And here is its. Its bias. So our model. Has calculated it. And now it can do prediction."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1338.0,
+            "end": 1348.0,
+            "text": " It is very simple to do prediction. You have a function. Predict. You will send your x test. Scaled."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1348.0,
+            "end": 1358.0,
+            "text": " And this. For all of you. For all the test set. Will give a prediction. Now the thing to notice here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1358.0,
+            "end": 1368.0,
+            "text": " Is that your output. Is not 1 or 0. Okay. Its reason is very simple. You are using sigmoid."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1368.0,
+            "end": 1378.0,
+            "text": " And the output of sigmoid. Is a probability between 0 and 1. So now it is your job. To convert this probability. To 0 and 1."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1378.0,
+            "end": 1388.0,
+            "text": " Okay. Now converting to 0 or 1. Is actually very easy. You have to decide the threshold. For example, we have decided the threshold."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1388.0,
+            "end": 1398.0,
+            "text": " 0.5 means. If the value is below 0.5. Then we will say 0. Means the customer will not leave the bank. And if it is above 0.5."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1398.0,
+            "end": 1408.0,
+            "text": " Then we will say 1. Means the customer will leave the bank. Obviously what should be the threshold. For this you have to plot. The ROC, AUC curve."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1408.0,
+            "end": 1418.0,
+            "text": " But for now we have decided. That our output should be. 0.5. So I am doing one thing. I am storing this whole thing."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1418.0,
+            "end": 1428.0,
+            "text": " In a variable. And after that. I am writing this code. Where. Y log."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1428.0,
+            "end": 1438.0,
+            "text": " Greater than 0.5. If it is. Then 1. If not then 0. And this is our output."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1438.0,
+            "end": 1448.0,
+            "text": " Let's call it. So we have. Now let's see the accuracy of this model. So we will write from. Sklearn.metrics."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1448.0,
+            "end": 1458.0,
+            "text": " Will import. Accuracy score. And now we will print. Our accuracy score. First we will pass."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1458.0,
+            "end": 1468.0,
+            "text": " The actual data. And then we will pass. And this is our output. The output at this point. That is 81."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1468.0,
+            "end": 1478.0,
+            "text": " 81.45 percent. Okay. Now what can you do. That by making some changes in your neural network. You can."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1478.0,
+            "end": 1488.0,
+            "text": " Improve the output. Okay. So let me show you. What changes can you do. First of all. You can increase the number of epochs."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1488.0,
+            "end": 1498.0,
+            "text": " Okay. Which is currently 10. You can increase it to 100,000. Second. It has been seen."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1498.0,
+            "end": 1508.0,
+            "text": " That your hidden layers. Their activation function. If you keep relu. Then it gives a better result. One more thing you can do."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1508.0,
+            "end": 1518.0,
+            "text": " That is your layers. Especially your hidden layer. You increase the number of nodes. Like here the number of nodes is 3. You can increase it to 10, 30."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1518.0,
+            "end": 1528.0,
+            "text": " You can do anything. So this is one way. You have to experiment and see. Another thing you can do. That you increase the number of layers."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1528.0,
+            "end": 1538.0,
+            "text": " Means there is only one hidden layer here. You can add one more. If you add too much. It starts overfitting. So that's what I said."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1538.0,
+            "end": 1548.0,
+            "text": " You have to experiment and see. So let me show you these changes. First of all, I did this. That I replaced the sigmoid here. Relu."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1548.0,
+            "end": 1564.0,
+            "text": " The output will still be sigmoid. Then I did 11 here. Then I increased one more layer. Like this. So if you."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1564.0,
+            "end": 1574.0,
+            "text": " Talk in architectural terms. So what happened to us now? We have. This is the first hidden layer. Which has 11 nodes."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1574.0,
+            "end": 1584.0,
+            "text": " This is another hidden layer. Which has 11 nodes. And this is a single node. So now if you. Calculate how many trainable parameters."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1584.0,
+            "end": 1594.0,
+            "text": " So this is 11 times. 11 weights plus 11. So 133 happened here. Then 11 times. 11 plus 11."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1594.0,
+            "end": 1604.0,
+            "text": " 133 happened here. 11 times 1 plus 1. So this is 12. So if you talk, this is 266. Plus 12 278."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1604.0,
+            "end": 1614.0,
+            "text": " Weights and biases. So if you run this code. I have done that. If you go to summary. Okay, I didn't do it."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1614.0,
+            "end": 1624.0,
+            "text": " Let's run it again. Here is your 276. Weights and biases. Okay, so now what are we doing again? We are compiling."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1624.0,
+            "end": 1634.0,
+            "text": " And this time while compiling. I show you together. How you. Accuracy can be seen together. So I am writing accuracy here."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1634.0,
+            "end": 1644.0,
+            "text": " So what will happen to us now? I was just showing the loss till now. Now we will also show accuracy. After every epoch. Also I am increasing my epoch."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1644.0,
+            "end": 1656.0,
+            "text": " I am doing 100. And here I am adding a new thing. I am taking a validation split here. So what happens with validation split? At the point where you are training your model."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1656.0,
+            "end": 1666.0,
+            "text": " You have data of 8000 customers. Now what am I doing? In those 8000 customers. I am separating 20% customers. Now my model."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1666.0,
+            "end": 1678.0,
+            "text": " Will run on 8000-20% customers. And along with running. It will test on these 2000 customers. How is its result coming? And will tell us the accuracy together."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1678.0,
+            "end": 1690.0,
+            "text": " So this is also a good technique. To validate the performance of your model. Okay, so these changes we have done. We run the code on it now. And there is some error."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1690.0,
+            "end": 1702.0,
+            "text": " Okay. I think we did not run this code. We will run this code. And now we will run this. And you can see."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1702.0,
+            "end": 1712.0,
+            "text": " Now a lot of information is on our screen. If you see epoch by epoch. First we can see. The loss of the training. We can see the accuracy of the training."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1712.0,
+            "end": 1722.0,
+            "text": " Then the validation set. 20% We can see the loss on it. Then we can see the accuracy of the model. And you will see this continuously in every epoch."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1722.0,
+            "end": 1732.0,
+            "text": " And your end goal is. That your loss should be reduced. And your accuracy should increase. Okay, also one thing. You have to take care of more."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1732.0,
+            "end": 1742.0,
+            "text": " That your training's accuracy should also increase. And your validation. Accuracy should also increase. If it happens that only. The accuracy of your training data is increasing."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1742.0,
+            "end": 1752.0,
+            "text": " Whereas your. Accuracy of validation. Is not increasing. It has stagnated. So it becomes a case of overfitting."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1752.0,
+            "end": 1762.0,
+            "text": " So let me show you. It is not taking much time to run the code. Because behind the scenes all the work is happening on the GPU. And you can see if you look at the last step. So a little."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1762.0,
+            "end": 1772.0,
+            "text": " A little overfitting. Scenario is visible. Because the training accuracy has reached 87%. Whereas validation accuracy. Still 84.8."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1772.0,
+            "end": 1782.0,
+            "text": " If you look at the loss. So the training loss is much less. And the validation one is still. Okay. In the range."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1782.0,
+            "end": 1792.0,
+            "text": " Here you can see the weights again. As we saw last time. This is your 121. Plus 11. First layer."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1792.0,
+            "end": 1802.0,
+            "text": " The zeroth layer. Will be exactly the same. And if you go to the second layer. So here is the second layer. Okay, now what we will do."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1802.0,
+            "end": 1812.0,
+            "text": " Will do prediction again. And. Will apply this logic again. And again we will get the accuracy. And you can see."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1812.0,
+            "end": 1822.0,
+            "text": " Our accuracy has improved. Now it has reached 85.75. Okay. Obviously if you apply cross validation. It will come a little less."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1822.0,
+            "end": 1832.0,
+            "text": " But again you get the idea. How you are making neural networks. And how you can improve their accuracy. We will learn many more things. But now I was just showing you."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1832.0,
+            "end": 1842.0,
+            "text": " One last thing. I would like to do in front of you. It is that you should plot two graphs at the same time. Let me show you. What are the graphs and how to plot them."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1842.0,
+            "end": 1854.0,
+            "text": " So I am running this model again. And. What am I doing here? I am creating a variable. What will it do?"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1854.0,
+            "end": 1864.0,
+            "text": " This whole data is on your screen. It will store it. In this dictionary. If you train the model again. Now you will get a dictionary called history."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1864.0,
+            "end": 1874.0,
+            "text": " In which all this data is stored. So what can you do? You can plot a graph of any stage. And that graph gives you a lot of information. How your neural network has performed."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1874.0,
+            "end": 1884.0,
+            "text": " Okay. So we will wait. Once we train this model. And after that. Then we will do our next step."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1884.0,
+            "end": 1894.0,
+            "text": " To do the next step. To do this. You have to import matplotlib. So I am doing that first. Import matplotlib.pyplot as plt."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1902.0,
+            "end": 1914.0,
+            "text": " And I guess our training is complete. And now I will show you. What is inside history. So history is basically a history object. But if you write this."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1914.0,
+            "end": 1924.0,
+            "text": " History.history. Then you get a dictionary. Where there are 4 key value pairs. First key is loss. And this is training loss."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1924.0,
+            "end": 1934.0,
+            "text": " Of every epoch. Similarly if you go down a little. Then this is accuracy. Again of your 100 epochs. And this is about training."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1934.0,
+            "end": 1944.0,
+            "text": " Till now. After that if you see. This is val loss. Here you have validation loss of every epoch. And if you go down a little."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1944.0,
+            "end": 1954.0,
+            "text": " Then you have validation accuracy. Of every epoch. So I will plot two graphs. Let me show you. So I would write this code."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1954.0,
+            "end": 1964.0,
+            "text": " Plt.plot. And here I will write. History.history. History.history. History.history."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1964.0,
+            "end": 1974.0,
+            "text": " History.history. History.history. History.history. History.history. History.history."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1974.0,
+            "end": 1994.0,
+            "text": " History.history. History.history. History.history. Let's see validation loss. So you can see."
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 1996.0,
+            "end": 2007.6,
+            "text": " And then slowly. Validation loss is not as fast as trading loss and that's why there is a gap and this gap only tells you how much overfitting has happened"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2007.6,
+            "end": 2017.6,
+            "text": " not much here honestly but you get this idea from this graph I will plot the same set of graphs for"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2017.6,
+            "end": 2029.6000000000001,
+            "text": " accuracy ok so we are just changing the name of all these variables and you can see"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2029.6000000000001,
+            "end": 2039.6000000000001,
+            "text": " even if it fluctuates a little we have reached over here so there is a gap between 84-86%"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2039.6000000000001,
+            "end": 2049.6000000000004,
+            "text": " so again you can't say much but yes at some level there is some overfitting now here you have to use some concepts like regularization"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2049.6000000000004,
+            "end": 2059.6,
+            "text": " or dropout we haven't studied that yet but as I told you we had to give an introduction an idea that whatever we have studied"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2059.6,
+            "end": 2069.6,
+            "text": " how to write it in code and how to use Keras library Keras library has made things very easy making neural networks is so easy now"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2069.6,
+            "end": 2079.6,
+            "text": " so I hope by watching this video you would have understood two things first how to make your own neural network and how to improve it"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2079.6,
+            "end": 2089.6,
+            "text": " second, how to work with Keras library so that was the video guys I hope you would have understood things I tried to keep everything in front of you"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2089.6,
+            "end": 2099.6,
+            "text": " in a very easy way obviously our end goal was not to achieve the best accuracy or make the best model because at this point that is not our concern"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2099.6,
+            "end": 2109.6,
+            "text": " our concern was to make the neural networks to train them and to make predictions and if possible to improve them"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2109.6,
+            "end": 2119.6,
+            "text": " we covered all these things in this video I hope you liked this video and if you liked this video please do like the video and please subscribe my channel"
+        },
+        {
+            "number": "11",
+            "title": "Customer Churn Prediction using ANN | Keras and Tensorflow | Deep Learning Classification",
+            "start": 2119.6,
+            "end": 2125.6,
+            "text": " that's it from my side let's meet in the next video bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So we are continuing our deep learning playlist. In the last video, we learned how a neural network does prediction. And I also told you in the last video that we are slowly moving towards a very important topic whose name is backpropagation. Backpropagation is the algorithm by which neural networks learn. And it is said that learning and understanding that algorithm is a little difficult. So I don't want to make any mistake. I want to approach that topic very lovingly. And I think you can learn backpropagation better when you use it once before. So my plan is that in today's video and in the next two videos, I will run backpropagation on two real-world data sets in front of you. As in, I will train neural networks. We will use Keras library because it makes things very easy. And you will see firsthand how a neural network architecture is made, how it is trained and then how it is predicted. Not only that, I will also teach you how you can improve that neural network. I think if you see all these concepts practically once, then when we read backpropagation later, you can understand it a little better. So the plan is very simple. Today we will work on a classification data set. The data set I have chosen is called Customer Churn Prediction. It is a bank data set where customers are leaving the bank. And we have to look at the data and tell which customer will leave the bank in the future. Similarly, in the next video, we will do a different problem. There we will do a multi-class classification problem. Today's problem is binary classification 1-0. We will do a multi-class classification. And then in another video, we will approach a regression problem. The whole idea of these three videos is that I want you to be able to see what happens before reading backpropagation. Making a neural network, training it and predicting it. So that when you read these things, then you can connect dots and learn more correctly. So that's it for the introduction. Let's start the video. So guys this is the data set on which we will work. This is a credit card customer churn prediction data set. So basically this is the data of a bank where they have stored the data of some of their customers. And this data tells whether their customers have left their bank or they are still customers. So machine learning is used a lot in churn prediction. Different companies make machine learning models for churn prediction. So I thought this is a good starting point. This is a good example. So the data set is not very big. We have a total of 14 columns. And the number of rows is also around 10,000. So what we will do, we have not installed anything yet. The secret of tensorflow on our system, we have not learned that. So I will use Kaggle's interface. I will code everything on Kaggle. We will get all the libraries pre-installed there. So there will be no problem of any installation. So we will click on new notebook. And this will create a new notebook. We will write our code here. So let's run the first cell. And while the first cell is running, I will write this code. We will call read csv of pandas. And this should give me the file path. Once you get the file path, here is our file path. We will paste it here. And now I will show you how our data looks exactly. Let me also print the shape. So 10,000 by 14. The data of 10,000 customers is across 14 columns. One by one, we will see what our columns are. First is row number, which I don't think is of any use. Second is customer ID, which again I don't think should be of any use. Third is surname. Surname of the customer. So maybe we get something here. But since our end goal is to learn how to use Keras and how to build artificial neural networks. So at this point, we don't need to get into the root of this problem. So I think we can also remove the surname. Next is credit score. I guess according to the credibility of the customer. We have geography, which is a categorical column. We have gender, age, tenure. I mean, for how many years, I guess the customer is associated with the bank. Balance, account balance is here. How many products are being used by the bank? I mean, it could be here that you are using a credit card, you are using a debit card. FDRD can be anything, it can be mutual funds. Has credit card. One or zero. It's a simple thing. Is active member. I guess it depends on the number of transactions the customer is performing. Estimated salary. So this bank must have taken it out of itself. I guess by using some other machine learning model. So that they can find out how much is their customer's yearly salary. And finally our target column is exited. So one means the customer left the bank. And zero means it is still there. So let's find out some basic things first. Like are there any missing values? If I run df.info. You can see in any column. We don't have a missing value. Also, the data type looks right. There is an object in two things. Surname, geography and gender. Which is fine. Balance has been told in the float. Estimated salary has been told in the float. Everything else is integer. So there is nothing wrong here. One more thing that should be checked is. What are the duplicated rows? This code will tell us. Is there any duplicated row? Zero means there is no duplicated row. Now let's do one thing. Let's see how many customers have left the bank. How many people are still there? I would write this code. Exited. Dot value counts. So it is clearly visible that around 8000 people are still there. And 2000 people have left. So this is a little imbalance classification problem. But again at this point our concern. It is not that we make a perfect model. Now we just have to learn. But yes, if we were actually solving this problem. Then we would have to consider this too. Also, I would like to see how many categories are in this geography column. So I will just copy this code. And I will paste it over here. And we write it. Geography. So there are three different geographies here. France, Germany and Spain. And there is a little imbalance here. I guess it should be male and female in gender. Let's write it once again. I'm sorry. We will write gender. So this is fairly balanced. Okay, now we will do one thing. Before moving forward, we will remove the first three columns. Okay, so we can write this code. Df. Drop. We will provide the name of the columns in a list. So the first one is row number. Second is. Customer ID. And the third one is surname. And we will keep it true in place. So that these changes become permanent. And now if we look at our data set. So this is our output. Okay, so now our approach should have been that we perform EDA etc. and find out which of the remaining columns are really useful. Which is not useful. We should have done such things. But unfortunately we cannot do this now. Because I am saying again and again that our end goal is not to get the perfect model. Our end goal is to learn how to build an artificial neural network using Keras. Okay, so I will tell you things in that direction. So first of all, what do we have to do? We have these two categorical columns. First of all, we have to encode them. So its method is very simple. There is a function called. Get dummies. Here we will pass our data frame. Our columns. We will write the name of those columns which we have to transform. Geography. Also gender. And we will make drop first true. What will happen with this? We will get this data. You can see. We have made two columns from our three categories. Geography Germany and Geography Spain. Geography France has been deleted. And we have made one from our two genders. Gender male. So we can show three categories from these two columns. Like 00 means France. Similarly, we can show two categories from one column. Like 0 means female. Okay, so we transformed it. Now I have all the data. It is numerical. It means that we are ready to build our model. Okay, one more thing that we will do before model building. That is that we will scale the values. So if you notice here. Some numbers are very big. Like six digit numbers. And then there are some single digit numbers. So in this way, if you try to train your neural network. So what happens is that the value of your weight. It does not converge quickly. So that's why it is said that whenever you are working with neural networks. Please make sure that you are at the time of model building. Scale all your values. Okay, so what will we do for it? First of all, we will split the train test. We have done all this many times. We would write X train. X test. Why train? Why test? Train to split x, y, let's pass our text. Test size to be 0.2 80% data. We are keeping it for training. Or 20% data. We are keeping it for testing. And obviously sorry. We did not do one thing. We did not separate x and y. So we will write this code. Drop. Columns. We will temporarily drop the last column. And whatever is left, we will store it in x. And we will write in y. Exited. And this is our code. So if you print x. This is our x. It has all the input columns. And if you talk about y. So this is our column. And if you talk about x train. Shape. So here we have 8000. Customers came randomly. And 11 are our input columns. Okay, so at this point. Now we have data. Train and test. Sets. Now what we have to do. Scaling on it. So we would write this code. Pre-processing. Import. Standard scalar class. Let's create an object. Of this class. We are making a new variable. X train scale. Which will be equal to x train. Dot. Scalar. Fit. Transform. Here we will pass. Our extreme. And we will make another variable. X test. Scaled. Scalar. Transform. X test. Okay. And now we will run this code. We have. Transformed values. I can show you. If we run this code. You can see here. And inside it. Every array. We have a customer. And you can see all the values. Very small. Decimal. To supply. To since. Everything is pre-installed here. I'll just import. TensorFlow. From TensorFlow. I'll import Keras. From Keras. From. TensorFlow dot Keras. Import the. Sequential. Class. And from. TensorFlow dot Keras. Dot layers. I will import. Dense layer. Which we are going to use. To make this model. So. After this import. Now we have to build our model. Okay. So you can make two types of models in Keras. One is sequential. And one is non-sequential. Now we are just starting. We will make sequential models. Its code is very simple. You write. Model is equal to. Sequential. You are making an object of it. When your model is made. You add layers to it. So we will start. So we have. One input layer. One hidden layer. And one output layer. So our hidden layer. For starting. We will keep three nodes there. That is, we will keep three perceptrons. So its code will look like this. Model dot add. Is a function. We are putting an object of dense class. Dense basically. Creates a dense layer. And here right now. By the way, this layer is our input layer. And here is our. Activation function. That will be sigmoid. Also. Since this hidden layer. Is connected to our input. So we have to tell. How many inputs it will get. So for now we write here. Input dimensions. Is equal to 11. Because we have 11 input columns. So this is our hidden layer. Now we will write. Model dot add. And now our. Output layer will be added. In which there will be one node. And the activation. That will be sigmoid. Okay. And this is our neural network. Architecture. So this is some warning. Now what you can do. There is a function called summary. You can run it. And it will give you a summary of your model. Okay, so if you see. So everything is very simple. What have we done. I will in fact show you. So we are here. Such a neural network. Architecture is made. Here we have a total. 11. Inputs. Okay. And. All these inputs. Your. In every node. Okay. Like this. Like this. Okay. After that you can see the architecture clearly. So. If you talk. How many trainable parameters are there. Here are 11. Multiplied by 3 biases. Plus 3 biases. So this would be 36. And here are 3 cross. 1 plus 1. So here it came. 4. So your total trainable parameters have become 40. Which you can see here. Okay. So this is the connection of the first layer. And this is the connection of the second layer. So when this neural network will be trained. Then it will do the same. It will take the value of 40 weights and biases. To do the prediction. Okay. So now see what we have to do. After doing this. We have to compile our model. Okay. In the model compilation stage. You tell some things. Which optimizer you will use. For gradient descent. You tell all this here. Let's say I wrote model.compile. And. Here I first told. That my loss function. Since this is our. Binary classification problem. Our loss function. That will be. Binary cross. Entropy. Which you. Can ask. And here we will use an optimizer. For our gradient descent algorithm. Whose name will be Adam. So we. Can use a lot of different optimizers. Adam generally performs better. So. This is our model. Compilation. Now what we will do in the last stage. Will fit the model. Here we will pass our x. Train scaled data. And here we will pass. Y train. Along with this, you will also tell. How many passes you have to take on your data. How many times you will rotate on your data. To find out these. Weights and biases. I said rotate 10 times for now. As a result comes in 10 times. We will check ahead. Now this is the stage where your. Neural network is trained. So if I run this code. You can see one by one. 10 times. Our whole model. Turned on our data. And every time he calculated a loss. And you would see. In every next epoch. The loss is decreasing. To a point where. In the last epoch. We have a log loss of 0.42. So after doing this. Now our model has been trained. All the weights of our model. And biases. Now I will show you. The value of weights and biases. Where is it stored. So your model. Object. There is an attribute called layers. We have to go to the 0th layer. And from there. We have to call this function. And look at this. Here is our output. So here are our 33. Weights of the first layer. And here are three biases. So basically I will show you. Of this layer. Which is. 11 x 3 weights. You can see it here. And. Its bias. You can see it here. Similarly if you. Put 1 instead of 0 in the layer. So here are three. Weights. This one, this one and this one. And here is its. Its bias. So our model. Has calculated it. And now it can do prediction. It is very simple to do prediction. You have a function. Predict. You will send your x test. Scaled. And this. For all of you. For all the test set. Will give a prediction. Now the thing to notice here. Is that your output. Is not 1 or 0. Okay. Its reason is very simple. You are using sigmoid. And the output of sigmoid. Is a probability between 0 and 1. So now it is your job. To convert this probability. To 0 and 1. Okay. Now converting to 0 or 1. Is actually very easy. You have to decide the threshold. For example, we have decided the threshold. 0.5 means. If the value is below 0.5. Then we will say 0. Means the customer will not leave the bank. And if it is above 0.5. Then we will say 1. Means the customer will leave the bank. Obviously what should be the threshold. For this you have to plot. The ROC, AUC curve. But for now we have decided. That our output should be. 0.5. So I am doing one thing. I am storing this whole thing. In a variable. And after that. I am writing this code. Where. Y log. Greater than 0.5. If it is. Then 1. If not then 0. And this is our output. Let's call it. So we have. Now let's see the accuracy of this model. So we will write from. Sklearn.metrics. Will import. Accuracy score. And now we will print. Our accuracy score. First we will pass. The actual data. And then we will pass. And this is our output. The output at this point. That is 81. 81.45 percent. Okay. Now what can you do. That by making some changes in your neural network. You can. Improve the output. Okay. So let me show you. What changes can you do. First of all. You can increase the number of epochs. Okay. Which is currently 10. You can increase it to 100,000. Second. It has been seen. That your hidden layers. Their activation function. If you keep relu. Then it gives a better result. One more thing you can do. That is your layers. Especially your hidden layer. You increase the number of nodes. Like here the number of nodes is 3. You can increase it to 10, 30. You can do anything. So this is one way. You have to experiment and see. Another thing you can do. That you increase the number of layers. Means there is only one hidden layer here. You can add one more. If you add too much. It starts overfitting. So that's what I said. You have to experiment and see. So let me show you these changes. First of all, I did this. That I replaced the sigmoid here. Relu. The output will still be sigmoid. Then I did 11 here. Then I increased one more layer. Like this. So if you. Talk in architectural terms. So what happened to us now? We have. This is the first hidden layer. Which has 11 nodes. This is another hidden layer. Which has 11 nodes. And this is a single node. So now if you. Calculate how many trainable parameters. So this is 11 times. 11 weights plus 11. So 133 happened here. Then 11 times. 11 plus 11. 133 happened here. 11 times 1 plus 1. So this is 12. So if you talk, this is 266. Plus 12 278. Weights and biases. So if you run this code. I have done that. If you go to summary. Okay, I didn't do it. Let's run it again. Here is your 276. Weights and biases. Okay, so now what are we doing again? We are compiling. And this time while compiling. I show you together. How you. Accuracy can be seen together. So I am writing accuracy here. So what will happen to us now? I was just showing the loss till now. Now we will also show accuracy. After every epoch. Also I am increasing my epoch. I am doing 100. And here I am adding a new thing. I am taking a validation split here. So what happens with validation split? At the point where you are training your model. You have data of 8000 customers. Now what am I doing? In those 8000 customers. I am separating 20% customers. Now my model. Will run on 8000-20% customers. And along with running. It will test on these 2000 customers. How is its result coming? And will tell us the accuracy together. So this is also a good technique. To validate the performance of your model. Okay, so these changes we have done. We run the code on it now. And there is some error. Okay. I think we did not run this code. We will run this code. And now we will run this. And you can see. Now a lot of information is on our screen. If you see epoch by epoch. First we can see. The loss of the training. We can see the accuracy of the training. Then the validation set. 20% We can see the loss on it. Then we can see the accuracy of the model. And you will see this continuously in every epoch. And your end goal is. That your loss should be reduced. And your accuracy should increase. Okay, also one thing. You have to take care of more. That your training's accuracy should also increase. And your validation. Accuracy should also increase. If it happens that only. The accuracy of your training data is increasing. Whereas your. Accuracy of validation. Is not increasing. It has stagnated. So it becomes a case of overfitting. So let me show you. It is not taking much time to run the code. Because behind the scenes all the work is happening on the GPU. And you can see if you look at the last step. So a little. A little overfitting. Scenario is visible. Because the training accuracy has reached 87%. Whereas validation accuracy. Still 84.8. If you look at the loss. So the training loss is much less. And the validation one is still. Okay. In the range. Here you can see the weights again. As we saw last time. This is your 121. Plus 11. First layer. The zeroth layer. Will be exactly the same. And if you go to the second layer. So here is the second layer. Okay, now what we will do. Will do prediction again. And. Will apply this logic again. And again we will get the accuracy. And you can see. Our accuracy has improved. Now it has reached 85.75. Okay. Obviously if you apply cross validation. It will come a little less. But again you get the idea. How you are making neural networks. And how you can improve their accuracy. We will learn many more things. But now I was just showing you. One last thing. I would like to do in front of you. It is that you should plot two graphs at the same time. Let me show you. What are the graphs and how to plot them. So I am running this model again. And. What am I doing here? I am creating a variable. What will it do? This whole data is on your screen. It will store it. In this dictionary. If you train the model again. Now you will get a dictionary called history. In which all this data is stored. So what can you do? You can plot a graph of any stage. And that graph gives you a lot of information. How your neural network has performed. Okay. So we will wait. Once we train this model. And after that. Then we will do our next step. To do the next step. To do this. You have to import matplotlib. So I am doing that first. Import matplotlib.pyplot as plt. And I guess our training is complete. And now I will show you. What is inside history. So history is basically a history object. But if you write this. History.history. Then you get a dictionary. Where there are 4 key value pairs. First key is loss. And this is training loss. Of every epoch. Similarly if you go down a little. Then this is accuracy. Again of your 100 epochs. And this is about training. Till now. After that if you see. This is val loss. Here you have validation loss of every epoch. And if you go down a little. Then you have validation accuracy. Of every epoch. So I will plot two graphs. Let me show you. So I would write this code. Plt.plot. And here I will write. History.history. History.history. History.history. History.history. History.history. History.history. History.history. History.history. History.history. History.history. History.history. Let's see validation loss. So you can see. And then slowly. Validation loss is not as fast as trading loss and that's why there is a gap and this gap only tells you how much overfitting has happened not much here honestly but you get this idea from this graph I will plot the same set of graphs for accuracy ok so we are just changing the name of all these variables and you can see even if it fluctuates a little we have reached over here so there is a gap between 84-86% so again you can't say much but yes at some level there is some overfitting now here you have to use some concepts like regularization or dropout we haven't studied that yet but as I told you we had to give an introduction an idea that whatever we have studied how to write it in code and how to use Keras library Keras library has made things very easy making neural networks is so easy now so I hope by watching this video you would have understood two things first how to make your own neural network and how to improve it second, how to work with Keras library so that was the video guys I hope you would have understood things I tried to keep everything in front of you in a very easy way obviously our end goal was not to achieve the best accuracy or make the best model because at this point that is not our concern our concern was to make the neural networks to train them and to make predictions and if possible to improve them we covered all these things in this video I hope you liked this video and if you liked this video please do like the video and please subscribe my channel that's it from my side let's meet in the next video bye"
+}

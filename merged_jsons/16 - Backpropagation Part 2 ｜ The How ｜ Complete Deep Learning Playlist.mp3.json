@@ -1,0 +1,2427 @@
+{
+    "chunks": [
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 0.0,
+            "end": 18.0,
+            "text": " Hi guys, my name is Nitish and you are welcome to my YouTube channel so we are continuing with our deep learning playlist we started backpropagation in last video there I told you about the what parts what is backpropagation and I told you how it works"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 18.0,
+            "end": 33.0,
+            "text": " now in today's video we will see the how part means we will take two datasets one in regression domain and one in classification domain and we will run our own code on that dataset and do backpropagation"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 33.0,
+            "end": 48.0,
+            "text": " so after seeing both these things you will get more clarity that how backpropagation works exactly behind the scenes also I will run the same code in Keras so that you can do a comparison between both"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 48.0,
+            "end": 61.0,
+            "text": " so I hope you like the video let's start the video so guys we will start with regression problem so whatever you saw in last video the first video of backpropagation"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 61.0,
+            "end": 75.0,
+            "text": " whatever we learned there we will apply that on this dataset our goal is that on this dataset we will train this neural network and the training we will do"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 75.0,
+            "end": 86.0,
+            "text": " we will not do it by using Keras we will not use Keras we will use our own code whatever algorithm we made we will convert it in code"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 86.0,
+            "end": 95.0,
+            "text": " and train our model so the dataset is the same which we used in last class in last video I just changed it here"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 95.0,
+            "end": 107.0,
+            "text": " I put resume score instead of IQ the reason for that is IQ is generally from 80 to 120 so it increases a little and it is from 0 to 10"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 107.0,
+            "end": 119.0,
+            "text": " so generally it is said that the inputs in neural network should be in the same range so the training is good we will see why this happens later"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 119.0,
+            "end": 129.0,
+            "text": " but for now I have replaced IQ with resume score output column is still same I have data of 4 students ok"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 129.0,
+            "end": 139.0,
+            "text": " we are moving forward with 4 students because I have to run this code manually architecture is same nothing special here so let me summarize"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 139.0,
+            "end": 149.0,
+            "text": " back propagation algorithm which we made in last class so we will run our code 5 times as in 5 epochs in every epoch we will do this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 149.0,
+            "end": 159.0,
+            "text": " which is written here so what we have to do in every epoch like we have total 4 students we will pick up all 4 students"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 159.0,
+            "end": 169.0,
+            "text": " one by one basically inner loop will run 4 times ok so first time you will pick up first student"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 169.0,
+            "end": 179.0,
+            "text": " by the way later I will tell you that this selection of students is random I will tell you later that's why I have written random word here"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 179.0,
+            "end": 189.0,
+            "text": " but for now think like this when we will be in loop for the first time we will pick up first student then what we will do using its inputs"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 189.0,
+            "end": 199.0,
+            "text": " we will do prediction ok whatever prediction will come from that we will calculate our loss using mean squared error"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 199.0,
+            "end": 209.0,
+            "text": " ok and then what we will do our 9 weights and biases in this architecture in this there are 9 weights and biases so we will update"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 209.0,
+            "end": 219.0,
+            "text": " all of them using this formula gradient descent ok in this I told you that we have to calculate this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 219.0,
+            "end": 229.0,
+            "text": " we have calculated all this in last video we have calculated value of all derivatives ok so we will update all weights"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 229.0,
+            "end": 239.0,
+            "text": " then we will go to second student for that we will do same work we will calculate loss as soon as your one epoch will end"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 239.0,
+            "end": 249.0,
+            "text": " means once you meet all 4 students after that you will come out of inner loop and you will do this you will calculate average loss"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 249.0,
+            "end": 259.0,
+            "text": " average loss means all 4 students you have calculated loss of all 4 L1, L2, L3 and L4 you will divide it by 4"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 259.0,
+            "end": 269.0,
+            "text": " that will be your average loss of that epoch and in this way as many times outer loop will run as many times"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 269.0,
+            "end": 279.0,
+            "text": " you will calculate average loss so what you will see your output will be like in epoch 1 loss was 5 in epoch 2"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 279.0,
+            "end": 289.0,
+            "text": " loss was 4 in epoch 3 loss was 3 so this is all about average loss"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 289.0,
+            "end": 299.0,
+            "text": " loss of all 4 students this is all about that loss so we have done everything all our math's formulation is ready now what we have to do"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 299.0,
+            "end": 309.0,
+            "text": " this whole data set we have to feed in our code I have written code I will show you next so guys I will explain you"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 309.0,
+            "end": 319.0,
+            "text": " code by scratch this code is written it may look complex in beginning but I will explain you one by one so in beginning"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 319.0,
+            "end": 329.0,
+            "text": " what we have done we have imported both libraries and in next line if you notice I have created my data set"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 329.0,
+            "end": 339.0,
+            "text": " I have made pandas data frame in which exactly same 4 students this is my data let me run it and you can see"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 339.0,
+            "end": 351.0,
+            "text": " this is the output see exactly same data I have shown you here ok"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 351.0,
+            "end": 361.0,
+            "text": " same data now from here we will discuss our code so I have divided function by function code"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 361.0,
+            "end": 371.0,
+            "text": " so this first function name is initialize parameters ok in input you have to send your architecture"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 371.0,
+            "end": 381.0,
+            "text": " like what is our architecture according to our architecture in input we have 2 nodes as in 2 inputs in middle 2 and here 1"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 381.0,
+            "end": 391.0,
+            "text": " so our architecture will be input 2,2,1 as soon as you give input of 2,2,1 for this total"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 391.0,
+            "end": 401.0,
+            "text": " 9 weights and biases will be created and they will be provided a value, what value will be provided for now I have taken weight value as 0.1"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 401.0,
+            "end": 411.0,
+            "text": " and bias value as 0 I could have taken random values but I have kept 6 weights value as 0.1 and 3 biases value as 0, let me show you"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 411.0,
+            "end": 421.0,
+            "text": " I will run this function and use it and show you so watch carefully I will run this now its logic is very simple"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 421.0,
+            "end": 433.0,
+            "text": " you can go and see I will call this initialize parameter function and here I have passed"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 433.0,
+            "end": 443.0,
+            "text": " 2,2,1 which is my architecture of neural network and you would see here you can see"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 443.0,
+            "end": 453.0,
+            "text": " it has created 4 different arrays this is 1 this is 2 this is 3 and this is 4 notice its structuring"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 453.0,
+            "end": 463.0,
+            "text": " so what is W1 W1 is matrix of these 4 weights so if you notice"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 463.0,
+            "end": 473.0,
+            "text": " in W1 there are 4 numbers basically initialization of these 4 weights is done what is W2"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 473.0,
+            "end": 483.0,
+            "text": " these 2 weights their value is here ok then what is B1 B1 is its and its bias"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 483.0,
+            "end": 493.0,
+            "text": " that's why there are 2 numbers and what is B2 B2 is its bias that's why there is 1 number so what is this initialize parameter function"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 493.0,
+            "end": 503.0,
+            "text": " doing for me according to a given neural network architecture it is initializing weights and biases and giving it to me here I have used 1's and 0's function"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 503.0,
+            "end": 513.0,
+            "text": " of numpy I could have easily used random for random initialization I hope you understood this function now"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 513.0,
+            "end": 523.0,
+            "text": " my next function is linear forward what is the function of linear forward it will calculate output of"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 523.0,
+            "end": 533.0,
+            "text": " any given neuron ok output of any given neuron it depends on 5 things 1st"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 533.0,
+            "end": 543.0,
+            "text": " all the weights 2nd all the inputs and 3rd its own bias if you talk about this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 543.0,
+            "end": 553.0,
+            "text": " there will be 5 things its own bias, these 2 weights and the input from this means the output of this node and the output of this node"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 553.0,
+            "end": 563.0,
+            "text": " it is getting as input its logic is very simple whatever we are getting from previous layer and the weight and the bias"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 563.0,
+            "end": 573.0,
+            "text": " in between that I am simply doing np.product of w and a and by adding bias I am writing return z now this is my main function"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 573.0,
+            "end": 583.0,
+            "text": " which will do forward propagation here I am writing this is the main function which will do forward propagation for me ok"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 583.0,
+            "end": 593.0,
+            "text": " now you can see how it is working its a very simple function you can understand it but I will show you"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 593.0,
+            "end": 603.0,
+            "text": " how we will use this to do forward propagation so I am running this function ok now see carefully"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 603.0,
+            "end": 613.0,
+            "text": " what I will do according to our algorithm what we have to do we have to enter epoch and pick up every point"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 613.0,
+            "end": 623.0,
+            "text": " and pick up every point and do prediction for it so I already have this much code so what I am going to do I will pick up my first student"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 623.0,
+            "end": 633.0,
+            "text": " and that first student I will send in this function ok and in this function I will send my parameters"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 633.0,
+            "end": 643.0,
+            "text": " which is this thing this whole thing and when we will get these two inputs what this function will do it will do prediction"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 643.0,
+            "end": 653.0,
+            "text": " for that particular student ok I will show you so guys see this what we have done"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 653.0,
+            "end": 663.0,
+            "text": " x my data frame I have taken first row and stored it in x and then"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 663.0,
+            "end": 673.0,
+            "text": " I have taken first row's lp as in value and stored it in y I will quickly show it to you so if I print here"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 673.0,
+            "end": 683.0,
+            "text": " x so it will give me first student's input 8 or 8 and if I write y"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 683.0,
+            "end": 693.0,
+            "text": " so it will give me first student's output value that is 4 ok"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 693.0,
+            "end": 703.0,
+            "text": " and third thing what we will do that we will initialize parameters although I have shown you but I am doing it again"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 703.0,
+            "end": 713.0,
+            "text": " these are my parameters 9 weights and biases now what I have to do that I have to call this function"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 713.0,
+            "end": 723.0,
+            "text": " ok this function and it needs two inputs what is the first input x"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 723.0,
+            "end": 733.0,
+            "text": " basically input of first student current value of parameters now as soon as I run it see carefully what will happen error"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 733.0,
+            "end": 743.0,
+            "text": " the reason is that we have not run this function so what is happening this function is using this function internally"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 743.0,
+            "end": 753.0,
+            "text": " you can see once again run and you can see this is the output now you have to understand"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 753.0,
+            "end": 763.0,
+            "text": " what is happening here you can see a notation a0 a1 and finally you can see a2"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 763.0,
+            "end": 773.0,
+            "text": " I will tell you what is a1 and a2 see carefully so when you are picking up the data of the first student and feeding in this neural network"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 773.0,
+            "end": 783.0,
+            "text": " through input layer so that is a0 basically this is my 8 and 8 for the first student"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 783.0,
+            "end": 793.0,
+            "text": " this is my a0 now with this the weights are multiplying the bias is adding so these two outputs are getting calculated"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 793.0,
+            "end": 803.0,
+            "text": " o11 and o12 these two outputs are getting calculated I am calling the combination of these two a1 you can also call them activation"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 803.0,
+            "end": 813.0,
+            "text": " so this is o11 and this is o12 and finally in this layer its output is getting calculated you can call it o21 or y hat this is a single number"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 813.0,
+            "end": 823.0,
+            "text": " this is your a2 so finally in our case the output is a2 which you are calling o21 so notice"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 823.0,
+            "end": 833.0,
+            "text": " what is this function doing first of all it is telling me what is a0 a0 is the same as in x you are calling the same as in x then it is saying that in w1"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 833.0,
+            "end": 843.0,
+            "text": " these were the weights and in b1 this was by using these three things it calculated a1 so now what is this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 843.0,
+            "end": 853.0,
+            "text": " the output of this node and this node is 1.6 then it caught a1 caught w2 and caught b2 and from that it calculated"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 853.0,
+            "end": 863.0,
+            "text": " a2 and what is your a2 which is your final output so for the first student this is my prediction that its package will be of 0.32 lakhs"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 863.0,
+            "end": 873.0,
+            "text": " I hope you are understanding till here also remember one thing that this function is returning two things when you are calling this function"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 873.0,
+            "end": 883.0,
+            "text": " forward propagation it is returning two things it is returning a2 which is the final prediction and at the same time"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 883.0,
+            "end": 893.0,
+            "text": " the output of these two nodes which you are storing in a1 it is also returning I need these two things why do you need, think about it"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 893.0,
+            "end": 903.0,
+            "text": " here you will notice to calculate some derivatives in the previous layer the output which came its value is required"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 903.0,
+            "end": 913.0,
+            "text": " that's why in this function at the time of return a1 is also returned now what I have to do"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 913.0,
+            "end": 923.0,
+            "text": " I have to store these infact we don't store infact lets go back to the algorithm lets go to the algorithm"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 923.0,
+            "end": 933.0,
+            "text": " see how much we have done we picked up the first student we did this step for that we did the prediction so I got the prediction"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 933.0,
+            "end": 943.0,
+            "text": " this is the prediction 0.32 I got this now see what I have to do I have to calculate the loss how will the loss be calculated"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 943.0,
+            "end": 953.0,
+            "text": " y minus y hat whole square so basically what I have to do I am going here and calculating the loss"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 953.0,
+            "end": 963.0,
+            "text": " what will be my loss my loss will be y as in this y in the data minus"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 965.0,
+            "end": 979.0,
+            "text": " 0.32 square and this is my loss for the first student this is the loss for the first student"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 979.0,
+            "end": 989.0,
+            "text": " for the first student we calculated this loss 13 point something now what I have to do now I have to update all"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 989.0,
+            "end": 999.0,
+            "text": " my weights and biases using this formula using this formula using this formula and notice what I have done"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 999.0,
+            "end": 1009.0,
+            "text": " I have made one more function whose name is update parameters and it looks scary and it looks scary but its work is"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1009.0,
+            "end": 1019.0,
+            "text": " to do these 9 operations to take these 9 updates that's it so even if you count there are total 9 lines of code"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1019.0,
+            "end": 1029.0,
+            "text": " which is holding every parameter what are we doing we are holding every parameter and updating it and what was the update rule"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1029.0,
+            "end": 1039.0,
+            "text": " new equal to old minus plus here because in our formula when we calculated"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1039.0,
+            "end": 1049.0,
+            "text": " derivatives it is minus in front of all so this minus and this minus is plus and in front of plus I have kept my learning rate"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1049.0,
+            "end": 1059.0,
+            "text": " 0.001 and in front of that I have written the same thing if you pause the video then this is exactly the same"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1059.0,
+            "end": 1069.0,
+            "text": " thing which is written here this formula is applied for weight notice what is A1"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1069.0,
+            "end": 1079.0,
+            "text": " A1 is basically the previous layer output is A1 and I have applied all these formulas"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1079.0,
+            "end": 1089.0,
+            "text": " very easily if there is any mistake then you can check this code basically I have converted these 9 formulas"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1089.0,
+            "end": 1099.0,
+            "text": " into code now what I will do I will call this it needs all parameters y"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1099.0,
+            "end": 1109.0,
+            "text": " what is y current student its LPA package what is y hat its prediction"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1109.0,
+            "end": 1119.0,
+            "text": " then I need A1 what is A1 previous layer basically these two its output"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1119.0,
+            "end": 1129.0,
+            "text": " its output and its output I need these two and I need my data so many things are needed here"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1129.0,
+            "end": 1139.0,
+            "text": " so what I will do whatever is returning from here two things are returning one is returning y hat which is the prediction"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1139.0,
+            "end": 1149.0,
+            "text": " and this is returning A1 so I am storing them here I have written y hat comma A1 is equal to this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1149.0,
+            "end": 1163.0,
+            "text": " run it now if I show you here so this is my y hat this is y hat now the problem is"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1163.0,
+            "end": 1173.0,
+            "text": " I need this in the form of number so what I will do is I will write it like this 0 of 0"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1173.0,
+            "end": 1183.0,
+            "text": " you will get a number because I have used it directly I have used it directly so let's write a code y hat"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1183.0,
+            "end": 1193.0,
+            "text": " is equal to y hat 0 of 0 and this is my A1 previous layer's output this is the correct form"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1193.0,
+            "end": 1203.0,
+            "text": " we will use it like this because I have taken out the matrix notation so now we are ready now what we will do is I will run"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1203.0,
+            "end": 1215.0,
+            "text": " update parameters and I have all the things, I have parameters I have y"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1215.0,
+            "end": 1225.0,
+            "text": " of the first student I have y hat of the first student I have A1 of the previous layer's output and I have x now as soon as I"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1225.0,
+            "end": 1235.0,
+            "text": " think about it, I will return it as soon as I call this function it will change the parameter notice what will happen as soon as I run it"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1235.0,
+            "end": 1245.0,
+            "text": " error will come because we have not run this code run it and now we call it see this"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1245.0,
+            "end": 1255.0,
+            "text": " it changed all the parameters now if I run the parameters again so here are my parameters notice it has changed"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1255.0,
+            "end": 1265.0,
+            "text": " my first layer weights were 0.1 now they have changed my second layer weights were 0.1 they have changed"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1265.0,
+            "end": 1275.0,
+            "text": " my b1 was 0 my b2 was 0 and all this has changed so what exactly happened if we go back to the algorithm"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1275.0,
+            "end": 1285.0,
+            "text": " after calculating the loss as soon as I did this step all my weights and biases got updated now what I have to do now in this loop"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1285.0,
+            "end": 1295.0,
+            "text": " I have to pick up another student and for that I have to repeat the same steps so see what I will do I will go back"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1295.0,
+            "end": 1305.0,
+            "text": " and I am copying the code I will copy this entire code I will copy this entire code"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1305.0,
+            "end": 1315.0,
+            "text": " and I will go down at this place and here I don't have to initialize the parameters I don't have to initialize"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1315.0,
+            "end": 1325.0,
+            "text": " and now I want another student here is another student we will call again to do forward propagation"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1325.0,
+            "end": 1335.0,
+            "text": " in this step I will get y hat of second student second student's y hat is 0.50 this is second student's y hat"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1335.0,
+            "end": 1345.0,
+            "text": " now what I will do again I will call update and I have all these inputs"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1345.0,
+            "end": 1355.0,
+            "text": " parameter's current value is y y hat and a1 and x and run it run is done now see parameters might have changed a bit"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1357.0,
+            "end": 1367.0,
+            "text": " see this parameters changed a bit more it is changing a bit more notice this was up it is changing a bit more"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1367.0,
+            "end": 1377.0,
+            "text": " I have to do this two more times so what I will do is here I will do the changes now I am taking third student this is my third student"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1377.0,
+            "end": 1387.0,
+            "text": " and again I am doing forward propagation whatever output is coming I am storing it here see this this is my third student's"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1387.0,
+            "end": 1397.0,
+            "text": " prediction 0.60 we can also calculate loss I forgot to calculate loss again I am calling notice again parameters"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1397.0,
+            "end": 1407.0,
+            "text": " will change see parameters changed again now I will take last student which is 3"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1407.0,
+            "end": 1417.0,
+            "text": " and again I will hold here 3 again I will run this is my fourth student's prediction again I will call update parameters"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1417.0,
+            "end": 1427.0,
+            "text": " and parameters are changing more see parameters are changing more so in short we did this demonstration"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1427.0,
+            "end": 1437.0,
+            "text": " once in front of you inner loop ran 4 times inner loop ran 4 times outer loop ran once for one epoch"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1437.0,
+            "end": 1447.0,
+            "text": " but you will repeat this same work 5 times so it will be 5 epochs now instead of doing 5 epochs what I am doing"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1447.0,
+            "end": 1457.0,
+            "text": " I have written a single piece of code which will do all this work let me show you this is epoch implementation here I am doing everything from start"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1457.0,
+            "end": 1467.0,
+            "text": " here I have initialized parameters here I have initialized parameters epochs I don't need to keep 75 epochs I don't need to keep 75 for now let's keep 10"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1467.0,
+            "end": 1477.0,
+            "text": " for now let's keep 5 run a loop for I in range of epochs run a loop for I in range of epochs"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1477.0,
+            "end": 1487.0,
+            "text": " basically here when I calculate loss and then I have to calculate average loss and then I have to calculate average loss every time in list"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1487.0,
+            "end": 1497.0,
+            "text": " I will append 4 loss and here I will put average on that loss and here I will put average on that loss this is loss now I am running a loop on all my data"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1497.0,
+            "end": 1507.0,
+            "text": " now I am running a loop on all my data every time I am picking up student by doing jj I am doing forward propagation I am getting y hat and a1"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1507.0,
+            "end": 1517.0,
+            "text": " I am extracting y hat I am calling all parameters I am extracting loss I am appending loss to loss as soon as inner loop is completed"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1517.0,
+            "end": 1527.0,
+            "text": " I am going out and I am calculating mean on loss so that in that particular epoch all the loss is printed all the loss is printed"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1527.0,
+            "end": 1537.0,
+            "text": " I am printing parameters I am printing parameters this is the code see see"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1537.0,
+            "end": 1549.0,
+            "text": " it is printing see see see see"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1549.0,
+            "end": 1565.0,
+            "text": " I am commenting all I am commenting all we are showing it to you we are showing it to you we are showing it to you"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1565.0,
+            "end": 1602.0,
+            "text": " run this code, this is the output, see this guys, when you roamed on 4 points for the first time then your average loss was 25, when you roamed for the second time then till now the parameters were adjusted in such a way that the loss reduced to 18, third time the loss reduced to 9.47 5th time it came to 3 and at 1.3 it stopped at the last, and finally after doing all the work when I printed my weights and biases, see it started from 0.1 and where it reached,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1602.0,
+            "end": 1641.0,
+            "text": " so this is the demonstration, now we will do one last thing, I will write this same code in Keras where we will use Keras library and see what is the output on the same data, so let me show you that, this is the Keras code, let's run it once, everything is the same, I have made the same data frame here also, here is our data frame, here we have imported all the libraries and here I have made the neural network of the same architecture, there is input layer,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1641.0,
+            "end": 1671.0,
+            "text": " there are 2 units in 10, everyone's activation is linear, we have run this, here is the summary of my model, there are total 9 trainable parameters, 6 weights, 2 biases, now see here, what Keras does is that Keras randomly initializes weights, so what am I doing to make it similar, what did I do to make it similar to the model we made, first I took out all the weights of the model using get weights, so see all the weights are visible,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1671.0,
+            "end": 1710.0,
+            "text": " just like mine was here, now what did I do, I made an array called new weights, in which I gave all weights 0.1 and all biases 0, and then I called the set weights function of Keras and set new weights, so now what is after this, the initial weights of Keras model is exactly like mine, I just did this to show a similar thing, now what did I do next, I went to the optimizer and set the learning rate 0.001 because in my case also it is 0.001,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1711.0,
+            "end": 1749.0,
+            "text": " and after doing this, I took out the mean squared error and finally I fitted the model, here somehow means most likely the optimizer has been used separately, so it took 75 epochs to converge Keras, see here I am running it, model is trained and this is my loss around 1.47, our loss was a little less, our loss was around 1.34, now what did I do again,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1749.0,
+            "end": 1782.0,
+            "text": " I did model.getWeights and here are the changes made by Keras in our weights, so you can see whatever work we do in Keras, we did the same work by applying our own code, the most important thing is that the algorithm which we had learned, we practically converted it into code, and we did this for a regression problem, next what we will do, we will repeat the same work for a classification problem,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1782.0,
+            "end": 1805.0,
+            "text": " what will happen with that, our understanding will become more solid, so let's go guys, we saw a regression example step by step, now we will see a classification example, everything is going to be very similar, but I want to give you the flavor of classification, we made some changes in the same data set and made a new data set,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1805.0,
+            "end": 1829.0,
+            "text": " this data set is for classification, here you have CGPA in input, student's profile score, and placement in the form of 1 or 0, and guess what, I have kept the architecture of neural network exactly the same, we have 3 layers, input, hidden and output, there are 2 in input, 2 in hidden and 1 in output,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1829.0,
+            "end": 1853.0,
+            "text": " now the big change is that in the regression example, my activation function in all 3 nodes was linear, but since this is a classification example, here I have taken sigmoid in all 3 nodes, there will be some changes due to this sigmoid,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1853.0,
+            "end": 1873.0,
+            "text": " also here your loss function is binary cross entropy, we have already seen this, so here notice when forward propagation happens, suppose you give something in input, suppose your initial weights are 0.1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1873.0,
+            "end": 1889.0,
+            "text": " here also 0.1, these 4 weights are 0.1, this is also 0.1, bias is 0, so I will tell you quickly how the output will be calculated on this node, suppose there is input of 8 and 8 for the student, so your output will be calculated, you will take out z first, what will be z,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1889.0,
+            "end": 1910.0,
+            "text": " 0.1 multiplied by 8, plus 0.1 multiplied by 8, plus 0, this is z, now you will pass this in sigmoid, and this will be your O11, its output, so here only this extra step is coming, after taking out z you will send it in sigmoid function,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1911.0,
+            "end": 1922.0,
+            "text": " this extra step you have to do here, due to this sigmoid this change happened, and your loss function changed, earlier it was y minus y hat whole square, now it is this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1922.0,
+            "end": 1937.0,
+            "text": " so these two changes are happening in classification problem, back propagation algorithm will be same, you will start for number of epochs, you will enter in epochs, you will run inner loop as many times as there are rows in your data,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1937.0,
+            "end": 1951.0,
+            "text": " you can pick up points randomly or one by one, we are using one by one approach, for every point as in every student, you will do forward propagation, you will predict its placement or not,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1951.0,
+            "end": 1962.0,
+            "text": " and then you will calculate its loss, here without MSE, binary cross entropy will be there, after that what you will do, this is your main step,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1962.0,
+            "end": 1975.0,
+            "text": " where you will update your 9 weights and biases, using gradient descent, now the problem is that, we have not calculated all these derivatives yet, so what we have to do,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1975.0,
+            "end": 1988.0,
+            "text": " we have to calculate all these derivatives one by one, as I showed you in last video for regression, so that is our next work, I will show you one by one, good thing is that since you have already done it once,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 1988.0,
+            "end": 2000.0,
+            "text": " it won't be that difficult, so watch carefully, I am starting, suppose this is my neural network architecture, this is the neural network architecture,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2000.0,
+            "end": 2009.0,
+            "text": " first of all, my y hat is coming here, which is entering the loss function, first of all, this weight,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2009.0,
+            "end": 2020.0,
+            "text": " this weight, and its bias, I will calculate the derivative of these three, with respect to loss function, I am writing loss function again,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2020.0,
+            "end": 2032.0,
+            "text": " loss function is, minus y, log of y hat, minus 1 minus y, log of 1 minus y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2032.0,
+            "end": 2045.0,
+            "text": " now see, first of all, we will calculate del of L, with respect to this weight, now you will remember our logic,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2045.0,
+            "end": 2059.0,
+            "text": " how we were calculating, if you want to do changes in L, then you will have to do changes in y hat, now what is y hat, y hat is basically,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2059.0,
+            "end": 2068.0,
+            "text": " sigmoid of z, and z, which is z of this node, its sigmoid, so y hat in turn,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2068.0,
+            "end": 2078.0,
+            "text": " will depend on z, let's call it z final, because this final is of last node, now this z final is, what is this z final,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2078.0,
+            "end": 2088.0,
+            "text": " it is basically, linear combination, w211 multiplied by, its output, o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2088.0,
+            "end": 2094.0,
+            "text": " plus, w2, this weight, 21, its output,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2094.0,
+            "end": 2104.0,
+            "text": " o12, plus its own bias, b21, now see here, we are calculating on the basis of this weight,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2104.0,
+            "end": 2114.0,
+            "text": " so z final depends on, w211, so if you will change in this, then it will change in z, by changing in z,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2114.0,
+            "end": 2120.0,
+            "text": " it will change in y hat, and by changing in y hat, it will change in L, so if I come here, then I can write this whole thing,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2120.0,
+            "end": 2139.0,
+            "text": " by breaking it down, like this, okay, this means, if I have to calculate this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2140.0,
+            "end": 2147.0,
+            "text": " for that I have to calculate, these three things, okay, similarly, let's do one thing,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2147.0,
+            "end": 2157.0,
+            "text": " let's write this also, according to this weight, what will be the derivative, according to this, same path will follow,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2157.0,
+            "end": 2162.0,
+            "text": " here at last, what will come, w2, 21, so everything will remain same,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2162.0,
+            "end": 2172.0,
+            "text": " first two derivatives, will remain same, here at last, w2, 21,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2172.0,
+            "end": 2187.0,
+            "text": " and then according to this bias, if you will see, then everything will remain same, first two, here it will come,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2187.0,
+            "end": 2194.0,
+            "text": " bias, 21, so now what we have to do, the good thing is, that this is common,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2195.0,
+            "end": 2204.0,
+            "text": " this much is common in all three, okay, so we have to subtract these two, and these three, so in total,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2204.0,
+            "end": 2211.0,
+            "text": " by subtracting five derivatives, we will get three, okay, so let's focus, first of all,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2211.0,
+            "end": 2218.0,
+            "text": " we will subtract, derivative of L, with respect to, y hat, so basically,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2218.0,
+            "end": 2232.0,
+            "text": " I have to subtract, this, sorry, here it will not be minus, here it will be,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2232.0,
+            "end": 2240.0,
+            "text": " y hat, minus, 1 minus, y, here it will be,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2241.0,
+            "end": 2247.0,
+            "text": " log, 1 minus, y hat, okay, for this thing,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2247.0,
+            "end": 2253.0,
+            "text": " I have to subtract derivative, see it is very simple, we will derive this term, differentiate, I am sorry,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2253.0,
+            "end": 2262.0,
+            "text": " so here it will come, minus y, divided by, log of this would be, y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2263.0,
+            "end": 2270.0,
+            "text": " minus, 1 minus y, this whole term will be the derivative, 1 minus, y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2270.0,
+            "end": 2277.0,
+            "text": " then you will differentiate, this inner term, so this negative will come out, and plus will come, if you solve this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2277.0,
+            "end": 2282.0,
+            "text": " so this would become, minus y, 1 minus, y hat, plus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2282.0,
+            "end": 2287.0,
+            "text": " y hat, times, 1 minus, y, and below,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2287.0,
+            "end": 2293.0,
+            "text": " y hat, 1 minus, y hat, if you multiply this, minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2293.0,
+            "end": 2298.0,
+            "text": " y, plus, y, y hat, plus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2298.0,
+            "end": 2304.0,
+            "text": " y hat, minus, y, y hat, divided by,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2304.0,
+            "end": 2311.0,
+            "text": " y hat, 1 minus, y hat, okay, this and this will cancel out,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2311.0,
+            "end": 2318.0,
+            "text": " and here you will have, minus, y, minus, y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2318.0,
+            "end": 2324.0,
+            "text": " divided by, y hat, 1 minus, y hat, so its derivative,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2325.0,
+            "end": 2336.0,
+            "text": " is this, you can see, so guys, we have taken out this one, now we will take out this one,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2337.0,
+            "end": 2342.0,
+            "text": " okay, this one is also very easy, we will go down, and write this code, not code,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2342.0,
+            "end": 2354.0,
+            "text": " I am sorry, we will write this expression, and basically we have to solve this, we have to solve this, okay,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2354.0,
+            "end": 2362.0,
+            "text": " because y hat is nothing but, sigmoid of z, now if you know, the derivative of sigmoid, is,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2365.0,
+            "end": 2371.0,
+            "text": " sigmoid, multiplied by, 1 minus, sigmoid, you have to remember this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2371.0,
+            "end": 2378.0,
+            "text": " okay, so this will become, sigmoid, 1 minus, sigmoid,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2379.0,
+            "end": 2386.0,
+            "text": " and here what I will do, I will replace this, with y hat, so this would become, y hat times,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2386.0,
+            "end": 2393.0,
+            "text": " y minus, y hat, okay, so now we have taken out this also, now the good thing is,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2394.0,
+            "end": 2401.0,
+            "text": " that, you have to multiply these two, you have to multiply these two, now notice, when you multiply these two,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2401.0,
+            "end": 2408.0,
+            "text": " what will happen, I will write in front of you, see, del L, del y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2409.0,
+            "end": 2416.0,
+            "text": " we got this, minus, y minus, y hat, y hat times,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2417.0,
+            "end": 2423.0,
+            "text": " 1 minus, y hat, and, we got this, this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2423.0,
+            "end": 2428.0,
+            "text": " y hat, 1 minus, y hat, now notice, we have to multiply these two,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2429.0,
+            "end": 2440.0,
+            "text": " in all three equations, so when you multiply these two, so this would become, multiplied by, y,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2441.0,
+            "end": 2448.0,
+            "text": " del z would become, minus, y minus, y hat, 1 minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2448.0,
+            "end": 2454.0,
+            "text": " y, multiplied by, y hat, 1 minus, y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2454.0,
+            "end": 2459.0,
+            "text": " this and this term will cancel, and I will get, from the multiplication of these two, minus, y times,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2459.0,
+            "end": 2467.0,
+            "text": " y hat, okay, so this is a very good thing, that, the multiplication of these two terms,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2467.0,
+            "end": 2475.0,
+            "text": " the multiplication of these two terms, is a very simple term, and that is, minus y, minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2475.0,
+            "end": 2483.0,
+            "text": " y hat, okay, now what we have to do is, subtract these three terms, these three terms are also very simple,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2483.0,
+            "end": 2490.0,
+            "text": " notice, what is our z, at this point our z is, w2, 1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2490.0,
+            "end": 2495.0,
+            "text": " 1, o, 1, 1, plus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2495.0,
+            "end": 2500.0,
+            "text": " w2, 2, 1, o, 1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2500.0,
+            "end": 2505.0,
+            "text": " 2, plus, b, 2, 1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2505.0,
+            "end": 2511.0,
+            "text": " now when you differentiate this, with respect to w2, 1, 1, and when you do it with respect to w2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2511.0,
+            "end": 2516.0,
+            "text": " the value will be, o, 1, 2, and when you do it with respect to w2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2516.0,
+            "end": 2521.0,
+            "text": " since there is no term here, the answer will be, 1, this means, I can come down,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2521.0,
+            "end": 2529.0,
+            "text": " and I can write this expression, see carefully, I can write this, this would become, minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2530.0,
+            "end": 2535.0,
+            "text": " y, y hat, times, o, 1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2535.0,
+            "end": 2540.0,
+            "text": " 1, this is its differentiation, equal to, minus, y,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2540.0,
+            "end": 2545.0,
+            "text": " minus, y hat, times, o, 1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2545.0,
+            "end": 2550.0,
+            "text": " 2, and here, minus, y, minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2550.0,
+            "end": 2558.0,
+            "text": " y hat, and nothing else, we have derived these three, if you want, you can compare these expressions,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2558.0,
+            "end": 2569.0,
+            "text": " with regression expressions, you would see, that there, see, compare and see,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2569.0,
+            "end": 2577.0,
+            "text": " this is not minus 2, this is minus 1, see, this is the only difference, you can compare and see,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2581.0,
+            "end": 2590.0,
+            "text": " now we will derive, the derivative of these three, of this weight, of this weight, and of this bias,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2591.0,
+            "end": 2598.0,
+            "text": " okay, so see how the path will follow, here is loss, here is y hat, y hat will depend,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2599.0,
+            "end": 2609.0,
+            "text": " on the z, z will depend, on the output, and its output, depends on the rest,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2610.0,
+            "end": 2616.0,
+            "text": " okay, so basically, we have to calculate three things, we have to calculate, this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2617.0,
+            "end": 2629.0,
+            "text": " this weight, we have to calculate, we have to calculate, this weight, and we have to calculate,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2631.0,
+            "end": 2639.0,
+            "text": " this bias, okay, let's do it one by one, let's focus on this weight, how will be the connection of this weight,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2639.0,
+            "end": 2645.0,
+            "text": " see once, so, loss, will depend on y hat, y hat will depend on z,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2646.0,
+            "end": 2653.0,
+            "text": " of this node, we call it z final, z final, z final will depend, on this output,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2654.0,
+            "end": 2661.0,
+            "text": " this output, will depend, on z, previous, in this node,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2661.0,
+            "end": 2668.0,
+            "text": " z will be calculated, and this z, will depend, on w111, okay,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2668.0,
+            "end": 2677.0,
+            "text": " so if you want to write this, so this will be, something like this, del l, del y hat,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2678.0,
+            "end": 2688.0,
+            "text": " del y hat, del zf, del zf, del o11, del o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2690.0,
+            "end": 2700.0,
+            "text": " del z previous, del z previous, del w11, now there is no need to worry, the good thing is,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2701.0,
+            "end": 2710.0,
+            "text": " we have already calculated these two, we have already calculated these two, we know the answer to this, minus, y minus,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2710.0,
+            "end": 2718.0,
+            "text": " y hat, we already know this answer, let's talk about this one, what is the relationship, between z final,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2718.0,
+            "end": 2723.0,
+            "text": " and o11, see, what is z final, z final is, w211,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2724.0,
+            "end": 2731.0,
+            "text": " this weight, times o11, its output, plus, w221,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2732.0,
+            "end": 2739.0,
+            "text": " this weight, its output, o12, plus, this bias,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2741.0,
+            "end": 2750.0,
+            "text": " now when you differentiate this, with respect to o11, what you will get, you will get this weight, so i will write here,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2751.0,
+            "end": 2763.0,
+            "text": " its output will be, w211, now let's focus on this, what is o11, you can write o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2763.0,
+            "end": 2774.0,
+            "text": " sigmoid of, z previous, here the value of z is sigmoid, so what will this become, z,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2774.0,
+            "end": 2781.0,
+            "text": " previous, 1 minus, sigmoid of, z previous, right,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2781.0,
+            "end": 2788.0,
+            "text": " now what you can write this, you can write this z previous, as o11, multiplied by, o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2788.0,
+            "end": 2794.0,
+            "text": " ok, so its answer will be, o11, 1 minus, o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2795.0,
+            "end": 2802.0,
+            "text": " ok, now only this last one is left, where you have to find out, that z previous, when you will do with w21,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2802.0,
+            "end": 2809.0,
+            "text": " so see what is z previous, z previous is, here the value of z, so how will this come out, w2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2809.0,
+            "end": 2819.0,
+            "text": " sorry, w11, this weight, multiplied by, this input,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2820.0,
+            "end": 2826.0,
+            "text": " xi1, plus, this weight, w1, 21,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2828.0,
+            "end": 2839.0,
+            "text": " multiplied by, this input, and its own bias, now when you will differentiate this, with respect to,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2840.0,
+            "end": 2847.0,
+            "text": " this weight, so what will be left in the output, only this will be left, so its input will be, its derivative will be,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2847.0,
+            "end": 2854.0,
+            "text": " xi1, so what I can do, I can write this whole thing here, that, this will be,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2856.0,
+            "end": 2862.0,
+            "text": " minus, y, minus, y hat, w2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2862.0,
+            "end": 2868.0,
+            "text": " 11, multiplied by, output 11, minus, o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2869.0,
+            "end": 2876.0,
+            "text": " xi1, ok, now, if you take out the previous one, I will put this in the box,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2876.0,
+            "end": 2885.0,
+            "text": " if you take out the next one, means, with respect to this weight, so you will understand, that only the last thing will change,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2886.0,
+            "end": 2894.0,
+            "text": " ok, only the last thing will change, and if you take out the derivative with respect to this weight, so xi2 will come, so you can write it very easily here,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2898.0,
+            "end": 2907.0,
+            "text": " everything will remain same, but, if you take out the next one, xi1 will come, this weight will also remain same,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2909.0,
+            "end": 2919.0,
+            "text": " this output one will also remain same, only in the end, xi2 will come, ok, and lastly,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2919.0,
+            "end": 2927.0,
+            "text": " when you take out the bias one, everything will remain same, only in the last one, 1 will come, if you do all this yourself,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2928.0,
+            "end": 2935.0,
+            "text": " with a copy pen, then you will get a little more confidence, the screen looks a little scary, but it is not that much, your mind will automatically start looking for patterns,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2936.0,
+            "end": 2948.0,
+            "text": " ok, so we have taken out in respect to these three also, now we will take out, the remaining three, with respect to this weight,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2949.0,
+            "end": 2958.0,
+            "text": " with respect to this weight, and with respect to its bias, so basically I have to take out three things, I have to take out, w1,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2959.0,
+            "end": 2972.0,
+            "text": " 1,2, w1,2,2, and this one, I have to take out these three things, ok,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2972.0,
+            "end": 2981.0,
+            "text": " first we will take out in respect to this, see how the whole relationship will be, loss will depend on y hat, y hat will depend on z final, z final will depend on,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2982.0,
+            "end": 2991.0,
+            "text": " its output, o12, o12 will depend on, z previous, and z previous will depend on,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 2992.0,
+            "end": 3002.0,
+            "text": " w1, 1,2, so if I want to write, so I would write this, is equal to,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3003.0,
+            "end": 3012.0,
+            "text": " del L del y hat, multiplied by, del y hat, del z f, multiplied by,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3013.0,
+            "end": 3021.0,
+            "text": " del z f, del o12, multiplied by, del o12, multiplied by,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3022.0,
+            "end": 3031.0,
+            "text": " z previous, multiplied by, previous, w1, 1,2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3032.0,
+            "end": 3041.0,
+            "text": " now the good news is, that we have calculated this, ok, also, it is very easy to calculate this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3042.0,
+            "end": 3051.0,
+            "text": " because I have told you earlier, what is z final, z final is, w1, this weight and its output,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3052.0,
+            "end": 3061.0,
+            "text": " plus, w2, 21 times o11, this weight and its output, plus this node's bias,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3062.0,
+            "end": 3072.0,
+            "text": " b21, when you differentiate this, with respect to, o, sorry here o12 will come,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3073.0,
+            "end": 3081.0,
+            "text": " when you differentiate o12, you will get this weight, so its output will be this, w2, 21,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3082.0,
+            "end": 3091.0,
+            "text": " like this was here, ok, also when you differentiate this, like you did here, you differentiated o11,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3092.0,
+            "end": 3102.0,
+            "text": " so the way you got this term, in the same way, you will get this term here, ok, and from this last one,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3103.0,
+            "end": 3112.0,
+            "text": " you will get, you, I am sorry, I have written it wrong here, we are not using this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3113.0,
+            "end": 3122.0,
+            "text": " we, are using this, I have written it wrong, here I have written it right, this is 12,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3123.0,
+            "end": 3132.0,
+            "text": " this is w112, and this is w122, here I have written it right, here I have drawn it wrong, I am sorry,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3133.0,
+            "end": 3141.0,
+            "text": " now what you are doing, so its output will be xi1, ok, so I can write here, that del L,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3142.0,
+            "end": 3151.0,
+            "text": " w1, 12 would be, minus times, y minus y hat, times w2,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3152.0,
+            "end": 3161.0,
+            "text": " 21, o12, 1 minus o12, multiplied by xi1, ok,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3162.0,
+            "end": 3171.0,
+            "text": " now if you, take w1, 22, so everything will be same, this whole thing will be same,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3175.0,
+            "end": 3187.0,
+            "text": " just here, xi1 will be replaced by xi2, and if you go for ys, so here everything is same, ok,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3193.0,
+            "end": 3202.0,
+            "text": " here nothing will come, only 1 will be there, this is yours, remaining 3 derivatives, this is all calculated,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3204.0,
+            "end": 3213.0,
+            "text": " ok, this is 3, this is 3, and this is also 3, where is it,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3214.0,
+            "end": 3223.0,
+            "text": " this is also 3, so guys, in this back propagation algorithm, I have got this thing, I have taken out 9 of 9 derivatives,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3224.0,
+            "end": 3234.0,
+            "text": " now what I have to do, this algorithm again, I will convert in code, and I will show you, ok,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3235.0,
+            "end": 3244.0,
+            "text": " so now we will move to coding window, so guys I have already written the code, I will explain in front of you, it is same code, which we have written for regression,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3244.0,
+            "end": 3253.0,
+            "text": " I have changed it, there are 2 changes, 1st is according to activation function, and 2nd is according to loss function, see carefully,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3254.0,
+            "end": 3263.0,
+            "text": " importing everything, this is my data set, exactly what I have shown you earlier, this is how it looks, ok,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3264.0,
+            "end": 3273.0,
+            "text": " here also the same functions are there, this is initialize parameter, which according to a given architecture, will give 0.1 initialization to all weights, and 0 initialization for all the biases,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3274.0,
+            "end": 3283.0,
+            "text": " this is the function I have made, by saying sigmoid, which if you give z, then it calculates sigmoid on it, 1 divided by 1 plus e to the power minus z,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3284.0,
+            "end": 3293.0,
+            "text": " ok, it returns, now here also you have the same function, in this function and in this function, there is not much difference,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3294.0,
+            "end": 3303.0,
+            "text": " if you think, see, this linear forward, here you were returning it by doing dot product, but here after doing dot product,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3304.0,
+            "end": 3313.0,
+            "text": " so this is the difference, rest the next main function, which was here, exactly same, copied here,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3314.0,
+            "end": 3323.0,
+            "text": " what is the work of this, send y hat, and the last layer, this layer, just give me one second,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3324.0,
+            "end": 3340.0,
+            "text": " I will open one note, so this layer, its output is o11, and its output is o12, so it will give me three things,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3341.0,
+            "end": 3350.0,
+            "text": " y hat will give, o12 and o11, and o12 will give, now see the main thing here, here the update parameters,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3351.0,
+            "end": 3360.0,
+            "text": " are a little different from this, here the update parameters are a little different, see here, here everything was 2 times, here you will notice,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3361.0,
+            "end": 3369.0,
+            "text": " according to the current one, see according to the current one, the formula we took out here, the formula we took out here, according to these formulas,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3370.0,
+            "end": 3379.0,
+            "text": " what can you do once, you can go and check, it will look a little confusing, but if you do it yourself, then you will understand,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3380.0,
+            "end": 3389.0,
+            "text": " basically I changed this function, according to these formulas, and this is my update parameter, now I will show you the back propagation, what will I do,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3390.0,
+            "end": 3399.0,
+            "text": " first epoch, I am taking out the first student for the first time, see here the value is 0, this is the first student, when I ran the first student,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3400.0,
+            "end": 3409.0,
+            "text": " then there was a loss of 0.61, here I am calculating the loss, okay, and this is its weight changes, see it has changed a little,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3410.0,
+            "end": 3419.0,
+            "text": " it was 0.1, it has changed a little from 0.1, see the bias has changed a lot, see the bias has changed a lot, it has not changed much,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3420.0,
+            "end": 3429.0,
+            "text": " actually 10 to the power minus 7, I took the next student, and sent it, ran it again, and you would see,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3430.0,
+            "end": 3439.0,
+            "text": " that the student's loss came a little less, and the weight changed slightly, okay, then I sent the third student, by putting 2 here,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3440.0,
+            "end": 3449.0,
+            "text": " and you would see, its loss is coming a little more, and it is obvious, the third student's cgpa and profile score is good, but its placement did not happen,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3450.0,
+            "end": 3459.0,
+            "text": " so our model is making a mistake here, now we came to the fourth student, and for this we ran, and you would see that the loss is still more, but the idea is that,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3460.0,
+            "end": 3469.0,
+            "text": " slowly our whole thing is changing, okay, our weights are changing, now what I have done here, I have put the epoch implementation,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3470.0,
+            "end": 3479.0,
+            "text": " everything is the same as before, everything is exactly the same, nothing is different, nothing has changed, everything is exactly the same,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3479.0,
+            "end": 3488.0,
+            "text": " everything is different, like this, everything else is the same, I ran it on a lot of epochs, around 550 epochs,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3489.0,
+            "end": 3498.0,
+            "text": " but unfortunately, I noticed that the loss, is not getting less than 0.69, you can see, now there can be any reason for this,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3499.0,
+            "end": 3508.0,
+            "text": " the data is less, there is something wrong in the initialization technique, loss, I am sorry, there is something wrong in the optimizer, anything can go wrong,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3509.0,
+            "end": 3520.0,
+            "text": " so what did I do, I wrote the same code in Keras, see the code is exactly the same in Keras, this is the code, here I made the neural network of the same architecture,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3521.0,
+            "end": 3530.0,
+            "text": " there were 9 trainable parameters here too, I did all the get weights, I set the new weights, which will be my weights, and now look at the new weights,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3531.0,
+            "end": 3540.0,
+            "text": " now I have set everything here, loss function binary cross entropy, and when I trained the model here too, for 50 epochs, this is also not going beyond 69,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3541.0,
+            "end": 3550.0,
+            "text": " so Keras is also somehow on this data, with 4 rows, is not able to converge, but the loss function is coming exactly the same, with this I can say,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3551.0,
+            "end": 3560.0,
+            "text": " that we are doing the right thing, so this is the notebook, again I would say, pick up this notebook, and run it yourself,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3561.0,
+            "end": 3570.0,
+            "text": " you will get a lot of perspective, so internally Keras is doing this, so I hope you understood this whole thing, so that was the video guys, I will recommend one thing,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3571.0,
+            "end": 3580.0,
+            "text": " that you please take a copy pen, and take your machine, and watch this video together, so that you also practice, because what I have taught in this video,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3581.0,
+            "end": 3590.0,
+            "text": " is a matter of practice, the more you practice, the more conceptual clarity you will get, now just one more video is left, in back propagation,"
+        },
+        {
+            "number": "16",
+            "title": "Backpropagation Part 2 | The How | Complete Deep Learning Playlist",
+            "start": 3591.0,
+            "end": 3598.0,
+            "text": " where we will study the why part, that is the most important video, so please do watch that, so that's it from my side,"
+        }
+    ],
+    "text": " Hi guys, my name is Nitish and you are welcome to my YouTube channel so we are continuing with our deep learning playlist we started backpropagation in last video there I told you about the what parts what is backpropagation and I told you how it works now in today's video we will see the how part means we will take two datasets one in regression domain and one in classification domain and we will run our own code on that dataset and do backpropagation so after seeing both these things you will get more clarity that how backpropagation works exactly behind the scenes also I will run the same code in Keras so that you can do a comparison between both so I hope you like the video let's start the video so guys we will start with regression problem so whatever you saw in last video the first video of backpropagation whatever we learned there we will apply that on this dataset our goal is that on this dataset we will train this neural network and the training we will do we will not do it by using Keras we will not use Keras we will use our own code whatever algorithm we made we will convert it in code and train our model so the dataset is the same which we used in last class in last video I just changed it here I put resume score instead of IQ the reason for that is IQ is generally from 80 to 120 so it increases a little and it is from 0 to 10 so generally it is said that the inputs in neural network should be in the same range so the training is good we will see why this happens later but for now I have replaced IQ with resume score output column is still same I have data of 4 students ok we are moving forward with 4 students because I have to run this code manually architecture is same nothing special here so let me summarize back propagation algorithm which we made in last class so we will run our code 5 times as in 5 epochs in every epoch we will do this which is written here so what we have to do in every epoch like we have total 4 students we will pick up all 4 students one by one basically inner loop will run 4 times ok so first time you will pick up first student by the way later I will tell you that this selection of students is random I will tell you later that's why I have written random word here but for now think like this when we will be in loop for the first time we will pick up first student then what we will do using its inputs we will do prediction ok whatever prediction will come from that we will calculate our loss using mean squared error ok and then what we will do our 9 weights and biases in this architecture in this there are 9 weights and biases so we will update all of them using this formula gradient descent ok in this I told you that we have to calculate this we have calculated all this in last video we have calculated value of all derivatives ok so we will update all weights then we will go to second student for that we will do same work we will calculate loss as soon as your one epoch will end means once you meet all 4 students after that you will come out of inner loop and you will do this you will calculate average loss average loss means all 4 students you have calculated loss of all 4 L1, L2, L3 and L4 you will divide it by 4 that will be your average loss of that epoch and in this way as many times outer loop will run as many times you will calculate average loss so what you will see your output will be like in epoch 1 loss was 5 in epoch 2 loss was 4 in epoch 3 loss was 3 so this is all about average loss loss of all 4 students this is all about that loss so we have done everything all our math's formulation is ready now what we have to do this whole data set we have to feed in our code I have written code I will show you next so guys I will explain you code by scratch this code is written it may look complex in beginning but I will explain you one by one so in beginning what we have done we have imported both libraries and in next line if you notice I have created my data set I have made pandas data frame in which exactly same 4 students this is my data let me run it and you can see this is the output see exactly same data I have shown you here ok same data now from here we will discuss our code so I have divided function by function code so this first function name is initialize parameters ok in input you have to send your architecture like what is our architecture according to our architecture in input we have 2 nodes as in 2 inputs in middle 2 and here 1 so our architecture will be input 2,2,1 as soon as you give input of 2,2,1 for this total 9 weights and biases will be created and they will be provided a value, what value will be provided for now I have taken weight value as 0.1 and bias value as 0 I could have taken random values but I have kept 6 weights value as 0.1 and 3 biases value as 0, let me show you I will run this function and use it and show you so watch carefully I will run this now its logic is very simple you can go and see I will call this initialize parameter function and here I have passed 2,2,1 which is my architecture of neural network and you would see here you can see it has created 4 different arrays this is 1 this is 2 this is 3 and this is 4 notice its structuring so what is W1 W1 is matrix of these 4 weights so if you notice in W1 there are 4 numbers basically initialization of these 4 weights is done what is W2 these 2 weights their value is here ok then what is B1 B1 is its and its bias that's why there are 2 numbers and what is B2 B2 is its bias that's why there is 1 number so what is this initialize parameter function doing for me according to a given neural network architecture it is initializing weights and biases and giving it to me here I have used 1's and 0's function of numpy I could have easily used random for random initialization I hope you understood this function now my next function is linear forward what is the function of linear forward it will calculate output of any given neuron ok output of any given neuron it depends on 5 things 1st all the weights 2nd all the inputs and 3rd its own bias if you talk about this there will be 5 things its own bias, these 2 weights and the input from this means the output of this node and the output of this node it is getting as input its logic is very simple whatever we are getting from previous layer and the weight and the bias in between that I am simply doing np.product of w and a and by adding bias I am writing return z now this is my main function which will do forward propagation here I am writing this is the main function which will do forward propagation for me ok now you can see how it is working its a very simple function you can understand it but I will show you how we will use this to do forward propagation so I am running this function ok now see carefully what I will do according to our algorithm what we have to do we have to enter epoch and pick up every point and pick up every point and do prediction for it so I already have this much code so what I am going to do I will pick up my first student and that first student I will send in this function ok and in this function I will send my parameters which is this thing this whole thing and when we will get these two inputs what this function will do it will do prediction for that particular student ok I will show you so guys see this what we have done x my data frame I have taken first row and stored it in x and then I have taken first row's lp as in value and stored it in y I will quickly show it to you so if I print here x so it will give me first student's input 8 or 8 and if I write y so it will give me first student's output value that is 4 ok and third thing what we will do that we will initialize parameters although I have shown you but I am doing it again these are my parameters 9 weights and biases now what I have to do that I have to call this function ok this function and it needs two inputs what is the first input x basically input of first student current value of parameters now as soon as I run it see carefully what will happen error the reason is that we have not run this function so what is happening this function is using this function internally you can see once again run and you can see this is the output now you have to understand what is happening here you can see a notation a0 a1 and finally you can see a2 I will tell you what is a1 and a2 see carefully so when you are picking up the data of the first student and feeding in this neural network through input layer so that is a0 basically this is my 8 and 8 for the first student this is my a0 now with this the weights are multiplying the bias is adding so these two outputs are getting calculated o11 and o12 these two outputs are getting calculated I am calling the combination of these two a1 you can also call them activation so this is o11 and this is o12 and finally in this layer its output is getting calculated you can call it o21 or y hat this is a single number this is your a2 so finally in our case the output is a2 which you are calling o21 so notice what is this function doing first of all it is telling me what is a0 a0 is the same as in x you are calling the same as in x then it is saying that in w1 these were the weights and in b1 this was by using these three things it calculated a1 so now what is this the output of this node and this node is 1.6 then it caught a1 caught w2 and caught b2 and from that it calculated a2 and what is your a2 which is your final output so for the first student this is my prediction that its package will be of 0.32 lakhs I hope you are understanding till here also remember one thing that this function is returning two things when you are calling this function forward propagation it is returning two things it is returning a2 which is the final prediction and at the same time the output of these two nodes which you are storing in a1 it is also returning I need these two things why do you need, think about it here you will notice to calculate some derivatives in the previous layer the output which came its value is required that's why in this function at the time of return a1 is also returned now what I have to do I have to store these infact we don't store infact lets go back to the algorithm lets go to the algorithm see how much we have done we picked up the first student we did this step for that we did the prediction so I got the prediction this is the prediction 0.32 I got this now see what I have to do I have to calculate the loss how will the loss be calculated y minus y hat whole square so basically what I have to do I am going here and calculating the loss what will be my loss my loss will be y as in this y in the data minus 0.32 square and this is my loss for the first student this is the loss for the first student for the first student we calculated this loss 13 point something now what I have to do now I have to update all my weights and biases using this formula using this formula using this formula and notice what I have done I have made one more function whose name is update parameters and it looks scary and it looks scary but its work is to do these 9 operations to take these 9 updates that's it so even if you count there are total 9 lines of code which is holding every parameter what are we doing we are holding every parameter and updating it and what was the update rule new equal to old minus plus here because in our formula when we calculated derivatives it is minus in front of all so this minus and this minus is plus and in front of plus I have kept my learning rate 0.001 and in front of that I have written the same thing if you pause the video then this is exactly the same thing which is written here this formula is applied for weight notice what is A1 A1 is basically the previous layer output is A1 and I have applied all these formulas very easily if there is any mistake then you can check this code basically I have converted these 9 formulas into code now what I will do I will call this it needs all parameters y what is y current student its LPA package what is y hat its prediction then I need A1 what is A1 previous layer basically these two its output its output and its output I need these two and I need my data so many things are needed here so what I will do whatever is returning from here two things are returning one is returning y hat which is the prediction and this is returning A1 so I am storing them here I have written y hat comma A1 is equal to this run it now if I show you here so this is my y hat this is y hat now the problem is I need this in the form of number so what I will do is I will write it like this 0 of 0 you will get a number because I have used it directly I have used it directly so let's write a code y hat is equal to y hat 0 of 0 and this is my A1 previous layer's output this is the correct form we will use it like this because I have taken out the matrix notation so now we are ready now what we will do is I will run update parameters and I have all the things, I have parameters I have y of the first student I have y hat of the first student I have A1 of the previous layer's output and I have x now as soon as I think about it, I will return it as soon as I call this function it will change the parameter notice what will happen as soon as I run it error will come because we have not run this code run it and now we call it see this it changed all the parameters now if I run the parameters again so here are my parameters notice it has changed my first layer weights were 0.1 now they have changed my second layer weights were 0.1 they have changed my b1 was 0 my b2 was 0 and all this has changed so what exactly happened if we go back to the algorithm after calculating the loss as soon as I did this step all my weights and biases got updated now what I have to do now in this loop I have to pick up another student and for that I have to repeat the same steps so see what I will do I will go back and I am copying the code I will copy this entire code I will copy this entire code and I will go down at this place and here I don't have to initialize the parameters I don't have to initialize and now I want another student here is another student we will call again to do forward propagation in this step I will get y hat of second student second student's y hat is 0.50 this is second student's y hat now what I will do again I will call update and I have all these inputs parameter's current value is y y hat and a1 and x and run it run is done now see parameters might have changed a bit see this parameters changed a bit more it is changing a bit more notice this was up it is changing a bit more I have to do this two more times so what I will do is here I will do the changes now I am taking third student this is my third student and again I am doing forward propagation whatever output is coming I am storing it here see this this is my third student's prediction 0.60 we can also calculate loss I forgot to calculate loss again I am calling notice again parameters will change see parameters changed again now I will take last student which is 3 and again I will hold here 3 again I will run this is my fourth student's prediction again I will call update parameters and parameters are changing more see parameters are changing more so in short we did this demonstration once in front of you inner loop ran 4 times inner loop ran 4 times outer loop ran once for one epoch but you will repeat this same work 5 times so it will be 5 epochs now instead of doing 5 epochs what I am doing I have written a single piece of code which will do all this work let me show you this is epoch implementation here I am doing everything from start here I have initialized parameters here I have initialized parameters epochs I don't need to keep 75 epochs I don't need to keep 75 for now let's keep 10 for now let's keep 5 run a loop for I in range of epochs run a loop for I in range of epochs basically here when I calculate loss and then I have to calculate average loss and then I have to calculate average loss every time in list I will append 4 loss and here I will put average on that loss and here I will put average on that loss this is loss now I am running a loop on all my data now I am running a loop on all my data every time I am picking up student by doing jj I am doing forward propagation I am getting y hat and a1 I am extracting y hat I am calling all parameters I am extracting loss I am appending loss to loss as soon as inner loop is completed I am going out and I am calculating mean on loss so that in that particular epoch all the loss is printed all the loss is printed I am printing parameters I am printing parameters this is the code see see it is printing see see see see I am commenting all I am commenting all we are showing it to you we are showing it to you we are showing it to you run this code, this is the output, see this guys, when you roamed on 4 points for the first time then your average loss was 25, when you roamed for the second time then till now the parameters were adjusted in such a way that the loss reduced to 18, third time the loss reduced to 9.47 5th time it came to 3 and at 1.3 it stopped at the last, and finally after doing all the work when I printed my weights and biases, see it started from 0.1 and where it reached, so this is the demonstration, now we will do one last thing, I will write this same code in Keras where we will use Keras library and see what is the output on the same data, so let me show you that, this is the Keras code, let's run it once, everything is the same, I have made the same data frame here also, here is our data frame, here we have imported all the libraries and here I have made the neural network of the same architecture, there is input layer, there are 2 units in 10, everyone's activation is linear, we have run this, here is the summary of my model, there are total 9 trainable parameters, 6 weights, 2 biases, now see here, what Keras does is that Keras randomly initializes weights, so what am I doing to make it similar, what did I do to make it similar to the model we made, first I took out all the weights of the model using get weights, so see all the weights are visible, just like mine was here, now what did I do, I made an array called new weights, in which I gave all weights 0.1 and all biases 0, and then I called the set weights function of Keras and set new weights, so now what is after this, the initial weights of Keras model is exactly like mine, I just did this to show a similar thing, now what did I do next, I went to the optimizer and set the learning rate 0.001 because in my case also it is 0.001, and after doing this, I took out the mean squared error and finally I fitted the model, here somehow means most likely the optimizer has been used separately, so it took 75 epochs to converge Keras, see here I am running it, model is trained and this is my loss around 1.47, our loss was a little less, our loss was around 1.34, now what did I do again, I did model.getWeights and here are the changes made by Keras in our weights, so you can see whatever work we do in Keras, we did the same work by applying our own code, the most important thing is that the algorithm which we had learned, we practically converted it into code, and we did this for a regression problem, next what we will do, we will repeat the same work for a classification problem, what will happen with that, our understanding will become more solid, so let's go guys, we saw a regression example step by step, now we will see a classification example, everything is going to be very similar, but I want to give you the flavor of classification, we made some changes in the same data set and made a new data set, this data set is for classification, here you have CGPA in input, student's profile score, and placement in the form of 1 or 0, and guess what, I have kept the architecture of neural network exactly the same, we have 3 layers, input, hidden and output, there are 2 in input, 2 in hidden and 1 in output, now the big change is that in the regression example, my activation function in all 3 nodes was linear, but since this is a classification example, here I have taken sigmoid in all 3 nodes, there will be some changes due to this sigmoid, also here your loss function is binary cross entropy, we have already seen this, so here notice when forward propagation happens, suppose you give something in input, suppose your initial weights are 0.1, here also 0.1, these 4 weights are 0.1, this is also 0.1, bias is 0, so I will tell you quickly how the output will be calculated on this node, suppose there is input of 8 and 8 for the student, so your output will be calculated, you will take out z first, what will be z, 0.1 multiplied by 8, plus 0.1 multiplied by 8, plus 0, this is z, now you will pass this in sigmoid, and this will be your O11, its output, so here only this extra step is coming, after taking out z you will send it in sigmoid function, this extra step you have to do here, due to this sigmoid this change happened, and your loss function changed, earlier it was y minus y hat whole square, now it is this, so these two changes are happening in classification problem, back propagation algorithm will be same, you will start for number of epochs, you will enter in epochs, you will run inner loop as many times as there are rows in your data, you can pick up points randomly or one by one, we are using one by one approach, for every point as in every student, you will do forward propagation, you will predict its placement or not, and then you will calculate its loss, here without MSE, binary cross entropy will be there, after that what you will do, this is your main step, where you will update your 9 weights and biases, using gradient descent, now the problem is that, we have not calculated all these derivatives yet, so what we have to do, we have to calculate all these derivatives one by one, as I showed you in last video for regression, so that is our next work, I will show you one by one, good thing is that since you have already done it once, it won't be that difficult, so watch carefully, I am starting, suppose this is my neural network architecture, this is the neural network architecture, first of all, my y hat is coming here, which is entering the loss function, first of all, this weight, this weight, and its bias, I will calculate the derivative of these three, with respect to loss function, I am writing loss function again, loss function is, minus y, log of y hat, minus 1 minus y, log of 1 minus y hat, now see, first of all, we will calculate del of L, with respect to this weight, now you will remember our logic, how we were calculating, if you want to do changes in L, then you will have to do changes in y hat, now what is y hat, y hat is basically, sigmoid of z, and z, which is z of this node, its sigmoid, so y hat in turn, will depend on z, let's call it z final, because this final is of last node, now this z final is, what is this z final, it is basically, linear combination, w211 multiplied by, its output, o11, plus, w2, this weight, 21, its output, o12, plus its own bias, b21, now see here, we are calculating on the basis of this weight, so z final depends on, w211, so if you will change in this, then it will change in z, by changing in z, it will change in y hat, and by changing in y hat, it will change in L, so if I come here, then I can write this whole thing, by breaking it down, like this, okay, this means, if I have to calculate this, for that I have to calculate, these three things, okay, similarly, let's do one thing, let's write this also, according to this weight, what will be the derivative, according to this, same path will follow, here at last, what will come, w2, 21, so everything will remain same, first two derivatives, will remain same, here at last, w2, 21, and then according to this bias, if you will see, then everything will remain same, first two, here it will come, bias, 21, so now what we have to do, the good thing is, that this is common, this much is common in all three, okay, so we have to subtract these two, and these three, so in total, by subtracting five derivatives, we will get three, okay, so let's focus, first of all, we will subtract, derivative of L, with respect to, y hat, so basically, I have to subtract, this, sorry, here it will not be minus, here it will be, y hat, minus, 1 minus, y, here it will be, log, 1 minus, y hat, okay, for this thing, I have to subtract derivative, see it is very simple, we will derive this term, differentiate, I am sorry, so here it will come, minus y, divided by, log of this would be, y hat, minus, 1 minus y, this whole term will be the derivative, 1 minus, y hat, then you will differentiate, this inner term, so this negative will come out, and plus will come, if you solve this, so this would become, minus y, 1 minus, y hat, plus, y hat, times, 1 minus, y, and below, y hat, 1 minus, y hat, if you multiply this, minus, y, plus, y, y hat, plus, y hat, minus, y, y hat, divided by, y hat, 1 minus, y hat, okay, this and this will cancel out, and here you will have, minus, y, minus, y hat, divided by, y hat, 1 minus, y hat, so its derivative, is this, you can see, so guys, we have taken out this one, now we will take out this one, okay, this one is also very easy, we will go down, and write this code, not code, I am sorry, we will write this expression, and basically we have to solve this, we have to solve this, okay, because y hat is nothing but, sigmoid of z, now if you know, the derivative of sigmoid, is, sigmoid, multiplied by, 1 minus, sigmoid, you have to remember this, okay, so this will become, sigmoid, 1 minus, sigmoid, and here what I will do, I will replace this, with y hat, so this would become, y hat times, y minus, y hat, okay, so now we have taken out this also, now the good thing is, that, you have to multiply these two, you have to multiply these two, now notice, when you multiply these two, what will happen, I will write in front of you, see, del L, del y hat, we got this, minus, y minus, y hat, y hat times, 1 minus, y hat, and, we got this, this, y hat, 1 minus, y hat, now notice, we have to multiply these two, in all three equations, so when you multiply these two, so this would become, multiplied by, y, del z would become, minus, y minus, y hat, 1 minus, y, multiplied by, y hat, 1 minus, y hat, this and this term will cancel, and I will get, from the multiplication of these two, minus, y times, y hat, okay, so this is a very good thing, that, the multiplication of these two terms, the multiplication of these two terms, is a very simple term, and that is, minus y, minus, y hat, okay, now what we have to do is, subtract these three terms, these three terms are also very simple, notice, what is our z, at this point our z is, w2, 1, 1, o, 1, 1, plus, w2, 2, 1, o, 1, 2, plus, b, 2, 1, now when you differentiate this, with respect to w2, 1, 1, and when you do it with respect to w2, the value will be, o, 1, 2, and when you do it with respect to w2, since there is no term here, the answer will be, 1, this means, I can come down, and I can write this expression, see carefully, I can write this, this would become, minus, y, y hat, times, o, 1, 1, this is its differentiation, equal to, minus, y, minus, y hat, times, o, 1, 2, and here, minus, y, minus, y hat, and nothing else, we have derived these three, if you want, you can compare these expressions, with regression expressions, you would see, that there, see, compare and see, this is not minus 2, this is minus 1, see, this is the only difference, you can compare and see, now we will derive, the derivative of these three, of this weight, of this weight, and of this bias, okay, so see how the path will follow, here is loss, here is y hat, y hat will depend, on the z, z will depend, on the output, and its output, depends on the rest, okay, so basically, we have to calculate three things, we have to calculate, this, this weight, we have to calculate, we have to calculate, this weight, and we have to calculate, this bias, okay, let's do it one by one, let's focus on this weight, how will be the connection of this weight, see once, so, loss, will depend on y hat, y hat will depend on z, of this node, we call it z final, z final, z final will depend, on this output, this output, will depend, on z, previous, in this node, z will be calculated, and this z, will depend, on w111, okay, so if you want to write this, so this will be, something like this, del l, del y hat, del y hat, del zf, del zf, del o11, del o11, del z previous, del z previous, del w11, now there is no need to worry, the good thing is, we have already calculated these two, we have already calculated these two, we know the answer to this, minus, y minus, y hat, we already know this answer, let's talk about this one, what is the relationship, between z final, and o11, see, what is z final, z final is, w211, this weight, times o11, its output, plus, w221, this weight, its output, o12, plus, this bias, now when you differentiate this, with respect to o11, what you will get, you will get this weight, so i will write here, its output will be, w211, now let's focus on this, what is o11, you can write o11, sigmoid of, z previous, here the value of z is sigmoid, so what will this become, z, previous, 1 minus, sigmoid of, z previous, right, now what you can write this, you can write this z previous, as o11, multiplied by, o11, ok, so its answer will be, o11, 1 minus, o11, ok, now only this last one is left, where you have to find out, that z previous, when you will do with w21, so see what is z previous, z previous is, here the value of z, so how will this come out, w2, sorry, w11, this weight, multiplied by, this input, xi1, plus, this weight, w1, 21, multiplied by, this input, and its own bias, now when you will differentiate this, with respect to, this weight, so what will be left in the output, only this will be left, so its input will be, its derivative will be, xi1, so what I can do, I can write this whole thing here, that, this will be, minus, y, minus, y hat, w2, 11, multiplied by, output 11, minus, o11, xi1, ok, now, if you take out the previous one, I will put this in the box, if you take out the next one, means, with respect to this weight, so you will understand, that only the last thing will change, ok, only the last thing will change, and if you take out the derivative with respect to this weight, so xi2 will come, so you can write it very easily here, everything will remain same, but, if you take out the next one, xi1 will come, this weight will also remain same, this output one will also remain same, only in the end, xi2 will come, ok, and lastly, when you take out the bias one, everything will remain same, only in the last one, 1 will come, if you do all this yourself, with a copy pen, then you will get a little more confidence, the screen looks a little scary, but it is not that much, your mind will automatically start looking for patterns, ok, so we have taken out in respect to these three also, now we will take out, the remaining three, with respect to this weight, with respect to this weight, and with respect to its bias, so basically I have to take out three things, I have to take out, w1, 1,2, w1,2,2, and this one, I have to take out these three things, ok, first we will take out in respect to this, see how the whole relationship will be, loss will depend on y hat, y hat will depend on z final, z final will depend on, its output, o12, o12 will depend on, z previous, and z previous will depend on, w1, 1,2, so if I want to write, so I would write this, is equal to, del L del y hat, multiplied by, del y hat, del z f, multiplied by, del z f, del o12, multiplied by, del o12, multiplied by, z previous, multiplied by, previous, w1, 1,2, now the good news is, that we have calculated this, ok, also, it is very easy to calculate this, because I have told you earlier, what is z final, z final is, w1, this weight and its output, plus, w2, 21 times o11, this weight and its output, plus this node's bias, b21, when you differentiate this, with respect to, o, sorry here o12 will come, when you differentiate o12, you will get this weight, so its output will be this, w2, 21, like this was here, ok, also when you differentiate this, like you did here, you differentiated o11, so the way you got this term, in the same way, you will get this term here, ok, and from this last one, you will get, you, I am sorry, I have written it wrong here, we are not using this, we, are using this, I have written it wrong, here I have written it right, this is 12, this is w112, and this is w122, here I have written it right, here I have drawn it wrong, I am sorry, now what you are doing, so its output will be xi1, ok, so I can write here, that del L, w1, 12 would be, minus times, y minus y hat, times w2, 21, o12, 1 minus o12, multiplied by xi1, ok, now if you, take w1, 22, so everything will be same, this whole thing will be same, just here, xi1 will be replaced by xi2, and if you go for ys, so here everything is same, ok, here nothing will come, only 1 will be there, this is yours, remaining 3 derivatives, this is all calculated, ok, this is 3, this is 3, and this is also 3, where is it, this is also 3, so guys, in this back propagation algorithm, I have got this thing, I have taken out 9 of 9 derivatives, now what I have to do, this algorithm again, I will convert in code, and I will show you, ok, so now we will move to coding window, so guys I have already written the code, I will explain in front of you, it is same code, which we have written for regression, I have changed it, there are 2 changes, 1st is according to activation function, and 2nd is according to loss function, see carefully, importing everything, this is my data set, exactly what I have shown you earlier, this is how it looks, ok, here also the same functions are there, this is initialize parameter, which according to a given architecture, will give 0.1 initialization to all weights, and 0 initialization for all the biases, this is the function I have made, by saying sigmoid, which if you give z, then it calculates sigmoid on it, 1 divided by 1 plus e to the power minus z, ok, it returns, now here also you have the same function, in this function and in this function, there is not much difference, if you think, see, this linear forward, here you were returning it by doing dot product, but here after doing dot product, so this is the difference, rest the next main function, which was here, exactly same, copied here, what is the work of this, send y hat, and the last layer, this layer, just give me one second, I will open one note, so this layer, its output is o11, and its output is o12, so it will give me three things, y hat will give, o12 and o11, and o12 will give, now see the main thing here, here the update parameters, are a little different from this, here the update parameters are a little different, see here, here everything was 2 times, here you will notice, according to the current one, see according to the current one, the formula we took out here, the formula we took out here, according to these formulas, what can you do once, you can go and check, it will look a little confusing, but if you do it yourself, then you will understand, basically I changed this function, according to these formulas, and this is my update parameter, now I will show you the back propagation, what will I do, first epoch, I am taking out the first student for the first time, see here the value is 0, this is the first student, when I ran the first student, then there was a loss of 0.61, here I am calculating the loss, okay, and this is its weight changes, see it has changed a little, it was 0.1, it has changed a little from 0.1, see the bias has changed a lot, see the bias has changed a lot, it has not changed much, actually 10 to the power minus 7, I took the next student, and sent it, ran it again, and you would see, that the student's loss came a little less, and the weight changed slightly, okay, then I sent the third student, by putting 2 here, and you would see, its loss is coming a little more, and it is obvious, the third student's cgpa and profile score is good, but its placement did not happen, so our model is making a mistake here, now we came to the fourth student, and for this we ran, and you would see that the loss is still more, but the idea is that, slowly our whole thing is changing, okay, our weights are changing, now what I have done here, I have put the epoch implementation, everything is the same as before, everything is exactly the same, nothing is different, nothing has changed, everything is exactly the same, everything is different, like this, everything else is the same, I ran it on a lot of epochs, around 550 epochs, but unfortunately, I noticed that the loss, is not getting less than 0.69, you can see, now there can be any reason for this, the data is less, there is something wrong in the initialization technique, loss, I am sorry, there is something wrong in the optimizer, anything can go wrong, so what did I do, I wrote the same code in Keras, see the code is exactly the same in Keras, this is the code, here I made the neural network of the same architecture, there were 9 trainable parameters here too, I did all the get weights, I set the new weights, which will be my weights, and now look at the new weights, now I have set everything here, loss function binary cross entropy, and when I trained the model here too, for 50 epochs, this is also not going beyond 69, so Keras is also somehow on this data, with 4 rows, is not able to converge, but the loss function is coming exactly the same, with this I can say, that we are doing the right thing, so this is the notebook, again I would say, pick up this notebook, and run it yourself, you will get a lot of perspective, so internally Keras is doing this, so I hope you understood this whole thing, so that was the video guys, I will recommend one thing, that you please take a copy pen, and take your machine, and watch this video together, so that you also practice, because what I have taught in this video, is a matter of practice, the more you practice, the more conceptual clarity you will get, now just one more video is left, in back propagation, where we will study the why part, that is the most important video, so please do watch that, so that's it from my side,"
+}

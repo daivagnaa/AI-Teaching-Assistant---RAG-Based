@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 0.0,
+            "end": 27.0,
+            "text": " Hi guys, my name is Ritesh and you are welcome to my YouTube channel In the last video, we took an intuition of Multilayer Perceptron We tried to understand how Multilayer Perceptrons work and why they can work In the end, I gave you some examples on Tensorflow Playground Now, slowly we will try to understand Multilayer Perceptron in a deeper way"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 27.0,
+            "end": 48.0,
+            "text": " To understand Multilayer Perceptron, the most difficult thing is to train the algorithm which is called Back Propagation So, everyone who has worked in deep learning knows that it is very difficult to understand Back Propagation I have also experienced it And I think the biggest reason for it is that beginners make a mistake"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 48.0,
+            "end": 71.0,
+            "text": " And that mistake is that when you make a neural network then many weights and biases come in that neural network So, if we don't learn to denote those weights and biases properly If we don't learn their notation, then while doing Back Propagation, there is a lot of confusion So, I made this mistake and I don't want you to make this mistake"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 71.0,
+            "end": 97.0,
+            "text": " That's why in today's video, our whole goal would be actually two things First, I want to teach you that by looking at any neural network architecture First of all, you should be able to calculate the number of trainable parameters in it The number of trainable parameters means that when you train that model then what is the total number of weights and biases you have to find the value of"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 97.0,
+            "end": 120.0,
+            "text": " So, the first thing we will learn in today's video is that if you are being given a neural network architecture then you should calculate it quickly that there are so many weights and biases in it The second thing we will learn is that how do you denote those weights and biases What do you name them? We have to learn their notation And we will learn a standard notation which is followed in the industry"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 120.0,
+            "end": 147.0,
+            "text": " So, what will happen is that in the future when you are studying a difficult algorithm like Back Propagation then you will never get confused by looking at any weight that which layer is this weight So, that's the whole idea of this video. It is a small video but trust me it is very important Please don't skip this one. So, that's it for the introduction. Let's start the video So, guys let's start. First of all, let me explain you the setup"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 147.0,
+            "end": 170.0,
+            "text": " What you are seeing on the screen is the neural network architecture I will explain you the whole notation by using this architecture So, there are 4 layers in total. Yes, 4 layers are there So, there is an input layer which you are calling layer 0 Hidden layer 1 is layer 1, hidden layer 2 is layer 2 and output layer is layer 3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 170.0,
+            "end": 203.0,
+            "text": " Also, the data that we have here is 4 dimensional data You can see where M denotes the number of rows and the value of N is 4 So, if you have data it will look like this There would be column 1, column 2, column 3, column 4 and finally your output column So, what I am doing is that I will insert row by row data here"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 203.0,
+            "end": 239.0,
+            "text": " So, x i1 is the value of the first column of the ith row This is the value of the ith row and this is the value of the ith row So, when I will provide one row I will insert these values here Now, the question is that how many trainable parameters do you have? This is the first question that how many trainable parameters do you have?"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 239.0,
+            "end": 267.0,
+            "text": " Trainable parameters means that when you will train on it So, your back propagation algorithm will find out the value of weights and biases So, you should be able to calculate this by looking at the neural network architecture So, let me show you If you focus here, let's count the number of weights and biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 267.0,
+            "end": 300.0,
+            "text": " So, clearly if you see the combination here, there are 4 nodes and 3 nodes So, 4 multiplied by 3, there are 12 weights You can see, if you count all these weights, there are 12 weights Also, one more thing, if you see this color encoding, I have created these weights in such a way that all the weights that you are getting from the previous layer are encoded in one color"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 300.0,
+            "end": 319.0,
+            "text": " So, all the weights that you are getting from the previous layer are in black color All the weights that you are getting from the previous layer are in red color All the weights that you are getting from the previous layer are in green color Also, I have used the same color encoding so that you can easily understand So, coming back, we have to count the total number of weights and biases in this neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 319.0,
+            "end": 343.0,
+            "text": " So, here there are 12 weights and its bias, its bias and its bias So, we have 3 biases Now, if we come here, there are 3 and 2 here So, we will have total weights, 6 weights And then its bias and its bias, 2 biases"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 343.0,
+            "end": 360.0,
+            "text": " After that, if we come here, we will have 2 weights We can understand by counting and then its bias So, here total is 15 Here total is 8 And here total is 3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 360.0,
+            "end": 385.0,
+            "text": " If we add these 3, 15 plus 8, 23 plus 3 There are 26 trainable parameters This means that when you train this neural network So, your back propagation algorithm will try to find out the value of 26 weights and biases You should always understand this by looking at the neural network architecture"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 385.0,
+            "end": 401.0,
+            "text": " Now, coming back to the original question How do you denote weights and biases in multilayer perceptron? What is the notation? We will solve this now Actually, I will show you 3 things"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 401.0,
+            "end": 421.0,
+            "text": " I will show you how to denote weights, how to denote biases and how to denote outputs The output coming out of this node is the input for the next node So, it is important to know that So, we will see the notation of output So, let's start with biases because they are the easiest"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 421.0,
+            "end": 445.0,
+            "text": " So, the notation to denote bias is Bij Where i represents the layer number And j represents the node number in that layer For example, if you talk about this node So, its bias will be 1,1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 445.0,
+            "end": 456.0,
+            "text": " Because it is in layer number 1 And it is the first node of layer number 1 Similarly, it will be 1,2 Because it is the second node in the first layer It will be 1,3"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 456.0,
+            "end": 466.0,
+            "text": " Because it is the third node in the first layer If you talk about this node It will be 2,1 Because it is the first node in the second layer It will be 2,2"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 466.0,
+            "end": 478.0,
+            "text": " Because it is the second node in the second layer And it will be 3,1 Because it is the first node in the third layer So, that is how you denote biases Now, the question arises"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 478.0,
+            "end": 489.0,
+            "text": " How will you denote the output? It is very simple to denote the output Again, you use Oij Which is exactly the same i represents the layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 489.0,
+            "end": 499.0,
+            "text": " And j represents the node number So, don't think too much The output of any node Follows the same notation Which denotes the bias"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 499.0,
+            "end": 509.0,
+            "text": " For example, if you talk about this node So, it produces two outputs This and this The output of these two will be O,1,1 Ok"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 509.0,
+            "end": 519.0,
+            "text": " This node produces two outputs The output of these two will be O,1,2 And two of these are producing O,1,3 One of these is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 519.0,
+            "end": 529.0,
+            "text": " O,2,1 One of these is producing O,2,2 One of these is producing O,3,1 And O,3,1 is your prediction"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 529.0,
+            "end": 539.0,
+            "text": " Ok So, that is how you denote the output Now, the last and the most tricky thing How to denote weights? To denote weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 539.0,
+            "end": 549.0,
+            "text": " You need three things i, j and k Ok So, what does k mean? It means the weight"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 549.0,
+            "end": 559.0,
+            "text": " Which is entering which layer Ok Remember i means Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 559.0,
+            "end": 569.0,
+            "text": " Which number in the current layer And j means Which node is producing Which number in the current layer I know it is a bit difficult"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 569.0,
+            "end": 579.0,
+            "text": " Let me give you an example Let's say I want to find this So, the weight will be Which layer is it entering Layer number 1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 579.0,
+            "end": 589.0,
+            "text": " So, 1 will come here Now, what will happen in i What will happen in i In the previous layer Which node is producing"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 589.0,
+            "end": 599.0,
+            "text": " 1 And in the next layer Which node is producing 1 Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 599.0,
+            "end": 609.0,
+            "text": " Ok Again, 1 will come here Because it is entering the first layer 4 will come here Because it is exiting the fourth node"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 609.0,
+            "end": 619.0,
+            "text": " And 2 will come here Because it is entering the second node I am talking about this one If you want to write this one It will be w1"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 619.0,
+            "end": 629.0,
+            "text": " Because it is entering the first one 1 because it is coming from the first one 3 because it is entering the third one Ok Let's talk about this one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 629.0,
+            "end": 639.0,
+            "text": " Weight Now, it is entering the second layer So, 2 will come here And it is exiting the second layer And going to the second one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 639.0,
+            "end": 649.0,
+            "text": " Ok Let's talk about this one This one So, it is also Entering the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 649.0,
+            "end": 659.0,
+            "text": " It is exiting the second one And going to the first one Let's talk about this one It is entering the third layer It is exiting the first one"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 659.0,
+            "end": 669.0,
+            "text": " And going to the first one Ok Let's talk about this one I will give you 3-4 examples It is entering the first layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 669.0,
+            "end": 681.0,
+            "text": " It is exiting the second layer And going to the first one Let's talk about this one This one It is going to the second layer"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 681.0,
+            "end": 696.08,
+            "text": " and that is how you denote weights and that is how you denote weights so I would recommend that you go and make a more complex neural network make a more complex neural network"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 696.08,
+            "end": 711.1600000000001,
+            "text": " something like this in which there are more hidden layers in which there are more hidden layers and pick up a copy pen and try to write the weights"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 711.1600000000001,
+            "end": 726.1600000000001,
+            "text": " that would be the best exercise whenever there is confusion, come back to the video once you learn this trust me, when you study how to train how to train"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 726.1600000000001,
+            "end": 741.16,
+            "text": " through back propagation algorithm you will not have any problem in understanding notation many people make a mistake and start studying a complex algorithm which is not good"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 741.16,
+            "end": 756.16,
+            "text": " so I hope this part is clear so that was the video guys I hope you understood I personally enjoyed creating this video because things were interesting"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 756.16,
+            "end": 771.16,
+            "text": " I had to run examples and tell you the conclusions I hope you developed an understanding now in the next video we will learn more about perceptron we will learn about multilayer perceptron notation"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 771.16,
+            "end": 786.16,
+            "text": " how to name weights and biases and then we will learn how to train our multilayer perceptron and there we will learn our back propagation algorithm which is very important and the backbone of deep learning"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 786.16,
+            "end": 801.16,
+            "text": " so that's it from my side please do like this video also if you haven't subscribed to the channel please press that red button it really motivates me"
+        },
+        {
+            "number": "8",
+            "title": "MLP Notation",
+            "start": 801.16,
+            "end": 804.16,
+            "text": " so that's it from my side, bye"
+        }
+    ],
+    "text": " Hi guys, my name is Ritesh and you are welcome to my YouTube channel In the last video, we took an intuition of Multilayer Perceptron We tried to understand how Multilayer Perceptrons work and why they can work In the end, I gave you some examples on Tensorflow Playground Now, slowly we will try to understand Multilayer Perceptron in a deeper way To understand Multilayer Perceptron, the most difficult thing is to train the algorithm which is called Back Propagation So, everyone who has worked in deep learning knows that it is very difficult to understand Back Propagation I have also experienced it And I think the biggest reason for it is that beginners make a mistake And that mistake is that when you make a neural network then many weights and biases come in that neural network So, if we don't learn to denote those weights and biases properly If we don't learn their notation, then while doing Back Propagation, there is a lot of confusion So, I made this mistake and I don't want you to make this mistake That's why in today's video, our whole goal would be actually two things First, I want to teach you that by looking at any neural network architecture First of all, you should be able to calculate the number of trainable parameters in it The number of trainable parameters means that when you train that model then what is the total number of weights and biases you have to find the value of So, the first thing we will learn in today's video is that if you are being given a neural network architecture then you should calculate it quickly that there are so many weights and biases in it The second thing we will learn is that how do you denote those weights and biases What do you name them? We have to learn their notation And we will learn a standard notation which is followed in the industry So, what will happen is that in the future when you are studying a difficult algorithm like Back Propagation then you will never get confused by looking at any weight that which layer is this weight So, that's the whole idea of this video. It is a small video but trust me it is very important Please don't skip this one. So, that's it for the introduction. Let's start the video So, guys let's start. First of all, let me explain you the setup What you are seeing on the screen is the neural network architecture I will explain you the whole notation by using this architecture So, there are 4 layers in total. Yes, 4 layers are there So, there is an input layer which you are calling layer 0 Hidden layer 1 is layer 1, hidden layer 2 is layer 2 and output layer is layer 3 Also, the data that we have here is 4 dimensional data You can see where M denotes the number of rows and the value of N is 4 So, if you have data it will look like this There would be column 1, column 2, column 3, column 4 and finally your output column So, what I am doing is that I will insert row by row data here So, x i1 is the value of the first column of the ith row This is the value of the ith row and this is the value of the ith row So, when I will provide one row I will insert these values here Now, the question is that how many trainable parameters do you have? This is the first question that how many trainable parameters do you have? Trainable parameters means that when you will train on it So, your back propagation algorithm will find out the value of weights and biases So, you should be able to calculate this by looking at the neural network architecture So, let me show you If you focus here, let's count the number of weights and biases So, clearly if you see the combination here, there are 4 nodes and 3 nodes So, 4 multiplied by 3, there are 12 weights You can see, if you count all these weights, there are 12 weights Also, one more thing, if you see this color encoding, I have created these weights in such a way that all the weights that you are getting from the previous layer are encoded in one color So, all the weights that you are getting from the previous layer are in black color All the weights that you are getting from the previous layer are in red color All the weights that you are getting from the previous layer are in green color Also, I have used the same color encoding so that you can easily understand So, coming back, we have to count the total number of weights and biases in this neural network So, here there are 12 weights and its bias, its bias and its bias So, we have 3 biases Now, if we come here, there are 3 and 2 here So, we will have total weights, 6 weights And then its bias and its bias, 2 biases After that, if we come here, we will have 2 weights We can understand by counting and then its bias So, here total is 15 Here total is 8 And here total is 3 If we add these 3, 15 plus 8, 23 plus 3 There are 26 trainable parameters This means that when you train this neural network So, your back propagation algorithm will try to find out the value of 26 weights and biases You should always understand this by looking at the neural network architecture Now, coming back to the original question How do you denote weights and biases in multilayer perceptron? What is the notation? We will solve this now Actually, I will show you 3 things I will show you how to denote weights, how to denote biases and how to denote outputs The output coming out of this node is the input for the next node So, it is important to know that So, we will see the notation of output So, let's start with biases because they are the easiest So, the notation to denote bias is Bij Where i represents the layer number And j represents the node number in that layer For example, if you talk about this node So, its bias will be 1,1 Because it is in layer number 1 And it is the first node of layer number 1 Similarly, it will be 1,2 Because it is the second node in the first layer It will be 1,3 Because it is the third node in the first layer If you talk about this node It will be 2,1 Because it is the first node in the second layer It will be 2,2 Because it is the second node in the second layer And it will be 3,1 Because it is the first node in the third layer So, that is how you denote biases Now, the question arises How will you denote the output? It is very simple to denote the output Again, you use Oij Which is exactly the same i represents the layer And j represents the node number So, don't think too much The output of any node Follows the same notation Which denotes the bias For example, if you talk about this node So, it produces two outputs This and this The output of these two will be O,1,1 Ok This node produces two outputs The output of these two will be O,1,2 And two of these are producing O,1,3 One of these is producing O,2,1 One of these is producing O,2,2 One of these is producing O,3,1 And O,3,1 is your prediction Ok So, that is how you denote the output Now, the last and the most tricky thing How to denote weights? To denote weights You need three things i, j and k Ok So, what does k mean? It means the weight Which is entering which layer Ok Remember i means Which node is producing Which number in the current layer And j means Which node is producing Which number in the current layer I know it is a bit difficult Let me give you an example Let's say I want to find this So, the weight will be Which layer is it entering Layer number 1 So, 1 will come here Now, what will happen in i What will happen in i In the previous layer Which node is producing 1 And in the next layer Which node is producing 1 Let's talk about this one Ok Again, 1 will come here Because it is entering the first layer 4 will come here Because it is exiting the fourth node And 2 will come here Because it is entering the second node I am talking about this one If you want to write this one It will be w1 Because it is entering the first one 1 because it is coming from the first one 3 because it is entering the third one Ok Let's talk about this one Weight Now, it is entering the second layer So, 2 will come here And it is exiting the second layer And going to the second one Ok Let's talk about this one This one So, it is also Entering the second layer It is exiting the second one And going to the first one Let's talk about this one It is entering the third layer It is exiting the first one And going to the first one Ok Let's talk about this one I will give you 3-4 examples It is entering the first layer It is exiting the second layer And going to the first one Let's talk about this one This one It is going to the second layer and that is how you denote weights and that is how you denote weights so I would recommend that you go and make a more complex neural network make a more complex neural network something like this in which there are more hidden layers in which there are more hidden layers and pick up a copy pen and try to write the weights that would be the best exercise whenever there is confusion, come back to the video once you learn this trust me, when you study how to train how to train through back propagation algorithm you will not have any problem in understanding notation many people make a mistake and start studying a complex algorithm which is not good so I hope this part is clear so that was the video guys I hope you understood I personally enjoyed creating this video because things were interesting I had to run examples and tell you the conclusions I hope you developed an understanding now in the next video we will learn more about perceptron we will learn about multilayer perceptron notation how to name weights and biases and then we will learn how to train our multilayer perceptron and there we will learn our back propagation algorithm which is very important and the backbone of deep learning so that's it from my side please do like this video also if you haven't subscribed to the channel please press that red button it really motivates me so that's it from my side, bye"
+}

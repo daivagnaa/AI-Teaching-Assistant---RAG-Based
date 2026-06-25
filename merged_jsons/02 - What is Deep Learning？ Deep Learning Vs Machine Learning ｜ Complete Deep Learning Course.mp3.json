@@ -1,0 +1,2455 @@
+{
+    "chunks": [
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 0.0,
+            "end": 18.0,
+            "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So, if you remember, in the last video I made an announcement that I am going to start a deep learning playlist on my channel. So, that will happen today. Today we will start our 100 days of deep learning course. This will be the first video."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 18.0,
+            "end": 45.0,
+            "text": " And before starting the video, let me give you a little introduction that what we will cover in this video. So, since we are just starting and I have decided that this course will be beginner friendly. So, the idea is very simple that we will start from scratch and gradually move to complex topics. So, today is day 1 and I want you to know everything about deep learning. So, that is why the title of today's video is what is deep learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 45.0,
+            "end": 77.0,
+            "text": " So, if you are a beginner and entering this field for the first time, then by watching this video you will understand what is deep learning and what is its origin. Apart from this, one more topic that I have covered in this video is that what is the difference between machine learning and deep learning. So, I will tell you the differences on 4-5 different points, both theoretical and practical aspects. And after that, I am covering one more topic in this video that why deep learning has become so famous now."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 77.0,
+            "end": 105.0,
+            "text": " Means what are the reasons behind the success of deep learning. I am teaching this topic only because I want that when you enter the field of deep learning, then you have a complete perspective that why things are the way they are and what are the reasons behind it. So, that is why in this video, if you watch this video completely, then you will understand the whole landscape of deep learning in today's date, in 2022."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 105.0,
+            "end": 122.0,
+            "text": " And this video will prepare you very well for the future. So, I think this introduction is enough. Let's start the video. So, guys, let's start from the beginning. First of all, I will tell you what is deep learning. And I will give you the definition of deep learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 122.0,
+            "end": 142.0,
+            "text": " So, if you go on the internet and type what is deep learning, then you will mostly see two types of definitions. One will be a simple version and the other will be a technical definition. In this video, I will tell you both the definitions. Because both will help you in your understanding."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 142.0,
+            "end": 168.0,
+            "text": " So, our first definition is on your screen. Where it is written that deep learning is a subfield of artificial intelligence and machine learning that is inspired by the structure of a human brain. Also, deep learning algorithms attempt to draw similar conclusions as humans would by continually analyzing data with a given logical structure called neural network."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 168.0,
+            "end": 187.0,
+            "text": " So, there are two parts in this definition. Let's break down and focus on the first line. So, from the first line, we understand that deep learning is a subfield of AI and machine learning. So, this diagram will help you a little. In this diagram, it is clearly visible that the biggest umbrella term"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 187.0,
+            "end": 207.0,
+            "text": " in which everything comes is artificial intelligence. What is artificial intelligence? It is basically the instinct of human beings where we want to make intelligent machines like us. We have been working on this for years, maybe 100 years. And some developments have also taken place."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 207.0,
+            "end": 244.0,
+            "text": " Among which, the biggest development is machine learning. So, machine learning is basically a subfield of AI where you learn from data. So, if you have data, then if there is input and output in that data, then the job of your machine learning algorithm is to figure out the relationship between input and output. So, machine learning is a subfield of AI."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 244.0,
+            "end": 272.0,
+            "text": " Now, what is deep learning? Deep learning is a subfield of machine learning where you are doing everything like machine learning. But the biggest difference between machine learning and deep learning is that machine learning depends on statistical techniques. To capture this relationship between input and output,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 272.0,
+            "end": 304.0,
+            "text": " most of the machine learning algorithms focus on statistical techniques. Whereas, deep learning depends on a logical structure which we call neural network. And this neural network is inspired by the human brain. Computer scientist said that if we want to make intelligent things, then let's get inspired by the most intelligent thing on earth, human beings."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 304.0,
+            "end": 339.0,
+            "text": " The way human beings think, the way they make decisions, what if we make algorithms that can map that thinking. So, neural network is basically a logical structure which is inspired by human brain. And this collection of algorithms is collectively called deep learning. Now, I will show you an example of a deep learning neural network."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 339.0,
+            "end": 353.0,
+            "text": " This is the example. This is a neural network. This is a simple neural network which we call ANN. Artificial Neural Network. Now, we are going to study this in detail."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 353.0,
+            "end": 374.0,
+            "text": " Let me give you a brief introduction. So, Artificial Neural Network is basically a logical structure where the fundamental unit is called Perceptron. All these circles you can see are Perceptrons. And they are connected to each other with these arrows."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 374.0,
+            "end": 391.0,
+            "text": " And these arrows are called weights. And these are called layers. These are all layers. All the Perceptrons in one line are called layers. These are all layers."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 391.0,
+            "end": 411.0,
+            "text": " Now, you give input from here. And you get output from here. I gave you a very simple description. Now, you call the input layer from where you get input. And you call the output layer from where you get output."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 411.0,
+            "end": 427.0,
+            "text": " Now, you can add as many layers as you want in between. There are two layers here but you can add as many layers as you want. These are called hidden layers. In fact, this is a fun fact. The name of deep learning comes from the number of hidden layers you have."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 427.0,
+            "end": 444.0,
+            "text": " If there are a lot of hidden layers in the middle, then this network becomes deep. So, that is why this name is deep learning. Now, you must be wondering whether we have only one type of neural network"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 444.0,
+            "end": 456.0,
+            "text": " or there are different types. So, the answer is that there are different types of neural networks. This is just one type. There is CNN. The simplest one."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 456.0,
+            "end": 475.0,
+            "text": " Then there is CNN. Convolutional Neural Network. Then there is RNN. Recurrent Neural Network. Apart from this, there are many other types of neural networks"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 475.0,
+            "end": 494.0,
+            "text": " which solve different purposes. For example, Convolutional Neural Networks work well on speech data. Similarly, RNN works well on speech and textual data. GAN can generate things."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 494.0,
+            "end": 512.0,
+            "text": " It can generate text and images. It is very interesting. In this way, you will get to read many more neural networks in this course. On the basis of the discussion till now, I will summarize. Deep learning is a subfield of machine learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 512.0,
+            "end": 527.0,
+            "text": " Machine learning works in the same way as deep learning. It just works in a different way. The work is to find the relationship between input and output. Mostly, in supervised learning. Machine learning uses statistical techniques to work."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 527.0,
+            "end": 542.0,
+            "text": " Whereas, deep learning follows a logical structure which is called a neural network. These neural networks are designed in such a way that they try to replicate the human brain. Why did the computer scientists think so?"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 542.0,
+            "end": 559.0,
+            "text": " Because they felt that if you want to make intelligent machines, then why not copy the human brain which is the most advanced intelligence form on earth. Now, ANN looks like what I described to you. It is the simplest neural network."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 559.0,
+            "end": 571.0,
+            "text": " We also understood that apart from this, there are many other neural networks which we will gradually study in this course. Now, everything is clear till here. Now, the question arises"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 571.0,
+            "end": 591.0,
+            "text": " and it should also come to your mind that why is deep learning getting so famous? Recently, you must have noticed that deep learning is being heard and seen everywhere. What is the reason?"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 591.0,
+            "end": 611.0,
+            "text": " What has deep learning done because of which deep learning is getting so much fame? Let's discuss that. There are two major reasons behind deep learning's fame. The first reason is applicability."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 611.0,
+            "end": 628.0,
+            "text": " I will explain what it means. The second reason is performance. The meaning of applicability is that the deep learning algorithms are applicable in a very large domain."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 628.0,
+            "end": 646.0,
+            "text": " You won't believe that deep learning works in many areas like computer vision, speech recognition, natural language processing, machine translation, bioinformatics, drug design, medical image analysis,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 646.0,
+            "end": 660.0,
+            "text": " climate science, material inspection, board games programs. You can apply deep learning in any of these fields. The second reason is performance. The performance of deep learning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 660.0,
+            "end": 680.0,
+            "text": " in all these fields is exploding. In fact, deep learning has provided the best state-of-the-art results. You can't surpass such performance. In fact, in some scenarios,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 680.0,
+            "end": 704.0,
+            "text": " deep learning has beaten the performance of human experts. You must have heard of a famous Chinese game called Go where an AI agent called AlphaGo defeated the world champion of Go 4 times in 5 games."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 704.0,
+            "end": 720.0,
+            "text": " There are many such scenarios where you will see that the state-of-the-art performance of deep learning is coming and it is leaving the human experts behind. This is the reason because of which"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 720.0,
+            "end": 738.0,
+            "text": " deep learning is getting so much attention from the software and computer science community. You will see many examples like self-driving car, new drugs are being made in medical science,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 738.0,
+            "end": 754.0,
+            "text": " new research in the field of chemistry is driven by deep learning. In the next video, I will tell you about different types of applications where deep learning has left its mark."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 754.0,
+            "end": 773.0,
+            "text": " The sudden fame of deep learning has come due to two things. First, deep learning algorithms are designed to be applied to a wide domain of problems. Second, performance."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 773.0,
+            "end": 789.0,
+            "text": " Wherever it is being applied, their performance remains state-of-the-art. At some places, it is surpassing human experts. Due to this, a reputation of deep learning is being built."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 789.0,
+            "end": 804.0,
+            "text": " I hope you understood a little about deep learning. Now let's move ahead in this video. As I said in the beginning, I will tell you two definitions. We have seen the first definition"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 804.0,
+            "end": 817.0,
+            "text": " which was a very common definition. Now let's move on to a slightly technical definition. The definition is on your screen. It is written here that deep learning is a part of a broader family"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 817.0,
+            "end": 829.0,
+            "text": " of machine learning methods based on artificial neural networks with representation learning. It is also written that deep learning algorithms uses multiple layers"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 829.0,
+            "end": 840.0,
+            "text": " to progressively extract higher-level features from the raw input. For example, in image processing, lower layers may identify edges"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 840.0,
+            "end": 854.0,
+            "text": " while higher layers may identify the concepts relevant to a human such as digits or letters or faces. Again, there are two parts in this definition. Let's focus on the first one."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 854.0,
+            "end": 868.0,
+            "text": " In the first definition, it is said that it comes under machine learning and is based on artificial neural networks. But here one more word is written"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 868.0,
+            "end": 882.0,
+            "text": " representation learning. According to this definition, deep learning depends on representation learning. Now the question is what is representation learning?"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 882.0,
+            "end": 896.0,
+            "text": " Trust me, if you want to get into deep learning, you should have an understanding of representation learning. In fact, let me show you. This is the Wikipedia page of representation learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 896.0,
+            "end": 906.0,
+            "text": " It is written here In machine learning, feature learning and representation learning are a set of techniques that allow a system to automatically discover"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 906.0,
+            "end": 920.0,
+            "text": " the representations needed for feature detection or classification from raw data. This replaces manual feature engineering and allows a machine to both learn the features and use them to perform a specific task."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 920.0,
+            "end": 940.0,
+            "text": " Let me explain this in easy words. If you have worked a little in machine learning, then you must know that there is a thing called feature extraction or you can also call it feature engineering."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 940.0,
+            "end": 954.0,
+            "text": " What do you do in that process? What features do you create? Let me give you an example. Let's say you want to make a dog-cat classifier where if you are given an image,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 954.0,
+            "end": 971.0,
+            "text": " then you have to look at that image and tell whether it has a dog or a cat. If you go to solve this problem with machine learning, then you will have to create manual features. How can features be?"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 971.0,
+            "end": 984.0,
+            "text": " For example, size is a feature. If the size is big, then it is a dog. If the size is small, then it is a cat. Color can be a feature. All the physical attributes can become features."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 984.0,
+            "end": 996.0,
+            "text": " But you have to understand one thing here that in machine learning, you have to create these features for your machine learning algorithm. But what happens in deep learning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 996.0,
+            "end": 1010.0,
+            "text": " is that this whole process is automated. That means you don't make such rules. You just provide the image in the right format and your deep learning algorithm automatically extracts features"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1010.0,
+            "end": 1023.0,
+            "text": " on its intelligence. This is called representation learning where automatic feature extraction happens from your problem, from your data. This is one more thing to understand"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1023.0,
+            "end": 1033.0,
+            "text": " and we will discuss it further that there is no need for feature engineering in deep learning. It automatically does your algorithm from your data."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1033.0,
+            "end": 1040.0,
+            "text": " Now if you move to the second part of the definition, then it is written here that deep learning algorithm uses multiple layers."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1040.0,
+            "end": 1051.0,
+            "text": " We have already seen this. To progressively extract higher level features from raw input. And then an example is given. I will explain the same example to you."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1051.0,
+            "end": 1062.0,
+            "text": " This part of the definition tells a very important thing about deep learning algorithms that deep learning algorithms are basically neural networks."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1062.0,
+            "end": 1073.0,
+            "text": " There are layers in neural networks. Now there is a purpose of these layers. For example, if we take this example of dog-cat classification, then what will happen is"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1073.0,
+            "end": 1083.0,
+            "text": " you will feed your image data from here. You will feed your data pixel by pixel here. Now there is a purpose of each layer."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1083.0,
+            "end": 1093.0,
+            "text": " Obviously, you will get the output here that it is a dog or a cat. But these middle layers also have a purpose. So the initial layers"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1093.0,
+            "end": 1102.0,
+            "text": " will extract some primitive features from your data. For example, if you are doing cat-dog analysis, then these first layers"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1102.0,
+            "end": 1114.0,
+            "text": " detect edges. Then if you go to the next layer, then it will detect some more complex features like shapes. Edges are detected like this."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1114.0,
+            "end": 1125.0,
+            "text": " Shapes are detected from the next layer. And then the more you go ahead, the more complex features you will make from them. For example, faces."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1125.0,
+            "end": 1135.0,
+            "text": " If you read it, it is written here. In image processing, lower layers may identify edges while higher layers may identify the concepts relevant to a human"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1135.0,
+            "end": 1147.0,
+            "text": " such as digits or letters or faces. So slowly you identify things from here. So basic things in the beginning and gradually complex things and eventually you give your result"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1147.0,
+            "end": 1156.0,
+            "text": " in the last layer. This definition is explaining two things to you. I will summarize it again. First, deep learning uses representation learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1156.0,
+            "end": 1167.0,
+            "text": " Which means that you don't have to extract features. The machine will do it by itself. The algorithm will do it by itself. From the second part of the definition,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1167.0,
+            "end": 1175.0,
+            "text": " you learned that what is the way to work on it. The way to work on it is that you give data in the input layer and then through the hidden layers"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1175.0,
+            "end": 1187.0,
+            "text": " you start detecting things. The hidden layers in the beginning extract primitive features and the deep layers in the end extract complex features."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1187.0,
+            "end": 1197.0,
+            "text": " And that is how this thing works. Now if I wanted, I could have skipped this part. But I felt that you should have this idea in the beginning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1197.0,
+            "end": 1207.0,
+            "text": " because we are going to discuss it in detail later. So guys, now we have an idea about what deep learning is. Now we will discuss"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1207.0,
+            "end": 1217.0,
+            "text": " what is the point of difference between deep learning and machine learning. Till this point, we only know that deep learning is a sub-field of machine learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1217.0,
+            "end": 1227.0,
+            "text": " The algorithms of machine learning mostly use statistical techniques to work. Whereas deep learning is a logical structure"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1227.0,
+            "end": 1237.0,
+            "text": " based on the human brain which we call neural networks. Apart from that, we are going to discuss the other point of differences"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1237.0,
+            "end": 1247.0,
+            "text": " at the practicality level. First of all, I have written 5 points here. These are the 5 points we are going to talk about."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1247.0,
+            "end": 1257.0,
+            "text": " The first point of difference between deep learning and machine learning is that deep learning needs a lot of data"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1257.0,
+            "end": 1267.0,
+            "text": " compared to machine learning. If you are working on a problem, then you can only"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1267.0,
+            "end": 1277.0,
+            "text": " apply deep learning when you have a lot of data. Somehow, deep learning needs a lot of data"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1277.0,
+            "end": 1287.0,
+            "text": " to be sure about things. After seeing a lot of data, your performance of deep learning models becomes reliable."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1287.0,
+            "end": 1297.0,
+            "text": " If you see here, there is a graph where on the x-axis is the amount of data available for training"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1297.0,
+            "end": 1307.0,
+            "text": " and on the y-axis is the performance of the model. If you take this point in this graph, let's say you have this much data"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1307.0,
+            "end": 1317.0,
+            "text": " i.e. less data, then you can see that the performance of machine learning models is better than deep learning models."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1317.0,
+            "end": 1327.0,
+            "text": " For less data, for less data, ML wins. But as you get more data than this amount,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1327.0,
+            "end": 1337.0,
+            "text": " there are two things to see. The first thing is that the performance of machine learning models stagnates. If you are adding more data"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1337.0,
+            "end": 1347.0,
+            "text": " after one point, then the performance of the model is not improving. Whereas, if you follow the curve of deep learning, then you can see that"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1347.0,
+            "end": 1357.0,
+            "text": " with the increase of data, your performance is improving almost linearly. The thing to understand here is that deep learning is"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1357.0,
+            "end": 1367.0,
+            "text": " data hungry. As the data increases, linearly, performance also"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1367.0,
+            "end": 1377.0,
+            "text": " increases. This is the first difference. The second big difference is hardware. If you want to train"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1377.0,
+            "end": 1387.0,
+            "text": " machine learning models, then you can use CPU on your simple machine. But deep learning models have very complex"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1387.0,
+            "end": 1397.0,
+            "text": " matrix multiplication going on. A lot of numbers. To handle this,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1397.0,
+            "end": 1407.0,
+            "text": " you need GPU. Graphical Processing Unit. Without it, if you run your deep learning models on CPU,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1407.0,
+            "end": 1417.0,
+            "text": " then your deep learning model will run slow. You need powerful GPUs with"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1417.0,
+            "end": 1427.0,
+            "text": " more memory where you can do matrix multiplication calculations. Hardware is costly"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1427.0,
+            "end": 1437.0,
+            "text": " in deep learning. The second point of difference is that machine learning can run on cheap hardware but to train"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1437.0,
+            "end": 1447.0,
+            "text": " deep learning models, you need costly hardware. You need costly hardware for GPU. Graphical Processing Unit. The third point is"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1447.0,
+            "end": 1457.0,
+            "text": " training time. Again, deep learning models are complex and that is why your model training time is high."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1457.0,
+            "end": 1467.0,
+            "text": " Training time is very high in comparison to machine learning where the training time is low."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1467.0,
+            "end": 1477.0,
+            "text": " In fact, if you apply deep learning algorithm on a large dataset, I have heard that people take weeks to train"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1477.0,
+            "end": 1487.0,
+            "text": " the model. I have also heard that some researchers take months for a specific purpose. To train a model in machine learning model,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1487.0,
+            "end": 1497.0,
+            "text": " you hardly need minutes. Sometimes it may happen that you have to run the model for hours. I have not heard that"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1497.0,
+            "end": 1507.0,
+            "text": " a weak machine learning model is being trained. Training time is very high in deep learning. If you talk about prediction time, then"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1507.0,
+            "end": 1517.0,
+            "text": " prediction time in deep learning is very fast. You will understand why it is fast later. Whereas, if you talk about machine learning algorithms,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1517.0,
+            "end": 1527.0,
+            "text": " then in some algorithms, prediction time is very slow. For example, it takes a lot of time to predict in KNN type algorithms."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1527.0,
+            "end": 1537.0,
+            "text": " So, it varies for machine learning. Prediction time varies. However, training time is definitely less for machine learning and more for deep learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1537.0,
+            "end": 1547.0,
+            "text": " Next point is feature selection. We have already discussed this point. We discussed that there is a thing called representation learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1549.0,
+            "end": 1559.0,
+            "text": " We discussed this a while ago. We learned that deep learning algorithms automatically extract relevant features"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1559.0,
+            "end": 1569.0,
+            "text": " from the data. Whereas, if you are working with machine learning, then you have to manually extract those features."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1569.0,
+            "end": 1579.0,
+            "text": " Let me give you an example. A year ago, we were making a resume based project. It was a"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1579.0,
+            "end": 1589.0,
+            "text": " resume based project. Let me give you an example. We had to predict based on the content of the resume"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1589.0,
+            "end": 1599.0,
+            "text": " whether the child will get a placement or not. So that we can give him some feedback. Now, when you apply a deep learning approach,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1599.0,
+            "end": 1609.0,
+            "text": " you have to extract features from the resume. One feature can be marks of 12th standard. Second feature can be"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1609.0,
+            "end": 1619.0,
+            "text": " marks of 10th standard. Third feature can be number of achievements. Another feature can be"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1619.0,
+            "end": 1629.0,
+            "text": " number of courses. Another feature can be quality of college. You can make all these features"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1629.0,
+            "end": 1639.0,
+            "text": " and then you can predict whether the child will get a placement or not. But obviously, to make this feature, we need domain experts."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1639.0,
+            "end": 1649.0,
+            "text": " I have to sit with some HRs or some teachers who will tell me to make such features."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1649.0,
+            "end": 1659.0,
+            "text": " Depending on the domain. But if you do this project through deep learning, then you just have to provide the algorithm"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1659.0,
+            "end": 1669.0,
+            "text": " with the content of the resume in the right form. Behind the scenes, it will automatically extract features and it will give you"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1669.0,
+            "end": 1679.0,
+            "text": " the prediction. This is called representation learning and this is a big benefit when you use deep learning. In fact, I gave you an example"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1679.0,
+            "end": 1689.0,
+            "text": " that if you have a neural network and you are giving it an image, then the initial layers extract"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1689.0,
+            "end": 1699.0,
+            "text": " simple features and primitive features and then complex features are automatically"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1699.0,
+            "end": 1709.0,
+            "text": " extracted. I have a diagram of this. If you are giving this photograph, then the initial layers, the first and second hidden layer,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1709.0,
+            "end": 1719.0,
+            "text": " will extract simple features like edges. Then in the middle, some middle features like shapes will be detected."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1719.0,
+            "end": 1729.0,
+            "text": " You can see these shapes are being detected and by doing this, eventually in the last, high level features are detected like a complete face."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1731.0,
+            "end": 1741.0,
+            "text": " This is how deep learning works. This feature extraction is happening automatically. I am not doing anything."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1741.0,
+            "end": 1751.0,
+            "text": " The network is designed in such a way that everything is happening automatically. How it is happening, we will discuss later. This is also a big point of difference."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1751.0,
+            "end": 1761.0,
+            "text": " The last point is interpretability. What happens is, we just discussed that feature extraction"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1761.0,
+            "end": 1771.0,
+            "text": " is happening automatically. The features are extracted automatically. I don't know what that feature is. I don't know which edges are there."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1771.0,
+            "end": 1781.0,
+            "text": " I don't understand it. What happens is, the model that comes to you is not interpretable. If I"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1781.0,
+            "end": 1791.0,
+            "text": " make a dog versus cat classifier, in such an architecture,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1791.0,
+            "end": 1801.0,
+            "text": " then as soon as I give it an image, it will tell me whether it is a dog or a cat. I have already told you how it will work."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1801.0,
+            "end": 1811.0,
+            "text": " The first layer will find some primitive features. The next layer will find some complex features. Internally, whatever happens, it will be like a black box. It will not tell me"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1811.0,
+            "end": 1821.0,
+            "text": " what it saw in that image. It means that if someone asks me tomorrow that why did you call this image a dog, I don't have any answer."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1821.0,
+            "end": 1831.0,
+            "text": " I don't have any answers. This is an issue of interpretability. This is a problem. Suppose you are training"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1831.0,
+            "end": 1841.0,
+            "text": " a deep learning model on a social networking website where you can ban a user by looking at the comments."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1841.0,
+            "end": 1851.0,
+            "text": " If you use deep learning, it will read the comment and decide whether to ban or not. Let's say it says ban"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1851.0,
+            "end": 1861.0,
+            "text": " this user and you ban it. The user will come and ask you that why did you ban me? Tell me the reason. But since you have a deep learning model,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1861.0,
+            "end": 1871.0,
+            "text": " you won't know the reason why your algorithm banned it. That is a big flaw. Explainability is important"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1871.0,
+            "end": 1881.0,
+            "text": " in many scenarios. Interpretability is important in deep learning. Deep learning fails there. But if you compare it with machine learning,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1881.0,
+            "end": 1891.0,
+            "text": " then interpretability is very high in machine learning. Let's say you are training a linear model, a logistic regression model"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1891.0,
+            "end": 1901.0,
+            "text": " where CGPA is one column IQ is another column and placement is the third column."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1901.0,
+            "end": 1911.0,
+            "text": " When you train a logistic regression model, there will be two weights W1 and W2. W1 is the weightage of this feature and W2 is the weightage of this feature."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1911.0,
+            "end": 1921.0,
+            "text": " Based on the value of W1 and W2, I can tell you which feature is more important and which is less important. If a child comes and asks"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1921.0,
+            "end": 1931.0,
+            "text": " why I was told that my placement won't happen, then I will say since your W1 is very less, your CGPA is very less, that is why your placement"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1931.0,
+            "end": 1941.0,
+            "text": " is less. In machine learning models, there is a proper decision making and you get"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1941.0,
+            "end": 1951.0,
+            "text": " a flowchart like this. This flowchart can tell you why a point is called 1 and why a point is called 0. The explainability"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1951.0,
+            "end": 1961.0,
+            "text": " or you can say interpretability is quite high. It helps in those scenarios where you have to tell the other person"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1961.0,
+            "end": 1971.0,
+            "text": " the reason for giving you 1 or 0. These are the 5 points of differences. Let's summarize. Data Dependency."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1971.0,
+            "end": 1981.0,
+            "text": " There is a lot of deep learning and less of machine learning. The good thing is that as the data increases, its performance scales linearly."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1981.0,
+            "end": 1991.0,
+            "text": " If we talk about hardware, deep learning lags behind. Why? Because it needs hardware, GPU to handle complex matrix multiplications."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 1991.0,
+            "end": 2001.0,
+            "text": " This is against deep learning. If we talk about training time, deep learning is slow. It takes a lot of time to train models in comparison to machine learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2001.0,
+            "end": 2011.0,
+            "text": " Prediction time is fast. Feature selection, I have already told you. Representation learning follows. Features are generated automatically."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2011.0,
+            "end": 2021.0,
+            "text": " What was the matter of layers? The initial layers find small features, the final layers find complex features. You understood all this. Interpretability."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2021.0,
+            "end": 2031.0,
+            "text": " Deep learning is a black box. Only it knows what it thinks and decides. We can't know. If we are working in a scenario where we have to tell the result"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2031.0,
+            "end": 2041.0,
+            "text": " why we reached that result, then deep learning is not a good choice. These are the 4-5 things. I guess after reading and understanding these 4-5 things,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2041.0,
+            "end": 2051.0,
+            "text": " you will reach a conclusion that machine learning cannot be replaced by deep learning. Many people think"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2051.0,
+            "end": 2061.0,
+            "text": " that if deep learning is so good and powerful, then why not use deep learning in every project? The reason is that"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2061.0,
+            "end": 2071.0,
+            "text": " in some things, machine learning is better than deep learning. You must have heard an old saying that where there is a need for a needle, swords are not used."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2071.0,
+            "end": 2081.0,
+            "text": " Machine learning is a needle and deep learning is a sword. Your purpose is to steal clothes or to kill people. Depending on that,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2081.0,
+            "end": 2091.0,
+            "text": " you will select whether you need machine learning or deep learning. I hope you understood this section. We have read many things regarding deep learning."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2091.0,
+            "end": 2101.0,
+            "text": " Now we will answer some questions. When I was studying deep learning, I was getting a question in my mind"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2101.0,
+            "end": 2111.0,
+            "text": " that why is deep learning becoming so famous now? I will teach you the history of deep learning after 1-2 videos. There you will notice"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2111.0,
+            "end": 2123.0,
+            "text": " that the work on deep learning started in 1960s from the time of Alan Turing. But it became famous now."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2123.0,
+            "end": 2133.0,
+            "text": " Around 2012 is called breakthrough year. So what happened after 2010"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2133.0,
+            "end": 2143.0,
+            "text": " that deep learning became such a powerful and famous technology. If you want to answer this question, there are multiple reasons."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2143.0,
+            "end": 2153.0,
+            "text": " So the answer of why now can be different. I will tell you one by one. The first reason is data sets."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2153.0,
+            "end": 2163.0,
+            "text": " We will talk about this later. The second reason is frameworks."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2169.0,
+            "end": 2191.0,
+            "text": " The third reason is architecture of models. The fourth reason is hardware. And the last reason"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2191.0,
+            "end": 2205.0,
+            "text": " is community. We will talk about these 5 points. This will give you some perspective"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2205.0,
+            "end": 2215.0,
+            "text": " about deep learning and the driving forces behind it. Let's start with the first one."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2215.0,
+            "end": 2227.0,
+            "text": " Data sets. I have already told you that deep learning is data hungry. It is data hungry. It needs a lot of data"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2227.0,
+            "end": 2237.0,
+            "text": " to make its predictions. It needs a lot of data to make sure about the patterns in the data."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2237.0,
+            "end": 2247.0,
+            "text": " If you talk about machine learning, if you have a dataset of 100 rows or 1000 rows, then you can train"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2247.0,
+            "end": 2257.0,
+            "text": " and build a model on it. But not with deep learning. Deep learning needs lakhs of rows."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2257.0,
+            "end": 2267.0,
+            "text": " Then it will work. The good thing is that around 2010 two revolutions came in our society."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2267.0,
+            "end": 2279.0,
+            "text": " First came smartphone revolution and second, parallelly internet pricing revolution."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2279.0,
+            "end": 2289.0,
+            "text": " I would say. Because internet was already there. Prices have reduced a lot. Around 2015-16, Reliance entered the Jio market and"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2289.0,
+            "end": 2299.0,
+            "text": " started providing high speed internet for free. If you combine these two things, then everyone in the world has a smartphone with high speed"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2299.0,
+            "end": 2309.0,
+            "text": " internet connection. People now use different apps. After that, there are many apps like TikTok, Snapchat"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2309.0,
+            "end": 2319.0,
+            "text": " and many other social media platforms. Due to this, on a daily basis, we started generating a lot of data."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2319.0,
+            "end": 2329.0,
+            "text": " In fact, I read in a study that in human history, from the time we started generating data,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2329.0,
+            "end": 2339.0,
+            "text": " from then till 2015, if we generated XGB data, then from 2015 to 2016,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2339.0,
+            "end": 2349.0,
+            "text": " we again generated XGB data. From 2015 to 2016, from 2016 to 2017, we generated 2X data."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2349.0,
+            "end": 2359.0,
+            "text": " From 2017 to 2018, we generated 4X data. It means that the time versus"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2359.0,
+            "end": 2369.0,
+            "text": " data generation was exponential. This year is around 2015. After 2015, we have grown like this."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2369.0,
+            "end": 2379.0,
+            "text": " So, a lot of data was generated. This is the first reason which was not there in 1960s. But, just by generating data, it won't work."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2379.0,
+            "end": 2389.0,
+            "text": " Think about it. If you want to make an image classification system where you look at a photo and tell"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2389.0,
+            "end": 2399.0,
+            "text": " whether it has a dog or a cat, then first you have to train your model. During training, you need a lot of photos"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2399.0,
+            "end": 2409.0,
+            "text": " where there is an image and it is told whether it has a cat or a dog. But, when you generate data through your smartphone,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2409.0,
+            "end": 2419.0,
+            "text": " a lot of data is generated which is unlabeled data. It means that you uploaded a photo of a puppy on Facebook but you didn't tell"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2419.0,
+            "end": 2429.0,
+            "text": " that this is my puppy. So, what happens is that in industry, you need someone to create labels. And here, big companies"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2429.0,
+            "end": 2439.0,
+            "text": " like Microsoft, Google, Facebook, spent a lot of money and converted a lot of unlabeled"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2439.0,
+            "end": 2449.0,
+            "text": " data into labeled data. And then they noticed that if we"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2449.0,
+            "end": 2459.0,
+            "text": " keep this whole data only with us, then research will not be able to progress as much as if we open source it. So, what did they do?"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2459.0,
+            "end": 2469.0,
+            "text": " They converted these datasets into public datasets. So, public dataset is basically a dataset which can be accessed by anyone and can work on it."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2469.0,
+            "end": 2479.0,
+            "text": " So, now when these public datasets came in the market, like on GitHub, then actual research benefited."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2479.0,
+            "end": 2489.0,
+            "text": " Deep learning research happened very fast because of these public datasets. Let me give you some examples of public datasets. For example,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2489.0,
+            "end": 2499.0,
+            "text": " if you talk about image data, if you talk about image data, then Microsoft has a dataset"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2499.0,
+            "end": 2509.0,
+            "text": " called Coco which is used a lot for image detection. There are a lot of images in this and the objects in those images"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2509.0,
+            "end": 2519.0,
+            "text": " have bounding boxes created around them to label the objects. So, it is a very powerful dataset which is very useful in object detection."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2519.0,
+            "end": 2529.0,
+            "text": " If you talk about video, then we have YouTube 8 million dataset which has around"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2529.0,
+            "end": 2539.0,
+            "text": " 6.1 million YouTube videos data. Imagine that. If you talk about text, we have a lot of"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2539.0,
+            "end": 2549.0,
+            "text": " different types of data. One of them is called SQUAD. What is SQUAD? It is basically a dataset from Wikipedia."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2549.0,
+            "end": 2559.0,
+            "text": " From Wikipedia, it has around 1.5 lakh question answers dataset. If you talk about audio,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2559.0,
+            "end": 2569.0,
+            "text": " then there are different datasets in audio like Google has an audio set"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2569.0,
+            "end": 2579.0,
+            "text": " which has around 20 lakh 20 lakh sound clips which they have"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2579.0,
+            "end": 2591.0,
+            "text": " extracted from YouTube under more than 600 categories. These are just 4-5 examples."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2591.0,
+            "end": 2603.0,
+            "text": " In today's rate, you will get thousands of public datasets which are open source. You can use them."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2603.0,
+            "end": 2613.0,
+            "text": " You will get them on Kaggle or on their own website. Or you can google and you will get these datasets. After these datasets came,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2613.0,
+            "end": 2623.0,
+            "text": " it became very easy to do research because it was not possible to make these datasets. If you ask me why deep learning is so powerful,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2623.0,
+            "end": 2633.0,
+            "text": " the biggest reason the biggest contributor would be dataset because without data there would be no deep learning. According to me,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2633.0,
+            "end": 2645.0,
+            "text": " the biggest second factor in pushing deep learning is hardware. Hardware means computing hardware. To explain this whole reason,"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2645.0,
+            "end": 2655.0,
+            "text": " first of all, I will explain Moore's law. Moore's law is a very famous law in computing. I don't know his first name"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2655.0,
+            "end": 2665.0,
+            "text": " but he was the co-founder of Intel. He gave this law that number of transistors on a microchip"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2665.0,
+            "end": 2675.0,
+            "text": " doubles every 2 years though the cost of the computer is halved. This means that every 2 years"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2675.0,
+            "end": 2685.0,
+            "text": " on a chip, on any chip let's say I7, the number of transistors you can place on it"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2685.0,
+            "end": 2695.0,
+            "text": " will double every 2 years and the cost of making it will be halved."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2695.0,
+            "end": 2705.0,
+            "text": " If you notice, the price of every commodity increases in the market but the price of electronics decreases."
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2705.0,
+            "end": 2715.0,
+            "text": " The price decreases which means every year smartphones come at a cheaper price and I am not talking about the flagship products but"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2715.0,
+            "end": 2725.0,
+            "text": " see how cheap the phones have become and the performance keeps improving. So the performance of hardware will always improve this is what Moore's law says"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2725.0,
+            "end": 2735.0,
+            "text": " and if you notice I don't know what you were doing in 2005-2006 but at that time the phones that were coming had 128 MB RAM"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2735.0,
+            "end": 2745.0,
+            "text": " whereas today's smartphones have 12 GB RAM phones so that is why there is a revolution in hardware"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2745.0,
+            "end": 2755.0,
+            "text": " and it is still continued and it gave a lot of push to deep learning. If you talk about deep learning then you already know that it needs a lot of"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2755.0,
+            "end": 2765.0,
+            "text": " data. Now on a lot of data it does matrix operations you will read this so you"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2765.0,
+            "end": 2775.0,
+            "text": " need a lot of data processing power to handle numbers if you use CPU then training time would be high"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2775.0,
+            "end": 2785.0,
+            "text": " or it will be low speed at that point around 2010 someone realized that matrix operation or matrix multiplication"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2785.0,
+            "end": 2797.0,
+            "text": " which I have to do I can convert it into a parallel task I can implement parallel processing just like you need parallel processing"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2797.0,
+            "end": 2807.0,
+            "text": " to read or render a high quality image and for this purpose if people use GPU then similarly"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2807.0,
+            "end": 2817.0,
+            "text": " for this matrix operation why don't we use GPU then this idea floated in deep learning community that now we will use GPU"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2817.0,
+            "end": 2827.0,
+            "text": " to train our neural networks. At this point NVIDIA launched CUDA CUDA is a programming"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2827.0,
+            "end": 2837.0,
+            "text": " language to program GPUs and after this a revolution came then everyone understood that rather than conventional CPU"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2837.0,
+            "end": 2847.0,
+            "text": " let's train our model on GPUs and after that NVIDIA's stock became very pricey because not only gamers were buying"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2847.0,
+            "end": 2857.0,
+            "text": " your graphics card now our deep learning researchers also started using graphics card infact in today's date"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2857.0,
+            "end": 2867.0,
+            "text": " if you will approach deep learning then you will have to buy a good machine which has a good GPU because what a GPU does"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2867.0,
+            "end": 2877.0,
+            "text": " 10 to 20 times training time reduces in comparison to a CPU which is a very big"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2877.0,
+            "end": 2887.0,
+            "text": " difference. So this didn't stop till GPU as soon as people realized that we can take faster results from parallel processing"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2887.0,
+            "end": 2897.0,
+            "text": " then in this area a lot of research started happening and then different types of hardware started coming. Like one more thing existed earlier"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2897.0,
+            "end": 2907.0,
+            "text": " called FPGA FPGA's full form is programmable gate array if any of you are from EC background in engineering then you must have"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2907.0,
+            "end": 2917.0,
+            "text": " heard about it. So these are basically programmable controllers the best thing about them is that they are very fast they run on very low power"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2919.0,
+            "end": 2929.0,
+            "text": " apart from this they are reprogrammable and you can easily install custom solutions on it"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2929.0,
+            "end": 2939.0,
+            "text": " the only problem with FPGA's are that they are very expensive so if you have heard about Xilinx then this is a leading manufacturer"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2939.0,
+            "end": 2949.0,
+            "text": " in today's date FPGA's are also used a lot to train and run deep learning models in fact in Microsoft FPGA's"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2949.0,
+            "end": 2959.0,
+            "text": " are used a lot Microsoft's Bing which is a search engine most of the AI part is run on FPGA's"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2959.0,
+            "end": 2969.0,
+            "text": " so this is one thing after this one more thing came which is called ASIC ASIC it's full form is"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2969.0,
+            "end": 2979.0,
+            "text": " application specific integrated circuit these are also custom made chips. It is a little expensive to design in the beginning but if you make it for a lot of people then it becomes cheap"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2979.0,
+            "end": 2989.0,
+            "text": " so under this different types of ASIC's came like first one is TPU maybe you have heard the name it's name is Tensor Processing"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2989.0,
+            "end": 2999.0,
+            "text": " Unit this was made by Google and this is specially a hardware to train deep learning models"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 2999.0,
+            "end": 3009.0,
+            "text": " if you are working in Google Colab then Google Colab gives you an option to select TPU to run a piece of code then the second"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3009.0,
+            "end": 3019.0,
+            "text": " thing that came was Edge TPU for Edge devices let's say you want to"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3019.0,
+            "end": 3029.0,
+            "text": " run a deep learning model on a drone or you want to run on a smart watch or on a smart glass"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3029.0,
+            "end": 3039.0,
+            "text": " so in this type of setup you can use Edge TPU's which is basically a very small device on which you can do calculations"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3039.0,
+            "end": 3049.0,
+            "text": " similarly in today's date there are a lot of applications where machine learning, AI, deep learning is used so for that NPU's came they are called Neural Processing"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3049.0,
+            "end": 3059.0,
+            "text": " Units Neural Processing Units now their job is on your mobile device"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3059.0,
+            "end": 3069.0,
+            "text": " these types of operations they have to be exclerated ok so if we take an example that when which type of hardware can be used"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3069.0,
+            "end": 3079.0,
+            "text": " so I would say if you are just starting your deep learning journey and you are doing very basic small projects then you can work with CPU"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3079.0,
+            "end": 3089.0,
+            "text": " if you are training big networks after gaining some experience then you should shift to graphics card you will get"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3089.0,
+            "end": 3099.0,
+            "text": " very good graphics card like RTX 2080 Ti it is a very good graphics card here only you can use TPU because it is designed"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3099.0,
+            "end": 3109.0,
+            "text": " specifically for this purpose if you want to use deep learning on your smartphone in an app then here you can"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3109.0,
+            "end": 3119.0,
+            "text": " use mobile CPU like snapdragon or you can use mobile GPU there are a lot of digital signal processors"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3119.0,
+            "end": 3129.0,
+            "text": " you can use those or you can use NPU's which I said if you want to run smartwatch"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3129.0,
+            "end": 3139.0,
+            "text": " or smartglass machine learning deep learning models then here you will use edge TPU"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3139.0,
+            "end": 3149.0,
+            "text": " which I said or you can use NPU's so for different requirements different type of hardware came"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3149.0,
+            "end": 3159.0,
+            "text": " but in last 10 years focus shifted to make custom hardware for deep learning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3159.0,
+            "end": 3169.0,
+            "text": " that made deep learning research very fast because now it doesn't take much time to train so obviously overall"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3169.0,
+            "end": 3179.0,
+            "text": " research will be fast so hardware is the second factor according to me the third factor which boosted deep learning the most"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3179.0,
+            "end": 3189.0,
+            "text": " is the development of frameworks see to train deep learning models is a difficult task there is no doubt"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3189.0,
+            "end": 3199.0,
+            "text": " and if you go to write the code from scratch then the problem you are going to solve it will take less time and"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3199.0,
+            "end": 3209.0,
+            "text": " it will take more time to make the code that is why we needed some library which can handle all the code behind the scenes and our job is to"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3209.0,
+            "end": 3219.0,
+            "text": " make our application just like sklearn scikit learn solved our problem in the domain of machine learning so we needed a library like scikit learn"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3219.0,
+            "end": 3229.0,
+            "text": " which can help us in deep learning so in today's date there are two famous libraries one is tensorflow"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3229.0,
+            "end": 3241.0,
+            "text": " by google and the second one is pytorch backed by facebook and let me tell you some history"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3241.0,
+            "end": 3251.0,
+            "text": " in 2011 google already saw the potential of deep learning so they wanted to use deep learning in their"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3251.0,
+            "end": 3261.0,
+            "text": " speech products so they internally made a framework called distbelief which"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3261.0,
+            "end": 3271.0,
+            "text": " worked fine but there was a problem it was attached to google's product so google wanted a separate"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3271.0,
+            "end": 3281.0,
+            "text": " framework so that is why they started working on a different framework and in 2015 they called it tensorflow and released this library"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3281.0,
+            "end": 3291.0,
+            "text": " now tensorflow was a very powerful library is a very powerful library and as soon as it came there was a blast in the market"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3291.0,
+            "end": 3301.0,
+            "text": " and everyone was using tensorflow but slowly people realized that tensorflow was very difficult to use infact"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3301.0,
+            "end": 3311.0,
+            "text": " people started making fun of it that google made this library for them for their engineers because normal people are not able to use it infact people used to say that if you"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3311.0,
+            "end": 3321.0,
+            "text": " know how to use tensorflow then you will get a job in google it was that difficult so around that time there was a library called keras"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3321.0,
+            "end": 3331.0,
+            "text": " which basically worked on top of tensorflow means user used to talk to keras and keras used to talk to tensorflow"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3331.0,
+            "end": 3341.0,
+            "text": " so it was an intermediate library basically you can say front end and since keras came since then their combination"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3341.0,
+            "end": 3351.0,
+            "text": " became very popular that is why in 2019 when tensorflow 2.0 came then google realized that if you really want to reach everyone"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3351.0,
+            "end": 3361.0,
+            "text": " then there is a way to make it accessible connect with keras so since then keras came with tensorflow we will use this combination in this course"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3361.0,
+            "end": 3371.0,
+            "text": " but another company facebook also didn't want to lag behind so in 2016"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3371.0,
+            "end": 3381.0,
+            "text": " they started a library called pytorch which was trying to solve this problem and there were some good things"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3381.0,
+            "end": 3391.0,
+            "text": " we will not go into technicalities but AI researchers liked this library and if you see in today's date the people who do research"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3391.0,
+            "end": 3401.0,
+            "text": " not the industry people they use pytorch more then around that time in 2018 they worked on another library"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3401.0,
+            "end": 3411.0,
+            "text": " cafe2 whose work was to deploy this library on server and run it on server so that many people can use that model"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3411.0,
+            "end": 3421.0,
+            "text": " and then after few days they merged these two and made pytorch complete framework so in today's date you have two frameworks"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3421.0,
+            "end": 3431.0,
+            "text": " one is tensorflow plus keras which is used more in industry driven applications and then another ecosystem is pytorch"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3431.0,
+            "end": 3441.0,
+            "text": " which is used more for research now here comes a problem that sometimes you may need to"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3441.0,
+            "end": 3451.0,
+            "text": " convert one code in another ok so it can be like"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3451.0,
+            "end": 3461.0,
+            "text": " if you are reading a researcher's paper which is internally implemented in pytorch and you want to implement that code in your company where tensorflow is being used so this type of interconversion"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3461.0,
+            "end": 3471.0,
+            "text": " was little difficult so here one more thing came here this type of drop down GUI based applications came"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3471.0,
+            "end": 3481.0,
+            "text": " whose work was you go to that website and connect with GUI and make neural networks and then you use"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3481.0,
+            "end": 3491.0,
+            "text": " export option and it will give you python code and tensorflow code like one example auto ML"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3491.0,
+            "end": 3501.0,
+            "text": " google's product which works exactly like this apart from this there are other products like microsoft's custom vision"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3501.0,
+            "end": 3511.0,
+            "text": " AI apple's create ML all these products work like this so in short what happened that these powerful big companies"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3511.0,
+            "end": 3521.0,
+            "text": " made such frameworks which pushed deep learning to research and to adoption in industry"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3521.0,
+            "end": 3531.0,
+            "text": " so according to me this is third factor so behind deep learning's success the fourth biggest factor i think is deep learning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3531.0,
+            "end": 3541.0,
+            "text": " architectures now what is deep learning architecture it is little difficult to understand in first lecture but i still try so i showed you a"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3541.0,
+            "end": 3555.0,
+            "text": " neural network called ANN and in that the structure was like this something like this it was like this"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3555.0,
+            "end": 3565.0,
+            "text": " i was calling this ANN artificial neural network so now"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3565.0,
+            "end": 3575.0,
+            "text": " this is ANN now in this ANN there are two things first thing is node we call it node"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3575.0,
+            "end": 3585.0,
+            "text": " these are all circles these are all nodes this is one fundamental unit of ANN and second is edges we call them weights"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3587.0,
+            "end": 3597.0,
+            "text": " these weights tell which nodes are connected to which nodes now these two you can create in different ways"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3597.0,
+            "end": 3607.0,
+            "text": " a different neural network can have less nodes it can have different types of edges like this one is connected to this but this one is not"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3607.0,
+            "end": 3617.0,
+            "text": " so by experimenting with these two combinations you can create different types of ANN so this is one architecture"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3617.0,
+            "end": 3627.0,
+            "text": " this is one way of connecting nodes and edges or weights similarly this is the second architecture so you can have different architectures and what is different in different"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3627.0,
+            "end": 3637.0,
+            "text": " architectures like in CNN there is a different type of node like in perceptron there is a different type of node"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3637.0,
+            "end": 3647.0,
+            "text": " in RNN there is a different type of node similarly weights can also be connected in different ways so depending on the problem you can create different"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3647.0,
+            "end": 3657.0,
+            "text": " neural network architectures ok now which architecture will work best to know this"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3657.0,
+            "end": 3667.0,
+            "text": " you have to run this experiment obviously it will take time and effort in certain cases"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3667.0,
+            "end": 3677.0,
+            "text": " it will take money also so it is a little difficult to figure out the best architecture but what you can do"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3677.0,
+            "end": 3687.0,
+            "text": " you have a second option that you already have some existing architectures researchers have already worked on some big problems"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3687.0,
+            "end": 3697.0,
+            "text": " already some neural networks have been made in some architectures and they have been trained on data set ok"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3697.0,
+            "end": 3707.0,
+            "text": " so basically they are ready to use you just have to download those architecture files and directly"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3707.0,
+            "end": 3717.0,
+            "text": " apply it on your problem this concept is called transfer learning which we will study in detail but at this point just understand"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3717.0,
+            "end": 3727.0,
+            "text": " what is architecture? creating neural network in different ways now which is the best architecture to know this you have to run this experiment"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3727.0,
+            "end": 3737.0,
+            "text": " it will take time and effort so to avoid that you can use existing architectures which are already trained on"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3737.0,
+            "end": 3747.0,
+            "text": " data sets and now they are ready to use means you can directly download it and apply it on your problem and this concept is called transfer learning which is used a lot in today's industry"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3747.0,
+            "end": 3757.0,
+            "text": " now because of this concept that you can use other architectures a massive boost has come in the adoption of deep learning in today's date if I have to"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3757.0,
+            "end": 3767.0,
+            "text": " solve a problem then I don't have to sit and tell my researchers to make architectures from scratch rather I can use"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3767.0,
+            "end": 3777.0,
+            "text": " state of the art architecture which is already best means best accuracy in certain cases"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3777.0,
+            "end": 3787.0,
+            "text": " has crossed the accuracy level of humans so I can directly use them so you might have heard name of some existing architectures like I will tell you"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3787.0,
+            "end": 3797.0,
+            "text": " different domain architectures like let's say you are talking about image classification where image has to be divided in one class or another class"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3797.0,
+            "end": 3807.0,
+            "text": " so resnet is a very famous neural network if you are talking about text classification or NLP related task"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3807.0,
+            "end": 3817.0,
+            "text": " then birth is a very famous architecture it's a transformer you might have heard the name if you are talking about image segmentation"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3817.0,
+            "end": 3827.0,
+            "text": " then we have unit if you are talking about image translation then we have"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3827.0,
+            "end": 3837.0,
+            "text": " a very famous pix2pix if you are talking about object detection then we have"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3837.0,
+            "end": 3847.0,
+            "text": " YOLO if you are talking about speech generation then we have WaveNet"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3847.0,
+            "end": 3857.0,
+            "text": " so these are all state of the art architectures which researchers made by investing their time and now they are ready to use you just have to download them on your machine"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3857.0,
+            "end": 3867.0,
+            "text": " and run them on your problem so after they came your adoption of deep learning became very fast because"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3867.0,
+            "end": 3877.0,
+            "text": " things became easy someone already did the hard work which we have to do so this is the fourth reason if you ask me"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3877.0,
+            "end": 3887.0,
+            "text": " what is the last reason then I would say factor number 5 is people or you can say community so all this"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3887.0,
+            "end": 3897.0,
+            "text": " wouldn't have been possible if people with passion hadn't come in the field of deep learning the history of deep learning is very interesting"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3897.0,
+            "end": 3907.0,
+            "text": " people have been working since 1960s but failed multiple times and around 2011 finally became successful so people who are"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3907.0,
+            "end": 3917.0,
+            "text": " researchers or deep learning engineers in the company for that matter teachers like us for that matter students like you"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3917.0,
+            "end": 3927.0,
+            "text": " community like Kaggle all these people together have made deep learning as a technology so according to me"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3927.0,
+            "end": 3937.0,
+            "text": " it should be at number 1 but this is a non technical reason so I am keeping it aside but yes people have seen"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3937.0,
+            "end": 3947.0,
+            "text": " the potential of deep learning they know that this is a technology which will change the world in the future for that matter it is already changing so invest your time in this"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3947.0,
+            "end": 3957.0,
+            "text": " maybe that's why you are studying so people for me is the fifth reason and one of the most important reasons because of which in today's date deep learning"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3957.0,
+            "end": 3967.0,
+            "text": " is what it is so that was the video guys I think I spoke a little too much but again"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3967.0,
+            "end": 3977.0,
+            "text": " that happened because I wanted to teach you everything properly so maybe I think 40-50 minutes video would have been done but if you have seen till here then I am sure"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3977.0,
+            "end": 3987.0,
+            "text": " at some level it would have helped you so if you liked the video then guys please like I will say this at the end of every video because I have seen"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3987.0,
+            "end": 3997.0,
+            "text": " this on my channel that the videos which have received a lot of likes and views so youtube pushes my content"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 3997.0,
+            "end": 4007.0,
+            "text": " if you tell youtube that this content is good so please it's a request that if you liked this content then please like it share it in your social circle"
+        },
+        {
+            "number": "2",
+            "title": "What is Deep Learning | Deep Learning Vs Machine Learning | Complete Deep Learning Course",
+            "start": 4007.0,
+            "end": 4017.0,
+            "text": " if your friend is preparing and that's it from my side we will meet after 2 days for the next topic until then bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel. So, if you remember, in the last video I made an announcement that I am going to start a deep learning playlist on my channel. So, that will happen today. Today we will start our 100 days of deep learning course. This will be the first video. And before starting the video, let me give you a little introduction that what we will cover in this video. So, since we are just starting and I have decided that this course will be beginner friendly. So, the idea is very simple that we will start from scratch and gradually move to complex topics. So, today is day 1 and I want you to know everything about deep learning. So, that is why the title of today's video is what is deep learning. So, if you are a beginner and entering this field for the first time, then by watching this video you will understand what is deep learning and what is its origin. Apart from this, one more topic that I have covered in this video is that what is the difference between machine learning and deep learning. So, I will tell you the differences on 4-5 different points, both theoretical and practical aspects. And after that, I am covering one more topic in this video that why deep learning has become so famous now. Means what are the reasons behind the success of deep learning. I am teaching this topic only because I want that when you enter the field of deep learning, then you have a complete perspective that why things are the way they are and what are the reasons behind it. So, that is why in this video, if you watch this video completely, then you will understand the whole landscape of deep learning in today's date, in 2022. And this video will prepare you very well for the future. So, I think this introduction is enough. Let's start the video. So, guys, let's start from the beginning. First of all, I will tell you what is deep learning. And I will give you the definition of deep learning. So, if you go on the internet and type what is deep learning, then you will mostly see two types of definitions. One will be a simple version and the other will be a technical definition. In this video, I will tell you both the definitions. Because both will help you in your understanding. So, our first definition is on your screen. Where it is written that deep learning is a subfield of artificial intelligence and machine learning that is inspired by the structure of a human brain. Also, deep learning algorithms attempt to draw similar conclusions as humans would by continually analyzing data with a given logical structure called neural network. So, there are two parts in this definition. Let's break down and focus on the first line. So, from the first line, we understand that deep learning is a subfield of AI and machine learning. So, this diagram will help you a little. In this diagram, it is clearly visible that the biggest umbrella term in which everything comes is artificial intelligence. What is artificial intelligence? It is basically the instinct of human beings where we want to make intelligent machines like us. We have been working on this for years, maybe 100 years. And some developments have also taken place. Among which, the biggest development is machine learning. So, machine learning is basically a subfield of AI where you learn from data. So, if you have data, then if there is input and output in that data, then the job of your machine learning algorithm is to figure out the relationship between input and output. So, machine learning is a subfield of AI. Now, what is deep learning? Deep learning is a subfield of machine learning where you are doing everything like machine learning. But the biggest difference between machine learning and deep learning is that machine learning depends on statistical techniques. To capture this relationship between input and output, most of the machine learning algorithms focus on statistical techniques. Whereas, deep learning depends on a logical structure which we call neural network. And this neural network is inspired by the human brain. Computer scientist said that if we want to make intelligent things, then let's get inspired by the most intelligent thing on earth, human beings. The way human beings think, the way they make decisions, what if we make algorithms that can map that thinking. So, neural network is basically a logical structure which is inspired by human brain. And this collection of algorithms is collectively called deep learning. Now, I will show you an example of a deep learning neural network. This is the example. This is a neural network. This is a simple neural network which we call ANN. Artificial Neural Network. Now, we are going to study this in detail. Let me give you a brief introduction. So, Artificial Neural Network is basically a logical structure where the fundamental unit is called Perceptron. All these circles you can see are Perceptrons. And they are connected to each other with these arrows. And these arrows are called weights. And these are called layers. These are all layers. All the Perceptrons in one line are called layers. These are all layers. Now, you give input from here. And you get output from here. I gave you a very simple description. Now, you call the input layer from where you get input. And you call the output layer from where you get output. Now, you can add as many layers as you want in between. There are two layers here but you can add as many layers as you want. These are called hidden layers. In fact, this is a fun fact. The name of deep learning comes from the number of hidden layers you have. If there are a lot of hidden layers in the middle, then this network becomes deep. So, that is why this name is deep learning. Now, you must be wondering whether we have only one type of neural network or there are different types. So, the answer is that there are different types of neural networks. This is just one type. There is CNN. The simplest one. Then there is CNN. Convolutional Neural Network. Then there is RNN. Recurrent Neural Network. Apart from this, there are many other types of neural networks which solve different purposes. For example, Convolutional Neural Networks work well on speech data. Similarly, RNN works well on speech and textual data. GAN can generate things. It can generate text and images. It is very interesting. In this way, you will get to read many more neural networks in this course. On the basis of the discussion till now, I will summarize. Deep learning is a subfield of machine learning. Machine learning works in the same way as deep learning. It just works in a different way. The work is to find the relationship between input and output. Mostly, in supervised learning. Machine learning uses statistical techniques to work. Whereas, deep learning follows a logical structure which is called a neural network. These neural networks are designed in such a way that they try to replicate the human brain. Why did the computer scientists think so? Because they felt that if you want to make intelligent machines, then why not copy the human brain which is the most advanced intelligence form on earth. Now, ANN looks like what I described to you. It is the simplest neural network. We also understood that apart from this, there are many other neural networks which we will gradually study in this course. Now, everything is clear till here. Now, the question arises and it should also come to your mind that why is deep learning getting so famous? Recently, you must have noticed that deep learning is being heard and seen everywhere. What is the reason? What has deep learning done because of which deep learning is getting so much fame? Let's discuss that. There are two major reasons behind deep learning's fame. The first reason is applicability. I will explain what it means. The second reason is performance. The meaning of applicability is that the deep learning algorithms are applicable in a very large domain. You won't believe that deep learning works in many areas like computer vision, speech recognition, natural language processing, machine translation, bioinformatics, drug design, medical image analysis, climate science, material inspection, board games programs. You can apply deep learning in any of these fields. The second reason is performance. The performance of deep learning in all these fields is exploding. In fact, deep learning has provided the best state-of-the-art results. You can't surpass such performance. In fact, in some scenarios, deep learning has beaten the performance of human experts. You must have heard of a famous Chinese game called Go where an AI agent called AlphaGo defeated the world champion of Go 4 times in 5 games. There are many such scenarios where you will see that the state-of-the-art performance of deep learning is coming and it is leaving the human experts behind. This is the reason because of which deep learning is getting so much attention from the software and computer science community. You will see many examples like self-driving car, new drugs are being made in medical science, new research in the field of chemistry is driven by deep learning. In the next video, I will tell you about different types of applications where deep learning has left its mark. The sudden fame of deep learning has come due to two things. First, deep learning algorithms are designed to be applied to a wide domain of problems. Second, performance. Wherever it is being applied, their performance remains state-of-the-art. At some places, it is surpassing human experts. Due to this, a reputation of deep learning is being built. I hope you understood a little about deep learning. Now let's move ahead in this video. As I said in the beginning, I will tell you two definitions. We have seen the first definition which was a very common definition. Now let's move on to a slightly technical definition. The definition is on your screen. It is written here that deep learning is a part of a broader family of machine learning methods based on artificial neural networks with representation learning. It is also written that deep learning algorithms uses multiple layers to progressively extract higher-level features from the raw input. For example, in image processing, lower layers may identify edges while higher layers may identify the concepts relevant to a human such as digits or letters or faces. Again, there are two parts in this definition. Let's focus on the first one. In the first definition, it is said that it comes under machine learning and is based on artificial neural networks. But here one more word is written representation learning. According to this definition, deep learning depends on representation learning. Now the question is what is representation learning? Trust me, if you want to get into deep learning, you should have an understanding of representation learning. In fact, let me show you. This is the Wikipedia page of representation learning. It is written here In machine learning, feature learning and representation learning are a set of techniques that allow a system to automatically discover the representations needed for feature detection or classification from raw data. This replaces manual feature engineering and allows a machine to both learn the features and use them to perform a specific task. Let me explain this in easy words. If you have worked a little in machine learning, then you must know that there is a thing called feature extraction or you can also call it feature engineering. What do you do in that process? What features do you create? Let me give you an example. Let's say you want to make a dog-cat classifier where if you are given an image, then you have to look at that image and tell whether it has a dog or a cat. If you go to solve this problem with machine learning, then you will have to create manual features. How can features be? For example, size is a feature. If the size is big, then it is a dog. If the size is small, then it is a cat. Color can be a feature. All the physical attributes can become features. But you have to understand one thing here that in machine learning, you have to create these features for your machine learning algorithm. But what happens in deep learning is that this whole process is automated. That means you don't make such rules. You just provide the image in the right format and your deep learning algorithm automatically extracts features on its intelligence. This is called representation learning where automatic feature extraction happens from your problem, from your data. This is one more thing to understand and we will discuss it further that there is no need for feature engineering in deep learning. It automatically does your algorithm from your data. Now if you move to the second part of the definition, then it is written here that deep learning algorithm uses multiple layers. We have already seen this. To progressively extract higher level features from raw input. And then an example is given. I will explain the same example to you. This part of the definition tells a very important thing about deep learning algorithms that deep learning algorithms are basically neural networks. There are layers in neural networks. Now there is a purpose of these layers. For example, if we take this example of dog-cat classification, then what will happen is you will feed your image data from here. You will feed your data pixel by pixel here. Now there is a purpose of each layer. Obviously, you will get the output here that it is a dog or a cat. But these middle layers also have a purpose. So the initial layers will extract some primitive features from your data. For example, if you are doing cat-dog analysis, then these first layers detect edges. Then if you go to the next layer, then it will detect some more complex features like shapes. Edges are detected like this. Shapes are detected from the next layer. And then the more you go ahead, the more complex features you will make from them. For example, faces. If you read it, it is written here. In image processing, lower layers may identify edges while higher layers may identify the concepts relevant to a human such as digits or letters or faces. So slowly you identify things from here. So basic things in the beginning and gradually complex things and eventually you give your result in the last layer. This definition is explaining two things to you. I will summarize it again. First, deep learning uses representation learning. Which means that you don't have to extract features. The machine will do it by itself. The algorithm will do it by itself. From the second part of the definition, you learned that what is the way to work on it. The way to work on it is that you give data in the input layer and then through the hidden layers you start detecting things. The hidden layers in the beginning extract primitive features and the deep layers in the end extract complex features. And that is how this thing works. Now if I wanted, I could have skipped this part. But I felt that you should have this idea in the beginning because we are going to discuss it in detail later. So guys, now we have an idea about what deep learning is. Now we will discuss what is the point of difference between deep learning and machine learning. Till this point, we only know that deep learning is a sub-field of machine learning. The algorithms of machine learning mostly use statistical techniques to work. Whereas deep learning is a logical structure based on the human brain which we call neural networks. Apart from that, we are going to discuss the other point of differences at the practicality level. First of all, I have written 5 points here. These are the 5 points we are going to talk about. The first point of difference between deep learning and machine learning is that deep learning needs a lot of data compared to machine learning. If you are working on a problem, then you can only apply deep learning when you have a lot of data. Somehow, deep learning needs a lot of data to be sure about things. After seeing a lot of data, your performance of deep learning models becomes reliable. If you see here, there is a graph where on the x-axis is the amount of data available for training and on the y-axis is the performance of the model. If you take this point in this graph, let's say you have this much data i.e. less data, then you can see that the performance of machine learning models is better than deep learning models. For less data, for less data, ML wins. But as you get more data than this amount, there are two things to see. The first thing is that the performance of machine learning models stagnates. If you are adding more data after one point, then the performance of the model is not improving. Whereas, if you follow the curve of deep learning, then you can see that with the increase of data, your performance is improving almost linearly. The thing to understand here is that deep learning is data hungry. As the data increases, linearly, performance also increases. This is the first difference. The second big difference is hardware. If you want to train machine learning models, then you can use CPU on your simple machine. But deep learning models have very complex matrix multiplication going on. A lot of numbers. To handle this, you need GPU. Graphical Processing Unit. Without it, if you run your deep learning models on CPU, then your deep learning model will run slow. You need powerful GPUs with more memory where you can do matrix multiplication calculations. Hardware is costly in deep learning. The second point of difference is that machine learning can run on cheap hardware but to train deep learning models, you need costly hardware. You need costly hardware for GPU. Graphical Processing Unit. The third point is training time. Again, deep learning models are complex and that is why your model training time is high. Training time is very high in comparison to machine learning where the training time is low. In fact, if you apply deep learning algorithm on a large dataset, I have heard that people take weeks to train the model. I have also heard that some researchers take months for a specific purpose. To train a model in machine learning model, you hardly need minutes. Sometimes it may happen that you have to run the model for hours. I have not heard that a weak machine learning model is being trained. Training time is very high in deep learning. If you talk about prediction time, then prediction time in deep learning is very fast. You will understand why it is fast later. Whereas, if you talk about machine learning algorithms, then in some algorithms, prediction time is very slow. For example, it takes a lot of time to predict in KNN type algorithms. So, it varies for machine learning. Prediction time varies. However, training time is definitely less for machine learning and more for deep learning. Next point is feature selection. We have already discussed this point. We discussed that there is a thing called representation learning. We discussed this a while ago. We learned that deep learning algorithms automatically extract relevant features from the data. Whereas, if you are working with machine learning, then you have to manually extract those features. Let me give you an example. A year ago, we were making a resume based project. It was a resume based project. Let me give you an example. We had to predict based on the content of the resume whether the child will get a placement or not. So that we can give him some feedback. Now, when you apply a deep learning approach, you have to extract features from the resume. One feature can be marks of 12th standard. Second feature can be marks of 10th standard. Third feature can be number of achievements. Another feature can be number of courses. Another feature can be quality of college. You can make all these features and then you can predict whether the child will get a placement or not. But obviously, to make this feature, we need domain experts. I have to sit with some HRs or some teachers who will tell me to make such features. Depending on the domain. But if you do this project through deep learning, then you just have to provide the algorithm with the content of the resume in the right form. Behind the scenes, it will automatically extract features and it will give you the prediction. This is called representation learning and this is a big benefit when you use deep learning. In fact, I gave you an example that if you have a neural network and you are giving it an image, then the initial layers extract simple features and primitive features and then complex features are automatically extracted. I have a diagram of this. If you are giving this photograph, then the initial layers, the first and second hidden layer, will extract simple features like edges. Then in the middle, some middle features like shapes will be detected. You can see these shapes are being detected and by doing this, eventually in the last, high level features are detected like a complete face. This is how deep learning works. This feature extraction is happening automatically. I am not doing anything. The network is designed in such a way that everything is happening automatically. How it is happening, we will discuss later. This is also a big point of difference. The last point is interpretability. What happens is, we just discussed that feature extraction is happening automatically. The features are extracted automatically. I don't know what that feature is. I don't know which edges are there. I don't understand it. What happens is, the model that comes to you is not interpretable. If I make a dog versus cat classifier, in such an architecture, then as soon as I give it an image, it will tell me whether it is a dog or a cat. I have already told you how it will work. The first layer will find some primitive features. The next layer will find some complex features. Internally, whatever happens, it will be like a black box. It will not tell me what it saw in that image. It means that if someone asks me tomorrow that why did you call this image a dog, I don't have any answer. I don't have any answers. This is an issue of interpretability. This is a problem. Suppose you are training a deep learning model on a social networking website where you can ban a user by looking at the comments. If you use deep learning, it will read the comment and decide whether to ban or not. Let's say it says ban this user and you ban it. The user will come and ask you that why did you ban me? Tell me the reason. But since you have a deep learning model, you won't know the reason why your algorithm banned it. That is a big flaw. Explainability is important in many scenarios. Interpretability is important in deep learning. Deep learning fails there. But if you compare it with machine learning, then interpretability is very high in machine learning. Let's say you are training a linear model, a logistic regression model where CGPA is one column IQ is another column and placement is the third column. When you train a logistic regression model, there will be two weights W1 and W2. W1 is the weightage of this feature and W2 is the weightage of this feature. Based on the value of W1 and W2, I can tell you which feature is more important and which is less important. If a child comes and asks why I was told that my placement won't happen, then I will say since your W1 is very less, your CGPA is very less, that is why your placement is less. In machine learning models, there is a proper decision making and you get a flowchart like this. This flowchart can tell you why a point is called 1 and why a point is called 0. The explainability or you can say interpretability is quite high. It helps in those scenarios where you have to tell the other person the reason for giving you 1 or 0. These are the 5 points of differences. Let's summarize. Data Dependency. There is a lot of deep learning and less of machine learning. The good thing is that as the data increases, its performance scales linearly. If we talk about hardware, deep learning lags behind. Why? Because it needs hardware, GPU to handle complex matrix multiplications. This is against deep learning. If we talk about training time, deep learning is slow. It takes a lot of time to train models in comparison to machine learning. Prediction time is fast. Feature selection, I have already told you. Representation learning follows. Features are generated automatically. What was the matter of layers? The initial layers find small features, the final layers find complex features. You understood all this. Interpretability. Deep learning is a black box. Only it knows what it thinks and decides. We can't know. If we are working in a scenario where we have to tell the result why we reached that result, then deep learning is not a good choice. These are the 4-5 things. I guess after reading and understanding these 4-5 things, you will reach a conclusion that machine learning cannot be replaced by deep learning. Many people think that if deep learning is so good and powerful, then why not use deep learning in every project? The reason is that in some things, machine learning is better than deep learning. You must have heard an old saying that where there is a need for a needle, swords are not used. Machine learning is a needle and deep learning is a sword. Your purpose is to steal clothes or to kill people. Depending on that, you will select whether you need machine learning or deep learning. I hope you understood this section. We have read many things regarding deep learning. Now we will answer some questions. When I was studying deep learning, I was getting a question in my mind that why is deep learning becoming so famous now? I will teach you the history of deep learning after 1-2 videos. There you will notice that the work on deep learning started in 1960s from the time of Alan Turing. But it became famous now. Around 2012 is called breakthrough year. So what happened after 2010 that deep learning became such a powerful and famous technology. If you want to answer this question, there are multiple reasons. So the answer of why now can be different. I will tell you one by one. The first reason is data sets. We will talk about this later. The second reason is frameworks. The third reason is architecture of models. The fourth reason is hardware. And the last reason is community. We will talk about these 5 points. This will give you some perspective about deep learning and the driving forces behind it. Let's start with the first one. Data sets. I have already told you that deep learning is data hungry. It is data hungry. It needs a lot of data to make its predictions. It needs a lot of data to make sure about the patterns in the data. If you talk about machine learning, if you have a dataset of 100 rows or 1000 rows, then you can train and build a model on it. But not with deep learning. Deep learning needs lakhs of rows. Then it will work. The good thing is that around 2010 two revolutions came in our society. First came smartphone revolution and second, parallelly internet pricing revolution. I would say. Because internet was already there. Prices have reduced a lot. Around 2015-16, Reliance entered the Jio market and started providing high speed internet for free. If you combine these two things, then everyone in the world has a smartphone with high speed internet connection. People now use different apps. After that, there are many apps like TikTok, Snapchat and many other social media platforms. Due to this, on a daily basis, we started generating a lot of data. In fact, I read in a study that in human history, from the time we started generating data, from then till 2015, if we generated XGB data, then from 2015 to 2016, we again generated XGB data. From 2015 to 2016, from 2016 to 2017, we generated 2X data. From 2017 to 2018, we generated 4X data. It means that the time versus data generation was exponential. This year is around 2015. After 2015, we have grown like this. So, a lot of data was generated. This is the first reason which was not there in 1960s. But, just by generating data, it won't work. Think about it. If you want to make an image classification system where you look at a photo and tell whether it has a dog or a cat, then first you have to train your model. During training, you need a lot of photos where there is an image and it is told whether it has a cat or a dog. But, when you generate data through your smartphone, a lot of data is generated which is unlabeled data. It means that you uploaded a photo of a puppy on Facebook but you didn't tell that this is my puppy. So, what happens is that in industry, you need someone to create labels. And here, big companies like Microsoft, Google, Facebook, spent a lot of money and converted a lot of unlabeled data into labeled data. And then they noticed that if we keep this whole data only with us, then research will not be able to progress as much as if we open source it. So, what did they do? They converted these datasets into public datasets. So, public dataset is basically a dataset which can be accessed by anyone and can work on it. So, now when these public datasets came in the market, like on GitHub, then actual research benefited. Deep learning research happened very fast because of these public datasets. Let me give you some examples of public datasets. For example, if you talk about image data, if you talk about image data, then Microsoft has a dataset called Coco which is used a lot for image detection. There are a lot of images in this and the objects in those images have bounding boxes created around them to label the objects. So, it is a very powerful dataset which is very useful in object detection. If you talk about video, then we have YouTube 8 million dataset which has around 6.1 million YouTube videos data. Imagine that. If you talk about text, we have a lot of different types of data. One of them is called SQUAD. What is SQUAD? It is basically a dataset from Wikipedia. From Wikipedia, it has around 1.5 lakh question answers dataset. If you talk about audio, then there are different datasets in audio like Google has an audio set which has around 20 lakh 20 lakh sound clips which they have extracted from YouTube under more than 600 categories. These are just 4-5 examples. In today's rate, you will get thousands of public datasets which are open source. You can use them. You will get them on Kaggle or on their own website. Or you can google and you will get these datasets. After these datasets came, it became very easy to do research because it was not possible to make these datasets. If you ask me why deep learning is so powerful, the biggest reason the biggest contributor would be dataset because without data there would be no deep learning. According to me, the biggest second factor in pushing deep learning is hardware. Hardware means computing hardware. To explain this whole reason, first of all, I will explain Moore's law. Moore's law is a very famous law in computing. I don't know his first name but he was the co-founder of Intel. He gave this law that number of transistors on a microchip doubles every 2 years though the cost of the computer is halved. This means that every 2 years on a chip, on any chip let's say I7, the number of transistors you can place on it will double every 2 years and the cost of making it will be halved. If you notice, the price of every commodity increases in the market but the price of electronics decreases. The price decreases which means every year smartphones come at a cheaper price and I am not talking about the flagship products but see how cheap the phones have become and the performance keeps improving. So the performance of hardware will always improve this is what Moore's law says and if you notice I don't know what you were doing in 2005-2006 but at that time the phones that were coming had 128 MB RAM whereas today's smartphones have 12 GB RAM phones so that is why there is a revolution in hardware and it is still continued and it gave a lot of push to deep learning. If you talk about deep learning then you already know that it needs a lot of data. Now on a lot of data it does matrix operations you will read this so you need a lot of data processing power to handle numbers if you use CPU then training time would be high or it will be low speed at that point around 2010 someone realized that matrix operation or matrix multiplication which I have to do I can convert it into a parallel task I can implement parallel processing just like you need parallel processing to read or render a high quality image and for this purpose if people use GPU then similarly for this matrix operation why don't we use GPU then this idea floated in deep learning community that now we will use GPU to train our neural networks. At this point NVIDIA launched CUDA CUDA is a programming language to program GPUs and after this a revolution came then everyone understood that rather than conventional CPU let's train our model on GPUs and after that NVIDIA's stock became very pricey because not only gamers were buying your graphics card now our deep learning researchers also started using graphics card infact in today's date if you will approach deep learning then you will have to buy a good machine which has a good GPU because what a GPU does 10 to 20 times training time reduces in comparison to a CPU which is a very big difference. So this didn't stop till GPU as soon as people realized that we can take faster results from parallel processing then in this area a lot of research started happening and then different types of hardware started coming. Like one more thing existed earlier called FPGA FPGA's full form is programmable gate array if any of you are from EC background in engineering then you must have heard about it. So these are basically programmable controllers the best thing about them is that they are very fast they run on very low power apart from this they are reprogrammable and you can easily install custom solutions on it the only problem with FPGA's are that they are very expensive so if you have heard about Xilinx then this is a leading manufacturer in today's date FPGA's are also used a lot to train and run deep learning models in fact in Microsoft FPGA's are used a lot Microsoft's Bing which is a search engine most of the AI part is run on FPGA's so this is one thing after this one more thing came which is called ASIC ASIC it's full form is application specific integrated circuit these are also custom made chips. It is a little expensive to design in the beginning but if you make it for a lot of people then it becomes cheap so under this different types of ASIC's came like first one is TPU maybe you have heard the name it's name is Tensor Processing Unit this was made by Google and this is specially a hardware to train deep learning models if you are working in Google Colab then Google Colab gives you an option to select TPU to run a piece of code then the second thing that came was Edge TPU for Edge devices let's say you want to run a deep learning model on a drone or you want to run on a smart watch or on a smart glass so in this type of setup you can use Edge TPU's which is basically a very small device on which you can do calculations similarly in today's date there are a lot of applications where machine learning, AI, deep learning is used so for that NPU's came they are called Neural Processing Units Neural Processing Units now their job is on your mobile device these types of operations they have to be exclerated ok so if we take an example that when which type of hardware can be used so I would say if you are just starting your deep learning journey and you are doing very basic small projects then you can work with CPU if you are training big networks after gaining some experience then you should shift to graphics card you will get very good graphics card like RTX 2080 Ti it is a very good graphics card here only you can use TPU because it is designed specifically for this purpose if you want to use deep learning on your smartphone in an app then here you can use mobile CPU like snapdragon or you can use mobile GPU there are a lot of digital signal processors you can use those or you can use NPU's which I said if you want to run smartwatch or smartglass machine learning deep learning models then here you will use edge TPU which I said or you can use NPU's so for different requirements different type of hardware came but in last 10 years focus shifted to make custom hardware for deep learning that made deep learning research very fast because now it doesn't take much time to train so obviously overall research will be fast so hardware is the second factor according to me the third factor which boosted deep learning the most is the development of frameworks see to train deep learning models is a difficult task there is no doubt and if you go to write the code from scratch then the problem you are going to solve it will take less time and it will take more time to make the code that is why we needed some library which can handle all the code behind the scenes and our job is to make our application just like sklearn scikit learn solved our problem in the domain of machine learning so we needed a library like scikit learn which can help us in deep learning so in today's date there are two famous libraries one is tensorflow by google and the second one is pytorch backed by facebook and let me tell you some history in 2011 google already saw the potential of deep learning so they wanted to use deep learning in their speech products so they internally made a framework called distbelief which worked fine but there was a problem it was attached to google's product so google wanted a separate framework so that is why they started working on a different framework and in 2015 they called it tensorflow and released this library now tensorflow was a very powerful library is a very powerful library and as soon as it came there was a blast in the market and everyone was using tensorflow but slowly people realized that tensorflow was very difficult to use infact people started making fun of it that google made this library for them for their engineers because normal people are not able to use it infact people used to say that if you know how to use tensorflow then you will get a job in google it was that difficult so around that time there was a library called keras which basically worked on top of tensorflow means user used to talk to keras and keras used to talk to tensorflow so it was an intermediate library basically you can say front end and since keras came since then their combination became very popular that is why in 2019 when tensorflow 2.0 came then google realized that if you really want to reach everyone then there is a way to make it accessible connect with keras so since then keras came with tensorflow we will use this combination in this course but another company facebook also didn't want to lag behind so in 2016 they started a library called pytorch which was trying to solve this problem and there were some good things we will not go into technicalities but AI researchers liked this library and if you see in today's date the people who do research not the industry people they use pytorch more then around that time in 2018 they worked on another library cafe2 whose work was to deploy this library on server and run it on server so that many people can use that model and then after few days they merged these two and made pytorch complete framework so in today's date you have two frameworks one is tensorflow plus keras which is used more in industry driven applications and then another ecosystem is pytorch which is used more for research now here comes a problem that sometimes you may need to convert one code in another ok so it can be like if you are reading a researcher's paper which is internally implemented in pytorch and you want to implement that code in your company where tensorflow is being used so this type of interconversion was little difficult so here one more thing came here this type of drop down GUI based applications came whose work was you go to that website and connect with GUI and make neural networks and then you use export option and it will give you python code and tensorflow code like one example auto ML google's product which works exactly like this apart from this there are other products like microsoft's custom vision AI apple's create ML all these products work like this so in short what happened that these powerful big companies made such frameworks which pushed deep learning to research and to adoption in industry so according to me this is third factor so behind deep learning's success the fourth biggest factor i think is deep learning architectures now what is deep learning architecture it is little difficult to understand in first lecture but i still try so i showed you a neural network called ANN and in that the structure was like this something like this it was like this i was calling this ANN artificial neural network so now this is ANN now in this ANN there are two things first thing is node we call it node these are all circles these are all nodes this is one fundamental unit of ANN and second is edges we call them weights these weights tell which nodes are connected to which nodes now these two you can create in different ways a different neural network can have less nodes it can have different types of edges like this one is connected to this but this one is not so by experimenting with these two combinations you can create different types of ANN so this is one architecture this is one way of connecting nodes and edges or weights similarly this is the second architecture so you can have different architectures and what is different in different architectures like in CNN there is a different type of node like in perceptron there is a different type of node in RNN there is a different type of node similarly weights can also be connected in different ways so depending on the problem you can create different neural network architectures ok now which architecture will work best to know this you have to run this experiment obviously it will take time and effort in certain cases it will take money also so it is a little difficult to figure out the best architecture but what you can do you have a second option that you already have some existing architectures researchers have already worked on some big problems already some neural networks have been made in some architectures and they have been trained on data set ok so basically they are ready to use you just have to download those architecture files and directly apply it on your problem this concept is called transfer learning which we will study in detail but at this point just understand what is architecture? creating neural network in different ways now which is the best architecture to know this you have to run this experiment it will take time and effort so to avoid that you can use existing architectures which are already trained on data sets and now they are ready to use means you can directly download it and apply it on your problem and this concept is called transfer learning which is used a lot in today's industry now because of this concept that you can use other architectures a massive boost has come in the adoption of deep learning in today's date if I have to solve a problem then I don't have to sit and tell my researchers to make architectures from scratch rather I can use state of the art architecture which is already best means best accuracy in certain cases has crossed the accuracy level of humans so I can directly use them so you might have heard name of some existing architectures like I will tell you different domain architectures like let's say you are talking about image classification where image has to be divided in one class or another class so resnet is a very famous neural network if you are talking about text classification or NLP related task then birth is a very famous architecture it's a transformer you might have heard the name if you are talking about image segmentation then we have unit if you are talking about image translation then we have a very famous pix2pix if you are talking about object detection then we have YOLO if you are talking about speech generation then we have WaveNet so these are all state of the art architectures which researchers made by investing their time and now they are ready to use you just have to download them on your machine and run them on your problem so after they came your adoption of deep learning became very fast because things became easy someone already did the hard work which we have to do so this is the fourth reason if you ask me what is the last reason then I would say factor number 5 is people or you can say community so all this wouldn't have been possible if people with passion hadn't come in the field of deep learning the history of deep learning is very interesting people have been working since 1960s but failed multiple times and around 2011 finally became successful so people who are researchers or deep learning engineers in the company for that matter teachers like us for that matter students like you community like Kaggle all these people together have made deep learning as a technology so according to me it should be at number 1 but this is a non technical reason so I am keeping it aside but yes people have seen the potential of deep learning they know that this is a technology which will change the world in the future for that matter it is already changing so invest your time in this maybe that's why you are studying so people for me is the fifth reason and one of the most important reasons because of which in today's date deep learning is what it is so that was the video guys I think I spoke a little too much but again that happened because I wanted to teach you everything properly so maybe I think 40-50 minutes video would have been done but if you have seen till here then I am sure at some level it would have helped you so if you liked the video then guys please like I will say this at the end of every video because I have seen this on my channel that the videos which have received a lot of likes and views so youtube pushes my content if you tell youtube that this content is good so please it's a request that if you liked this content then please like it share it in your social circle if your friend is preparing and that's it from my side we will meet after 2 days for the next topic until then bye"
+}

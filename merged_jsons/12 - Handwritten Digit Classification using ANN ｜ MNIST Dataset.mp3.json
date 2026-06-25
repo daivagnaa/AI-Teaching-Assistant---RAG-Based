@@ -1,0 +1,1020 @@
+{
+    "chunks": [
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 0.0,
+            "end": 18.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we are continuing our 100 days of deep learning course. So, we had studied these multilayer perceptrons. We had taken their basic intuition, we had studied their notation, and how does it have a prediction. We had covered these three videos."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 18.0,
+            "end": 51.0,
+            "text": " And after that we had to study how they are trained using back propagation. But then I decided that I will first show you some artificial neural networks on some real-world data sets using the Keras library. Because I believe that once you have seen the practical first, then it becomes a little easier to understand the theory of that thing. So, that is why I had picked up a real-world data set in the last video, customer churn prediction. And we had made a binary classification model on it, which was a ANN."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 51.0,
+            "end": 74.0,
+            "text": " Now, we are going to do something similar in today's video. Today, we will take a different data set, which is the very famous MNIST data set, where you will have a photograph of digits. And you will have to make a prediction as to which digit is there in that photo, from 0 to 9. Now, the reason to raise this problem is that this is a multi-class classification problem."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 74.0,
+            "end": 96.0,
+            "text": " It is not binary, it is multi-class. So, I have to show you how a multi-class classification problem is solved using ANN. So, today's video will be all about that. The end goal is not to reach the best accuracy. The end goal is to learn how to solve a multi-class classification problem using an ANN."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 96.0,
+            "end": 117.0,
+            "text": " Again, we will use the Keras library. And that's it for the introduction. Let's start the video. So, guys, as I told you that in this video, we will work on MNIST data set. What is MNIST data set? It's basically a collection of 70,000 images like this."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 117.0,
+            "end": 136.0,
+            "text": " We will have a photograph of many people's handwritten digits. Exactly 70,000 photographs. And you will see one digit in every photo that someone has written by hand. And his photo has been taken. These images are very low resolution images."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 136.0,
+            "end": 162.0,
+            "text": " As you can see, their resolution is only 28x28. Means 28 pixels in this direction and 28 pixels in this direction. Means in total, there are 784 pixel values in this image. Now what we have to do is we have to train the data on 70,000 images. And then we have to make a model."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 162.0,
+            "end": 185.0,
+            "text": " If you give a new image to it, it will tell you which digit is in that photo. Now this data set is very famous. If you have worked in machine learning, then I guess you must have got this data set to work. So we will make an ANN prediction on it. So the idea is very simple."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 185.0,
+            "end": 213.0,
+            "text": " In our neural network architecture, we will start with let's say this architecture where there will be 128 nodes. And then in the output, there would be 10 nodes. This will be the output layer. Now you might ask why there are 10 nodes here. Generally, we put only one."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 213.0,
+            "end": 234.0,
+            "text": " The reason for this is that this is a multi-class classification problem. Means the categories here are 0, 1, 2 to 9. There are 10 categories. So whenever we are working with multi-class classification problem, you put as many nodes in the output node as your classes are."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 234.0,
+            "end": 258.0,
+            "text": " And then you consider the highest probability of any of these as the output. So I will tell you that our initial architecture will be something like this. In our input layer, a total of 784 inputs will come. One input for each pixel. After that, it will go to our next layer."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 258.0,
+            "end": 282.0,
+            "text": " Hidden layer in which there will be 128 nodes. And then in the last, it will go to the output node where there will be 10 nodes. So you can already sense that this time there will be a lot of weights and biases. Like if you talk about this layer, then 784 multiplied by 128 plus 128. So many weights and biases will be here."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 282.0,
+            "end": 303.0,
+            "text": " If you talk about this one, then 128 multiplied by 10 plus 10 will be in this layer. If you want, you can introduce more hidden layers if you feel that your accuracy is not improving. But this is the problem. Like this is the summary. We have digits inside a photograph."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 303.0,
+            "end": 317.0,
+            "text": " We will extract the pixel value of this photograph. And we will send that pixel value to an input node. Which we will send to a hidden node. And then we will send it to our output. And whatever result will come, we will show it to the user."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 317.0,
+            "end": 343.0,
+            "text": " So now I will show you how our data is. So we will work in Google Colab. And here I have already imported these libraries. Now the good thing is that this MNIST dataset is so famous that Keras has already included it as a built-in dataset. So I don't need to bring it from anywhere."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 343.0,
+            "end": 360.0,
+            "text": " I just have to write this code, keras.datasets.mnist. And there is a function inside it, load data, which will provide you with a dataset in exactly this format. So X-Train and Y-Train will be separate. X-Test and Y-Test will be separate. So I don't have to do anything."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 360.0,
+            "end": 377.0,
+            "text": " I don't even have to split the train test. Now I will show you what is inside X-Train. So if you print X-Train. You would see that these are your images. So the data here is not in the form of actual images."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 377.0,
+            "end": 398.0,
+            "text": " It is in the form of pixel value. So what happened is that this X-Train is basically if you take out its shape. So you will find that this is a 3D array. Okay, this is a 3D array. Where you have 60,000 images of data."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 398.0,
+            "end": 412.0,
+            "text": " And what is every image? 28 by 28 NumPy array. If you remove the first item from it. So you will get. A NumPy array whose shape is."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 412.0,
+            "end": 423.0,
+            "text": " 28 by 28. You can see this. So this is our first image. And if you look at the first image. So in this way, here are your pixel values."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 423.0,
+            "end": 433.0,
+            "text": " This is your first row pixel. Which has 28 pixels. This is your second row pixel. Here are some pixels in the middle. And so on."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 433.0,
+            "end": 446.0,
+            "text": " So I can show you. Here we have stored pixels row wise. 28 pixels of the first row. Then 28 pixels of the second row. Then 28 pixels of the third row."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 446.0,
+            "end": 457.0,
+            "text": " And then 28 pixels of the 28th row. This is how this data is organized. Similarly, if I show you. What is in the X test? So you would see."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 457.0,
+            "end": 469.0,
+            "text": " This is also a 3D array. Whose shape is. 10,000 comma 28 comma 28. So it means in our training set. There are 60,000 images of data."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 469.0,
+            "end": 480.0,
+            "text": " In our test set. There are 10,000 sets of set of images. So now if I show you. What is in the Y train? Basically our labels are."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 480.0,
+            "end": 490.0,
+            "text": " Which digit is inside each image? You can see this. So the first image is ours. Inside the X train. There is 5 hidden in it."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 490.0,
+            "end": 498.0,
+            "text": " 0 in the second one. 4 in the third one. And so on. Now if I want. I can also convert this pixel value."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 498.0,
+            "end": 510.0,
+            "text": " In the image. What do I have to do for that? I will have to import. Matplotlib. And there is a function inside it."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 510.0,
+            "end": 520.0,
+            "text": " I am sure. What will I do in I am sure? X train. I will send the 0th item. And here is my output."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 520.0,
+            "end": 532.0,
+            "text": " See this. This is the first image. And you can see this is 5. Similarly, if I send the second image. You can see this is 0."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 532.0,
+            "end": 544.0,
+            "text": " As I showed you. If I send the third. It should be 4. Okay, so this is the whole setup. Now what do we have to do?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 544.0,
+            "end": 554.0,
+            "text": " We have to make a neural network architecture. What will happen with it? In which we will pass this data. And it will be a train. He will understand."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 554.0,
+            "end": 564.0,
+            "text": " What kind of pixel value. Which digit is it? Okay, we have to make this. But before making it. We will do one thing."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 564.0,
+            "end": 576.0,
+            "text": " If you take any image. The values in it. They are like this. Between 0 to 255. Okay, so we have to do the first thing."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 578.0,
+            "end": 588.0,
+            "text": " That we have our array. As in this array. It has to be between 0 to 1. All its values. Why am I saying this?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 588.0,
+            "end": 598.0,
+            "text": " Because whenever you train neural networks. The values are in a similar range. Your weights. Come out as soon as possible. And the convergence is fast."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 598.0,
+            "end": 608.0,
+            "text": " We will discuss this later. Why does this happen? But just understand at this point. It's very very important. That your numbers are in a similar range."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 608.0,
+            "end": 618.0,
+            "text": " So what will we do? We will divide all these values. 255 which is the maximum value. We will divide it. What will happen with it?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 618.0,
+            "end": 628.0,
+            "text": " The maximum value of 255. When you divide it. Your output will be 1. And your minimum value is 0. When you divide it by 255."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 628.0,
+            "end": 638.0,
+            "text": " Your value will be 0. So what will happen? All your pixel values. Will come in the range of 0 to 1. And we have to do that."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 638.0,
+            "end": 648.0,
+            "text": " So what I will do is. I would write this code. X train is equal to. X train divided by 255. Similarly I would write."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 648.0,
+            "end": 658.0,
+            "text": " X test divided by 255. And as soon as we run this operation. Our work is done. I can quickly show you. The zeroth item of X train."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 658.0,
+            "end": 668.0,
+            "text": " Basically the first photograph. In that all the values. Between 0 to 1. And this is what we wanted. Okay."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 668.0,
+            "end": 678.0,
+            "text": " Now what we have to do? We have to make our artificial neural network. So what do we have to do for that? It's very simple. We will start with."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 678.0,
+            "end": 688.0,
+            "text": " A model. Which will be a Keras. Sequential model. Okay. Now we will slowly add layers."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 688.0,
+            "end": 698.0,
+            "text": " In this sequential model. There is only one problem. The problem is. That the architecture. We have to make."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 698.0,
+            "end": 708.0,
+            "text": " In the first layer. 784. Pixels. We have to give the value of pixels. But what is the problem we have?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 708.0,
+            "end": 718.0,
+            "text": " That in this format there is data. 28 by 28. So what we have to do? This whole layer. We have to flatten it first."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 718.0,
+            "end": 728.0,
+            "text": " Basically your whole image. All its pixel values. In 2D. Like first row, second row, third row. It is organized in this way."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 728.0,
+            "end": 738.0,
+            "text": " What I have to do? Everyone has to bring it side by side. Next to it is the value of the second row. Next to it is the value of the third row. And in the same way."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 738.0,
+            "end": 748.0,
+            "text": " The value of the 28th row. From this shape. Will have to come in this shape. Okay. There is a very good way to do this."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 748.0,
+            "end": 758.0,
+            "text": " Flatten layer. There is a flatten layer in Keras. Which is higher dimensional. Converts it to 1D. Okay."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 758.0,
+            "end": 770.0,
+            "text": " I have already imported it. This time I have also imported the flatten in the layer. You have to simply write. Model dot add. Flatten layer."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 770.0,
+            "end": 780.0,
+            "text": " Okay. And in flatten you just have to tell one thing. That your input shape. Which you are getting data. What is its shape?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 780.0,
+            "end": 792.0,
+            "text": " In our case it is 28 by 28. What will it do automatically? It will convert your data. It will convert it to 1D. It will convert it to 784 inputs."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 792.0,
+            "end": 802.0,
+            "text": " Now what do you have to do? You have to write model dot add. And from here you will start normal work. You will add. Your first dense layer."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 802.0,
+            "end": 812.0,
+            "text": " Let's say it has 128 nodes. And the activation function. That is. Let's say value. Which most of the time."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 812.0,
+            "end": 822.0,
+            "text": " Performs best. Also, you do not need to tell in this layer. That how many inputs you are getting. It will automatically figure out. Because the output of flatten."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 822.0,
+            "end": 832.0,
+            "text": " Will get dense. Okay. And lastly, what do you have to do? You have to add your output layer. In which this time there are 10 nodes."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 832.0,
+            "end": 842.0,
+            "text": " Because you have 10. Output classes. And the activation function. That will be softmax this time. Always remember."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 842.0,
+            "end": 852.0,
+            "text": " Whenever you have more than one node. In the output. You will use softmax. For classification. Now again, all these activation functions."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 852.0,
+            "end": 862.0,
+            "text": " We will read in great detail. In the next videos. Now I just want to show you. How things are working. So this is the setup."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 862.0,
+            "end": 874.0,
+            "text": " This is the architecture. If we run this code. And then go to model dot summary. You can see. This is the summary of the model."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 874.0,
+            "end": 884.0,
+            "text": " So you can see. That first of all. There are no trainable parameters in the flattened layer. Because there is no training there. There you are simply."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 884.0,
+            "end": 894.0,
+            "text": " High dimension arrays. Converting to 1D. Then as soon as your layer came. First hidden layer. There are 100480 parameters."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 894.0,
+            "end": 904.0,
+            "text": " How did this calculation happen? I can show you. You are getting 784 inputs. And those inputs. Are going to 128 nodes."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 904.0,
+            "end": 914.0,
+            "text": " So this is the number. And total. 128 biases. So 100480. Total weights and biases."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 914.0,
+            "end": 924.0,
+            "text": " Similarly, if you talk. Between hidden layer and output layer. So there are 1290. Trainable parameters. It is very simple."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 924.0,
+            "end": 934.0,
+            "text": " There are 128 nodes in the hidden layer. There are 10 in the output. So these are our weights. Plus. 10 biases of the output layer."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 934.0,
+            "end": 944.0,
+            "text": " So that is why 1290. And on adding it. Total this time. Our neural network is being made. It has more than 100000."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 944.0,
+            "end": 954.0,
+            "text": " Weights and biases. And honestly it is not much. You will work with more weights and biases. In the future. So what we have to do."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 954.0,
+            "end": 964.0,
+            "text": " We have to compile our model. And train it. So that our model can learn. Which digit is formed. By which pixel pattern."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 964.0,
+            "end": 974.0,
+            "text": " So it is very simple. We will write model.compile. Here you have to tell. 2-3 things. First of all you have to tell."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 974.0,
+            "end": 984.0,
+            "text": " Our loss function. The loss function. We will use. Categorical. Cross."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 984.0,
+            "end": 994.0,
+            "text": " Entropy. In fact there is one more thing. Which we call. Categorical cross entropy. You also use this."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 994.0,
+            "end": 1004.0,
+            "text": " You can do. But we will use sparse categorical. Cross entropy. The difference between the two is very small. The difference is that."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1004.0,
+            "end": 1014.0,
+            "text": " In sparse categorical cross entropy. You don't have to. One hot encode. So what are our labels. 01234."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1014.0,
+            "end": 1024.0,
+            "text": " Up to 9. We don't need to encode it. Whereas if you use. Categorical cross entropy. You have to encode your labels."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1024.0,
+            "end": 1034.0,
+            "text": " One hot. So I will not do that. I will instead use. Sparse categorical cross entropy. Also."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1034.0,
+            "end": 1044.0,
+            "text": " If you are not able to understand. What it is. Don't worry. We will do a video on this. Where I will discuss."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1044.0,
+            "end": 1054.0,
+            "text": " All the famous loss functions. In deep learning. So you will understand. What is going on. This is our loss function."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1054.0,
+            "end": 1064.0,
+            "text": " Our optimizer. Would be again Adam. You don't know at this point. What other optimizers are there. But let's assume."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1064.0,
+            "end": 1074.0,
+            "text": " Is the best. And after being compiled. We have not compiled. We have compiled. So spelling mistake."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1076.0,
+            "end": 1086.0,
+            "text": " This will not be L. Model will be compiled. And now if you run this code. Our model will be compiled. Now what we have to do."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1086.0,
+            "end": 1096.0,
+            "text": " Train our model. So we would write model.fit. X train. Y train. Number of epochs."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1096.0,
+            "end": 1106.0,
+            "text": " As in how many times. Our data will rotate. Our model. 10 times. Also let's take a validation split."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1106.0,
+            "end": 1116.0,
+            "text": " Of point. Through the whole training data. We will randomly separate 20% rows. For validation purpose. And here is our model."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1116.0,
+            "end": 1132.0,
+            "text": " Let's train this model. So you can see guys. Our model is trained. Our loss. Was quite high in the beginning."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1132.0,
+            "end": 1142.0,
+            "text": " But slowly you can see. It started reducing. Now what I do. I do predictions. So the way to do predictions."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1142.0,
+            "end": 1152.0,
+            "text": " Is very simple. You have to write this code. Model.predict. And here you have to pass. Your test."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1152.0,
+            "end": 1162.0,
+            "text": " As soon as you pass your X test. What will it do. All your test images. And for every image. What is the probability of being 0."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1162.0,
+            "end": 1172.0,
+            "text": " What is the probability of being 1. What is the probability of being 2. What is the probability of being 9. What is the probability of being 9. It will give you everything."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1172.0,
+            "end": 1182.0,
+            "text": " Okay. It will do this for every image. For 10,000 images. We store it in a variable. Y probability."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1182.0,
+            "end": 1192.0,
+            "text": " Okay. But we have to show in the output. That image is 1. Or 2 or 3. So what we have to do."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1192.0,
+            "end": 1202.0,
+            "text": " For every array. We have to know. At which index position. The value is maximum. So the way to do it is very simple."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1202.0,
+            "end": 1212.0,
+            "text": " You will write. Y probe. Dot argmax. Xs. Equals 1."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1212.0,
+            "end": 1222.0,
+            "text": " And look at this. It is telling you. That the first test image. According to my model. According to my model."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1222.0,
+            "end": 1232.0,
+            "text": " What is the second. What is the third. And what came. This is my vibrate. Now."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1232.0,
+            "end": 1242.0,
+            "text": " I will write from. Sklearn. Matrix. Import. Accuracy score."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1244.0,
+            "end": 1254.0,
+            "text": " And I would write. Accuracy. Score. I will pass. Y test."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1254.0,
+            "end": 1264.0,
+            "text": " Or vibrate. My predictions. And you can see. It's already coming out. 97%."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1264.0,
+            "end": 1274.0,
+            "text": " Which is very good. If you remember. When we run machine learning algorithms. Like random forest. Or."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1274.0,
+            "end": 1284.0,
+            "text": " SVM etc. 95 96. If you are very good. Hyper parameter tuning. Here you did not do anything special."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1284.0,
+            "end": 1294.0,
+            "text": " And you have already reached 97%. In fact after this. We will read another neural network. Whose name is CNN. So when you read CNN."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1294.0,
+            "end": 1304.0,
+            "text": " Then you will notice there. That it does more good work. On image data. But that is not our topic right now. Now the question is."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1304.0,
+            "end": 1314.0,
+            "text": " Can we improve it a little bit? Can this accuracy be improved? Actually it can be done. There are multiple ways. You can change your architecture a little bit."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1314.0,
+            "end": 1324.0,
+            "text": " You can add more layers. Or you can increase. The number of nodes in existing layers. Also the training we have done. It is only on 10 epochs."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1324.0,
+            "end": 1334.0,
+            "text": " If you want. You can train it up to 100 epochs. You can see. So let's do one thing. Just to show you."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1334.0,
+            "end": 1344.0,
+            "text": " What I will do is. That we. Add one more layer. In which. 32 nodes."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1344.0,
+            "end": 1354.0,
+            "text": " So now we have. Hidden layers. And. One more thing we will do. If you take out the summary of the model again."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1354.0,
+            "end": 1364.0,
+            "text": " So now the parameters have obviously increased. Here. So we will not make any special changes. As it is. And epochs."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1364.0,
+            "end": 1374.0,
+            "text": " I am doing 25 for now. Because otherwise it will take a lot of time. Okay. And whatever is happening. We will store it in a variable called history."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1374.0,
+            "end": 1384.0,
+            "text": " So that later. Let's train our model. Let's train our model. And you can see guys. Our model has been trained."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1384.0,
+            "end": 1394.0,
+            "text": " We repeat all the work again. We calculated y probabilities. Calculated prediction from it. Calculated prediction from it. And again we took out the accuracy score."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1394.0,
+            "end": 1404.0,
+            "text": " Which has been reduced a little. So most likely. A little overfitting is happening here. So let's do one thing. We have a history object."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1404.0,
+            "end": 1414.0,
+            "text": " What we will do is. We will write this. Plt.plot. History. Dot."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1414.0,
+            "end": 1424.0,
+            "text": " History. We need loss from inside. This is training loss. You can see. As the epochs are increasing."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1424.0,
+            "end": 1434.0,
+            "text": " Your training loss is reducing. What about the validation loss? Let's see the validation loss. So if you write. Val loss."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1434.0,
+            "end": 1444.0,
+            "text": " You can see. It has increased after a point. It is increasing. And that is why. Our accuracy is getting worse."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1444.0,
+            "end": 1454.0,
+            "text": " If you do the same plot. If you do the same plot. On the accuracy. You will see a similar pattern. You will see a similar pattern."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1456.0,
+            "end": 1466.0,
+            "text": " Val. Accuracy. Okay. So this will be an error. It is obvious."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1466.0,
+            "end": 1476.0,
+            "text": " Because here. While compiling the model. In the matrix. Not told. What else do we have to track?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1476.0,
+            "end": 1486.0,
+            "text": " What else do we have to track? So if we write accuracy here. So then. And to train the model. We have to run things again."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1486.0,
+            "end": 1496.0,
+            "text": " We have to run things again. So let's run. This. This. And also this."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1504.0,
+            "end": 1514.0,
+            "text": " And now you can see. Along with that. Accuracy is also being tracked. Validation accuracy is also being tracked. Training accuracy is also being tracked."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1514.0,
+            "end": 1530.0,
+            "text": " And we will be able to plot its graph. And we will be able to plot its graph. And the training is complete. Let's run the next cells quickly. 97.55"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1530.0,
+            "end": 1540.0,
+            "text": " This is our loss plot. This is our loss plot. And now our accuracy plot will come. As you can see. As the epochs increase."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1540.0,
+            "end": 1552.0,
+            "text": " Our training accuracy. Has reached 100%. Whereas our. Validation accuracy is. Below 98."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1552.0,
+            "end": 1562.0,
+            "text": " So slight bit of. Overfitting is happening here. So there are ways to avoid overfitting. So there are ways to avoid overfitting. And we will move forward."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1562.0,
+            "end": 1572.0,
+            "text": " So regularization has become a technique. So regularization has become a technique. Apart from that, there are many other techniques. Apart from that, there are many other techniques. There will be a section where we will read."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1572.0,
+            "end": 1582.0,
+            "text": " How to improve the performance of a neural network. How to improve the performance of a neural network. We will read all these topics there. But at this point, our concern was. To show you."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1582.0,
+            "end": 1592.0,
+            "text": " How do you solve a multi-class classification problem. How do you solve a multi-class classification problem. With an artificial neural network. Now let's do one last thing. The predictions that have come to us."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1592.0,
+            "end": 1602.0,
+            "text": " Let's see how they are working. Let's see how they are working. So this is my X test data. So if I print the X test. So if I print the X test."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1602.0,
+            "end": 1614.0,
+            "text": " Here are all my test images. Here is my zeroth image. If I put this image in. If I put this image in. If I put this image in."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1614.0,
+            "end": 1626.0,
+            "text": " If I put this image in. Then it will show me. What is really in this photo. 7 is fine. Now what do we do?"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1626.0,
+            "end": 1636.0,
+            "text": " We would write model.predict. We would write model.predict. X test. Zero. Will reshape it to."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1636.0,
+            "end": 1646.0,
+            "text": " 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28"
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1646.0,
+            "end": 1656.0,
+            "text": " 1,28,28 1,28,28 1,28,28 1,28,28 Xs equals 1."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1656.0,
+            "end": 1666.0,
+            "text": " Xs equals 1. 7. 7. 7. 7."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1666.0,
+            "end": 1676.0,
+            "text": " 7. 7. 7. 7. 7."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1676.0,
+            "end": 1686.0,
+            "text": " 7. 7. 7. 7. 7."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1686.0,
+            "end": 1696.0,
+            "text": " 7. 7. 7. 7. 7."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1696.0,
+            "end": 1706.0,
+            "text": " 7. 7. 7. 7. 7."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1706.0,
+            "end": 1718.5,
+            "text": " 7. 7. So, if you have any suggestion for me then please write it in the comment. I will try to resolve that. Okay, that's it from my side."
+        },
+        {
+            "number": "12",
+            "title": "Handwritten Digit Classification using ANN | MNIST Dataset",
+            "start": 1718.5,
+            "end": 1720.5,
+            "text": " Thanks for watching. Bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, we are continuing our 100 days of deep learning course. So, we had studied these multilayer perceptrons. We had taken their basic intuition, we had studied their notation, and how does it have a prediction. We had covered these three videos. And after that we had to study how they are trained using back propagation. But then I decided that I will first show you some artificial neural networks on some real-world data sets using the Keras library. Because I believe that once you have seen the practical first, then it becomes a little easier to understand the theory of that thing. So, that is why I had picked up a real-world data set in the last video, customer churn prediction. And we had made a binary classification model on it, which was a ANN. Now, we are going to do something similar in today's video. Today, we will take a different data set, which is the very famous MNIST data set, where you will have a photograph of digits. And you will have to make a prediction as to which digit is there in that photo, from 0 to 9. Now, the reason to raise this problem is that this is a multi-class classification problem. It is not binary, it is multi-class. So, I have to show you how a multi-class classification problem is solved using ANN. So, today's video will be all about that. The end goal is not to reach the best accuracy. The end goal is to learn how to solve a multi-class classification problem using an ANN. Again, we will use the Keras library. And that's it for the introduction. Let's start the video. So, guys, as I told you that in this video, we will work on MNIST data set. What is MNIST data set? It's basically a collection of 70,000 images like this. We will have a photograph of many people's handwritten digits. Exactly 70,000 photographs. And you will see one digit in every photo that someone has written by hand. And his photo has been taken. These images are very low resolution images. As you can see, their resolution is only 28x28. Means 28 pixels in this direction and 28 pixels in this direction. Means in total, there are 784 pixel values in this image. Now what we have to do is we have to train the data on 70,000 images. And then we have to make a model. If you give a new image to it, it will tell you which digit is in that photo. Now this data set is very famous. If you have worked in machine learning, then I guess you must have got this data set to work. So we will make an ANN prediction on it. So the idea is very simple. In our neural network architecture, we will start with let's say this architecture where there will be 128 nodes. And then in the output, there would be 10 nodes. This will be the output layer. Now you might ask why there are 10 nodes here. Generally, we put only one. The reason for this is that this is a multi-class classification problem. Means the categories here are 0, 1, 2 to 9. There are 10 categories. So whenever we are working with multi-class classification problem, you put as many nodes in the output node as your classes are. And then you consider the highest probability of any of these as the output. So I will tell you that our initial architecture will be something like this. In our input layer, a total of 784 inputs will come. One input for each pixel. After that, it will go to our next layer. Hidden layer in which there will be 128 nodes. And then in the last, it will go to the output node where there will be 10 nodes. So you can already sense that this time there will be a lot of weights and biases. Like if you talk about this layer, then 784 multiplied by 128 plus 128. So many weights and biases will be here. If you talk about this one, then 128 multiplied by 10 plus 10 will be in this layer. If you want, you can introduce more hidden layers if you feel that your accuracy is not improving. But this is the problem. Like this is the summary. We have digits inside a photograph. We will extract the pixel value of this photograph. And we will send that pixel value to an input node. Which we will send to a hidden node. And then we will send it to our output. And whatever result will come, we will show it to the user. So now I will show you how our data is. So we will work in Google Colab. And here I have already imported these libraries. Now the good thing is that this MNIST dataset is so famous that Keras has already included it as a built-in dataset. So I don't need to bring it from anywhere. I just have to write this code, keras.datasets.mnist. And there is a function inside it, load data, which will provide you with a dataset in exactly this format. So X-Train and Y-Train will be separate. X-Test and Y-Test will be separate. So I don't have to do anything. I don't even have to split the train test. Now I will show you what is inside X-Train. So if you print X-Train. You would see that these are your images. So the data here is not in the form of actual images. It is in the form of pixel value. So what happened is that this X-Train is basically if you take out its shape. So you will find that this is a 3D array. Okay, this is a 3D array. Where you have 60,000 images of data. And what is every image? 28 by 28 NumPy array. If you remove the first item from it. So you will get. A NumPy array whose shape is. 28 by 28. You can see this. So this is our first image. And if you look at the first image. So in this way, here are your pixel values. This is your first row pixel. Which has 28 pixels. This is your second row pixel. Here are some pixels in the middle. And so on. So I can show you. Here we have stored pixels row wise. 28 pixels of the first row. Then 28 pixels of the second row. Then 28 pixels of the third row. And then 28 pixels of the 28th row. This is how this data is organized. Similarly, if I show you. What is in the X test? So you would see. This is also a 3D array. Whose shape is. 10,000 comma 28 comma 28. So it means in our training set. There are 60,000 images of data. In our test set. There are 10,000 sets of set of images. So now if I show you. What is in the Y train? Basically our labels are. Which digit is inside each image? You can see this. So the first image is ours. Inside the X train. There is 5 hidden in it. 0 in the second one. 4 in the third one. And so on. Now if I want. I can also convert this pixel value. In the image. What do I have to do for that? I will have to import. Matplotlib. And there is a function inside it. I am sure. What will I do in I am sure? X train. I will send the 0th item. And here is my output. See this. This is the first image. And you can see this is 5. Similarly, if I send the second image. You can see this is 0. As I showed you. If I send the third. It should be 4. Okay, so this is the whole setup. Now what do we have to do? We have to make a neural network architecture. What will happen with it? In which we will pass this data. And it will be a train. He will understand. What kind of pixel value. Which digit is it? Okay, we have to make this. But before making it. We will do one thing. If you take any image. The values in it. They are like this. Between 0 to 255. Okay, so we have to do the first thing. That we have our array. As in this array. It has to be between 0 to 1. All its values. Why am I saying this? Because whenever you train neural networks. The values are in a similar range. Your weights. Come out as soon as possible. And the convergence is fast. We will discuss this later. Why does this happen? But just understand at this point. It's very very important. That your numbers are in a similar range. So what will we do? We will divide all these values. 255 which is the maximum value. We will divide it. What will happen with it? The maximum value of 255. When you divide it. Your output will be 1. And your minimum value is 0. When you divide it by 255. Your value will be 0. So what will happen? All your pixel values. Will come in the range of 0 to 1. And we have to do that. So what I will do is. I would write this code. X train is equal to. X train divided by 255. Similarly I would write. X test divided by 255. And as soon as we run this operation. Our work is done. I can quickly show you. The zeroth item of X train. Basically the first photograph. In that all the values. Between 0 to 1. And this is what we wanted. Okay. Now what we have to do? We have to make our artificial neural network. So what do we have to do for that? It's very simple. We will start with. A model. Which will be a Keras. Sequential model. Okay. Now we will slowly add layers. In this sequential model. There is only one problem. The problem is. That the architecture. We have to make. In the first layer. 784. Pixels. We have to give the value of pixels. But what is the problem we have? That in this format there is data. 28 by 28. So what we have to do? This whole layer. We have to flatten it first. Basically your whole image. All its pixel values. In 2D. Like first row, second row, third row. It is organized in this way. What I have to do? Everyone has to bring it side by side. Next to it is the value of the second row. Next to it is the value of the third row. And in the same way. The value of the 28th row. From this shape. Will have to come in this shape. Okay. There is a very good way to do this. Flatten layer. There is a flatten layer in Keras. Which is higher dimensional. Converts it to 1D. Okay. I have already imported it. This time I have also imported the flatten in the layer. You have to simply write. Model dot add. Flatten layer. Okay. And in flatten you just have to tell one thing. That your input shape. Which you are getting data. What is its shape? In our case it is 28 by 28. What will it do automatically? It will convert your data. It will convert it to 1D. It will convert it to 784 inputs. Now what do you have to do? You have to write model dot add. And from here you will start normal work. You will add. Your first dense layer. Let's say it has 128 nodes. And the activation function. That is. Let's say value. Which most of the time. Performs best. Also, you do not need to tell in this layer. That how many inputs you are getting. It will automatically figure out. Because the output of flatten. Will get dense. Okay. And lastly, what do you have to do? You have to add your output layer. In which this time there are 10 nodes. Because you have 10. Output classes. And the activation function. That will be softmax this time. Always remember. Whenever you have more than one node. In the output. You will use softmax. For classification. Now again, all these activation functions. We will read in great detail. In the next videos. Now I just want to show you. How things are working. So this is the setup. This is the architecture. If we run this code. And then go to model dot summary. You can see. This is the summary of the model. So you can see. That first of all. There are no trainable parameters in the flattened layer. Because there is no training there. There you are simply. High dimension arrays. Converting to 1D. Then as soon as your layer came. First hidden layer. There are 100480 parameters. How did this calculation happen? I can show you. You are getting 784 inputs. And those inputs. Are going to 128 nodes. So this is the number. And total. 128 biases. So 100480. Total weights and biases. Similarly, if you talk. Between hidden layer and output layer. So there are 1290. Trainable parameters. It is very simple. There are 128 nodes in the hidden layer. There are 10 in the output. So these are our weights. Plus. 10 biases of the output layer. So that is why 1290. And on adding it. Total this time. Our neural network is being made. It has more than 100000. Weights and biases. And honestly it is not much. You will work with more weights and biases. In the future. So what we have to do. We have to compile our model. And train it. So that our model can learn. Which digit is formed. By which pixel pattern. So it is very simple. We will write model.compile. Here you have to tell. 2-3 things. First of all you have to tell. Our loss function. The loss function. We will use. Categorical. Cross. Entropy. In fact there is one more thing. Which we call. Categorical cross entropy. You also use this. You can do. But we will use sparse categorical. Cross entropy. The difference between the two is very small. The difference is that. In sparse categorical cross entropy. You don't have to. One hot encode. So what are our labels. 01234. Up to 9. We don't need to encode it. Whereas if you use. Categorical cross entropy. You have to encode your labels. One hot. So I will not do that. I will instead use. Sparse categorical cross entropy. Also. If you are not able to understand. What it is. Don't worry. We will do a video on this. Where I will discuss. All the famous loss functions. In deep learning. So you will understand. What is going on. This is our loss function. Our optimizer. Would be again Adam. You don't know at this point. What other optimizers are there. But let's assume. Is the best. And after being compiled. We have not compiled. We have compiled. So spelling mistake. This will not be L. Model will be compiled. And now if you run this code. Our model will be compiled. Now what we have to do. Train our model. So we would write model.fit. X train. Y train. Number of epochs. As in how many times. Our data will rotate. Our model. 10 times. Also let's take a validation split. Of point. Through the whole training data. We will randomly separate 20% rows. For validation purpose. And here is our model. Let's train this model. So you can see guys. Our model is trained. Our loss. Was quite high in the beginning. But slowly you can see. It started reducing. Now what I do. I do predictions. So the way to do predictions. Is very simple. You have to write this code. Model.predict. And here you have to pass. Your test. As soon as you pass your X test. What will it do. All your test images. And for every image. What is the probability of being 0. What is the probability of being 1. What is the probability of being 2. What is the probability of being 9. What is the probability of being 9. It will give you everything. Okay. It will do this for every image. For 10,000 images. We store it in a variable. Y probability. Okay. But we have to show in the output. That image is 1. Or 2 or 3. So what we have to do. For every array. We have to know. At which index position. The value is maximum. So the way to do it is very simple. You will write. Y probe. Dot argmax. Xs. Equals 1. And look at this. It is telling you. That the first test image. According to my model. According to my model. What is the second. What is the third. And what came. This is my vibrate. Now. I will write from. Sklearn. Matrix. Import. Accuracy score. And I would write. Accuracy. Score. I will pass. Y test. Or vibrate. My predictions. And you can see. It's already coming out. 97%. Which is very good. If you remember. When we run machine learning algorithms. Like random forest. Or. SVM etc. 95 96. If you are very good. Hyper parameter tuning. Here you did not do anything special. And you have already reached 97%. In fact after this. We will read another neural network. Whose name is CNN. So when you read CNN. Then you will notice there. That it does more good work. On image data. But that is not our topic right now. Now the question is. Can we improve it a little bit? Can this accuracy be improved? Actually it can be done. There are multiple ways. You can change your architecture a little bit. You can add more layers. Or you can increase. The number of nodes in existing layers. Also the training we have done. It is only on 10 epochs. If you want. You can train it up to 100 epochs. You can see. So let's do one thing. Just to show you. What I will do is. That we. Add one more layer. In which. 32 nodes. So now we have. Hidden layers. And. One more thing we will do. If you take out the summary of the model again. So now the parameters have obviously increased. Here. So we will not make any special changes. As it is. And epochs. I am doing 25 for now. Because otherwise it will take a lot of time. Okay. And whatever is happening. We will store it in a variable called history. So that later. Let's train our model. Let's train our model. And you can see guys. Our model has been trained. We repeat all the work again. We calculated y probabilities. Calculated prediction from it. Calculated prediction from it. And again we took out the accuracy score. Which has been reduced a little. So most likely. A little overfitting is happening here. So let's do one thing. We have a history object. What we will do is. We will write this. Plt.plot. History. Dot. History. We need loss from inside. This is training loss. You can see. As the epochs are increasing. Your training loss is reducing. What about the validation loss? Let's see the validation loss. So if you write. Val loss. You can see. It has increased after a point. It is increasing. And that is why. Our accuracy is getting worse. If you do the same plot. If you do the same plot. On the accuracy. You will see a similar pattern. You will see a similar pattern. Val. Accuracy. Okay. So this will be an error. It is obvious. Because here. While compiling the model. In the matrix. Not told. What else do we have to track? What else do we have to track? So if we write accuracy here. So then. And to train the model. We have to run things again. We have to run things again. So let's run. This. This. And also this. And now you can see. Along with that. Accuracy is also being tracked. Validation accuracy is also being tracked. Training accuracy is also being tracked. And we will be able to plot its graph. And we will be able to plot its graph. And the training is complete. Let's run the next cells quickly. 97.55 This is our loss plot. This is our loss plot. And now our accuracy plot will come. As you can see. As the epochs increase. Our training accuracy. Has reached 100%. Whereas our. Validation accuracy is. Below 98. So slight bit of. Overfitting is happening here. So there are ways to avoid overfitting. So there are ways to avoid overfitting. And we will move forward. So regularization has become a technique. So regularization has become a technique. Apart from that, there are many other techniques. Apart from that, there are many other techniques. There will be a section where we will read. How to improve the performance of a neural network. How to improve the performance of a neural network. We will read all these topics there. But at this point, our concern was. To show you. How do you solve a multi-class classification problem. How do you solve a multi-class classification problem. With an artificial neural network. Now let's do one last thing. The predictions that have come to us. Let's see how they are working. Let's see how they are working. So this is my X test data. So if I print the X test. So if I print the X test. Here are all my test images. Here is my zeroth image. If I put this image in. If I put this image in. If I put this image in. If I put this image in. Then it will show me. What is really in this photo. 7 is fine. Now what do we do? We would write model.predict. We would write model.predict. X test. Zero. Will reshape it to. 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28 1,28,28 Xs equals 1. Xs equals 1. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. 7. So, if you have any suggestion for me then please write it in the comment. I will try to resolve that. Okay, that's it from my side. Thanks for watching. Bye."
+}

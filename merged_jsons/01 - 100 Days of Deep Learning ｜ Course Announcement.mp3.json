@@ -1,0 +1,817 @@
+{
+    "chunks": [
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 0.0,
+            "end": 17.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, in this video, I am going to make an announcement. And the announcement is that I am going to start a new playlist on my channel by the name of 100 days of deep learning. So, those who have already come to my channel,"
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 17.0,
+            "end": 32.0,
+            "text": " they must know that last year I created a course for my channel called 100 days of machine learning. And after that, I got a lot of requests from your side that I should also create a course on deep learning. So, I tried."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 32.0,
+            "end": 50.0,
+            "text": " Last year, many times I thought that let's create a course on deep learning. But honestly, I was not able to create the course. The reason was that I found it difficult to explain deep learning on camera. Because deep learning is a bit difficult. So, I took some time."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 50.0,
+            "end": 65.0,
+            "text": " I taught some people offline. In fact, I tried to teach the kids the core ideas of deep learning. Basic principles. The whole idea was that I should be able to explain deep learning in a very simplified way. That was the idea."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 65.0,
+            "end": 84.0,
+            "text": " So, after 6-8 months of effort, I think now I am ready. To be able to explain and teach deep learning properly. Also, my NLP course is almost complete. 2 videos are left, but they also need deep learning. So, I thought that this is the right time to create this course."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 84.0,
+            "end": 95.0,
+            "text": " So, what will happen in the course? How will it happen? This video is made for that. If you watch this video till the end, then I will tell you first what curriculum we will follow."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 95.0,
+            "end": 112.0,
+            "text": " After that, what are the basic prerequisites? After that, what are the special features of this course? And lastly, I will also provide some extra content in this course. I will also tell you that during this video. So, I will share the screen."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 112.0,
+            "end": 125.0,
+            "text": " And we will start our conversation. So guys, let's start our discussion with curriculum. The most important thing is what we are going to study. Deep learning is very vast. And a lot of things come in deep learning."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 125.0,
+            "end": 142.0,
+            "text": " Because there are different types of neural networks. So, my idea in this course will be that I will cover the whole curriculum. So, I have done a lot of research in the process of making this curriculum. I myself have been working on deep learning for the past 4 years. So, I also had some idea."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 142.0,
+            "end": 160.0,
+            "text": " But despite this, I have referred many online courses. Referred a lot of books. And after that, I have made a curriculum. So, I can broadly divide our curriculum into 3-4 categories. The first category would be ANN."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 160.0,
+            "end": 171.0,
+            "text": " Artificial Neural Network. The simplest type of neural network. First of all, we will work on this. After that, we will shift our focus to CNNs. Convolutional Neural Networks."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 171.0,
+            "end": 186.0,
+            "text": " Basically, the neural networks that perform the best on image data. We will focus on them. After that, we will move on to RNNs. Which we call Recurrent Neural Networks. And they are used a lot for textual data."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 186.0,
+            "end": 202.0,
+            "text": " And after that, we will go towards Generative Models. We will discuss GANs. And we will discuss things like Autoencoders. Okay. And after that, we will come back and discuss a few topics."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 202.0,
+            "end": 226.0,
+            "text": " Like Object Detection. And let's say like Image Segmentation. So, I have divided this course into 5 parts. At this point, if you ask me. So, the things that we will cover in ANN."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 226.0,
+            "end": 242.0,
+            "text": " I have written it very elaborately in a document. I will show you the document. So, this is the document. You can see this whole course is divided into 5 parts. And this is the first part."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 242.0,
+            "end": 257.0,
+            "text": " Artificial Neural Network. And in this, we will spend a total of around 30-35 days. Out of 100 days. Okay. The idea would be that the most basic neural network."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 257.0,
+            "end": 268.0,
+            "text": " Artificial Neural Network. We read it very well. Because if you cover it once. Then you will have less trouble in the future neural networks. There will be trouble, but a little less."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 268.0,
+            "end": 279.0,
+            "text": " So, we will start with the absolute basics. You can see what is Deep Learning. What is Deep Learning vs Machine Learning. Why is Deep Learning famous today? What are the applications of Deep Learning?"
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 279.0,
+            "end": 285.0,
+            "text": " What are its types? History of Deep Learning. So, what will happen with this? You will get a little idea. You will get a little perspective."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 285.0,
+            "end": 296.0,
+            "text": " In the world of Deep Learning. Okay. After that, we will start with Perceptron. Okay. So, Perceptron is the building block of neural networks."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 296.0,
+            "end": 306.0,
+            "text": " It is said that Perceptron is the absolute unit of neural networks. Pick up any neural network. It is made up of Perceptron. Okay. So, what will we do?"
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 306.0,
+            "end": 314.0,
+            "text": " We will study Perceptron very well. We will first discuss what is a Perceptron? What is its relationship with Neuron? How is the prediction in it? How is the training in it?"
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 314.0,
+            "end": 328.0,
+            "text": " And then what is the problem in it? Because of which Multilayer Perceptrons as in Artificial Neural Networks were needed. Okay. So, after that, when we do this once. We will move towards MLP."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 328.0,
+            "end": 341.0,
+            "text": " Which we call Multilayer Perceptron. Or you can call it ANN. And in this, we will first take intuition. How do MLPs work? We will learn the notation of weights and biases in it."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 341.0,
+            "end": 351.0,
+            "text": " How is the prediction in it? We will see all this. After that, the most important topic of this entire course is. How to train a neural network? Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 351.0,
+            "end": 359.0,
+            "text": " So, here we will study some algorithms. Like Back Propagation, Gradient Descent. Okay. We will cover this. Once we have developed so much theory."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 359.0,
+            "end": 369.0,
+            "text": " After that, we will move on to the practical side. Okay. So, first of all, we will see the installation. Because installing the libraries of deep learning. I am talking about TensorFlow Keras."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 369.0,
+            "end": 378.0,
+            "text": " It is a little difficult. I will explain it in great detail. So that it can run on everyone's machine. After that, we will use the Keras library. We will see two examples."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 378.0,
+            "end": 391.0,
+            "text": " Because we have studied the basics. So, the first example will be on regression. And the second will be on classification. After that, when we have got some idea of both practical and theory. Now what we will do is."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 391.0,
+            "end": 405.0,
+            "text": " We will learn how to improve the performance of your neural network. Okay. So, we will learn a lot of concepts here. We will talk about exploding vanishing gradients. We will talk about dropout layers."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 405.0,
+            "end": 414.0,
+            "text": " How regularization is applied in neural networks. We will talk about that. After that, a lot of optimizers are used. Okay. You must have heard about it."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 414.0,
+            "end": 422.0,
+            "text": " We will talk about them. After that, there are 2-3 more advanced topics. Like gradient checking and clipping. And batch normalization. A very famous thing has been developed recently."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 422.0,
+            "end": 431.0,
+            "text": " And lastly, we will learn. How can we do hyperparameter tuning of our neural network. Okay. And after that, in the last. We will do some advanced topics."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 431.0,
+            "end": 440.0,
+            "text": " Okay. Like what are callbacks? Tensor board. How to use your feature in TensorFlow. How to work with a pre-trained model."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 440.0,
+            "end": 451.0,
+            "text": " So, we train the model ourselves. The second option is to use some other pre-trained model. To work with it. After that, we will work on Keras functional API. So, generally, when we start."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 451.0,
+            "end": 462.0,
+            "text": " We will work on sequential API. But I will also teach you how to work on functional API. Which is a little more flexible. Okay. After that, how to save and load Keras model."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 462.0,
+            "end": 479.0,
+            "text": " And lastly, we will make a deep learning application in Streamlet. And lastly, to conclude this whole section. I will do an end-to-end project. In which we will use all these concepts again. We will make a proper Streamlet application."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 479.0,
+            "end": 492.0,
+            "text": " And we will deploy it on AWS. Okay. So, these will be some 30-35 videos. Which will cover the whole section of ANN. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 492.0,
+            "end": 502.0,
+            "text": " After covering these 30-35 videos. Your foundation in deep learning. That will be very good. I don't think I have missed anything here. Any topic."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 502.0,
+            "end": 512.0,
+            "text": " If I did, then please write in the comments and tell me. And after that, we will move on to the next topics. We will start with CNN. Then RNN. Auto encoders."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 512.0,
+            "end": 523.0,
+            "text": " And finally, we will move on to object detection. Okay. So, my target is that I will make a video every alternate day. It is a little difficult to make a daily video. Because there are more commitments."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 523.0,
+            "end": 536.0,
+            "text": " I hope you understand. So, we will cover every alternate day. So, most likely by the end of March. To the beginning of April. We will complete the first section."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 536.0,
+            "end": 545.0,
+            "text": " And after that, I will show you. What we are going to study in CNN. And after completing CNN. What we are going to study in RNN. So, in making this whole course."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 545.0,
+            "end": 553.0,
+            "text": " I think. It will take at least 3-4 months. But I will make sure. This ANN part. Which is the most fundamental part."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 553.0,
+            "end": 560.0,
+            "text": " Which is asked the most. And you should know. That I will try to complete. Before 10th April. That is my mental goal."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 560.0,
+            "end": 567.0,
+            "text": " Okay. So, this is our discussion. Now, let's move on to. The second part of this video. Where we will discuss."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 567.0,
+            "end": 578.0,
+            "text": " What are the features of our course? Okay. What is the specialty of this course? According to me. So, the first specialty is."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 578.0,
+            "end": 591.0,
+            "text": " That. It is going to be a well-researched course. Okay. In the last one year. I have studied deep learning from many places."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 591.0,
+            "end": 598.0,
+            "text": " I have taught many people. And I have made sure. That you understand. Okay. So, first is well-researched."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 598.0,
+            "end": 606.0,
+            "text": " The content you will get. I will make sure. That it is not wrong in any way. Second. Easy to consume."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 606.0,
+            "end": 619.0,
+            "text": " It means. That I will shoot this whole playlist. That even if you are a beginner. Then you understand the concept. I take this very seriously."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 619.0,
+            "end": 628.0,
+            "text": " That whenever I teach something. That is a challenge that I take. That everyone should understand. So, I will also make sure. That everyone understands this course."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 628.0,
+            "end": 638.0,
+            "text": " Okay. The third thing is. It will be well-structured. Okay. I have planned in this way."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 638.0,
+            "end": 647.0,
+            "text": " To make this course. That it should be around 100 days. Complete. 500 sections. And in 100 days."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 647.0,
+            "end": 657.0,
+            "text": " You will understand the end-to-end machine learning. So, we are spending 30 days on ANN. It will take 20 days on CNN. It will take 20-25 days on RNN. And the remaining days."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 657.0,
+            "end": 667.0,
+            "text": " We will spend on object detection and GANs. So, the idea is to provide a well-structured course. So that there is no confusion. Because if the course is not well-structured. Then there is a little confusion."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 667.0,
+            "end": 674.0,
+            "text": " And then there is a problem in understanding. So, this is also a point. On which I will focus. That the content is very well-structured. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 674.0,
+            "end": 684.0,
+            "text": " Fourth. Mostly, I will be using. TensorFlow. Plus Keras. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 684.0,
+            "end": 693.0,
+            "text": " There was one more option. We could have used PyTorch. But I have noticed so much. That in the industry. Companies generally use Keras and TensorFlow more."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 693.0,
+            "end": 703.0,
+            "text": " In research-driven work. PyTorch is used. So, I will use Keras and TensorFlow. For this course. But in the future."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 703.0,
+            "end": 711.0,
+            "text": " Once this is over. Then we will do a little discussion on PyTorch. Okay. The fifth thing would be. We will do projects in between."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 711.0,
+            "end": 724.0,
+            "text": " So, deep learning will not only happen by reading. We will also have to do projects together. So, I will make sure. Whenever we hit a landmark. Let's say we read the whole ANN."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 724.0,
+            "end": 735.0,
+            "text": " So, we make a project on it. So, what will happen by making a project. Your whole conceptual clarity will come. Okay. So, I will try to import more and more projects."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 735.0,
+            "end": 744.0,
+            "text": " Into the playlist. So, after every section. I will try to do one end-to-end project. Okay. So, for now, these are the 4-5 features in my mind."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 744.0,
+            "end": 751.0,
+            "text": " And. Rest. You tell. If you have any feedback from your side. Which you want to add."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 751.0,
+            "end": 759.0,
+            "text": " I will definitely add it to the playlist. Now, let's discuss. What you should know. Before starting this course. What are the prerequisites?"
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 759.0,
+            "end": 770.0,
+            "text": " Okay. So, the first prerequisite. I will tell you. The first prerequisite is. You should know the basics of Python."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 770.0,
+            "end": 779.0,
+            "text": " Okay. Because. We will start assuming. That you know Python. I will use Python language in the course."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 779.0,
+            "end": 787.0,
+            "text": " And. I will assume that you know Python. If you don't know Python. Then you will have trouble understanding the code. So, that is the first assumption."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 787.0,
+            "end": 797.0,
+            "text": " Second. You should also know the basics. Of machine learning. If you don't know everything, it will work. But the overall flow."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 797.0,
+            "end": 806.0,
+            "text": " How is the model trained? How is the data prepared? How is it served? You should have a rough idea. For both of these things."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 806.0,
+            "end": 814.0,
+            "text": " If you want. You can follow my playlist. There is a playlist on my channel. 100 Days of Python Programming. Where you will get all these videos."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 814.0,
+            "end": 823.0,
+            "text": " If you do this much. Beyond that. You don't need to know in Python. Also, there is a playlist on my channel. As I said."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 823.0,
+            "end": 831.0,
+            "text": " 100 Days of Machine Learning. You can follow this. To learn the basics of machine learning. Okay. If you don't read everything, it will work."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 831.0,
+            "end": 837.0,
+            "text": " I am not saying. That you cover all the algorithms. But the basic funda. Of machine learning. To train a model."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 837.0,
+            "end": 843.0,
+            "text": " You should know that. Okay. So. All these things are done. Now, apart from this."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 843.0,
+            "end": 854.0,
+            "text": " The third thing. You should know. And that is. Linear Algebra. So."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 854.0,
+            "end": 860.0,
+            "text": " In deep learning. Linear algebra is used a lot. In fact. All your libraries. Fundamentally."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 860.0,
+            "end": 867.0,
+            "text": " Using linear algebra. It is made. So it will be very useful. You should have a little idea. About linear algebra."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 867.0,
+            "end": 877.0,
+            "text": " I would recommend you. To go to a channel called. 3blue1brown. This is a channel. They have a playlist."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 877.0,
+            "end": 887.0,
+            "text": " On linear algebra. I would recommend you. Watch its first 5 videos. So that you get a little idea. Like."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 887.0,
+            "end": 894.0,
+            "text": " Concepts that you have. How do matrices work. And what are your vectors. And how does your dot product work. You should know such things."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 894.0,
+            "end": 901.0,
+            "text": " Then it will look a little easy. Okay. Lastly. I will also try to provide you. Some extra content."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 901.0,
+            "end": 910.0,
+            "text": " During the course. So the first thing would be. After a few days. I will bring a proper. Deep learning roadmap for you."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 910.0,
+            "end": 917.0,
+            "text": " So even if you. Don't follow my course. This roadmap will help you. To read deep learning yourself. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 917.0,
+            "end": 926.0,
+            "text": " So I have to provide this to you. Second. I will make one or two videos. On deep learning. Project ideas."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 926.0,
+            "end": 936.0,
+            "text": " Many people ask me. That you are in the final year. Or you are building a portfolio. So what kind of projects should we add. So in the domain of deep learning."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 936.0,
+            "end": 944.0,
+            "text": " Whatever kind of projects you need. That kind of I. I will make a video and share it with you. Okay. Third."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 944.0,
+            "end": 951.0,
+            "text": " I will do projects. Full fledged projects. As I told you a little while ago. Fourth. When the course will be completed."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 951.0,
+            "end": 961.0,
+            "text": " In fact after every section. I will try to put interview. Preparation. As in interview questions. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 961.0,
+            "end": 967.0,
+            "text": " Interview questions. Which can be asked. On that section. Like we read ANN. So after ANN is complete."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 967.0,
+            "end": 975.0,
+            "text": " I will share top 30-40 questions with you. And. It will help you during the interview. Okay. Apart from this."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 975.0,
+            "end": 983.0,
+            "text": " If I get some ideas in between. So I will try to add them. So this is the entire thing. Which is in my mind now. And."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 983.0,
+            "end": 988.0,
+            "text": " We will start. From day after tomorrow. So. Next video. Will be on."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 989.0,
+            "end": 997.0,
+            "text": " Thursday. Okay. And then every alternate day. I will try to put up a video. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 997.0,
+            "end": 1003.0,
+            "text": " Goal is. 10th April. Around. We have to complete our first section. ANN completely."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1003.0,
+            "end": 1009.0,
+            "text": " And then we have to move. Towards CNN. By doing anything. This course. 3-4 months."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1009.0,
+            "end": 1016.0,
+            "text": " Will take easily. As I feel. But I guess. It is necessary to give so much time. To create a good course."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1016.0,
+            "end": 1021.0,
+            "text": " Okay. I hope you understand. In the middle. Issues of my commitment. May come."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1021.0,
+            "end": 1027.0,
+            "text": " I have to go to a college. To conduct a placement training. So. A little time can go in it. But again."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1027.0,
+            "end": 1032.0,
+            "text": " I will try. That the course should be completely consistent. Okay. So now. My full attention is on this."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1032.0,
+            "end": 1038.0,
+            "text": " That I have to complete the first section by 10th. Which will include. 30-35 days of. Video. So."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1038.0,
+            "end": 1043.0,
+            "text": " Yeah. That's it. From my side. I have a request from you. It will take a lot of effort."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1043.0,
+            "end": 1049.0,
+            "text": " In this course. I already know. So. I need a little help from your side. Help is that."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1049.0,
+            "end": 1056.0,
+            "text": " You. Please subscribe to the channel. I have seen that. I mean. People are coming."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1056.0,
+            "end": 1064.0,
+            "text": " People are watching videos. But they are not subscribing. If you are one of them. I am talking to you. Please subscribe."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1064.0,
+            "end": 1069.0,
+            "text": " I mean. It matters. I can only say this. It matters a lot for me. So."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1069.0,
+            "end": 1075.0,
+            "text": " If my content is helping you. So. Please help me. Okay. That's a request."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1075.0,
+            "end": 1080.0,
+            "text": " Second. Please like this video. This video. Please like it. As far as I have seen."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1080.0,
+            "end": 1085.0,
+            "text": " By being like. Content is pushed. On YouTube. More reach increases. More people reach."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1085.0,
+            "end": 1090.0,
+            "text": " So. I want. This course. To reach as many people as possible. And for that."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1090.0,
+            "end": 1095.0,
+            "text": " I need your help. Okay. So. Please like this video. If you like it."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1095.0,
+            "end": 1100.0,
+            "text": " So. Please like it. Will reach more people. And when we start the course. More people will be able to join."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1100.0,
+            "end": 1105.0,
+            "text": " From this course. Okay. So. That's it. From my side."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1105.0,
+            "end": 1110.0,
+            "text": " See you day after tomorrow. With the first video of this course. I hope you are excited. I am a lot. Okay."
+        },
+        {
+            "number": "1",
+            "title": "100 Days of Deep Learning | Course Announcement",
+            "start": 1110.0,
+            "end": 1114.0,
+            "text": " So. Let's go. Bye. Bye."
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So, in this video, I am going to make an announcement. And the announcement is that I am going to start a new playlist on my channel by the name of 100 days of deep learning. So, those who have already come to my channel, they must know that last year I created a course for my channel called 100 days of machine learning. And after that, I got a lot of requests from your side that I should also create a course on deep learning. So, I tried. Last year, many times I thought that let's create a course on deep learning. But honestly, I was not able to create the course. The reason was that I found it difficult to explain deep learning on camera. Because deep learning is a bit difficult. So, I took some time. I taught some people offline. In fact, I tried to teach the kids the core ideas of deep learning. Basic principles. The whole idea was that I should be able to explain deep learning in a very simplified way. That was the idea. So, after 6-8 months of effort, I think now I am ready. To be able to explain and teach deep learning properly. Also, my NLP course is almost complete. 2 videos are left, but they also need deep learning. So, I thought that this is the right time to create this course. So, what will happen in the course? How will it happen? This video is made for that. If you watch this video till the end, then I will tell you first what curriculum we will follow. After that, what are the basic prerequisites? After that, what are the special features of this course? And lastly, I will also provide some extra content in this course. I will also tell you that during this video. So, I will share the screen. And we will start our conversation. So guys, let's start our discussion with curriculum. The most important thing is what we are going to study. Deep learning is very vast. And a lot of things come in deep learning. Because there are different types of neural networks. So, my idea in this course will be that I will cover the whole curriculum. So, I have done a lot of research in the process of making this curriculum. I myself have been working on deep learning for the past 4 years. So, I also had some idea. But despite this, I have referred many online courses. Referred a lot of books. And after that, I have made a curriculum. So, I can broadly divide our curriculum into 3-4 categories. The first category would be ANN. Artificial Neural Network. The simplest type of neural network. First of all, we will work on this. After that, we will shift our focus to CNNs. Convolutional Neural Networks. Basically, the neural networks that perform the best on image data. We will focus on them. After that, we will move on to RNNs. Which we call Recurrent Neural Networks. And they are used a lot for textual data. And after that, we will go towards Generative Models. We will discuss GANs. And we will discuss things like Autoencoders. Okay. And after that, we will come back and discuss a few topics. Like Object Detection. And let's say like Image Segmentation. So, I have divided this course into 5 parts. At this point, if you ask me. So, the things that we will cover in ANN. I have written it very elaborately in a document. I will show you the document. So, this is the document. You can see this whole course is divided into 5 parts. And this is the first part. Artificial Neural Network. And in this, we will spend a total of around 30-35 days. Out of 100 days. Okay. The idea would be that the most basic neural network. Artificial Neural Network. We read it very well. Because if you cover it once. Then you will have less trouble in the future neural networks. There will be trouble, but a little less. So, we will start with the absolute basics. You can see what is Deep Learning. What is Deep Learning vs Machine Learning. Why is Deep Learning famous today? What are the applications of Deep Learning? What are its types? History of Deep Learning. So, what will happen with this? You will get a little idea. You will get a little perspective. In the world of Deep Learning. Okay. After that, we will start with Perceptron. Okay. So, Perceptron is the building block of neural networks. It is said that Perceptron is the absolute unit of neural networks. Pick up any neural network. It is made up of Perceptron. Okay. So, what will we do? We will study Perceptron very well. We will first discuss what is a Perceptron? What is its relationship with Neuron? How is the prediction in it? How is the training in it? And then what is the problem in it? Because of which Multilayer Perceptrons as in Artificial Neural Networks were needed. Okay. So, after that, when we do this once. We will move towards MLP. Which we call Multilayer Perceptron. Or you can call it ANN. And in this, we will first take intuition. How do MLPs work? We will learn the notation of weights and biases in it. How is the prediction in it? We will see all this. After that, the most important topic of this entire course is. How to train a neural network? Okay. So, here we will study some algorithms. Like Back Propagation, Gradient Descent. Okay. We will cover this. Once we have developed so much theory. After that, we will move on to the practical side. Okay. So, first of all, we will see the installation. Because installing the libraries of deep learning. I am talking about TensorFlow Keras. It is a little difficult. I will explain it in great detail. So that it can run on everyone's machine. After that, we will use the Keras library. We will see two examples. Because we have studied the basics. So, the first example will be on regression. And the second will be on classification. After that, when we have got some idea of both practical and theory. Now what we will do is. We will learn how to improve the performance of your neural network. Okay. So, we will learn a lot of concepts here. We will talk about exploding vanishing gradients. We will talk about dropout layers. How regularization is applied in neural networks. We will talk about that. After that, a lot of optimizers are used. Okay. You must have heard about it. We will talk about them. After that, there are 2-3 more advanced topics. Like gradient checking and clipping. And batch normalization. A very famous thing has been developed recently. And lastly, we will learn. How can we do hyperparameter tuning of our neural network. Okay. And after that, in the last. We will do some advanced topics. Okay. Like what are callbacks? Tensor board. How to use your feature in TensorFlow. How to work with a pre-trained model. So, we train the model ourselves. The second option is to use some other pre-trained model. To work with it. After that, we will work on Keras functional API. So, generally, when we start. We will work on sequential API. But I will also teach you how to work on functional API. Which is a little more flexible. Okay. After that, how to save and load Keras model. And lastly, we will make a deep learning application in Streamlet. And lastly, to conclude this whole section. I will do an end-to-end project. In which we will use all these concepts again. We will make a proper Streamlet application. And we will deploy it on AWS. Okay. So, these will be some 30-35 videos. Which will cover the whole section of ANN. Okay. After covering these 30-35 videos. Your foundation in deep learning. That will be very good. I don't think I have missed anything here. Any topic. If I did, then please write in the comments and tell me. And after that, we will move on to the next topics. We will start with CNN. Then RNN. Auto encoders. And finally, we will move on to object detection. Okay. So, my target is that I will make a video every alternate day. It is a little difficult to make a daily video. Because there are more commitments. I hope you understand. So, we will cover every alternate day. So, most likely by the end of March. To the beginning of April. We will complete the first section. And after that, I will show you. What we are going to study in CNN. And after completing CNN. What we are going to study in RNN. So, in making this whole course. I think. It will take at least 3-4 months. But I will make sure. This ANN part. Which is the most fundamental part. Which is asked the most. And you should know. That I will try to complete. Before 10th April. That is my mental goal. Okay. So, this is our discussion. Now, let's move on to. The second part of this video. Where we will discuss. What are the features of our course? Okay. What is the specialty of this course? According to me. So, the first specialty is. That. It is going to be a well-researched course. Okay. In the last one year. I have studied deep learning from many places. I have taught many people. And I have made sure. That you understand. Okay. So, first is well-researched. The content you will get. I will make sure. That it is not wrong in any way. Second. Easy to consume. It means. That I will shoot this whole playlist. That even if you are a beginner. Then you understand the concept. I take this very seriously. That whenever I teach something. That is a challenge that I take. That everyone should understand. So, I will also make sure. That everyone understands this course. Okay. The third thing is. It will be well-structured. Okay. I have planned in this way. To make this course. That it should be around 100 days. Complete. 500 sections. And in 100 days. You will understand the end-to-end machine learning. So, we are spending 30 days on ANN. It will take 20 days on CNN. It will take 20-25 days on RNN. And the remaining days. We will spend on object detection and GANs. So, the idea is to provide a well-structured course. So that there is no confusion. Because if the course is not well-structured. Then there is a little confusion. And then there is a problem in understanding. So, this is also a point. On which I will focus. That the content is very well-structured. Okay. Fourth. Mostly, I will be using. TensorFlow. Plus Keras. Okay. There was one more option. We could have used PyTorch. But I have noticed so much. That in the industry. Companies generally use Keras and TensorFlow more. In research-driven work. PyTorch is used. So, I will use Keras and TensorFlow. For this course. But in the future. Once this is over. Then we will do a little discussion on PyTorch. Okay. The fifth thing would be. We will do projects in between. So, deep learning will not only happen by reading. We will also have to do projects together. So, I will make sure. Whenever we hit a landmark. Let's say we read the whole ANN. So, we make a project on it. So, what will happen by making a project. Your whole conceptual clarity will come. Okay. So, I will try to import more and more projects. Into the playlist. So, after every section. I will try to do one end-to-end project. Okay. So, for now, these are the 4-5 features in my mind. And. Rest. You tell. If you have any feedback from your side. Which you want to add. I will definitely add it to the playlist. Now, let's discuss. What you should know. Before starting this course. What are the prerequisites? Okay. So, the first prerequisite. I will tell you. The first prerequisite is. You should know the basics of Python. Okay. Because. We will start assuming. That you know Python. I will use Python language in the course. And. I will assume that you know Python. If you don't know Python. Then you will have trouble understanding the code. So, that is the first assumption. Second. You should also know the basics. Of machine learning. If you don't know everything, it will work. But the overall flow. How is the model trained? How is the data prepared? How is it served? You should have a rough idea. For both of these things. If you want. You can follow my playlist. There is a playlist on my channel. 100 Days of Python Programming. Where you will get all these videos. If you do this much. Beyond that. You don't need to know in Python. Also, there is a playlist on my channel. As I said. 100 Days of Machine Learning. You can follow this. To learn the basics of machine learning. Okay. If you don't read everything, it will work. I am not saying. That you cover all the algorithms. But the basic funda. Of machine learning. To train a model. You should know that. Okay. So. All these things are done. Now, apart from this. The third thing. You should know. And that is. Linear Algebra. So. In deep learning. Linear algebra is used a lot. In fact. All your libraries. Fundamentally. Using linear algebra. It is made. So it will be very useful. You should have a little idea. About linear algebra. I would recommend you. To go to a channel called. 3blue1brown. This is a channel. They have a playlist. On linear algebra. I would recommend you. Watch its first 5 videos. So that you get a little idea. Like. Concepts that you have. How do matrices work. And what are your vectors. And how does your dot product work. You should know such things. Then it will look a little easy. Okay. Lastly. I will also try to provide you. Some extra content. During the course. So the first thing would be. After a few days. I will bring a proper. Deep learning roadmap for you. So even if you. Don't follow my course. This roadmap will help you. To read deep learning yourself. Okay. So I have to provide this to you. Second. I will make one or two videos. On deep learning. Project ideas. Many people ask me. That you are in the final year. Or you are building a portfolio. So what kind of projects should we add. So in the domain of deep learning. Whatever kind of projects you need. That kind of I. I will make a video and share it with you. Okay. Third. I will do projects. Full fledged projects. As I told you a little while ago. Fourth. When the course will be completed. In fact after every section. I will try to put interview. Preparation. As in interview questions. Okay. Interview questions. Which can be asked. On that section. Like we read ANN. So after ANN is complete. I will share top 30-40 questions with you. And. It will help you during the interview. Okay. Apart from this. If I get some ideas in between. So I will try to add them. So this is the entire thing. Which is in my mind now. And. We will start. From day after tomorrow. So. Next video. Will be on. Thursday. Okay. And then every alternate day. I will try to put up a video. Okay. Goal is. 10th April. Around. We have to complete our first section. ANN completely. And then we have to move. Towards CNN. By doing anything. This course. 3-4 months. Will take easily. As I feel. But I guess. It is necessary to give so much time. To create a good course. Okay. I hope you understand. In the middle. Issues of my commitment. May come. I have to go to a college. To conduct a placement training. So. A little time can go in it. But again. I will try. That the course should be completely consistent. Okay. So now. My full attention is on this. That I have to complete the first section by 10th. Which will include. 30-35 days of. Video. So. Yeah. That's it. From my side. I have a request from you. It will take a lot of effort. In this course. I already know. So. I need a little help from your side. Help is that. You. Please subscribe to the channel. I have seen that. I mean. People are coming. People are watching videos. But they are not subscribing. If you are one of them. I am talking to you. Please subscribe. I mean. It matters. I can only say this. It matters a lot for me. So. If my content is helping you. So. Please help me. Okay. That's a request. Second. Please like this video. This video. Please like it. As far as I have seen. By being like. Content is pushed. On YouTube. More reach increases. More people reach. So. I want. This course. To reach as many people as possible. And for that. I need your help. Okay. So. Please like this video. If you like it. So. Please like it. Will reach more people. And when we start the course. More people will be able to join. From this course. Okay. So. That's it. From my side. See you day after tomorrow. With the first video of this course. I hope you are excited. I am a lot. Okay. So. Let's go. Bye. Bye."
+}

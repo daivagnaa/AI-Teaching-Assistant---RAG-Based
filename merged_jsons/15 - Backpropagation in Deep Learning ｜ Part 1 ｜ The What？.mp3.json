@@ -1,0 +1,2259 @@
+{
+    "chunks": [
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 0.0,
+            "end": 22.0,
+            "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel So again, sorry for the delay in uploading the video The reason is that the next video in our deep learning playlist is backpropagation I was working on it And as you might already know that in deep learning, backpropagation is one of the most important topics"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 22.0,
+            "end": 39.0,
+            "text": " And this was a topic which I wanted to teach very well And I want to keep that content in front of you very flawlessly So that is why it is taking some time to create that content I hope you can understand So what happened was that I put a lot of research in it"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 39.0,
+            "end": 57.0,
+            "text": " And then I shot the video And the video became a little big It is not complete yet, some things are left So what I decided is that I will bring our topic of backpropagation in front of you in three parts So there will be three videos on backpropagation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 57.0,
+            "end": 76.0,
+            "text": " This is the first video I will tell you the structure of these three videos So I have decided that I will keep this topic in the format of what, how and why So I personally feel that if you want to understand anything So if you understand everything about it, what, how and why"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 76.0,
+            "end": 91.0,
+            "text": " Then you will understand that topic So I will use the same format to explain backpropagation Today's video will be called the what So what will you do in today's video You will understand what backpropagation is by watching today's video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 91.0,
+            "end": 103.0,
+            "text": " So I will explain you the basic algorithm I will show you a little maths With which you will understand An understanding will develop in your mind That what is backpropagation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 103.0,
+            "end": 117.0,
+            "text": " And how does it work After that, in the second video of this series I will make that video by saying the how In the how, I will take two data sets One regression data set and one classification data set"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 117.0,
+            "end": 131.0,
+            "text": " And I will take out all the maths from scratch in front of you I will solve all the expressions And then whatever maths will be made I will convert it in code and show So the second part would be the how part"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 131.0,
+            "end": 148.0,
+            "text": " Then the third part will be the why part So whatever doubts will come from what and how Why did this happen or why is this thing working like this So we will answer such questions in the third part Which would be the why part"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 148.0,
+            "end": 160.0,
+            "text": " So I hope you are able to understand what I am saying Now let's start today's video Where our goal is to understand What is backpropagation So let's start the video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 160.0,
+            "end": 174.0,
+            "text": " So let's go guys First of all, let's start with the official definition If you google backpropagation Then you will see this definition Or you will see this type of definition"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 174.0,
+            "end": 189.0,
+            "text": " Where it would be written Backpropagation short for backward propagation of errors Is an algorithm for supervised learning of artificial neural networks Using gradient descent Given an artificial neural network and an error function"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 189.0,
+            "end": 203.0,
+            "text": " The method calculates the gradient of the error function With respect to the neural network's weight Now I know after reading this definition for the first time If you are a beginner, then you feel a little scared What all complex things are written"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 203.0,
+            "end": 214.0,
+            "text": " So we will do one thing We will simplify this whole thing So if you ask me What is backpropagation Then I have a simple answer"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 214.0,
+            "end": 227.0,
+            "text": " I will tell you directly It is an algorithm Which is used to train neural networks That's it For me, this is the definition"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 227.0,
+            "end": 238.0,
+            "text": " Backpropagation is an algorithm Which is used to train simple neural networks For that matter, some complex neural networks Okay Now a question may arise in your mind"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 238.0,
+            "end": 250.0,
+            "text": " What is training? What is training a neural network? Let's take a small example Assume we are working on a data set Where students have CGPA"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 250.0,
+            "end": 259.0,
+            "text": " They have IQ value And we have to predict their package How many lakhs per annum Okay Now this data looks like this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 259.0,
+            "end": 270.0,
+            "text": " I am putting some example rows here Assume this is a student His CGPA is 8 His IQ is 80 And his package is 8 lakhs"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 270.0,
+            "end": 276.0,
+            "text": " This is 7's CGPA 70's IQ His package is 7 lakhs Okay Now what did I do"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 276.0,
+            "end": 287.0,
+            "text": " I have to solve this prediction problem Since this is a regression problem To solve this problem I made a neural network architecture This is the neural network architecture"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 287.0,
+            "end": 301.0,
+            "text": " It is a very simple neural network architecture Here are 3 perceptrons or neurons From here you will give the value of CGPA From here you will give the value of IQ And here you will get your prediction"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 301.0,
+            "end": 310.0,
+            "text": " Okay Now what happens is There are two things in neural network One is weights And the other is bias"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 310.0,
+            "end": 322.0,
+            "text": " So these edges you are seeing These are your weights And here is your bias Okay So when I am saying that"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 322.0,
+            "end": 339.0,
+            "text": " I have to train my neural network So I actually want to find the correct value of these weights and biases According to this data So if I come back now So the definition means"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 339.0,
+            "end": 351.0,
+            "text": " That back propagation is an algorithm Which trains neural networks Or in simple words So for a given data It finds out the value of weights and biases"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 351.0,
+            "end": 362.0,
+            "text": " The most optimum value For which your neural network Will give the best prediction on this data I hope you are understanding till here Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 362.0,
+            "end": 376.0,
+            "text": " Now the question is how How How exactly You will find the correct value of these weights and biases That is what we have to understand in this video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 377.0,
+            "end": 390.0,
+            "text": " Now guys before moving ahead I want to tell you one thing from the beginning That if you want to understand back propagation well Then you should know two topics from the beginning The first topic is gradient descent"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 390.0,
+            "end": 402.0,
+            "text": " Which is basically an optimization algorithm And the second topic is forward propagation What is forward propagation? This is basically a technique Which is used to make neural network predictions"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 402.0,
+            "end": 414.0,
+            "text": " You should know these two topics well Only then you will be able to understand more Which will be taught to you in this video Okay So I have covered these two topics on my channel"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 414.0,
+            "end": 426.0,
+            "text": " I will put the link of both of them in the description Your job is If you feel that you are not getting full confidence in these two Go and watch these two videos once After that watch this video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 426.0,
+            "end": 432.0,
+            "text": " Okay You will be able to appreciate more What I am teaching you Okay So let's go"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 432.0,
+            "end": 446.0,
+            "text": " Now let's learn How does back propagation work? We are seeing the working of back propagation Now what happens in back propagation It follows a series of steps"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 446.0,
+            "end": 456.0,
+            "text": " To find the correct value of weights and biases It follows a series of steps So what I am doing For a while I am writing my data here again"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 456.0,
+            "end": 465.0,
+            "text": " At this place IQ CGPA And LPA Here it comes"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 465.0,
+            "end": 471.0,
+            "text": " 80 60 70 120 8"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 471.0,
+            "end": 476.0,
+            "text": " 9 5 7 3 5"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 476.0,
+            "end": 481.0,
+            "text": " 8 11 Okay This is my data This is the data of 4 students"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 481.0,
+            "end": 490.0,
+            "text": " There are 4 students Also I would do one more thing For further discussion I am making this neural network again Because"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 491.0,
+            "end": 499.0,
+            "text": " It will be useful This is the neural network Also This is also a connection This is also a connection"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 499.0,
+            "end": 508.0,
+            "text": " From here you are sending IQ From here you are sending CGPA Okay Now I am doing one thing We are labeling these weights according to the notation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 508.0,
+            "end": 522.0,
+            "text": " This will be W1-1-1 This will be W1-1-2 This will be W1-2-1 And this will be W1-2-2 Basically here all are W1 weights"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 522.0,
+            "end": 534.0,
+            "text": " Okay Its bias will be B1-1 Its bias will be B1-2 This weight will be W2-1-1 And this will be W2-2-1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 534.0,
+            "end": 542.0,
+            "text": " This will be bias 2-1 2-1 And from here you will get your Y hat Okay It was necessary to do this labeling"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 542.0,
+            "end": 549.0,
+            "text": " So that we can do the work ahead Okay Let's go Now I will tell you step by step What happens"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 550.0,
+            "end": 560.0,
+            "text": " I will tell you the steps So what happens In step 1 You select A point"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 561.0,
+            "end": 572.0,
+            "text": " And basically you can say row Here we select a student So what you do You select your first student You hold this student"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 574.0,
+            "end": 580.0,
+            "text": " And what you do Its marks As in its CGPA And its IQ You put it in this neural network"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 581.0,
+            "end": 589.0,
+            "text": " Also before this you can say Step 0 is Initialize Weights And biases"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 589.0,
+            "end": 595.0,
+            "text": " Okay So There are different types of initializations Like Some people do"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 595.0,
+            "end": 605.0,
+            "text": " That weights And biases Give random values Some people do That weights"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 605.0,
+            "end": 612.0,
+            "text": " Give value of 1 And biases Give value of 0 So there are different Initialization techniques"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 612.0,
+            "end": 620.0,
+            "text": " And it also depends on them That how efficiently Back propagation will work But for today's video We are going to keep everything simple"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 620.0,
+            "end": 627.0,
+            "text": " So what I am doing That I am using this Initialization technique So when back propagation Will start"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 627.0,
+            "end": 634.0,
+            "text": " Here all the weights Their value Will be 1 And all the biases Their value"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 634.0,
+            "end": 639.0,
+            "text": " Will be 0 I have accepted this Okay Also One more thing"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 639.0,
+            "end": 644.0,
+            "text": " I forgot to tell That all these nodes In all of them The activation function That I have chosen"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 645.0,
+            "end": 655.0,
+            "text": " That is linear I have not used sigmoid anywhere Here also it is linear Here also it is linear And here it will be linear"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 656.0,
+            "end": 662.0,
+            "text": " Because This is a regression problem So you have to remember This setup Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 662.0,
+            "end": 668.0,
+            "text": " Now see First of all We initialized weights We initialized biases Now you"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 668.0,
+            "end": 677.0,
+            "text": " Catch your first student And you feed His data here Here Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 677.0,
+            "end": 683.0,
+            "text": " And what is your work Your initial Weight And value of bias Using them"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 684.0,
+            "end": 691.0,
+            "text": " You Predict That This student's LPA will be"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 691.0,
+            "end": 697.0,
+            "text": " This step You Forward Propagation You also say"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 697.0,
+            "end": 702.0,
+            "text": " Okay So what will happen Simple Dot product Will be"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 704.0,
+            "end": 709.0,
+            "text": " If you Have seen that video Forward propagation One Then you will know"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 709.0,
+            "end": 715.0,
+            "text": " This whole matrix And in the end Here You will get a number Which"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 715.0,
+            "end": 720.0,
+            "text": " Your neural network will feel That This child's LPA should be Since in the beginning"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 720.0,
+            "end": 725.0,
+            "text": " The weights They are Absolutely So this number Anything can come"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 725.0,
+            "end": 730.0,
+            "text": " Anything can come Okay Assume for a while Our number came Eighteen"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 730.0,
+            "end": 736.0,
+            "text": " Eighteen LPA Now if you see In the data Actually there are three"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 736.0,
+            "end": 742.0,
+            "text": " But since we Started with wrong weights Output came Eighteen You can actually"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 742.0,
+            "end": 747.0,
+            "text": " Calculate and see How much will come Okay But i am not doing Because the video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 747.0,
+            "end": 752.0,
+            "text": " Will be unnecessarily long So whatever it is In actual data Three lakh My neural network says"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 752.0,
+            "end": 757.0,
+            "text": " It should get 18 lakh Right So i know clearly That Mistake is happening"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 757.0,
+            "end": 765.0,
+            "text": " Now if you think So why is the mistake happening The mistake is only happening Because your Weights"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 765.0,
+            "end": 770.0,
+            "text": " And the biases Their value Is not right So what you have to do You have to"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 770.0,
+            "end": 776.0,
+            "text": " Somehow You have to remove Your error And according to that error You have to adjust"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 776.0,
+            "end": 781.0,
+            "text": " The value of these weights And biases Okay So what do you do In step 3"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 782.0,
+            "end": 791.0,
+            "text": " You choose A loss function You choose A loss function Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 791.0,
+            "end": 798.0,
+            "text": " Since this is Regression problem I will use MSE here What is MSE"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 798.0,
+            "end": 805.0,
+            "text": " Mean squared error Whose formula is this Y minus Y hat Whole square"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 806.0,
+            "end": 811.0,
+            "text": " Okay So now what i will do For this kid I will calculate Its loss"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 811.0,
+            "end": 818.0,
+            "text": " What will be its loss 3 minus 18 Whole square Which is"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 818.0,
+            "end": 824.0,
+            "text": " A big number Maybe 225 Okay So this is my Error"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 824.0,
+            "end": 831.0,
+            "text": " This is my error For this student Now what i have to do By using this error I have to explain"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 831.0,
+            "end": 836.0,
+            "text": " To my neural network That see You are making a mistake See how much mistake Is happening"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 836.0,
+            "end": 842.0,
+            "text": " And now you have to Adjust your weights And biases Based on this error Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 842.0,
+            "end": 847.0,
+            "text": " Now Think and see How this whole thing Will work Here the main"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 847.0,
+            "end": 852.0,
+            "text": " Thing is Back propagation That comes Look carefully So i will just erase this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 853.0,
+            "end": 859.0,
+            "text": " If you think carefully If you think carefully If you think carefully Then you will see That"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 859.0,
+            "end": 865.0,
+            "text": " What is loss Loss is basically Y minus Y hat Whole square"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 865.0,
+            "end": 870.0,
+            "text": " Basically Loss has two components One is Y And one is Y hat Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 870.0,
+            "end": 876.0,
+            "text": " Now what is Y Y is 3 The output of data Okay And what is Y hat"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 876.0,
+            "end": 881.0,
+            "text": " 18 Which is the prediction Of your neural network Now you have to Reduce the loss"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 882.0,
+            "end": 887.0,
+            "text": " You have to Reduce your error Right Now error Is made up of two things"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 887.0,
+            "end": 893.0,
+            "text": " Y and Y hat Can you change Y No You cannot change"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 893.0,
+            "end": 898.0,
+            "text": " Y because It is your ground truth It is your label It is in your data You cannot change"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 898.0,
+            "end": 904.0,
+            "text": " Y You can only change Y hat So it basically means If i have to reduce"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 904.0,
+            "end": 911.0,
+            "text": " Loss as an error I can change My Y hat Now it is possible That i have to increase"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 911.0,
+            "end": 916.0,
+            "text": " Y hat It is possible In this case It is clearly visible That my Y hat is 18"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 916.0,
+            "end": 921.0,
+            "text": " I have to reduce it It is also possible That my prediction Would have been 1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 921.0,
+            "end": 926.0,
+            "text": " In this case I have to increase My Y hat You are getting the idea Right"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 926.0,
+            "end": 931.0,
+            "text": " Now the question is That increasing Or reducing Y hat Depends on"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 931.0,
+            "end": 936.0,
+            "text": " Which thing Right We have to understand Increasing Or reducing"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 936.0,
+            "end": 941.0,
+            "text": " Y hat If you see This neural network You will immediately Understand"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 941.0,
+            "end": 946.0,
+            "text": " On which it depends If you see Y hat Is basically Output"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 946.0,
+            "end": 951.0,
+            "text": " From 2,1 What do you call The output of this node Y hat And how is the"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 951.0,
+            "end": 956.0,
+            "text": " Output of this node Calculated If you see How is O2,1 Calculated"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 956.0,
+            "end": 961.0,
+            "text": " This neuron In this You have 5 things This is the weight"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 961.0,
+            "end": 966.0,
+            "text": " Which Will be multiplied By the output Of this node W2"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 966.0,
+            "end": 971.0,
+            "text": " 1,1 Multiplied by O 1,1 Plus"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 971.0,
+            "end": 976.0,
+            "text": " This weight Will be multiplied By the output Of this node W2"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 976.0,
+            "end": 981.0,
+            "text": " 2,1 Multiplied by O 1,2 Plus"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 981.0,
+            "end": 986.0,
+            "text": " Its own Bias will be added B 2,1 Now since"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 986.0,
+            "end": 991.0,
+            "text": " There is no Activation function Here So that activation Function is not happening"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 991.0,
+            "end": 996.0,
+            "text": " Sigma of Z Is not happening Right Here Clearly"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 996.0,
+            "end": 1001.0,
+            "text": " I can see That I had to Minimize The loss For this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1001.0,
+            "end": 1006.0,
+            "text": " What I have to do I have to Change my Y hat Y hat"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1006.0,
+            "end": 1011.0,
+            "text": " Is O2,1 And If you focus On O2,1 Then it depends"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1011.0,
+            "end": 1016.0,
+            "text": " On 5 things It depends On W1,1 On O1,1 On W2,1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1016.0,
+            "end": 1021.0,
+            "text": " On O1,2 And On B2,1 So if I want to"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1021.0,
+            "end": 1026.0,
+            "text": " Make a chart Then see carefully This chart Will explain What is happening"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1026.0,
+            "end": 1031.0,
+            "text": " You have to Change L For that Which you Can also call"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1031.0,
+            "end": 1036.0,
+            "text": " O2,1 You have to Change this Now this thing Depends on"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1036.0,
+            "end": 1041.0,
+            "text": " 5 things On which O1,1 O1,2 W2,1,1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1041.0,
+            "end": 1046.0,
+            "text": " W2,2,1 And B2,1 Now if You talk"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1046.0,
+            "end": 1051.0,
+            "text": " About this Bias About this Weight And"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1051.0,
+            "end": 1056.0,
+            "text": " About this Weight You can Change these Very easily"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1056.0,
+            "end": 1061.0,
+            "text": " Right Bias Right But if you Talk about"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1061.0,
+            "end": 1066.0,
+            "text": " O1,2 And O1,1 Basically Talk about"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1066.0,
+            "end": 1071.0,
+            "text": " Output of This And Output of This"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1071.0,
+            "end": 1076.0,
+            "text": " Now these Are complex Things Let's talk About"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1076.0,
+            "end": 1081.0,
+            "text": " Its Output O1,1 How many Things"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1081.0,
+            "end": 1086.0,
+            "text": " It depends On Again It depends On 5"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1086.0,
+            "end": 1091.0,
+            "text": " Things It depends On CGPA It depends"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1091.0,
+            "end": 1096.0,
+            "text": " On This Weight W1,1,1 And"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1096.0,
+            "end": 1101.0,
+            "text": " It depends On This Weight W1,2,1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1101.0,
+            "end": 1106.0,
+            "text": " So I Will Write W1,1,1 W1,2,1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1106.0,
+            "end": 1111.0,
+            "text": " And It depends On Its Bias"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1111.0,
+            "end": 1116.0,
+            "text": " Which Is B2,1 I'm Sorry"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1117.0,
+            "end": 1122.0,
+            "text": " W1,1 Okay Similarly If you want You can write"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1122.0,
+            "end": 1127.0,
+            "text": " O1,2 Depends On Its Output"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1127.0,
+            "end": 1132.0,
+            "text": " Depends On Bias Weight CGPA"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1132.0,
+            "end": 1137.0,
+            "text": " IQ You can See This Complex"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1137.0,
+            "end": 1142.0,
+            "text": " Hierarchy So If I Want"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1142.0,
+            "end": 1147.0,
+            "text": " To Minimize Loss If I"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1147.0,
+            "end": 1152.0,
+            "text": " Want To Minimize Loss I"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1152.0,
+            "end": 1157.0,
+            "text": " Can Change These Five Things"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1157.0,
+            "end": 1162.0,
+            "text": " One Of Them Is Complex"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1162.0,
+            "end": 1167.0,
+            "text": " To Change It You Have"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1167.0,
+            "end": 1172.0,
+            "text": " To Go Back You Have"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1172.0,
+            "end": 1177.0,
+            "text": " To Go Back To Change"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1177.0,
+            "end": 1182.0,
+            "text": " These Weights And Bias So"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1182.0,
+            "end": 1187.0,
+            "text": " You Are Changing Things By"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1187.0,
+            "end": 1192.0,
+            "text": " Going Back So This Algorithm"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1192.0,
+            "end": 1197.0,
+            "text": " Is Back Propagation Okay Back"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1197.0,
+            "end": 1202.0,
+            "text": " Propagation Of Errors Because You"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1202.0,
+            "end": 1207.0,
+            "text": " Are Changing It So To"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1207.0,
+            "end": 1212.0,
+            "text": " Stop Your Errors You Have"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1212.0,
+            "end": 1217.0,
+            "text": " To Go Back To Change"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1217.0,
+            "end": 1222.0,
+            "text": " These Things So You Are"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1222.0,
+            "end": 1227.0,
+            "text": " Changing It Okay So This"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1227.0,
+            "end": 1232.0,
+            "text": " Algorithm Is Back Propagation So"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1232.0,
+            "end": 1275.0,
+            "text": " You have to apply this rule on all your weights and biases. Weight new is equal to weight old minus learning rate times partial derivative of your loss function with respect to the weight. You will use this update rule to update your weights as well as bias. This is the update rule for all your biases. I am summarizing here."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1275.0,
+            "end": 1293.0,
+            "text": " By the way, if you count the total weights and biases, here are 4 and here are 2. So, total weights are 6 and biases are 3. So, in total there are 9 trainable parameters. I am summarizing once again how this step will work."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1293.0,
+            "end": 1313.0,
+            "text": " You would start with a random value or some value of your weights and biases. I took the value of weights as 1 and biases as 0. After that, I will pick up my students one by one. I picked up my first student. I made a prediction for him using forward propagation."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1313.0,
+            "end": 1336.0,
+            "text": " I got a number. Now, I put it in the loss function and calculated the error for this point. Now, as soon as this error is calculated, I have to go back to my neural network and update the weights and biases in every layer one by one. How will that update?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1336.0,
+            "end": 1353.0,
+            "text": " Using this formula. Let me show you an example. Suppose you had to change O21 to minimize L. O21 depends on these 5 things. First of all, you will update this weight."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1353.0,
+            "end": 1380.0,
+            "text": " What will be the formula to update this weight? W211 nu would be W211's old value minus learning rate del of L as in partial derivative of L with respect to this. This will be the formula. Similarly, if I have to update this weight,"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1380.0,
+            "end": 1423.0,
+            "text": " then its formula will be W211's new value would be W211's old value minus learning rate times partial derivative of L with respect to W211. Similarly, if I have to update this bias, then its formula will be W211's new value would be W211's old value minus learning rate times partial derivative of L with respect to W211. Now, guess what? If you just focus on this, then you already have this value."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1423.0,
+            "end": 1433.0,
+            "text": " It is 1. We started with 1. I will also have a learning rate which is generally 0.1. Now, I just have to find this term. I don't have this term."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1433.0,
+            "end": 1452.0,
+            "text": " What is this term? This is the term. This is basically the derivative of Loss with respect to this particular weight. I have to find this. Everything depends on this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1452.0,
+            "end": 1467.0,
+            "text": " I have to find this. If you go back to the definition which I showed you in the beginning of the video, if you read it again, then you will understand. Given an artificial neural network and an error function, our loss function is mean squared error,"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1467.0,
+            "end": 1482.0,
+            "text": " the method calculates the gradient, partial derivative of the error function with respect to the neural network's weight. See, we are doing this. We are calculating the gradient of error function. See, who is called gradient? Gradient is called partial derivative."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1482.0,
+            "end": 1508.0,
+            "text": " Partial derivative is gradient. We are calculating the gradient of the error function. We are finding the derivative of our loss function with respect to all the weights. I hope you are understanding this. In short, I have to calculate these 9 derivatives."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1508.0,
+            "end": 1539.0,
+            "text": " I have the initial value. If I get the value of these derivatives, then this algorithm will be complete. And it will start working. Next, I am going to show you how you will calculate the derivative of your loss function for each of your weights and biases. So guys, in this video, our next target is to calculate these 9 derivatives."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1539.0,
+            "end": 1557.0,
+            "text": " We have to calculate the derivative of the loss function with respect to all the trainable parameters. So we will start with the first set. First, we will get this one. Basically, these are the 3 weights and biases. So see, this derivative will come out."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1557.0,
+            "end": 1581.0,
+            "text": " It is not that difficult. But I want to give you an intuition as to why we are after getting the derivative. The thing to understand is that I have to minimize the loss function. The loss function is depending on y hat. y hat is depending on w211, on this weight."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1581.0,
+            "end": 1600.0,
+            "text": " So why am I subtracting this? What am I getting from this quantity? It is very important to understand this. See, what are we getting? What you have to do is to understand the derivatives from the first principle."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1600.0,
+            "end": 1628.0,
+            "text": " See, whenever you subtract dy by dx, what does it mean? y is a quantity, x is also a quantity. You want to know that when there is a small change in x, then what change does y get? So if you plot x and y, that is why you get the slope of that quantity. Because you want to know that when you made a small change in x, then what change did y get?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1628.0,
+            "end": 1647.0,
+            "text": " This is the derivative. You might have read this in maths. So when I am being told to get the derivative of L with respect to derivative of weight 211, then I am being asked that when I am making small changes in this, then what change is coming in this quantity?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1647.0,
+            "end": 1666.0,
+            "text": " I have to subtract this. I guess you are understanding this. But if you understand this change, then you will see that w211 is not directly related to the loss. Means the change made in this will not be seen directly here. This is an indirect reflection."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1666.0,
+            "end": 1699.0,
+            "text": " Means when I will make a change in w211, then it will change y hat. And when there will be a change in y hat, then because of that there will be a change in L. I hope you are understanding this that you cannot directly subtract this. You cannot directly subtract this until you first subtract this. And then you multiply this in that."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1702.0,
+            "end": 1728.0,
+            "text": " So see what I am subtracting. First I am subtracting that by changing in w211, how much change is coming in y. And then I am subtracting that by changing in y, how much change is coming in L. So what I have done in front of you is called chain rule of differentiation. So listen carefully."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1728.0,
+            "end": 1751.0,
+            "text": " We want to subtract that by changing in this weight, how much change is coming in L. And for this what I have done is that I have broken it down. By weight change, how much is coming in y hat and by y hat, how much is coming in L. So now if we have to subtract this quantity, then for that we have to subtract these two quantities. So let's do one by one and subtract these two quantities."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1751.0,
+            "end": 1780.0,
+            "text": " First we will subtract this quantity. Now we already know that loss function is y minus y hat whole square. I am not using i notation, there is unnecessary confusion. As soon as you differentiate this, you will get 2 times y minus y hat. And then if you differentiate individually, you will get a minus 1."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1780.0,
+            "end": 1802.0,
+            "text": " So this is the output of this quantity. I hope you are understanding. Now we will subtract this. Now if you notice, this y hat is your O21. And you can write O21 in this way."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1802.0,
+            "end": 1833.0,
+            "text": " Let me write it once. You will write the output of this node as O11 times W211 plus its output O12 times W221 plus its bias B21. Now this differentiation is very simple. This term is only here. Everything else will be 0 and its answer will be O11."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1833.0,
+            "end": 1861.0,
+            "text": " Now you have these two things. So going by this logic, you can write del L by del W211 would be equal to minus 2 times y minus y hat times O11. We have calculated this first thing. This is done. This is done."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1861.0,
+            "end": 1875.0,
+            "text": " Now what will we do similarly? We will calculate this thing. Now if you understand this too, it is very simple. Your loss depends on y hat. y hat depends on 5 things."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1875.0,
+            "end": 1910.0,
+            "text": " One of them is W221. So when I am going to subtract this, I am actually asking that what will be the difference in loss if I make a small change in this weight? So you know what you will do. You will apply the chain rule again. And you will write del of L divided by del of W21 would be del of L del y hat times del of y hat times del of W221."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1910.0,
+            "end": 1924.0,
+            "text": " Now if you notice, this term was also common in the above one. And it is also common here. Now I just have to subtract this thing. How will this thing be subtracted? It is very simple."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1926.0,
+            "end": 1952.0,
+            "text": " This will be del of del W221. And here it will be O11, O12, W221 plus B21. Basically I have written the same thing here. Now this term is only here. So its answer will be O12."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1952.0,
+            "end": 1987.0,
+            "text": " So going by this logic, I can write del of L del W221 would be equal to minus 2 times y minus y hat O12. This was my second derivative. We have also calculated this one. Now we have to subtract for B. Again for B, this same rule will be applied that loss depends on y hat, y hat depends on B."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 1987.0,
+            "end": 2006.0,
+            "text": " So again you will write the same thing. I guess now you are noticing the pattern. B21 is equal to del of L del of y hat multiplied by del of y hat del of B21. This thing is again the same. We know its answer."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2006.0,
+            "end": 2026.0,
+            "text": " We just have to calculate this. And it is very easy to calculate this. Only this last term has B21 and nothing else with it. So its answer will be 1. And going by this logic, this will be minus 2 times y minus y hat."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2026.0,
+            "end": 2049.0,
+            "text": " And this is our next step. We have also subtracted this one. We have also subtracted this one. Now before subtracting the derivatives, I would like to attract your attention to this. That the formula we have derived for derivatives is so simple if you see."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2049.0,
+            "end": 2068.0,
+            "text": " So what we were doing, if you remember the flow, we started with the first student. We initialized for the first student. After that we took the first student and used its forward propagation to derive its prediction. Calculated the loss. And after that we came to update the weight."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2068.0,
+            "end": 2080.0,
+            "text": " So if you see the formula for updating the weight. So what is the formula? Like if you have to update this weight for the first student. So your formula is minus 2 times y. What is y?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2080.0,
+            "end": 2094.0,
+            "text": " The output of the first student. This one. This will be 3. Similarly, what is y hat for the first student? y hat is 18 which came here."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2094.0,
+            "end": 2113.0,
+            "text": " And what is O11? O11 is when we did forward propagation. So the output from this node is O11. So from forward propagation we will also get O11. So you can see that I have three numbers which I need to calculate."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2113.0,
+            "end": 2136.0,
+            "text": " So I will quickly calculate this derivative. So now we have to calculate the rest of the derivatives in the same way. Next we will calculate the derivative of L with respect to W111. This weight. So basically what we want to find out is that"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2138.0,
+            "end": 2155.0,
+            "text": " How much will be the change in L if we make a small change in this weight? If you make the hierarchy diagram then you will understand. I am writing here. L depends on y hat. y hat depends on five things."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2157.0,
+            "end": 2168.0,
+            "text": " y hat depends on five things. These two weights. This bias. And its output and its output. Now its output is O11."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2168.0,
+            "end": 2183.0,
+            "text": " This depends on five things. And one of them is weight. So again this is an indirect relationship. When you make a change in this then this will change. This will change."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2183.0,
+            "end": 2204.0,
+            "text": " And this will change. So you will write it like this. You will write del L by del y hat. del y hat divided by del O11. And del O11 will be this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2204.0,
+            "end": 2219.0,
+            "text": " Chain rule. Similarly if I want to find out this weight. So this will be del L by del W121. This will be on what? Everything is the same."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2219.0,
+            "end": 2240.0,
+            "text": " You will find out del L by del y hat. del y hat divided by del O11. del O11 divided by del W121. See this first part. This is the same in both."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2240.0,
+            "end": 2251.0,
+            "text": " This much is common. Okay. Now if you talk about bias again. This bias. So this output also depends on bias."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2251.0,
+            "end": 2270.0,
+            "text": " So I will write the same thing here again. del B11 would be equal to. Everything will be the same. First two. And then del O11 would be this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2270.0,
+            "end": 2283.0,
+            "text": " Again you can see this part is common. Just have to make changes in the last part. Okay. I guess you are understanding till here. Now we will do these two weights."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2283.0,
+            "end": 2295.0,
+            "text": " And this bias. Okay. So notice. Now it will come here. This y hat also depends on its output."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2295.0,
+            "end": 2304.0,
+            "text": " Which is O12. And this O12 also depends on five things. Okay. These two weights. Its bias."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2304.0,
+            "end": 2311.0,
+            "text": " And these two inputs. Okay. Like these two inputs were here too. Okay. So now if you put it again."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2311.0,
+            "end": 2323.0,
+            "text": " This. So this will happen. Del L. Del y hat. Then del y hat."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2323.0,
+            "end": 2337.0,
+            "text": " This time it will depend on this. Del O12. And del O12 will depend. On this weight. Del W112."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2337.0,
+            "end": 2357.0,
+            "text": " Okay. Similarly I can write. According to this weight. First two will be same. And this last one will just change."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2357.0,
+            "end": 2370.0,
+            "text": " And it will come here. W122. And now I just have to remove this bias. Again the first two will be same. Del L."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2370.0,
+            "end": 2379.0,
+            "text": " Del y hat. Del y hat. Del O12. Del O12. Del B12."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2379.0,
+            "end": 2390.0,
+            "text": " And if you notice. Then again. This thing is common. So if you focus on these six. Then how many derivatives do you have to remove totally."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2390.0,
+            "end": 2397.0,
+            "text": " You see. First of all you have to remove. Del L by. Del y hat. It is in all."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2397.0,
+            "end": 2402.0,
+            "text": " It is in this. It is in this. It is in this. It is in this. And it is in this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2402.0,
+            "end": 2407.0,
+            "text": " And guess what. It was in others also. You have removed this above. See this. You have removed this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2407.0,
+            "end": 2414.0,
+            "text": " Its value is this. So this. Is already calculated. I will come down. This is already done."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2414.0,
+            "end": 2422.0,
+            "text": " Okay. Second what I have to remove. This term. Del y hat. Del O11."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2422.0,
+            "end": 2431.0,
+            "text": " We have not removed this yet. We have to remove this. And apart from this. We have to remove these three things. This one."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2431.0,
+            "end": 2438.0,
+            "text": " This two. This three. Okay. Similarly you notice here. So this first one has been removed."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2438.0,
+            "end": 2446.0,
+            "text": " We have to remove this second one. Del y hat. Del O11. We have to remove this. And apart from this."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2446.0,
+            "end": 2451.0,
+            "text": " This last one. One. Two. Three. Okay."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2451.0,
+            "end": 2458.0,
+            "text": " So. It is very simple to remove this. Like if you notice. What will this be? I will remove one by one."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2458.0,
+            "end": 2465.0,
+            "text": " The video will be a little long. I know. But okay. Come on. It is also a matter of practice for you."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2465.0,
+            "end": 2474.0,
+            "text": " So y hat. How is it depending on O11? It is very simple. What is your y hat formula? What is the formula for its output?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2474.0,
+            "end": 2480.0,
+            "text": " We had written above. W. Two. One. One."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2480.0,
+            "end": 2485.0,
+            "text": " O11 plus. W2. Two. One. O."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2485.0,
+            "end": 2490.0,
+            "text": " Two. One. Plus. B. Two."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2490.0,
+            "end": 2496.0,
+            "text": " One. When you differentiate it from O11. This is the only term. Its answer will come. W2."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2496.0,
+            "end": 2501.0,
+            "text": " One. One. So its answer is W2. One. One."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2501.0,
+            "end": 2508.0,
+            "text": " Okay. Similarly. When you take out for this term. Here it will be two. Sorry."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2508.0,
+            "end": 2513.0,
+            "text": " Y hat. Del. O. One. Two."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2513.0,
+            "end": 2518.0,
+            "text": " Will take out. So you will write again. O. One. Two."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2518.0,
+            "end": 2523.0,
+            "text": " This whole term will be repeated. O11 plus. W2. Two. One."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2523.0,
+            "end": 2528.0,
+            "text": " O. Two. One. Plus. B."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2528.0,
+            "end": 2533.0,
+            "text": " Two. One. And now when you differentiate. It is only in this term. So its answer will come."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2533.0,
+            "end": 2538.0,
+            "text": " Two. Two. One. Okay. Now we have to do."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2538.0,
+            "end": 2543.0,
+            "text": " One by one. We have to take out this term. This term. This term. This term."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2543.0,
+            "end": 2549.0,
+            "text": " Okay. So we also take out these quickly. After that you can multiply. Like. This term will be."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2549.0,
+            "end": 2554.0,
+            "text": " Del. Let's make a diagram here again. This is the diagram. This term. This term."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2554.0,
+            "end": 2559.0,
+            "text": " This term. This term. This term. This term. This term."
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2559.0,
+            "end": 2581.0,
+            "text": " This term. This term. This term. Next we have to find out O11 with respect to this Basically we have to find out the output of this with respect to this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2581.0,
+            "end": 2595.0,
+            "text": " This is very simple How to calculate O11 O11 will be calculated as Iq times W111 plus Cgpa times This is the weight Iq is entering from here"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2595.0,
+            "end": 2615.0,
+            "text": " Cgpa is entering from here This weight is W121 plus its own bias B11 When you differentiate this This is the only term Everything else will be 0"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2615.0,
+            "end": 2631.0,
+            "text": " Iq value for the first student The student for whom you are updating Iq value of this student So basically I can write here I can write the value of Iq as XI1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2631.0,
+            "end": 2643.0,
+            "text": " I means Ith row And I can write this as XI2 Here also I means row If you are talking about the first student Then it will be X11"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2643.0,
+            "end": 2652.0,
+            "text": " And if you are talking about the second student Then it will be X21 It will increase in this way So I write in place of Iq XI1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2652.0,
+            "end": 2661.0,
+            "text": " Similarly when you take out the next term What is this? With respect to this With respect to this you also know That this will happen"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2661.0,
+            "end": 2672.0,
+            "text": " Simply XI2 Value of Cgpa And the third one Your bias term B11"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2672.0,
+            "end": 2684.0,
+            "text": " Basically with respect to its bias Sorry O11 with respect to B11 Will be 1 Because when you differentiate this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2684.0,
+            "end": 2694.0,
+            "text": " Then 1 will come So these three terms are done And when you Now when you differentiate these three See once"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2694.0,
+            "end": 2705.0,
+            "text": " W012 Its output depends on five things I want to find out How much it depends on this weight 12"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2705.0,
+            "end": 2716.0,
+            "text": " What will happen? Del of del W112 Its output depends on five things Iq times W112"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2716.0,
+            "end": 2728.0,
+            "text": " Plus Cgpa times Your weight W122 Plus its own bias So from here again you will get Iq"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2728.0,
+            "end": 2740.0,
+            "text": " Which you will call XI1 When you take out O12 With respect to O Then its value will come XI2 Cgpa"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2740.0,
+            "end": 2748.0,
+            "text": " And when you take out this Del B12 Then this will come 1 Okay So what can I do now?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2748.0,
+            "end": 2758.0,
+            "text": " I can write all these derivatives What I will do is I will erase a little here This whole term And the calculations I have done from below"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2758.0,
+            "end": 2765.0,
+            "text": " I will fill it here Okay See Like if I have to take this out So what will happen?"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2765.0,
+            "end": 2776.0,
+            "text": " Because of the first one Minus two times Y minus Y hat Then we calculated this middle one here This came"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2776.0,
+            "end": 2787.0,
+            "text": " W211 And this last one we Calculated below This came XI1 Then this will come"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2787.0,
+            "end": 2796.0,
+            "text": " Minus two times Y minus Y hat And Here also W211 Here will come XI2"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2796.0,
+            "end": 2804.0,
+            "text": " And this will be Minus two Y minus Y hat W211 These are our"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2804.0,
+            "end": 2820.0,
+            "text": " The remaining three answers Okay Similarly what can we do? You can write the answer here I am erasing this"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2820.0,
+            "end": 2840.0,
+            "text": " I will just remember these answers That this was Del of Y hat With respect to O12 So now this term will be"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2841.0,
+            "end": 2851.0,
+            "text": " Minus two times Y minus Y hat This is here W221 Times"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2851.0,
+            "end": 2859.0,
+            "text": " XI1 This will be Minus two times Y minus Y hat W221"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2859.0,
+            "end": 2865.0,
+            "text": " XI2 CGPA And this will be Minus two times Y minus Y hat"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2865.0,
+            "end": 2873.0,
+            "text": " W221 Times one These are your Remaining derivatives We have calculated 9 of 9 derivatives"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2873.0,
+            "end": 2886.0,
+            "text": " And I did this deliberately Because I want you to find patterns You have to understand patterns Here are our 9 derivatives Here are our 9 derivatives"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2886.0,
+            "end": 2892.0,
+            "text": " Here is 1 Here is 2 Here is 3 Here is 4 Here is 5"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2892.0,
+            "end": 2898.0,
+            "text": " Here is 6 Here is 7 8 And 9 If you analyze everyone"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2898.0,
+            "end": 2907.0,
+            "text": " Then you will know You have the value of all these You have the value of all these So what can you do Very easily"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2907.0,
+            "end": 2914.0,
+            "text": " You can go to your algorithm And you can apply these formulas Very easily Okay So what will we do now"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2914.0,
+            "end": 2923.0,
+            "text": " We have learned to calculate all the derivatives Now we will go back And once again We will repeat all these steps So guys let's go"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2923.0,
+            "end": 2932.0,
+            "text": " We have learned to calculate all the derivatives Now what we will do Once again We will repeat the backpropagation algorithm Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2932.0,
+            "end": 2942.0,
+            "text": " So this is the data In which there are 4 students And this is my neural network Where there are 9 trainable parameters How will backpropagation work"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2942.0,
+            "end": 2947.0,
+            "text": " First of all In step 0 What will you do First of all What will you do"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2947.0,
+            "end": 2957.0,
+            "text": " Your weights And biases By giving a value You will initialize Some people give this value randomly"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2958.0,
+            "end": 2965.0,
+            "text": " What we have done We have given 1 to all the weights And 0 to all the biases Simple way to initialize Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2965.0,
+            "end": 2973.0,
+            "text": " Because in the next video I am going to show you the calculation So I have used this method Okay Now what do you do in step 1"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2973.0,
+            "end": 2986.0,
+            "text": " You run a loop And you run the loop How many times First time All the students in your data"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2986.0,
+            "end": 2995.0,
+            "text": " Basically 4 times Now what you will do in the loop Every time You will pick up each student I am writing 1A here"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 2995.0,
+            "end": 3007.0,
+            "text": " What you will do here You will take 1 student And You will do forward propagation And from forward propagation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3007.0,
+            "end": 3016.0,
+            "text": " You will do prediction Of his salary LPA Okay You will get a number So here a prediction will come"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3016.0,
+            "end": 3027.0,
+            "text": " Assume 18 comes Now what you will do Now what you will do Using that prediction You will calculate the loss"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3030.0,
+            "end": 3035.0,
+            "text": " In our case MSC is the loss function So that would be Y minus Y hat"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3035.0,
+            "end": 3041.0,
+            "text": " Whole square Okay Now On the basis of that loss What you will do is"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3041.0,
+            "end": 3052.0,
+            "text": " You will adjust All the weights And biases Okay And this adjustment"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3052.0,
+            "end": 3060.0,
+            "text": " What will be its formula This gradient descent will be here And the formula will be The new value of all the weights That will be"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3060.0,
+            "end": 3068.0,
+            "text": " Old value Which was 1 and 0 Minus You will choose a learning rate Derivative of"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3068.0,
+            "end": 3077.0,
+            "text": " W Old And all these derivatives We have calculated We will put them in the equation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3077.0,
+            "end": 3086.0,
+            "text": " Basically in this step You have to do 9 times You have to do this step 9 times 1 for each weight and bias Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3086.0,
+            "end": 3095.0,
+            "text": " And then As you do You will get the new value of your weights Then you will go back here You will pick up the next student"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3095.0,
+            "end": 3105.0,
+            "text": " You will do prediction for him You will calculate the loss for him For him again with this formula You will change these weights and biases Then you will go to the next student"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3105.0,
+            "end": 3113.0,
+            "text": " You will calculate his LPA Again you will calculate the loss And you will change the weight Okay Then the last student will come"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3113.0,
+            "end": 3118.0,
+            "text": " For the last student Prediction Loss calculation And weight adjustment So what is happening every time"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3118.0,
+            "end": 3127.0,
+            "text": " Every time the next student comes My weights are changing And slowly Will move towards being right Now this whole work"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3127.0,
+            "end": 3137.0,
+            "text": " This whole work You will actually do this multiple times So what you will do On your data In multiple rounds"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3137.0,
+            "end": 3144.0,
+            "text": " You will run this whole operation Means above this You will run one more loop here Okay Now this loop can be 100 times"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3144.0,
+            "end": 3153.0,
+            "text": " Or it can be 1000 times Basically until the convergence does not come Convergence means Until your loss Is completely minimized"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3153.0,
+            "end": 3162.0,
+            "text": " Till then you have to run the outer loop And the number of times You run this outer loop This is called Epochs Basically you are giving your algorithm"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3162.0,
+            "end": 3171.0,
+            "text": " On your data Multiple chances Okay Then when it will run the second time Again the data of the first student will enter"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3171.0,
+            "end": 3178.0,
+            "text": " Again the data of the second will enter Again the data of the third will enter Again the data of the last will enter Will repeat again Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3178.0,
+            "end": 3188.0,
+            "text": " So this is the backpropagation algorithm Until the convergence does not come Convergence means Loss does not get minimized Means there was 8 here"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3188.0,
+            "end": 3197.0,
+            "text": " Until the answer of this child Does not come around 8 Till then you will keep doing this work So many times people do it 100 or 1000 times So the work happens automatically"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3197.0,
+            "end": 3205.0,
+            "text": " Okay So till then you have to do this Whole thing inside This algorithm is called Backpropagation"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3207.0,
+            "end": 3214.0,
+            "text": " This is called backpropagation Okay So I hope I was able to explain to you Now what we will do in the next video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3214.0,
+            "end": 3224.0,
+            "text": " That We will take a proper data set And after doing proper calculation on it We will get the answer And then we will convert it into a code"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3224.0,
+            "end": 3231.0,
+            "text": " And we will see that the code is really Reducing our loss Or not Okay This will be our next video"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3231.0,
+            "end": 3238.0,
+            "text": " The how So that was the video guys Backpropagation part 1 The what Okay"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3238.0,
+            "end": 3245.0,
+            "text": " I hope I was able to explain to you How backpropagation is working A lot of things are still left And we will cover that in the next 2 videos"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3245.0,
+            "end": 3253.0,
+            "text": " If you liked this video Then please like it And if you haven't subscribed to my channel Please do subscribe It matters"
+        },
+        {
+            "number": "15",
+            "title": "Backpropagation in Deep Learning | Part 1 | The What",
+            "start": 3253.0,
+            "end": 3258.0,
+            "text": " Okay So that's it from my side Let's meet in the next video Bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitesh and you are welcome to my YouTube channel So again, sorry for the delay in uploading the video The reason is that the next video in our deep learning playlist is backpropagation I was working on it And as you might already know that in deep learning, backpropagation is one of the most important topics And this was a topic which I wanted to teach very well And I want to keep that content in front of you very flawlessly So that is why it is taking some time to create that content I hope you can understand So what happened was that I put a lot of research in it And then I shot the video And the video became a little big It is not complete yet, some things are left So what I decided is that I will bring our topic of backpropagation in front of you in three parts So there will be three videos on backpropagation This is the first video I will tell you the structure of these three videos So I have decided that I will keep this topic in the format of what, how and why So I personally feel that if you want to understand anything So if you understand everything about it, what, how and why Then you will understand that topic So I will use the same format to explain backpropagation Today's video will be called the what So what will you do in today's video You will understand what backpropagation is by watching today's video So I will explain you the basic algorithm I will show you a little maths With which you will understand An understanding will develop in your mind That what is backpropagation And how does it work After that, in the second video of this series I will make that video by saying the how In the how, I will take two data sets One regression data set and one classification data set And I will take out all the maths from scratch in front of you I will solve all the expressions And then whatever maths will be made I will convert it in code and show So the second part would be the how part Then the third part will be the why part So whatever doubts will come from what and how Why did this happen or why is this thing working like this So we will answer such questions in the third part Which would be the why part So I hope you are able to understand what I am saying Now let's start today's video Where our goal is to understand What is backpropagation So let's start the video So let's go guys First of all, let's start with the official definition If you google backpropagation Then you will see this definition Or you will see this type of definition Where it would be written Backpropagation short for backward propagation of errors Is an algorithm for supervised learning of artificial neural networks Using gradient descent Given an artificial neural network and an error function The method calculates the gradient of the error function With respect to the neural network's weight Now I know after reading this definition for the first time If you are a beginner, then you feel a little scared What all complex things are written So we will do one thing We will simplify this whole thing So if you ask me What is backpropagation Then I have a simple answer I will tell you directly It is an algorithm Which is used to train neural networks That's it For me, this is the definition Backpropagation is an algorithm Which is used to train simple neural networks For that matter, some complex neural networks Okay Now a question may arise in your mind What is training? What is training a neural network? Let's take a small example Assume we are working on a data set Where students have CGPA They have IQ value And we have to predict their package How many lakhs per annum Okay Now this data looks like this I am putting some example rows here Assume this is a student His CGPA is 8 His IQ is 80 And his package is 8 lakhs This is 7's CGPA 70's IQ His package is 7 lakhs Okay Now what did I do I have to solve this prediction problem Since this is a regression problem To solve this problem I made a neural network architecture This is the neural network architecture It is a very simple neural network architecture Here are 3 perceptrons or neurons From here you will give the value of CGPA From here you will give the value of IQ And here you will get your prediction Okay Now what happens is There are two things in neural network One is weights And the other is bias So these edges you are seeing These are your weights And here is your bias Okay So when I am saying that I have to train my neural network So I actually want to find the correct value of these weights and biases According to this data So if I come back now So the definition means That back propagation is an algorithm Which trains neural networks Or in simple words So for a given data It finds out the value of weights and biases The most optimum value For which your neural network Will give the best prediction on this data I hope you are understanding till here Okay Now the question is how How How exactly You will find the correct value of these weights and biases That is what we have to understand in this video Now guys before moving ahead I want to tell you one thing from the beginning That if you want to understand back propagation well Then you should know two topics from the beginning The first topic is gradient descent Which is basically an optimization algorithm And the second topic is forward propagation What is forward propagation? This is basically a technique Which is used to make neural network predictions You should know these two topics well Only then you will be able to understand more Which will be taught to you in this video Okay So I have covered these two topics on my channel I will put the link of both of them in the description Your job is If you feel that you are not getting full confidence in these two Go and watch these two videos once After that watch this video Okay You will be able to appreciate more What I am teaching you Okay So let's go Now let's learn How does back propagation work? We are seeing the working of back propagation Now what happens in back propagation It follows a series of steps To find the correct value of weights and biases It follows a series of steps So what I am doing For a while I am writing my data here again At this place IQ CGPA And LPA Here it comes 80 60 70 120 8 9 5 7 3 5 8 11 Okay This is my data This is the data of 4 students There are 4 students Also I would do one more thing For further discussion I am making this neural network again Because It will be useful This is the neural network Also This is also a connection This is also a connection From here you are sending IQ From here you are sending CGPA Okay Now I am doing one thing We are labeling these weights according to the notation This will be W1-1-1 This will be W1-1-2 This will be W1-2-1 And this will be W1-2-2 Basically here all are W1 weights Okay Its bias will be B1-1 Its bias will be B1-2 This weight will be W2-1-1 And this will be W2-2-1 This will be bias 2-1 2-1 And from here you will get your Y hat Okay It was necessary to do this labeling So that we can do the work ahead Okay Let's go Now I will tell you step by step What happens I will tell you the steps So what happens In step 1 You select A point And basically you can say row Here we select a student So what you do You select your first student You hold this student And what you do Its marks As in its CGPA And its IQ You put it in this neural network Also before this you can say Step 0 is Initialize Weights And biases Okay So There are different types of initializations Like Some people do That weights And biases Give random values Some people do That weights Give value of 1 And biases Give value of 0 So there are different Initialization techniques And it also depends on them That how efficiently Back propagation will work But for today's video We are going to keep everything simple So what I am doing That I am using this Initialization technique So when back propagation Will start Here all the weights Their value Will be 1 And all the biases Their value Will be 0 I have accepted this Okay Also One more thing I forgot to tell That all these nodes In all of them The activation function That I have chosen That is linear I have not used sigmoid anywhere Here also it is linear Here also it is linear And here it will be linear Because This is a regression problem So you have to remember This setup Okay Now see First of all We initialized weights We initialized biases Now you Catch your first student And you feed His data here Here Okay And what is your work Your initial Weight And value of bias Using them You Predict That This student's LPA will be This step You Forward Propagation You also say Okay So what will happen Simple Dot product Will be If you Have seen that video Forward propagation One Then you will know This whole matrix And in the end Here You will get a number Which Your neural network will feel That This child's LPA should be Since in the beginning The weights They are Absolutely So this number Anything can come Anything can come Okay Assume for a while Our number came Eighteen Eighteen LPA Now if you see In the data Actually there are three But since we Started with wrong weights Output came Eighteen You can actually Calculate and see How much will come Okay But i am not doing Because the video Will be unnecessarily long So whatever it is In actual data Three lakh My neural network says It should get 18 lakh Right So i know clearly That Mistake is happening Now if you think So why is the mistake happening The mistake is only happening Because your Weights And the biases Their value Is not right So what you have to do You have to Somehow You have to remove Your error And according to that error You have to adjust The value of these weights And biases Okay So what do you do In step 3 You choose A loss function You choose A loss function Okay Since this is Regression problem I will use MSE here What is MSE Mean squared error Whose formula is this Y minus Y hat Whole square Okay So now what i will do For this kid I will calculate Its loss What will be its loss 3 minus 18 Whole square Which is A big number Maybe 225 Okay So this is my Error This is my error For this student Now what i have to do By using this error I have to explain To my neural network That see You are making a mistake See how much mistake Is happening And now you have to Adjust your weights And biases Based on this error Okay Now Think and see How this whole thing Will work Here the main Thing is Back propagation That comes Look carefully So i will just erase this If you think carefully If you think carefully If you think carefully Then you will see That What is loss Loss is basically Y minus Y hat Whole square Basically Loss has two components One is Y And one is Y hat Okay Now what is Y Y is 3 The output of data Okay And what is Y hat 18 Which is the prediction Of your neural network Now you have to Reduce the loss You have to Reduce your error Right Now error Is made up of two things Y and Y hat Can you change Y No You cannot change Y because It is your ground truth It is your label It is in your data You cannot change Y You can only change Y hat So it basically means If i have to reduce Loss as an error I can change My Y hat Now it is possible That i have to increase Y hat It is possible In this case It is clearly visible That my Y hat is 18 I have to reduce it It is also possible That my prediction Would have been 1 In this case I have to increase My Y hat You are getting the idea Right Now the question is That increasing Or reducing Y hat Depends on Which thing Right We have to understand Increasing Or reducing Y hat If you see This neural network You will immediately Understand On which it depends If you see Y hat Is basically Output From 2,1 What do you call The output of this node Y hat And how is the Output of this node Calculated If you see How is O2,1 Calculated This neuron In this You have 5 things This is the weight Which Will be multiplied By the output Of this node W2 1,1 Multiplied by O 1,1 Plus This weight Will be multiplied By the output Of this node W2 2,1 Multiplied by O 1,2 Plus Its own Bias will be added B 2,1 Now since There is no Activation function Here So that activation Function is not happening Sigma of Z Is not happening Right Here Clearly I can see That I had to Minimize The loss For this What I have to do I have to Change my Y hat Y hat Is O2,1 And If you focus On O2,1 Then it depends On 5 things It depends On W1,1 On O1,1 On W2,1 On O1,2 And On B2,1 So if I want to Make a chart Then see carefully This chart Will explain What is happening You have to Change L For that Which you Can also call O2,1 You have to Change this Now this thing Depends on 5 things On which O1,1 O1,2 W2,1,1 W2,2,1 And B2,1 Now if You talk About this Bias About this Weight And About this Weight You can Change these Very easily Right Bias Right But if you Talk about O1,2 And O1,1 Basically Talk about Output of This And Output of This Now these Are complex Things Let's talk About Its Output O1,1 How many Things It depends On Again It depends On 5 Things It depends On CGPA It depends On This Weight W1,1,1 And It depends On This Weight W1,2,1 So I Will Write W1,1,1 W1,2,1 And It depends On Its Bias Which Is B2,1 I'm Sorry W1,1 Okay Similarly If you want You can write O1,2 Depends On Its Output Depends On Bias Weight CGPA IQ You can See This Complex Hierarchy So If I Want To Minimize Loss If I Want To Minimize Loss I Can Change These Five Things One Of Them Is Complex To Change It You Have To Go Back You Have To Go Back To Change These Weights And Bias So You Are Changing Things By Going Back So This Algorithm Is Back Propagation Okay Back Propagation Of Errors Because You Are Changing It So To Stop Your Errors You Have To Go Back To Change These Things So You Are Changing It Okay So This Algorithm Is Back Propagation So You have to apply this rule on all your weights and biases. Weight new is equal to weight old minus learning rate times partial derivative of your loss function with respect to the weight. You will use this update rule to update your weights as well as bias. This is the update rule for all your biases. I am summarizing here. By the way, if you count the total weights and biases, here are 4 and here are 2. So, total weights are 6 and biases are 3. So, in total there are 9 trainable parameters. I am summarizing once again how this step will work. You would start with a random value or some value of your weights and biases. I took the value of weights as 1 and biases as 0. After that, I will pick up my students one by one. I picked up my first student. I made a prediction for him using forward propagation. I got a number. Now, I put it in the loss function and calculated the error for this point. Now, as soon as this error is calculated, I have to go back to my neural network and update the weights and biases in every layer one by one. How will that update? Using this formula. Let me show you an example. Suppose you had to change O21 to minimize L. O21 depends on these 5 things. First of all, you will update this weight. What will be the formula to update this weight? W211 nu would be W211's old value minus learning rate del of L as in partial derivative of L with respect to this. This will be the formula. Similarly, if I have to update this weight, then its formula will be W211's new value would be W211's old value minus learning rate times partial derivative of L with respect to W211. Similarly, if I have to update this bias, then its formula will be W211's new value would be W211's old value minus learning rate times partial derivative of L with respect to W211. Now, guess what? If you just focus on this, then you already have this value. It is 1. We started with 1. I will also have a learning rate which is generally 0.1. Now, I just have to find this term. I don't have this term. What is this term? This is the term. This is basically the derivative of Loss with respect to this particular weight. I have to find this. Everything depends on this. I have to find this. If you go back to the definition which I showed you in the beginning of the video, if you read it again, then you will understand. Given an artificial neural network and an error function, our loss function is mean squared error, the method calculates the gradient, partial derivative of the error function with respect to the neural network's weight. See, we are doing this. We are calculating the gradient of error function. See, who is called gradient? Gradient is called partial derivative. Partial derivative is gradient. We are calculating the gradient of the error function. We are finding the derivative of our loss function with respect to all the weights. I hope you are understanding this. In short, I have to calculate these 9 derivatives. I have the initial value. If I get the value of these derivatives, then this algorithm will be complete. And it will start working. Next, I am going to show you how you will calculate the derivative of your loss function for each of your weights and biases. So guys, in this video, our next target is to calculate these 9 derivatives. We have to calculate the derivative of the loss function with respect to all the trainable parameters. So we will start with the first set. First, we will get this one. Basically, these are the 3 weights and biases. So see, this derivative will come out. It is not that difficult. But I want to give you an intuition as to why we are after getting the derivative. The thing to understand is that I have to minimize the loss function. The loss function is depending on y hat. y hat is depending on w211, on this weight. So why am I subtracting this? What am I getting from this quantity? It is very important to understand this. See, what are we getting? What you have to do is to understand the derivatives from the first principle. See, whenever you subtract dy by dx, what does it mean? y is a quantity, x is also a quantity. You want to know that when there is a small change in x, then what change does y get? So if you plot x and y, that is why you get the slope of that quantity. Because you want to know that when you made a small change in x, then what change did y get? This is the derivative. You might have read this in maths. So when I am being told to get the derivative of L with respect to derivative of weight 211, then I am being asked that when I am making small changes in this, then what change is coming in this quantity? I have to subtract this. I guess you are understanding this. But if you understand this change, then you will see that w211 is not directly related to the loss. Means the change made in this will not be seen directly here. This is an indirect reflection. Means when I will make a change in w211, then it will change y hat. And when there will be a change in y hat, then because of that there will be a change in L. I hope you are understanding this that you cannot directly subtract this. You cannot directly subtract this until you first subtract this. And then you multiply this in that. So see what I am subtracting. First I am subtracting that by changing in w211, how much change is coming in y. And then I am subtracting that by changing in y, how much change is coming in L. So what I have done in front of you is called chain rule of differentiation. So listen carefully. We want to subtract that by changing in this weight, how much change is coming in L. And for this what I have done is that I have broken it down. By weight change, how much is coming in y hat and by y hat, how much is coming in L. So now if we have to subtract this quantity, then for that we have to subtract these two quantities. So let's do one by one and subtract these two quantities. First we will subtract this quantity. Now we already know that loss function is y minus y hat whole square. I am not using i notation, there is unnecessary confusion. As soon as you differentiate this, you will get 2 times y minus y hat. And then if you differentiate individually, you will get a minus 1. So this is the output of this quantity. I hope you are understanding. Now we will subtract this. Now if you notice, this y hat is your O21. And you can write O21 in this way. Let me write it once. You will write the output of this node as O11 times W211 plus its output O12 times W221 plus its bias B21. Now this differentiation is very simple. This term is only here. Everything else will be 0 and its answer will be O11. Now you have these two things. So going by this logic, you can write del L by del W211 would be equal to minus 2 times y minus y hat times O11. We have calculated this first thing. This is done. This is done. Now what will we do similarly? We will calculate this thing. Now if you understand this too, it is very simple. Your loss depends on y hat. y hat depends on 5 things. One of them is W221. So when I am going to subtract this, I am actually asking that what will be the difference in loss if I make a small change in this weight? So you know what you will do. You will apply the chain rule again. And you will write del of L divided by del of W21 would be del of L del y hat times del of y hat times del of W221. Now if you notice, this term was also common in the above one. And it is also common here. Now I just have to subtract this thing. How will this thing be subtracted? It is very simple. This will be del of del W221. And here it will be O11, O12, W221 plus B21. Basically I have written the same thing here. Now this term is only here. So its answer will be O12. So going by this logic, I can write del of L del W221 would be equal to minus 2 times y minus y hat O12. This was my second derivative. We have also calculated this one. Now we have to subtract for B. Again for B, this same rule will be applied that loss depends on y hat, y hat depends on B. So again you will write the same thing. I guess now you are noticing the pattern. B21 is equal to del of L del of y hat multiplied by del of y hat del of B21. This thing is again the same. We know its answer. We just have to calculate this. And it is very easy to calculate this. Only this last term has B21 and nothing else with it. So its answer will be 1. And going by this logic, this will be minus 2 times y minus y hat. And this is our next step. We have also subtracted this one. We have also subtracted this one. Now before subtracting the derivatives, I would like to attract your attention to this. That the formula we have derived for derivatives is so simple if you see. So what we were doing, if you remember the flow, we started with the first student. We initialized for the first student. After that we took the first student and used its forward propagation to derive its prediction. Calculated the loss. And after that we came to update the weight. So if you see the formula for updating the weight. So what is the formula? Like if you have to update this weight for the first student. So your formula is minus 2 times y. What is y? The output of the first student. This one. This will be 3. Similarly, what is y hat for the first student? y hat is 18 which came here. And what is O11? O11 is when we did forward propagation. So the output from this node is O11. So from forward propagation we will also get O11. So you can see that I have three numbers which I need to calculate. So I will quickly calculate this derivative. So now we have to calculate the rest of the derivatives in the same way. Next we will calculate the derivative of L with respect to W111. This weight. So basically what we want to find out is that How much will be the change in L if we make a small change in this weight? If you make the hierarchy diagram then you will understand. I am writing here. L depends on y hat. y hat depends on five things. y hat depends on five things. These two weights. This bias. And its output and its output. Now its output is O11. This depends on five things. And one of them is weight. So again this is an indirect relationship. When you make a change in this then this will change. This will change. And this will change. So you will write it like this. You will write del L by del y hat. del y hat divided by del O11. And del O11 will be this. Chain rule. Similarly if I want to find out this weight. So this will be del L by del W121. This will be on what? Everything is the same. You will find out del L by del y hat. del y hat divided by del O11. del O11 divided by del W121. See this first part. This is the same in both. This much is common. Okay. Now if you talk about bias again. This bias. So this output also depends on bias. So I will write the same thing here again. del B11 would be equal to. Everything will be the same. First two. And then del O11 would be this. Again you can see this part is common. Just have to make changes in the last part. Okay. I guess you are understanding till here. Now we will do these two weights. And this bias. Okay. So notice. Now it will come here. This y hat also depends on its output. Which is O12. And this O12 also depends on five things. Okay. These two weights. Its bias. And these two inputs. Okay. Like these two inputs were here too. Okay. So now if you put it again. This. So this will happen. Del L. Del y hat. Then del y hat. This time it will depend on this. Del O12. And del O12 will depend. On this weight. Del W112. Okay. Similarly I can write. According to this weight. First two will be same. And this last one will just change. And it will come here. W122. And now I just have to remove this bias. Again the first two will be same. Del L. Del y hat. Del y hat. Del O12. Del O12. Del B12. And if you notice. Then again. This thing is common. So if you focus on these six. Then how many derivatives do you have to remove totally. You see. First of all you have to remove. Del L by. Del y hat. It is in all. It is in this. It is in this. It is in this. It is in this. And it is in this. And guess what. It was in others also. You have removed this above. See this. You have removed this. Its value is this. So this. Is already calculated. I will come down. This is already done. Okay. Second what I have to remove. This term. Del y hat. Del O11. We have not removed this yet. We have to remove this. And apart from this. We have to remove these three things. This one. This two. This three. Okay. Similarly you notice here. So this first one has been removed. We have to remove this second one. Del y hat. Del O11. We have to remove this. And apart from this. This last one. One. Two. Three. Okay. So. It is very simple to remove this. Like if you notice. What will this be? I will remove one by one. The video will be a little long. I know. But okay. Come on. It is also a matter of practice for you. So y hat. How is it depending on O11? It is very simple. What is your y hat formula? What is the formula for its output? We had written above. W. Two. One. One. O11 plus. W2. Two. One. O. Two. One. Plus. B. Two. One. When you differentiate it from O11. This is the only term. Its answer will come. W2. One. One. So its answer is W2. One. One. Okay. Similarly. When you take out for this term. Here it will be two. Sorry. Y hat. Del. O. One. Two. Will take out. So you will write again. O. One. Two. This whole term will be repeated. O11 plus. W2. Two. One. O. Two. One. Plus. B. Two. One. And now when you differentiate. It is only in this term. So its answer will come. Two. Two. One. Okay. Now we have to do. One by one. We have to take out this term. This term. This term. This term. Okay. So we also take out these quickly. After that you can multiply. Like. This term will be. Del. Let's make a diagram here again. This is the diagram. This term. This term. This term. This term. This term. This term. This term. This term. This term. This term. Next we have to find out O11 with respect to this Basically we have to find out the output of this with respect to this This is very simple How to calculate O11 O11 will be calculated as Iq times W111 plus Cgpa times This is the weight Iq is entering from here Cgpa is entering from here This weight is W121 plus its own bias B11 When you differentiate this This is the only term Everything else will be 0 Iq value for the first student The student for whom you are updating Iq value of this student So basically I can write here I can write the value of Iq as XI1 I means Ith row And I can write this as XI2 Here also I means row If you are talking about the first student Then it will be X11 And if you are talking about the second student Then it will be X21 It will increase in this way So I write in place of Iq XI1 Similarly when you take out the next term What is this? With respect to this With respect to this you also know That this will happen Simply XI2 Value of Cgpa And the third one Your bias term B11 Basically with respect to its bias Sorry O11 with respect to B11 Will be 1 Because when you differentiate this Then 1 will come So these three terms are done And when you Now when you differentiate these three See once W012 Its output depends on five things I want to find out How much it depends on this weight 12 What will happen? Del of del W112 Its output depends on five things Iq times W112 Plus Cgpa times Your weight W122 Plus its own bias So from here again you will get Iq Which you will call XI1 When you take out O12 With respect to O Then its value will come XI2 Cgpa And when you take out this Del B12 Then this will come 1 Okay So what can I do now? I can write all these derivatives What I will do is I will erase a little here This whole term And the calculations I have done from below I will fill it here Okay See Like if I have to take this out So what will happen? Because of the first one Minus two times Y minus Y hat Then we calculated this middle one here This came W211 And this last one we Calculated below This came XI1 Then this will come Minus two times Y minus Y hat And Here also W211 Here will come XI2 And this will be Minus two Y minus Y hat W211 These are our The remaining three answers Okay Similarly what can we do? You can write the answer here I am erasing this I will just remember these answers That this was Del of Y hat With respect to O12 So now this term will be Minus two times Y minus Y hat This is here W221 Times XI1 This will be Minus two times Y minus Y hat W221 XI2 CGPA And this will be Minus two times Y minus Y hat W221 Times one These are your Remaining derivatives We have calculated 9 of 9 derivatives And I did this deliberately Because I want you to find patterns You have to understand patterns Here are our 9 derivatives Here are our 9 derivatives Here is 1 Here is 2 Here is 3 Here is 4 Here is 5 Here is 6 Here is 7 8 And 9 If you analyze everyone Then you will know You have the value of all these You have the value of all these So what can you do Very easily You can go to your algorithm And you can apply these formulas Very easily Okay So what will we do now We have learned to calculate all the derivatives Now we will go back And once again We will repeat all these steps So guys let's go We have learned to calculate all the derivatives Now what we will do Once again We will repeat the backpropagation algorithm Okay So this is the data In which there are 4 students And this is my neural network Where there are 9 trainable parameters How will backpropagation work First of all In step 0 What will you do First of all What will you do Your weights And biases By giving a value You will initialize Some people give this value randomly What we have done We have given 1 to all the weights And 0 to all the biases Simple way to initialize Okay Because in the next video I am going to show you the calculation So I have used this method Okay Now what do you do in step 1 You run a loop And you run the loop How many times First time All the students in your data Basically 4 times Now what you will do in the loop Every time You will pick up each student I am writing 1A here What you will do here You will take 1 student And You will do forward propagation And from forward propagation You will do prediction Of his salary LPA Okay You will get a number So here a prediction will come Assume 18 comes Now what you will do Now what you will do Using that prediction You will calculate the loss In our case MSC is the loss function So that would be Y minus Y hat Whole square Okay Now On the basis of that loss What you will do is You will adjust All the weights And biases Okay And this adjustment What will be its formula This gradient descent will be here And the formula will be The new value of all the weights That will be Old value Which was 1 and 0 Minus You will choose a learning rate Derivative of W Old And all these derivatives We have calculated We will put them in the equation Basically in this step You have to do 9 times You have to do this step 9 times 1 for each weight and bias Okay And then As you do You will get the new value of your weights Then you will go back here You will pick up the next student You will do prediction for him You will calculate the loss for him For him again with this formula You will change these weights and biases Then you will go to the next student You will calculate his LPA Again you will calculate the loss And you will change the weight Okay Then the last student will come For the last student Prediction Loss calculation And weight adjustment So what is happening every time Every time the next student comes My weights are changing And slowly Will move towards being right Now this whole work This whole work You will actually do this multiple times So what you will do On your data In multiple rounds You will run this whole operation Means above this You will run one more loop here Okay Now this loop can be 100 times Or it can be 1000 times Basically until the convergence does not come Convergence means Until your loss Is completely minimized Till then you have to run the outer loop And the number of times You run this outer loop This is called Epochs Basically you are giving your algorithm On your data Multiple chances Okay Then when it will run the second time Again the data of the first student will enter Again the data of the second will enter Again the data of the third will enter Again the data of the last will enter Will repeat again Okay So this is the backpropagation algorithm Until the convergence does not come Convergence means Loss does not get minimized Means there was 8 here Until the answer of this child Does not come around 8 Till then you will keep doing this work So many times people do it 100 or 1000 times So the work happens automatically Okay So till then you have to do this Whole thing inside This algorithm is called Backpropagation This is called backpropagation Okay So I hope I was able to explain to you Now what we will do in the next video That We will take a proper data set And after doing proper calculation on it We will get the answer And then we will convert it into a code And we will see that the code is really Reducing our loss Or not Okay This will be our next video The how So that was the video guys Backpropagation part 1 The what Okay I hope I was able to explain to you How backpropagation is working A lot of things are still left And we will cover that in the next 2 videos If you liked this video Then please like it And if you haven't subscribed to my channel Please do subscribe It matters Okay So that's it from my side Let's meet in the next video Bye"
+}

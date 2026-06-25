@@ -1,0 +1,1300 @@
+{
+    "chunks": [
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 0.0,
+            "end": 23.0,
+            "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So we are continuing our deep learning course and today is the third day. And as I told you in the last video that now the theory is complete, now we will move to the practical side. So from today we are starting actual deep learning. The things you have to study and learn."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 24.0,
+            "end": 45.0,
+            "text": " So we are going to start with Perceptron. Perceptron is the fundamental building block of Artificial Neural Network. So I think the story of deep learning should start from Perceptron. So first of all, we will focus on Perceptron and understand it in and out. After that, we will move to Multilayer Perceptron or you can say ANN."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 45.0,
+            "end": 60.0,
+            "text": " So it will take 2-3 videos to cover Perceptron. I have not shot it completely, so I have no idea. But I will tell you what topics we will cover. First of all, we will see the introduction of Perceptron. What is Perceptron?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 60.0,
+            "end": 78.0,
+            "text": " What is its geometric intuition? And we will run it in code. After that, we will learn how to train Perceptron. Because just like any other machine learning or deep learning algorithm, it also has training. And once we learn how it is trained,"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 78.0,
+            "end": 104.0,
+            "text": " after that I will tell you what was the problem in Perceptron, which stopped the growth of Perceptron and due to which Multilayer Perceptron was needed. And then we will start Multilayer Perceptron. So I honestly want to talk to you about this. Without studying Perceptron, don't study Multilayer Perceptron."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 104.0,
+            "end": 122.0,
+            "text": " It is very very important. Because once you learn to train a single Perceptron, then it is easy to understand how to train Multilayer Perceptron. Many people start directly with Multilayer Perceptron. I think that is not the right learning framework."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 122.0,
+            "end": 138.0,
+            "text": " So whatever it is, now that's it for the introduction. Let's start the video. Now you might ask what is Perceptron? So for starters, Perceptron is an algorithm. It is an algorithm."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 138.0,
+            "end": 160.0,
+            "text": " Like you must have read other algorithms. Like Linear Regression, Logistic Regression, SVM. In the same way, Perceptron is also an algorithm. And it is used for supervised machine learning. Supervised Machine Learning."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 160.0,
+            "end": 187.0,
+            "text": " It's just that the design of this algorithm is such that it automatically became a building block of deep learning. So that's why before studying deep learning, you should study Perceptron well. So what we will do is try to understand Perceptron very well in this section. So first of all, I will show you how Perceptron looks."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 187.0,
+            "end": 213.0,
+            "text": " What is its design? So you can see this is the design of Perceptron. So Perceptron is an algorithm, but you can also call it a mathematical model. You can call it a mathematical model. Or you can also call it a mathematical function."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 213.0,
+            "end": 229.0,
+            "text": " Which you have studied in function schools. Now look here. This is its model. I will explain one by one. So first I will explain to you what are the different parts."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 229.0,
+            "end": 249.0,
+            "text": " After that, I will explain to you how it works. So first of all, you take input from this side in Perceptron. You provide input. So this X1 and X2 are actually input. Now what is this 1? I will explain this after a while."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 249.0,
+            "end": 269.0,
+            "text": " Now these connections, your input and this block. We can also call it a summation block. Where things are added. So the connection between these blocks, we call them weights and biases. Like the W1 and W2 are weights."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 269.0,
+            "end": 284.0,
+            "text": " I am writing here. They are called weights. And this connection through 1, we call it a bias. That's why I represented it with a B. After that, things are added here."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 284.0,
+            "end": 290.0,
+            "text": " Things are added here. It is a summation. How is a summation? Dot product. So what will happen?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 290.0,
+            "end": 301.0,
+            "text": " We will multiply X1 and W1. W1 X1. Then we will multiply W2 and X2. W2 X2. Plus we will multiply B by 1."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 301.0,
+            "end": 310.0,
+            "text": " B. So here in this part, this operation is happening. This operation is happening. Okay. Let's call it Z."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 310.0,
+            "end": 325.0,
+            "text": " The output that is coming is called Z. And then you will send Z forward. Z will travel from here and go here. And this is called the activation function. Activation function."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 325.0,
+            "end": 336.0,
+            "text": " Okay. Now the work of the activation function is to bring your Z in a given range. Okay. Now that range can be anything. It can be minus 1 to 1."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 336.0,
+            "end": 346.0,
+            "text": " It can be 0 to 1. Or it can be something else. But the work of the activation function is to bring it in a kind of range. Because this number can be anything. This input can be anything."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 346.0,
+            "end": 358.0,
+            "text": " This weight can be anything. So this number can be anything. Now to bring this number in a range, you use a function. A mathematical function. Like a mathematical function can be a step function."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 358.0,
+            "end": 373.0,
+            "text": " What does the step function do? The graph of the step function is something like this. Okay. This is the graph of the step function. That if your X value is Z here."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 373.0,
+            "end": 388.0,
+            "text": " If your Z value is greater than 0, then the output will be 1. If Z value is less than 0, then the output will be 0. Okay. So this is an activation function. There are other activation functions like this."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 388.0,
+            "end": 402.0,
+            "text": " There is a function called Relu. Tanh. And you will read many more activation functions like this. But now we just know that this is the block of the activation function. Okay."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 402.0,
+            "end": 413.0,
+            "text": " So that's it guys. This is the entire design. You are providing input from here. You are providing input from here. You call them weights."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 413.0,
+            "end": 430.0,
+            "text": " You call this one bias. Here things are added. Using this formula dot product. And then it moves forward towards the activation function. And whatever the output is, let's say in this case."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 430.0,
+            "end": 442.0,
+            "text": " In the function case, you receive 0 or 1 from here. Okay. So this is the mathematical design. Now how is this whole design used? Let me explain that to you."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 442.0,
+            "end": 456.0,
+            "text": " So for now, let's take a small problem. We are solving a problem in machine learning. Let's say we have some students' data. Let's say we have 1000 students' data. What is the data?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 456.0,
+            "end": 470.0,
+            "text": " We have the IQ of the students. Means what is the IQ of each student? And what is the CGPA in their college? And then we have this data that their placement was done or not. Placed one or not."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 470.0,
+            "end": 477.0,
+            "text": " So, for example, the data of a student can be something like this. 78. 7. 8. 1."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 477.0,
+            "end": 486.0,
+            "text": " Means the IQ of this student is 78. CGPA is 7.8 and its placement is done. One can be 69. 5. 1."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 486.0,
+            "end": 495.0,
+            "text": " 0. Okay. So let's say we are solving this problem. That we have to make a predictor. We have to make a model."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 495.0,
+            "end": 510.0,
+            "text": " And when we give this data to that model. So he will learn from this data. And in the future, if we provide the IQ and CGPA of a student. So this model will predict whether it will have a placement or not. Okay."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 510.0,
+            "end": 525.0,
+            "text": " So what happens is that if you want to solve it, let's say. Using perceptron. So there are two stages. Clearly, like in any machine learning algorithm. The first stage is training."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 527.0,
+            "end": 541.0,
+            "text": " And the second stage is prediction. So this is the model of perceptron. In this too, you will do both things. First you will train it. Then you will use it for prediction."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 541.0,
+            "end": 555.0,
+            "text": " Okay. So I will explain to you roughly how training is done. So what do you do for training? That you pick up every student one by one. And send it here."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 555.0,
+            "end": 564.0,
+            "text": " Okay. Now here for every student. What will happen to x1? Its IQ value. And what will happen to x2?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 564.0,
+            "end": 575.0,
+            "text": " Its CGPA value. Okay. So if we talk about the first student. So what will we do? First of all, we will send 78 here."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 575.0,
+            "end": 590.0,
+            "text": " And we will send 7.8 here. Okay. And we know that we will calculate its output. And since we already know that the output should be 1. Depending on what is coming out."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 590.0,
+            "end": 603.0,
+            "text": " We will train this model. Okay. Basically, the idea is very simple. What do you have to do in this whole process? That you have to find the value of W and B."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 603.0,
+            "end": 618.0,
+            "text": " The core objective of this whole learning process. Is that you find the value of W2, W1 and B. That is the whole idea. Okay. How to find it?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 618.0,
+            "end": 628.0,
+            "text": " How to train the perceptron? We will study all this later. For now, just understand this. I will easily summarize it once. That by using this training data."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 628.0,
+            "end": 641.0,
+            "text": " You calculate the value of W1, W2 and B. Okay. Once you calculate the value of W1, W2 and B. After training. Then you can make a prediction."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 641.0,
+            "end": 651.0,
+            "text": " How? I will tell you. Assume that the value of W1 is 1. And the value of W2 is 2. And the value of B is 3. You calculated this from training."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 651.0,
+            "end": 663.0,
+            "text": " Now you have a new student. His GPA is 5.1. And his IQ is 100. And now you are told. Use this perceptron."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 663.0,
+            "end": 676.0,
+            "text": " To predict whether this child will be placed or not. So what will you do? You will pass 100 in X1. Because this new child has an IQ of 100. And you will pass 5.1 in X2."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 676.0,
+            "end": 688.0,
+            "text": " Now what will you do? You will combine both. So 100. Multiplied by W1. Plus 5.1."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 688.0,
+            "end": 700.0,
+            "text": " Multiplied by 2. Plus the value of B is 3. Multiplied by 1. Okay, you will calculate this. This is your Z."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 700.0,
+            "end": 711.0,
+            "text": " So this will come 100. Plus 10.2. Plus 3. So 113.2. Now you will pass this Z."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 711.0,
+            "end": 723.0,
+            "text": " In the activation function. Since the value of Z is greater than or equal to 0. You will say. This child will be placed. If this Z would have been negative."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 723.0,
+            "end": 734.0,
+            "text": " Then you would have said. This child will not be placed. So now I just showed you. How to predict from perceptron. To predict from perceptron."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 734.0,
+            "end": 746.0,
+            "text": " These weights. And the value of this bias should be known. And how will the value of these weights and bias be known? In the process of training. And to do training."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 746.0,
+            "end": 758.0,
+            "text": " You need data. As you need in other algorithms. Now this thing I told you while walking very easily. We will discuss this whole thing in great detail. Going ahead."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 758.0,
+            "end": 775.0,
+            "text": " When we will learn its training process very well. But for now this was a small introduction. What is perceptron? Now this question may come to your mind. What if I have more than two input columns?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 775.0,
+            "end": 785.0,
+            "text": " Like IQ and CGPA. Two input columns. What if I have one more input column? Which state is that child from? Maharashtra."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 785.0,
+            "end": 794.0,
+            "text": " West Bengal. Which state is this? This is also an input. So how will your perceptron look? It is very simple."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 794.0,
+            "end": 803.0,
+            "text": " All the input columns you have. You will provide that much X. So what will you do? You will take one more input here. X3."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 803.0,
+            "end": 815.0,
+            "text": " And this connection. You will call it W3. Now how will Z be calculated? Z will be W1 X1. Plus W2 X2."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 815.0,
+            "end": 827.0,
+            "text": " Plus W3. I'm sorry. Plus W3 X3. Plus B. So as you increase the input columns."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 827.0,
+            "end": 838.0,
+            "text": " You will provide more inputs. That's it. There is no change in the rest of the model. So I hope this thing is clear to you. Now we will talk about one more point of discussion."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 838.0,
+            "end": 853.0,
+            "text": " And that is. It is said about deep learning. That deep learning is heavily inspired. By our own nervous system. The way the nervous system of humans works."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 853.0,
+            "end": 865.0,
+            "text": " Deep learning also works in the same way. So we have to discuss this point. We will discuss. That a perceptron. The perceptron we just read."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 865.0,
+            "end": 878.0,
+            "text": " How is it compared to a single neuron? Okay. So look at this image once. There are two things in this image. You have a perceptron on the right-hand side."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 878.0,
+            "end": 888.0,
+            "text": " Pause the video once. Just make sure you understand the perceptron. It is exactly the same. There are multiple inputs. How many inputs can be here?"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 888.0,
+            "end": 898.0,
+            "text": " A weight is assigned for each input. And the last input is 1. And you are calling its weight W0. We called it B. Okay."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 898.0,
+            "end": 905.0,
+            "text": " Here is the summation. And here is the step function. And here is the output. It is exactly the same thing. And the entity on the left side."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 905.0,
+            "end": 918.0,
+            "text": " It is called a neuron. So if you have read a little bit of elementary biology. Then you will know there. That your nervous system. It is basically a collection of billions of neurons."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 918.0,
+            "end": 927.0,
+            "text": " The neuron is your building block. Of your nervous system. Okay. And this is on the screen. This is a neuron."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 927.0,
+            "end": 934.0,
+            "text": " A single neuron. Okay. What happens in the neuron? First of all, it is a cell. Okay."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 934.0,
+            "end": 944.0,
+            "text": " It is a biological cell. So there is a nucleus. This part is nucleus. Where the most important things are going on. This part where you can see."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 944.0,
+            "end": 952.0,
+            "text": " I don't know. It looks like the roots of a tree. These are called dendrites. Input comes from here. Okay."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 952.0,
+            "end": 961.0,
+            "text": " Input comes from here. Some calculations run here. And the output goes out from here. Okay. This thing."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 961.0,
+            "end": 971.0,
+            "text": " This thick thing. This is called axon. So keep in mind that. Input comes from dendrites. Output comes from axon."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 971.0,
+            "end": 978.0,
+            "text": " And all the internal calculations. Are done in this nucleus. Okay. So in a way if you compare. Side by side."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 978.0,
+            "end": 988.0,
+            "text": " So you can see that there is a little similarity. Meaning you can say that. The perceptron is inspired. By biological neurons. Because here you can see."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 988.0,
+            "end": 999.0,
+            "text": " That this part. You can roughly compare it. With dendrites. The nucleus. You can roughly compare it."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 999.0,
+            "end": 1007.0,
+            "text": " With these two blocks. And your axon. The output. You can compare it. With this output."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1007.0,
+            "end": 1014.0,
+            "text": " Which is going ahead. Which is coming out. Okay. Now. The neurons are connected to each other."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1014.0,
+            "end": 1024.0,
+            "text": " To make the nervous system. Similarly, a lot of perceptrons. Make a neural network. We will see this later. At this point, I just had to explain to you."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1024.0,
+            "end": 1034.0,
+            "text": " That there is a little inspiration. Whoever made the perceptron. Rosenblatt. He has taken a little inspiration. From biological neurons."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1034.0,
+            "end": 1044.0,
+            "text": " But it is wrong to say. That it is exactly the same. Or exactly. Based on neurons. There is a little inspiration."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1044.0,
+            "end": 1054.0,
+            "text": " If you talk about the differences. There are a lot of differences. Okay, I will tell you one by one. Differences. So the first point of difference."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1054.0,
+            "end": 1064.0,
+            "text": " Between neurons and perceptrons. Neurons are very complex. If you think about it. How many inputs. Millions of inputs come."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1064.0,
+            "end": 1074.0,
+            "text": " And what happens internally. No one knows. And then this output. Goes to many other neurons. So it is a very complex structure."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1074.0,
+            "end": 1084.0,
+            "text": " What we have made. Or what we are using. It is not so complex. It is actually simple. It is a little inspired."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1084.0,
+            "end": 1094.0,
+            "text": " But it is very simple. The second point of difference. What is the calculation inside this nucleus. Based on which the output comes out. I have no idea."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1094.0,
+            "end": 1104.0,
+            "text": " What is going on inside this nucleus. I don't know anything. Some complex electrochemical reactions are going on. But our nucleus. There are only two operations inside it."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1104.0,
+            "end": 1114.0,
+            "text": " One is the summation. The other is the step function. At least in this perceptron. This is a very simple mathematical function. The internal processing."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1114.0,
+            "end": 1124.0,
+            "text": " In the case of neurons. It is unknown. Some sort of electrochemical reaction. Whereas in the perceptron. It is a very simple function."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1124.0,
+            "end": 1134.0,
+            "text": " You can see it by plotting it. The processing stage. That is also different. Third. There is a concept of."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1134.0,
+            "end": 1144.0,
+            "text": " Neuroplasticity. What is neuroplasticity? Your dendrites. These connections. Similarly these connections."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1144.0,
+            "end": 1154.0,
+            "text": " Their thickness changes over time. This thickness. It keeps changing. It can be thicker. The connection of the showing is very strong."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1154.0,
+            "end": 1164.0,
+            "text": " Or it can be very thin. Or it can be very weak. Or it can end. There is no connection. Or new connections can be formed."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1164.0,
+            "end": 1174.0,
+            "text": " This is called neuroplasticity. Whenever you are young. Learning new skills. These connections keep forming. Whereas in our."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1174.0,
+            "end": 1184.0,
+            "text": " Perceptron model. These connections. They don't change. They never change. This is also a big point of difference."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1184.0,
+            "end": 1194.0,
+            "text": " This is also a big point of difference. Neuroplasticity. Neuroplasticity. Neuroplasticity. I wanted to tell you two things."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1194.0,
+            "end": 1204.0,
+            "text": " I wanted to tell you two things. First. Perceptron is. Weakly inspired. Design element."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1204.0,
+            "end": 1214.0,
+            "text": " Design element. I would say. It is inspired. It is copied. It is copied."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1214.0,
+            "end": 1224.0,
+            "text": " It is copied. It is copied. It is copied. It is copied. It is copied."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1224.0,
+            "end": 1234.0,
+            "text": " It is copied. It is copied. It is copied. It is copied. It is copied."
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1234.0,
+            "end": 1253.0,
+            "text": " It is copied. It is copied. It is copied. It has a very beautiful interpretation, so the example we had taken that In the example, we got the data of the IQ and CGPA of the student and its"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1253.0,
+            "end": 1279.0,
+            "text": " We also knew whether the placement was done or not, now let's say we have Based on this data, we trained this perceptron and let's say we have The value of these weights and biases has come, let's say the value of W1 is 2 The value of W2 is 4 and the value of bias is 1, let's say for now Now I will tell you an interpretation about these weights, what do these weights tell you"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1279.0,
+            "end": 1320.0,
+            "text": " So these weights are actually telling the strength of these connections How strong is the connection between X1 and your model Or in a way you can say that IQ will enter from here and CGPA will enter from here So you can say that whether the student will have a placement or not The most important factor in deciding this is CGPA in comparison to IQ"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1320.0,
+            "end": 1356.0,
+            "text": " Why did I say this because the weight of CGPA is more than the weight of IQ In fact it is 2 times, so you can say that whether a student will have a placement or not CGPA is more important factor in comparison to IQ So these weights tell you which input is more important and which is less important So I just wanted to tell you that you can draw an interpretation from this"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1356.0,
+            "end": 1392.0,
+            "text": " That the weights tell you the feature importance Now what does this bias do, we have not discussed it yet, we will do it in the future So guys now we will see the geometric intuition of Perceptron Basically geometric intuition means that you want to visualize the working of that algorithm And I believe that if you see any machine learning algorithm working visually"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1392.0,
+            "end": 1424.0,
+            "text": " Then it becomes easy to understand that algorithm So Perceptron we just saw is a very simple model Basically you have two operations, this is summation and this is let's say step function operation Let's draw it a little better So this is summation and this is let's say activation function"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1424.0,
+            "end": 1457.0,
+            "text": " And these are our inputs w1 w2 b1 x1 x2 Actually let's call it x2 and x1 We took a dataset of IQ, CGPA, placement or not We took this dataset of 1000 students Now I will show you what Perceptron is doing visually"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1457.0,
+            "end": 1482.0,
+            "text": " So if you see Perceptron is basically a function The output y is either 1 or 0 Because there is a step function So you can write y in this way that it is a function of z Where z is this or you can write z is w1 x1 plus w2 x2 plus b"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1482.0,
+            "end": 1503.0,
+            "text": " Now you can write it like this The output will be 1 if z is greater than or equal to 0 And the output will be 0 if z is less than 0 So y is a function of z where z is this And how to calculate y using this logic"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1503.0,
+            "end": 1518.0,
+            "text": " Now let's do one thing Let's plot our dataset How to plot We will make a scatter plot Where x-axis will be the value of IQ"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1518.0,
+            "end": 1534.0,
+            "text": " y-axis will be the value of CGPA And we have 1000 students so 1000 points will be made So points can be something like this In this way we can have all the students We can have all these students"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1535.0,
+            "end": 1554.0,
+            "text": " Now if it is placed Then we put it in green circle Like this And if it is not placed Means value is 0"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1554.0,
+            "end": 1570.0,
+            "text": " Then we put it in this circle Like this So I have made a dataset like this When your IQ is high and CGPA is high Then you will fall in green cluster"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1570.0,
+            "end": 1581.0,
+            "text": " And if your IQ is low and CGPA is low Then you will fall in red cluster So this is the dataset Now I want to see This algorithm on this dataset"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1581.0,
+            "end": 1593.0,
+            "text": " Or this function How it is operating Our end goal is to make a predictor Whose work will be If we provide new student's IQ and CGPA"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1593.0,
+            "end": 1607.0,
+            "text": " That predictor will tell us Whether that student will be placed or not Now the whole thing gets stuck here See this Focus on this thing"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1607.0,
+            "end": 1621.0,
+            "text": " Pause the video and try to think Have you seen such an equation before Let's say we replace W1 With capital A Let's say we replace W2 with capital B"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1621.0,
+            "end": 1638.0,
+            "text": " Let's say we replace B with capital C Let's say we replace X1 with small x Let's say we replace X2 with small y So this equation becomes Ax plus By plus C"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1638.0,
+            "end": 1649.0,
+            "text": " Now if you know So this is actually an equation of a line This is an equation of a line So in a way Your perceptron"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1649.0,
+            "end": 1659.0,
+            "text": " Is nothing but a line It is a line See Like this Now going by this logic"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1659.0,
+            "end": 1669.0,
+            "text": " Z is greater than or equal to 0 So you are saying Ax plus By plus C Is greater than or equal to 0 If this equation is true"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1669.0,
+            "end": 1679.0,
+            "text": " Then you are saying That placement will happen If this equation is true If this equation is true Then you are saying"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1679.0,
+            "end": 1689.0,
+            "text": " That placement will not happen Now if you think What is this If Ax plus By plus C Is equal to 0"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1689.0,
+            "end": 1699.0,
+            "text": " Then think and see Pause the video What is this This is actually a region This is a region"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1699.0,
+            "end": 1709.0,
+            "text": " Similarly what is this This is also a region So if you talk about Ax plus By plus C is greater than or equal to 0 Then it is this region"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1709.0,
+            "end": 1721.0,
+            "text": " This region Everything above this And if you talk about Less than 0 Then it is this region"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1721.0,
+            "end": 1731.0,
+            "text": " Below So in a way Perceptron, this whole function It is basically a line By using this"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1731.0,
+            "end": 1741.0,
+            "text": " I am creating two regions And in one region If a new point falls here Then I am saying that its placement will happen And if it falls here"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1741.0,
+            "end": 1751.0,
+            "text": " Then I am saying that its placement will not happen So the thing to understand Is that Perceptron is nothing but A line"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1751.0,
+            "end": 1761.0,
+            "text": " And its work is To create a region And in region To divide your classes There were two classes"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1761.0,
+            "end": 1771.0,
+            "text": " Placement will happen or not You divided it in two regions So in a way, this is why it is said Perceptron is a binary classifier Binary"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1771.0,
+            "end": 1781.0,
+            "text": " Classifier Because it divides your data In two different classes By creating Two regions"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1781.0,
+            "end": 1791.0,
+            "text": " Now this question may come to your mind That This was 2D I had two inputs IQ and CGPA"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1791.0,
+            "end": 1803.0,
+            "text": " What if I have one more input Let's say I have one input IQ, CGPA And one is 12th marks And then I have to find out"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1803.0,
+            "end": 1813.0,
+            "text": " Will the placement happen or not So in this case Your whole region is in 3D Means all these points Imagine that it is in 3D"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1813.0,
+            "end": 1823.0,
+            "text": " Okay And in this case Your equation will be W1 X1"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1823.0,
+            "end": 1833.0,
+            "text": " W2 X2 W3 X3 Now I can write it again"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1833.0,
+            "end": 1843.0,
+            "text": " Ax By Cz B This means"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1843.0,
+            "end": 1853.0,
+            "text": " In this 3D coordinate system Now your Perceptron model Is not like a line It is like a plane"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1853.0,
+            "end": 1863.0,
+            "text": " Imagine your room And there you imagine a sheet That sheet is your Perceptron model And it is creating two regions"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1863.0,
+            "end": 1873.0,
+            "text": " One upper side and one lower side Upper side one class Lower side second class In 2D Perceptron will act as a line"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1873.0,
+            "end": 1883.0,
+            "text": " In 3D Perceptron will act as a Plane and 4D Onwards it will act As a hyper plane"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1883.0,
+            "end": 1893.0,
+            "text": " But the idea is very simple That always Perceptron will Divide your data in two regions That is why"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1893.0,
+            "end": 1903.0,
+            "text": " It is called binary classifier And one more thing Perceptron has a Very big limitation And that limitation is"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1903.0,
+            "end": 1913.0,
+            "text": " That Perceptron can only classify Linear or Sort of linear Data"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1913.0,
+            "end": 1923.0,
+            "text": " That means It can classify The same type of data That can be separated from a line Like here you can see"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1923.0,
+            "end": 1933.0,
+            "text": " That this green cluster And this red cluster Can be separated from a line Sort of linear means That one or two red points are here"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1933.0,
+            "end": 1943.0,
+            "text": " And one or two green points Are here Then also you can draw a line and run your work Accuracy is less but It works"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1943.0,
+            "end": 1953.0,
+            "text": " But if you have a completely non linear Data set Then Perceptron will fail I will show you"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1953.0,
+            "end": 1967.0,
+            "text": " This is the data set This is the data set This is the data set of our students Now you Can never draw a line"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1967.0,
+            "end": 1977.0,
+            "text": " And Separate both the classes And in such scenarios Accuracy of Perceptron Will be very less"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1977.0,
+            "end": 1987.0,
+            "text": " That is why Perceptron can be used only on Linear or sort of Linear data sets And this is true in 2D, 3D"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1987.0,
+            "end": 1997.0,
+            "text": " 4D You have to be careful about this And this is the biggest limitation Of Perceptron Because of which Perceptron"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 1997.0,
+            "end": 2007.0,
+            "text": " Couldn't become that much powerful We will discuss this A little further But my goal in this section Was to give you a"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2007.0,
+            "end": 2017.0,
+            "text": " Glass Through which you can see What Perceptron is doing Visually imagine What Perceptron is doing"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2017.0,
+            "end": 2027.0,
+            "text": " Perceptron is nothing but A line In 2D which creates Two regions to classify Two classes, that's it"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2027.0,
+            "end": 2037.0,
+            "text": " We have discussed only this much In 3D it will become a plane, in 4D it will become a hyper plane The concept is the same So yeah So guys till now"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2037.0,
+            "end": 2047.0,
+            "text": " We covered a lot of theory About Perceptron Now through a practical example I will show you the same thing The idea would be"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2047.0,
+            "end": 2057.0,
+            "text": " Whatever you have learned till now It should become a little more concrete In your mind So I am showing you Perceptron algorithm on a data set"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2057.0,
+            "end": 2067.0,
+            "text": " The data set we have Is exactly the same data set Of which I was giving an example We have a data set of some students Where we have their cgpa"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2067.0,
+            "end": 2077.0,
+            "text": " Their resume score And their placement or not And cgpa And resume score both Varying between 0 to 10"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2077.0,
+            "end": 2087.0,
+            "text": " So The code is very simple We By the way scikit learn Perceptron"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2087.0,
+            "end": 2097.0,
+            "text": " Will use the class Perceptron option is there In scikit learn so we Don't need to write So here I"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2097.0,
+            "end": 2107.0,
+            "text": " Imported it 100 students Data cgpa Resume score placed Now I will show you"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2107.0,
+            "end": 2117.0,
+            "text": " How cgpa and resume score Varying This is the scatter plot Our data Is linearly separable"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2117.0,
+            "end": 2127.0,
+            "text": " Cgpa on x-axis Resume score on y-axis According to this Blue students are not placed Orange students are placed"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2127.0,
+            "end": 2137.0,
+            "text": " Now our job is to run Perceptron on it and create Two decision regions So in short What will our"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2137.0,
+            "end": 2147.0,
+            "text": " Perceptron do We have cgpa We have Resume score And we have"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2147.0,
+            "end": 2157.0,
+            "text": " Placed In short Draw a line like this Perceptron And in the process of drawing this line"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2157.0,
+            "end": 2167.0,
+            "text": " It will calculate three things W1 W2 And b if you talk about Perceptron model It will be"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2167.0,
+            "end": 2177.0,
+            "text": " Something like this The value of cgpa will go from here And w1 will be calculated The value of resume score will go from here And here w2 will be calculated"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2177.0,
+            "end": 2187.0,
+            "text": " The value of w1 will go from here And b will be calculated from here We actually have to see two things That these three values are getting or not And this line is forming or not"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2187.0,
+            "end": 2197.0,
+            "text": " And what did I do to do this First of all, I extracted x and y Perceptron I made an object And by calling p.fit"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2197.0,
+            "end": 2207.0,
+            "text": " I trained my model Now in p You have an attribute called coefficient As soon as I ran it Here is my output"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2207.0,
+            "end": 2217.0,
+            "text": " So here W1 is coming 40 something and w2 Is coming Minus 36 something"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2217.0,
+            "end": 2227.0,
+            "text": " Okay and then I intercepted Minus 25 Minus 25 These three values we took out"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2227.0,
+            "end": 2237.0,
+            "text": " Now if you want to see if the line plot Or not, for that I called this function Plot decision regions from this Library called ml extend In that I passed my x and y"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2237.0,
+            "end": 2247.0,
+            "text": " And passed my classifier And here is our output You can see here is the line According to my perceptron This is the line that is dividing"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2247.0,
+            "end": 2257.0,
+            "text": " The whole data In two classes Although this result is not that right You must be seeing it too The reason is that we have not configured it properly"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2257.0,
+            "end": 2267.0,
+            "text": " We did not work hard And the data is also But again My end goal was not to show you Best and most accurate perceptron"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2267.0,
+            "end": 2277.0,
+            "text": " My idea was that whatever we have read so far Show it once in code So what do you do now Pick up any data set In which there are more than two"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2277.0,
+            "end": 2287.0,
+            "text": " Columns in the input and Apply perceptron on it You can also check Accuracy etc. So that was the video guys"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2287.0,
+            "end": 2297.0,
+            "text": " I have given you the whole Introduction in this video And from the next video We will start how to train Perceptron"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2297.0,
+            "end": 2307.0,
+            "text": " If you liked this video Then it deserves A like from your side Please do press the like button It would help my content"
+        },
+        {
+            "number": "4",
+            "title": "What is a Perceptron | Perceptron Vs Neuron | Perceptron Geometric Intuition",
+            "start": 2307.0,
+            "end": 2315.0,
+            "text": " To reach a wider audience So that's it From my side Bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and you are welcome to my YouTube channel. So we are continuing our deep learning course and today is the third day. And as I told you in the last video that now the theory is complete, now we will move to the practical side. So from today we are starting actual deep learning. The things you have to study and learn. So we are going to start with Perceptron. Perceptron is the fundamental building block of Artificial Neural Network. So I think the story of deep learning should start from Perceptron. So first of all, we will focus on Perceptron and understand it in and out. After that, we will move to Multilayer Perceptron or you can say ANN. So it will take 2-3 videos to cover Perceptron. I have not shot it completely, so I have no idea. But I will tell you what topics we will cover. First of all, we will see the introduction of Perceptron. What is Perceptron? What is its geometric intuition? And we will run it in code. After that, we will learn how to train Perceptron. Because just like any other machine learning or deep learning algorithm, it also has training. And once we learn how it is trained, after that I will tell you what was the problem in Perceptron, which stopped the growth of Perceptron and due to which Multilayer Perceptron was needed. And then we will start Multilayer Perceptron. So I honestly want to talk to you about this. Without studying Perceptron, don't study Multilayer Perceptron. It is very very important. Because once you learn to train a single Perceptron, then it is easy to understand how to train Multilayer Perceptron. Many people start directly with Multilayer Perceptron. I think that is not the right learning framework. So whatever it is, now that's it for the introduction. Let's start the video. Now you might ask what is Perceptron? So for starters, Perceptron is an algorithm. It is an algorithm. Like you must have read other algorithms. Like Linear Regression, Logistic Regression, SVM. In the same way, Perceptron is also an algorithm. And it is used for supervised machine learning. Supervised Machine Learning. It's just that the design of this algorithm is such that it automatically became a building block of deep learning. So that's why before studying deep learning, you should study Perceptron well. So what we will do is try to understand Perceptron very well in this section. So first of all, I will show you how Perceptron looks. What is its design? So you can see this is the design of Perceptron. So Perceptron is an algorithm, but you can also call it a mathematical model. You can call it a mathematical model. Or you can also call it a mathematical function. Which you have studied in function schools. Now look here. This is its model. I will explain one by one. So first I will explain to you what are the different parts. After that, I will explain to you how it works. So first of all, you take input from this side in Perceptron. You provide input. So this X1 and X2 are actually input. Now what is this 1? I will explain this after a while. Now these connections, your input and this block. We can also call it a summation block. Where things are added. So the connection between these blocks, we call them weights and biases. Like the W1 and W2 are weights. I am writing here. They are called weights. And this connection through 1, we call it a bias. That's why I represented it with a B. After that, things are added here. Things are added here. It is a summation. How is a summation? Dot product. So what will happen? We will multiply X1 and W1. W1 X1. Then we will multiply W2 and X2. W2 X2. Plus we will multiply B by 1. B. So here in this part, this operation is happening. This operation is happening. Okay. Let's call it Z. The output that is coming is called Z. And then you will send Z forward. Z will travel from here and go here. And this is called the activation function. Activation function. Okay. Now the work of the activation function is to bring your Z in a given range. Okay. Now that range can be anything. It can be minus 1 to 1. It can be 0 to 1. Or it can be something else. But the work of the activation function is to bring it in a kind of range. Because this number can be anything. This input can be anything. This weight can be anything. So this number can be anything. Now to bring this number in a range, you use a function. A mathematical function. Like a mathematical function can be a step function. What does the step function do? The graph of the step function is something like this. Okay. This is the graph of the step function. That if your X value is Z here. If your Z value is greater than 0, then the output will be 1. If Z value is less than 0, then the output will be 0. Okay. So this is an activation function. There are other activation functions like this. There is a function called Relu. Tanh. And you will read many more activation functions like this. But now we just know that this is the block of the activation function. Okay. So that's it guys. This is the entire design. You are providing input from here. You are providing input from here. You call them weights. You call this one bias. Here things are added. Using this formula dot product. And then it moves forward towards the activation function. And whatever the output is, let's say in this case. In the function case, you receive 0 or 1 from here. Okay. So this is the mathematical design. Now how is this whole design used? Let me explain that to you. So for now, let's take a small problem. We are solving a problem in machine learning. Let's say we have some students' data. Let's say we have 1000 students' data. What is the data? We have the IQ of the students. Means what is the IQ of each student? And what is the CGPA in their college? And then we have this data that their placement was done or not. Placed one or not. So, for example, the data of a student can be something like this. 78. 7. 8. 1. Means the IQ of this student is 78. CGPA is 7.8 and its placement is done. One can be 69. 5. 1. 0. Okay. So let's say we are solving this problem. That we have to make a predictor. We have to make a model. And when we give this data to that model. So he will learn from this data. And in the future, if we provide the IQ and CGPA of a student. So this model will predict whether it will have a placement or not. Okay. So what happens is that if you want to solve it, let's say. Using perceptron. So there are two stages. Clearly, like in any machine learning algorithm. The first stage is training. And the second stage is prediction. So this is the model of perceptron. In this too, you will do both things. First you will train it. Then you will use it for prediction. Okay. So I will explain to you roughly how training is done. So what do you do for training? That you pick up every student one by one. And send it here. Okay. Now here for every student. What will happen to x1? Its IQ value. And what will happen to x2? Its CGPA value. Okay. So if we talk about the first student. So what will we do? First of all, we will send 78 here. And we will send 7.8 here. Okay. And we know that we will calculate its output. And since we already know that the output should be 1. Depending on what is coming out. We will train this model. Okay. Basically, the idea is very simple. What do you have to do in this whole process? That you have to find the value of W and B. The core objective of this whole learning process. Is that you find the value of W2, W1 and B. That is the whole idea. Okay. How to find it? How to train the perceptron? We will study all this later. For now, just understand this. I will easily summarize it once. That by using this training data. You calculate the value of W1, W2 and B. Okay. Once you calculate the value of W1, W2 and B. After training. Then you can make a prediction. How? I will tell you. Assume that the value of W1 is 1. And the value of W2 is 2. And the value of B is 3. You calculated this from training. Now you have a new student. His GPA is 5.1. And his IQ is 100. And now you are told. Use this perceptron. To predict whether this child will be placed or not. So what will you do? You will pass 100 in X1. Because this new child has an IQ of 100. And you will pass 5.1 in X2. Now what will you do? You will combine both. So 100. Multiplied by W1. Plus 5.1. Multiplied by 2. Plus the value of B is 3. Multiplied by 1. Okay, you will calculate this. This is your Z. So this will come 100. Plus 10.2. Plus 3. So 113.2. Now you will pass this Z. In the activation function. Since the value of Z is greater than or equal to 0. You will say. This child will be placed. If this Z would have been negative. Then you would have said. This child will not be placed. So now I just showed you. How to predict from perceptron. To predict from perceptron. These weights. And the value of this bias should be known. And how will the value of these weights and bias be known? In the process of training. And to do training. You need data. As you need in other algorithms. Now this thing I told you while walking very easily. We will discuss this whole thing in great detail. Going ahead. When we will learn its training process very well. But for now this was a small introduction. What is perceptron? Now this question may come to your mind. What if I have more than two input columns? Like IQ and CGPA. Two input columns. What if I have one more input column? Which state is that child from? Maharashtra. West Bengal. Which state is this? This is also an input. So how will your perceptron look? It is very simple. All the input columns you have. You will provide that much X. So what will you do? You will take one more input here. X3. And this connection. You will call it W3. Now how will Z be calculated? Z will be W1 X1. Plus W2 X2. Plus W3. I'm sorry. Plus W3 X3. Plus B. So as you increase the input columns. You will provide more inputs. That's it. There is no change in the rest of the model. So I hope this thing is clear to you. Now we will talk about one more point of discussion. And that is. It is said about deep learning. That deep learning is heavily inspired. By our own nervous system. The way the nervous system of humans works. Deep learning also works in the same way. So we have to discuss this point. We will discuss. That a perceptron. The perceptron we just read. How is it compared to a single neuron? Okay. So look at this image once. There are two things in this image. You have a perceptron on the right-hand side. Pause the video once. Just make sure you understand the perceptron. It is exactly the same. There are multiple inputs. How many inputs can be here? A weight is assigned for each input. And the last input is 1. And you are calling its weight W0. We called it B. Okay. Here is the summation. And here is the step function. And here is the output. It is exactly the same thing. And the entity on the left side. It is called a neuron. So if you have read a little bit of elementary biology. Then you will know there. That your nervous system. It is basically a collection of billions of neurons. The neuron is your building block. Of your nervous system. Okay. And this is on the screen. This is a neuron. A single neuron. Okay. What happens in the neuron? First of all, it is a cell. Okay. It is a biological cell. So there is a nucleus. This part is nucleus. Where the most important things are going on. This part where you can see. I don't know. It looks like the roots of a tree. These are called dendrites. Input comes from here. Okay. Input comes from here. Some calculations run here. And the output goes out from here. Okay. This thing. This thick thing. This is called axon. So keep in mind that. Input comes from dendrites. Output comes from axon. And all the internal calculations. Are done in this nucleus. Okay. So in a way if you compare. Side by side. So you can see that there is a little similarity. Meaning you can say that. The perceptron is inspired. By biological neurons. Because here you can see. That this part. You can roughly compare it. With dendrites. The nucleus. You can roughly compare it. With these two blocks. And your axon. The output. You can compare it. With this output. Which is going ahead. Which is coming out. Okay. Now. The neurons are connected to each other. To make the nervous system. Similarly, a lot of perceptrons. Make a neural network. We will see this later. At this point, I just had to explain to you. That there is a little inspiration. Whoever made the perceptron. Rosenblatt. He has taken a little inspiration. From biological neurons. But it is wrong to say. That it is exactly the same. Or exactly. Based on neurons. There is a little inspiration. If you talk about the differences. There are a lot of differences. Okay, I will tell you one by one. Differences. So the first point of difference. Between neurons and perceptrons. Neurons are very complex. If you think about it. How many inputs. Millions of inputs come. And what happens internally. No one knows. And then this output. Goes to many other neurons. So it is a very complex structure. What we have made. Or what we are using. It is not so complex. It is actually simple. It is a little inspired. But it is very simple. The second point of difference. What is the calculation inside this nucleus. Based on which the output comes out. I have no idea. What is going on inside this nucleus. I don't know anything. Some complex electrochemical reactions are going on. But our nucleus. There are only two operations inside it. One is the summation. The other is the step function. At least in this perceptron. This is a very simple mathematical function. The internal processing. In the case of neurons. It is unknown. Some sort of electrochemical reaction. Whereas in the perceptron. It is a very simple function. You can see it by plotting it. The processing stage. That is also different. Third. There is a concept of. Neuroplasticity. What is neuroplasticity? Your dendrites. These connections. Similarly these connections. Their thickness changes over time. This thickness. It keeps changing. It can be thicker. The connection of the showing is very strong. Or it can be very thin. Or it can be very weak. Or it can end. There is no connection. Or new connections can be formed. This is called neuroplasticity. Whenever you are young. Learning new skills. These connections keep forming. Whereas in our. Perceptron model. These connections. They don't change. They never change. This is also a big point of difference. This is also a big point of difference. Neuroplasticity. Neuroplasticity. Neuroplasticity. I wanted to tell you two things. I wanted to tell you two things. First. Perceptron is. Weakly inspired. Design element. Design element. I would say. It is inspired. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It is copied. It has a very beautiful interpretation, so the example we had taken that In the example, we got the data of the IQ and CGPA of the student and its We also knew whether the placement was done or not, now let's say we have Based on this data, we trained this perceptron and let's say we have The value of these weights and biases has come, let's say the value of W1 is 2 The value of W2 is 4 and the value of bias is 1, let's say for now Now I will tell you an interpretation about these weights, what do these weights tell you So these weights are actually telling the strength of these connections How strong is the connection between X1 and your model Or in a way you can say that IQ will enter from here and CGPA will enter from here So you can say that whether the student will have a placement or not The most important factor in deciding this is CGPA in comparison to IQ Why did I say this because the weight of CGPA is more than the weight of IQ In fact it is 2 times, so you can say that whether a student will have a placement or not CGPA is more important factor in comparison to IQ So these weights tell you which input is more important and which is less important So I just wanted to tell you that you can draw an interpretation from this That the weights tell you the feature importance Now what does this bias do, we have not discussed it yet, we will do it in the future So guys now we will see the geometric intuition of Perceptron Basically geometric intuition means that you want to visualize the working of that algorithm And I believe that if you see any machine learning algorithm working visually Then it becomes easy to understand that algorithm So Perceptron we just saw is a very simple model Basically you have two operations, this is summation and this is let's say step function operation Let's draw it a little better So this is summation and this is let's say activation function And these are our inputs w1 w2 b1 x1 x2 Actually let's call it x2 and x1 We took a dataset of IQ, CGPA, placement or not We took this dataset of 1000 students Now I will show you what Perceptron is doing visually So if you see Perceptron is basically a function The output y is either 1 or 0 Because there is a step function So you can write y in this way that it is a function of z Where z is this or you can write z is w1 x1 plus w2 x2 plus b Now you can write it like this The output will be 1 if z is greater than or equal to 0 And the output will be 0 if z is less than 0 So y is a function of z where z is this And how to calculate y using this logic Now let's do one thing Let's plot our dataset How to plot We will make a scatter plot Where x-axis will be the value of IQ y-axis will be the value of CGPA And we have 1000 students so 1000 points will be made So points can be something like this In this way we can have all the students We can have all these students Now if it is placed Then we put it in green circle Like this And if it is not placed Means value is 0 Then we put it in this circle Like this So I have made a dataset like this When your IQ is high and CGPA is high Then you will fall in green cluster And if your IQ is low and CGPA is low Then you will fall in red cluster So this is the dataset Now I want to see This algorithm on this dataset Or this function How it is operating Our end goal is to make a predictor Whose work will be If we provide new student's IQ and CGPA That predictor will tell us Whether that student will be placed or not Now the whole thing gets stuck here See this Focus on this thing Pause the video and try to think Have you seen such an equation before Let's say we replace W1 With capital A Let's say we replace W2 with capital B Let's say we replace B with capital C Let's say we replace X1 with small x Let's say we replace X2 with small y So this equation becomes Ax plus By plus C Now if you know So this is actually an equation of a line This is an equation of a line So in a way Your perceptron Is nothing but a line It is a line See Like this Now going by this logic Z is greater than or equal to 0 So you are saying Ax plus By plus C Is greater than or equal to 0 If this equation is true Then you are saying That placement will happen If this equation is true If this equation is true Then you are saying That placement will not happen Now if you think What is this If Ax plus By plus C Is equal to 0 Then think and see Pause the video What is this This is actually a region This is a region Similarly what is this This is also a region So if you talk about Ax plus By plus C is greater than or equal to 0 Then it is this region This region Everything above this And if you talk about Less than 0 Then it is this region Below So in a way Perceptron, this whole function It is basically a line By using this I am creating two regions And in one region If a new point falls here Then I am saying that its placement will happen And if it falls here Then I am saying that its placement will not happen So the thing to understand Is that Perceptron is nothing but A line And its work is To create a region And in region To divide your classes There were two classes Placement will happen or not You divided it in two regions So in a way, this is why it is said Perceptron is a binary classifier Binary Classifier Because it divides your data In two different classes By creating Two regions Now this question may come to your mind That This was 2D I had two inputs IQ and CGPA What if I have one more input Let's say I have one input IQ, CGPA And one is 12th marks And then I have to find out Will the placement happen or not So in this case Your whole region is in 3D Means all these points Imagine that it is in 3D Okay And in this case Your equation will be W1 X1 W2 X2 W3 X3 Now I can write it again Ax By Cz B This means In this 3D coordinate system Now your Perceptron model Is not like a line It is like a plane Imagine your room And there you imagine a sheet That sheet is your Perceptron model And it is creating two regions One upper side and one lower side Upper side one class Lower side second class In 2D Perceptron will act as a line In 3D Perceptron will act as a Plane and 4D Onwards it will act As a hyper plane But the idea is very simple That always Perceptron will Divide your data in two regions That is why It is called binary classifier And one more thing Perceptron has a Very big limitation And that limitation is That Perceptron can only classify Linear or Sort of linear Data That means It can classify The same type of data That can be separated from a line Like here you can see That this green cluster And this red cluster Can be separated from a line Sort of linear means That one or two red points are here And one or two green points Are here Then also you can draw a line and run your work Accuracy is less but It works But if you have a completely non linear Data set Then Perceptron will fail I will show you This is the data set This is the data set This is the data set of our students Now you Can never draw a line And Separate both the classes And in such scenarios Accuracy of Perceptron Will be very less That is why Perceptron can be used only on Linear or sort of Linear data sets And this is true in 2D, 3D 4D You have to be careful about this And this is the biggest limitation Of Perceptron Because of which Perceptron Couldn't become that much powerful We will discuss this A little further But my goal in this section Was to give you a Glass Through which you can see What Perceptron is doing Visually imagine What Perceptron is doing Perceptron is nothing but A line In 2D which creates Two regions to classify Two classes, that's it We have discussed only this much In 3D it will become a plane, in 4D it will become a hyper plane The concept is the same So yeah So guys till now We covered a lot of theory About Perceptron Now through a practical example I will show you the same thing The idea would be Whatever you have learned till now It should become a little more concrete In your mind So I am showing you Perceptron algorithm on a data set The data set we have Is exactly the same data set Of which I was giving an example We have a data set of some students Where we have their cgpa Their resume score And their placement or not And cgpa And resume score both Varying between 0 to 10 So The code is very simple We By the way scikit learn Perceptron Will use the class Perceptron option is there In scikit learn so we Don't need to write So here I Imported it 100 students Data cgpa Resume score placed Now I will show you How cgpa and resume score Varying This is the scatter plot Our data Is linearly separable Cgpa on x-axis Resume score on y-axis According to this Blue students are not placed Orange students are placed Now our job is to run Perceptron on it and create Two decision regions So in short What will our Perceptron do We have cgpa We have Resume score And we have Placed In short Draw a line like this Perceptron And in the process of drawing this line It will calculate three things W1 W2 And b if you talk about Perceptron model It will be Something like this The value of cgpa will go from here And w1 will be calculated The value of resume score will go from here And here w2 will be calculated The value of w1 will go from here And b will be calculated from here We actually have to see two things That these three values are getting or not And this line is forming or not And what did I do to do this First of all, I extracted x and y Perceptron I made an object And by calling p.fit I trained my model Now in p You have an attribute called coefficient As soon as I ran it Here is my output So here W1 is coming 40 something and w2 Is coming Minus 36 something Okay and then I intercepted Minus 25 Minus 25 These three values we took out Now if you want to see if the line plot Or not, for that I called this function Plot decision regions from this Library called ml extend In that I passed my x and y And passed my classifier And here is our output You can see here is the line According to my perceptron This is the line that is dividing The whole data In two classes Although this result is not that right You must be seeing it too The reason is that we have not configured it properly We did not work hard And the data is also But again My end goal was not to show you Best and most accurate perceptron My idea was that whatever we have read so far Show it once in code So what do you do now Pick up any data set In which there are more than two Columns in the input and Apply perceptron on it You can also check Accuracy etc. So that was the video guys I have given you the whole Introduction in this video And from the next video We will start how to train Perceptron If you liked this video Then it deserves A like from your side Please do press the like button It would help my content To reach a wider audience So that's it From my side Bye"
+}

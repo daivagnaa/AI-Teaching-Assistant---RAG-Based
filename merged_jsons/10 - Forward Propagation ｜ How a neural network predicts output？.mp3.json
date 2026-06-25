@@ -1,0 +1,579 @@
+{
+    "chunks": [
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 0.0,
+            "end": 18.0,
+            "text": " Hello guys, my name is Nitish and welcome to my YouTube channel. So we are slowly moving forward in our deep learning course and in the last two videos we have studied about Multilayer Perceptron. In the first video we saw the intuition of Multilayer Perceptron and in the last video I told you its notation"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 18.0,
+            "end": 33.0,
+            "text": " that how you name its weights and biases so that there is no confusion in the future. So I will tell you what is the whole flow. We are slowly moving towards a very important topic which is called Backpropagation."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 33.0,
+            "end": 49.0,
+            "text": " So backpropagation is the algorithm by which you train neural networks. And it is said that it is a little difficult to understand backpropagation. So I have planned that before understanding backpropagation we will simplify things a lot."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 49.0,
+            "end": 62.0,
+            "text": " So when you will read backpropagation then you will realize that there are two things one is forward propagation. Forward propagation is where your data i.e. your input"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 62.0,
+            "end": 74.0,
+            "text": " moves forward in your neural network through each layer. And backpropagation is when you come to the back side and update the weights through which training happens."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 74.0,
+            "end": 86.0,
+            "text": " So I thought that before reading backpropagation you should have a very good idea that how forward propagation works. So in this video I will teach you forward propagation. Or you can say in simple words"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 86.0,
+            "end": 98.0,
+            "text": " that if you have an input and if there are some weights in your neural network then how do you use those weights and inputs to make predictions. I want to show you this."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 98.0,
+            "end": 111.0,
+            "text": " And you will see that this whole thing handles linear algebra so beautifully. No matter how big the architecture is it does not mean that at the end you just have to do dot products of matrices."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 111.0,
+            "end": 124.0,
+            "text": " So I just wanted to give you this overview video so that's why I have shot today's video. I would like to discuss one more thing with you. You must have noticed in all the courses that generally people after reading backpropagation"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 124.0,
+            "end": 136.0,
+            "text": " move towards real world data sets and read it like examples. But I am going to do something different in this course. Before backpropagation I will use Keras library"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 136.0,
+            "end": 148.0,
+            "text": " and train neural network on some real world data sets. I know we have not studied training yet but we do not have to write its code ourselves. Keras will handle behind the scenes. So I just want to give you a perspective"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 148.0,
+            "end": 158.0,
+            "text": " that how things work. Once you see it when you go to read backpropagation you will understand it better. And then we will do some projects after that."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 158.0,
+            "end": 168.0,
+            "text": " So my plan is that in today's video we will learn about forward propagation or you can say how a neural network does prediction. And then in the next 2-3 videos"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 168.0,
+            "end": 178.0,
+            "text": " we will work on some data sets with Keras library. So that's it for the introduction. Let's start the video. So guys let's learn in this video"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 178.0,
+            "end": 188.0,
+            "text": " that how a neural network does prediction. So neural network is a complex architecture where you can put any number of nodes or"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 188.0,
+            "end": 198.0,
+            "text": " add any number of layers. Our goal will be that the prediction that comes out of such a complex architecture should be learned in a simplified way."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 198.0,
+            "end": 208.0,
+            "text": " The good thing is that linear algebra handles everything behind the scenes. You just have to understand the flow."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 208.0,
+            "end": 218.0,
+            "text": " So on the screen there is a neural network where this is the architecture. There are 2 hidden layers and 1 output layer."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 218.0,
+            "end": 228.0,
+            "text": " I have this data. I have 4 input columns in the data. CGPA, IQ, 10th marks, 12th marks and the output column is placed."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 228.0,
+            "end": 240.0,
+            "text": " Whether the child was placed or not. I believe that whenever you work with a neural network you should know the total number of trainable parameters."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 240.0,
+            "end": 250.0,
+            "text": " When the back propagation algorithm works it will find the value of weights and biases. It's very simple. If you focus here"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 250.0,
+            "end": 260.0,
+            "text": " then here there are 4 nodes in the input hidden layer. Total connections are 4x3 which is 12."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 260.0,
+            "end": 270.0,
+            "text": " If there are 3 nodes then there are 3 biases. Here you have 15 trainable parameters. If there are 2 nodes"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 270.0,
+            "end": 280.0,
+            "text": " then the total number of connections will be 6 plus 2 biases which is 8. Here you have"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 280.0,
+            "end": 290.0,
+            "text": " 1 node which is 2 weights plus 1 bias which is 3. 3 plus 8 is 11. 11 or 15."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 290.0,
+            "end": 300.0,
+            "text": " There are 26 parameters. We have understood that the total training will be 26 weights and biases."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 300.0,
+            "end": 310.0,
+            "text": " Now we have to do the prediction. What will happen? We will insert each row at the time of training."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 310.0,
+            "end": 320.0,
+            "text": " First of all, this row will go up. There are 4 columns so there are 4 input nodes. 7.2"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 320.0,
+            "end": 330.0,
+            "text": " will enter from here. 72 will enter from here. 69 will enter from here. 81 will enter from here. In this complex architecture"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 330.0,
+            "end": 340.0,
+            "text": " here y hat will come. Prediction of my model. When you start you will start with a random value"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 340.0,
+            "end": 350.0,
+            "text": " of weights and biases. Now let's see how the prediction is done. Just remember that whenever you want"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 350.0,
+            "end": 360.0,
+            "text": " an output from a perceptron then this is the formula for it. What you do is you multiply all the weights by the input plus you add a bias"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 360.0,
+            "end": 370.0,
+            "text": " and get the sigmoid of the whole thing. We have already seen this. Now what we will do is we will calculate the prediction layer by layer."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 370.0,
+            "end": 382.0,
+            "text": " Our focus will be here. What I have done is I have made a weight matrix for these weights. If you see this matrix"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 382.0,
+            "end": 392.0,
+            "text": " then the notation which I introduced in the last video I have written it here. In the first row, it is written W1 1 1"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 392.0,
+            "end": 406.0,
+            "text": " W1 1 2 W1 1 3 W1 2 1 W1 2 2 W1 2 3"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 406.0,
+            "end": 416.0,
+            "text": " and so on. If you notice then if you focus on the row then"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 416.0,
+            "end": 426.0,
+            "text": " all the weights coming out of the input and if you focus on the column then all the weights coming here"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 426.0,
+            "end": 436.0,
+            "text": " this is how this matrix is designed. Now what I have to do is I have to multiply it by my input. What is my input?"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 436.0,
+            "end": 446.0,
+            "text": " My input is this column matrix where I have taken x i1 x i2, x i3 and x i4. Now I have to do one thing"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 446.0,
+            "end": 456.0,
+            "text": " I have to transpose the weight matrix. I have transposed it. First it was 4x3 after transposing it became 3x4. Its shape is 4x1."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 456.0,
+            "end": 466.0,
+            "text": " Since this and this are same you will get a new matrix 3x1 and you already have a bias 3x1."
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 466.0,
+            "end": 476.0,
+            "text": " When you add 3x1 and 3x1 you will get another 3x1 matrix. I have done the same thing below. Here you can see I have transposed this matrix"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 476.0,
+            "end": 486.0,
+            "text": " and then I have taken dot product. You can see this is the output. This is multiplied by 3 plus"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 486.0,
+            "end": 496.0,
+            "text": " this is multiplied by 3 plus this is multiplied by 3 and I have this thing. Similarly"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 496.0,
+            "end": 507.0,
+            "text": " this is multiplied by 3 plus this is multiplied by 3 and I have this thing. This matrix has a shape of 3x1"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 507.0,
+            "end": 520.0,
+            "text": " I added it to the bias and I got this Now I just have to take out the sigmoid and as soon as I took out the sigmoid I got this matrix"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 520.0,
+            "end": 530.0,
+            "text": " O11, O12, O13 If you focus here then this is your O11 this is your O22 sorry, O12"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 530.0,
+            "end": 540.0,
+            "text": " and this is your O13 Now this will go to the input for the next layer So what did I do there? I moved forward and started layer 2"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 540.0,
+            "end": 550.0,
+            "text": " If you notice in layer 2 there are 6 weights So I wrote it again in the same way W211"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 550.0,
+            "end": 560.0,
+            "text": " basically this weight After that I wrote W212 this weight Then I wrote"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 560.0,
+            "end": 570.0,
+            "text": " W212 Sorry, W21 W21 W21 W21"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 570.0,
+            "end": 580.0,
+            "text": " W21 W21 This is my weight matrix Its shape is 3x2 I will transpose it"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 580.0,
+            "end": 590.32,
+            "text": " so it becomes 2x3 This is my input Input is 3x1 and here is 2x3 this is already a bias of 2x1"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 590.76,
+            "end": 603.08,
+            "text": " this one and this one and when I added the dot product again I got this you can verify it with a copy pen"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 603.08,
+            "end": 615.32,
+            "text": " and now I have to apply sigmoid again and as soon as I applied sigmoid here are my two outputs this output and this output now only the last layer is left"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 615.32,
+            "end": 627.24,
+            "text": " I have two weights in the last layer here are my two outputs and here is my single bias of this one and now I just have to transpose it becomes 1x2"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 627.24,
+            "end": 641.36,
+            "text": " if I do it with 2x1 then I will get a matrix of 1x1 I will add it with 1x1 here is my matrix, I took out the sigmoid and here is my O you can also call it 3-1 or you can call it"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 641.36,
+            "end": 655.8,
+            "text": " yi hat and you can see how your entire data flowed and eventually converted into a single number and all because of you did the multiplication of simple matrices"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 656.28,
+            "end": 668.48,
+            "text": " so I will suggest you to make a more complex structure than this and take a copy pen and verify it see what is happening at the end at the end it is a very simple thing"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 668.8,
+            "end": 681.24,
+            "text": " I will do one thing, for some time we will use a notation that we will collectively call all the inputs a square bracket 0"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 681.24,
+            "end": 694.5600000000001,
+            "text": " you can call it the activation of the 0th layer similarly the output in this layer this we will collectively call it a 1, the activation of the first layer"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 694.5600000000001,
+            "end": 704.72,
+            "text": " similarly the output in this layer in the next one, we will call it a 2 and finally the last output we will call it a"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 705.0400000000001,
+            "end": 716.12,
+            "text": " 3 or activation 3 so what is happening is that you are applying this formula first of all you are taking the activation of layer 0 this one"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 716.12,
+            "end": 732.88,
+            "text": " and you are multiplying it by the weight of 1 by this weight whose superscript is 1 and you are adding bias of layer 1 and when you are applying sigmoid on it then you are getting"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 733.24,
+            "end": 748.44,
+            "text": " a of 1 after that what you are doing is you are taking a of 1 and you are multiplying it by the weight of 2 and in that also you are adding bias of 2"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 748.44,
+            "end": 763.48,
+            "text": " and when you are taking its sigmoid then you are getting a of 2 then you are taking a of 2 and you are multiplying it by the weight of 3 and you are adding bias of 3"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 763.48,
+            "end": 775.48,
+            "text": " and when you are taking its sigmoid then you are getting a of 3 which is finally your output infact this can be completely chained how? see this"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 775.48,
+            "end": 785.28,
+            "text": " we can write it like this we will write it like this sigmoid of a 0 w of 1"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 785.64,
+            "end": 799.52,
+            "text": " plus b of 1 now this is my a of 1 now what i have done is i have multiplied it w of"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 800.56,
+            "end": 814.8000000000001,
+            "text": " i have multiplied it just one second w of 2 and i have added b of 2 and then i have taken"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 815.6,
+            "end": 825.08,
+            "text": " sigmoid of this whole thing so now this whole thing is a of 2 then what i have done is i have added"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 825.08,
+            "end": 838.32,
+            "text": " weight of 3 and then i have added bias of 3 and then i have taken sigmoid of this whole thing and this whole big thing is my a of 3"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 838.32,
+            "end": 849.36,
+            "text": " which is finally my output so this is what is happening this is what i have shown in matrix maths and this is the complex expression which this neural network is solving"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 849.36,
+            "end": 859.8000000000001,
+            "text": " if you add more and more layers this expression will get bigger ok? but its nothing its a very organized way of"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 859.8000000000001,
+            "end": 871.24,
+            "text": " doing mathematics because of which even though this is a very complex architecture but it is getting simplified so my suggestion to you will be that if you are not able to understand this"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 871.24,
+            "end": 882.48,
+            "text": " or if there is any point left pick up your copy pen once draw a neural network architecture you can start from this small one and write its matrix math"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 882.48,
+            "end": 893.4000000000001,
+            "text": " that how this prediction is happening you will understand so that was the video guys i hope you understood things i tried to explain it in a very easy way"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 893.4000000000001,
+            "end": 903.6,
+            "text": " i will request you that if you want to understand this topic well so once on your copy using your pen make a neural network architecture"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 903.6,
+            "end": 914.28,
+            "text": " and then from scratch try to make a prediction of it the practice that you will do that will help you more rather than watching this video"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 914.28,
+            "end": 924.28,
+            "text": " so i hope you liked the video and if you didn't like it then please do like it also do subscribe my channel it motivates me a lot"
+        },
+        {
+            "number": "10",
+            "title": "Forward Propagation | How a neural network predicts output",
+            "start": 924.28,
+            "end": 932.28,
+            "text": " we will slowly complete deep learning so that's it from my side let's meet in the next video bye"
+        }
+    ],
+    "text": " Hello guys, my name is Nitish and welcome to my YouTube channel. So we are slowly moving forward in our deep learning course and in the last two videos we have studied about Multilayer Perceptron. In the first video we saw the intuition of Multilayer Perceptron and in the last video I told you its notation that how you name its weights and biases so that there is no confusion in the future. So I will tell you what is the whole flow. We are slowly moving towards a very important topic which is called Backpropagation. So backpropagation is the algorithm by which you train neural networks. And it is said that it is a little difficult to understand backpropagation. So I have planned that before understanding backpropagation we will simplify things a lot. So when you will read backpropagation then you will realize that there are two things one is forward propagation. Forward propagation is where your data i.e. your input moves forward in your neural network through each layer. And backpropagation is when you come to the back side and update the weights through which training happens. So I thought that before reading backpropagation you should have a very good idea that how forward propagation works. So in this video I will teach you forward propagation. Or you can say in simple words that if you have an input and if there are some weights in your neural network then how do you use those weights and inputs to make predictions. I want to show you this. And you will see that this whole thing handles linear algebra so beautifully. No matter how big the architecture is it does not mean that at the end you just have to do dot products of matrices. So I just wanted to give you this overview video so that's why I have shot today's video. I would like to discuss one more thing with you. You must have noticed in all the courses that generally people after reading backpropagation move towards real world data sets and read it like examples. But I am going to do something different in this course. Before backpropagation I will use Keras library and train neural network on some real world data sets. I know we have not studied training yet but we do not have to write its code ourselves. Keras will handle behind the scenes. So I just want to give you a perspective that how things work. Once you see it when you go to read backpropagation you will understand it better. And then we will do some projects after that. So my plan is that in today's video we will learn about forward propagation or you can say how a neural network does prediction. And then in the next 2-3 videos we will work on some data sets with Keras library. So that's it for the introduction. Let's start the video. So guys let's learn in this video that how a neural network does prediction. So neural network is a complex architecture where you can put any number of nodes or add any number of layers. Our goal will be that the prediction that comes out of such a complex architecture should be learned in a simplified way. The good thing is that linear algebra handles everything behind the scenes. You just have to understand the flow. So on the screen there is a neural network where this is the architecture. There are 2 hidden layers and 1 output layer. I have this data. I have 4 input columns in the data. CGPA, IQ, 10th marks, 12th marks and the output column is placed. Whether the child was placed or not. I believe that whenever you work with a neural network you should know the total number of trainable parameters. When the back propagation algorithm works it will find the value of weights and biases. It's very simple. If you focus here then here there are 4 nodes in the input hidden layer. Total connections are 4x3 which is 12. If there are 3 nodes then there are 3 biases. Here you have 15 trainable parameters. If there are 2 nodes then the total number of connections will be 6 plus 2 biases which is 8. Here you have 1 node which is 2 weights plus 1 bias which is 3. 3 plus 8 is 11. 11 or 15. There are 26 parameters. We have understood that the total training will be 26 weights and biases. Now we have to do the prediction. What will happen? We will insert each row at the time of training. First of all, this row will go up. There are 4 columns so there are 4 input nodes. 7.2 will enter from here. 72 will enter from here. 69 will enter from here. 81 will enter from here. In this complex architecture here y hat will come. Prediction of my model. When you start you will start with a random value of weights and biases. Now let's see how the prediction is done. Just remember that whenever you want an output from a perceptron then this is the formula for it. What you do is you multiply all the weights by the input plus you add a bias and get the sigmoid of the whole thing. We have already seen this. Now what we will do is we will calculate the prediction layer by layer. Our focus will be here. What I have done is I have made a weight matrix for these weights. If you see this matrix then the notation which I introduced in the last video I have written it here. In the first row, it is written W1 1 1 W1 1 2 W1 1 3 W1 2 1 W1 2 2 W1 2 3 and so on. If you notice then if you focus on the row then all the weights coming out of the input and if you focus on the column then all the weights coming here this is how this matrix is designed. Now what I have to do is I have to multiply it by my input. What is my input? My input is this column matrix where I have taken x i1 x i2, x i3 and x i4. Now I have to do one thing I have to transpose the weight matrix. I have transposed it. First it was 4x3 after transposing it became 3x4. Its shape is 4x1. Since this and this are same you will get a new matrix 3x1 and you already have a bias 3x1. When you add 3x1 and 3x1 you will get another 3x1 matrix. I have done the same thing below. Here you can see I have transposed this matrix and then I have taken dot product. You can see this is the output. This is multiplied by 3 plus this is multiplied by 3 plus this is multiplied by 3 and I have this thing. Similarly this is multiplied by 3 plus this is multiplied by 3 and I have this thing. This matrix has a shape of 3x1 I added it to the bias and I got this Now I just have to take out the sigmoid and as soon as I took out the sigmoid I got this matrix O11, O12, O13 If you focus here then this is your O11 this is your O22 sorry, O12 and this is your O13 Now this will go to the input for the next layer So what did I do there? I moved forward and started layer 2 If you notice in layer 2 there are 6 weights So I wrote it again in the same way W211 basically this weight After that I wrote W212 this weight Then I wrote W212 Sorry, W21 W21 W21 W21 W21 W21 This is my weight matrix Its shape is 3x2 I will transpose it so it becomes 2x3 This is my input Input is 3x1 and here is 2x3 this is already a bias of 2x1 this one and this one and when I added the dot product again I got this you can verify it with a copy pen and now I have to apply sigmoid again and as soon as I applied sigmoid here are my two outputs this output and this output now only the last layer is left I have two weights in the last layer here are my two outputs and here is my single bias of this one and now I just have to transpose it becomes 1x2 if I do it with 2x1 then I will get a matrix of 1x1 I will add it with 1x1 here is my matrix, I took out the sigmoid and here is my O you can also call it 3-1 or you can call it yi hat and you can see how your entire data flowed and eventually converted into a single number and all because of you did the multiplication of simple matrices so I will suggest you to make a more complex structure than this and take a copy pen and verify it see what is happening at the end at the end it is a very simple thing I will do one thing, for some time we will use a notation that we will collectively call all the inputs a square bracket 0 you can call it the activation of the 0th layer similarly the output in this layer this we will collectively call it a 1, the activation of the first layer similarly the output in this layer in the next one, we will call it a 2 and finally the last output we will call it a 3 or activation 3 so what is happening is that you are applying this formula first of all you are taking the activation of layer 0 this one and you are multiplying it by the weight of 1 by this weight whose superscript is 1 and you are adding bias of layer 1 and when you are applying sigmoid on it then you are getting a of 1 after that what you are doing is you are taking a of 1 and you are multiplying it by the weight of 2 and in that also you are adding bias of 2 and when you are taking its sigmoid then you are getting a of 2 then you are taking a of 2 and you are multiplying it by the weight of 3 and you are adding bias of 3 and when you are taking its sigmoid then you are getting a of 3 which is finally your output infact this can be completely chained how? see this we can write it like this we will write it like this sigmoid of a 0 w of 1 plus b of 1 now this is my a of 1 now what i have done is i have multiplied it w of i have multiplied it just one second w of 2 and i have added b of 2 and then i have taken sigmoid of this whole thing so now this whole thing is a of 2 then what i have done is i have added weight of 3 and then i have added bias of 3 and then i have taken sigmoid of this whole thing and this whole big thing is my a of 3 which is finally my output so this is what is happening this is what i have shown in matrix maths and this is the complex expression which this neural network is solving if you add more and more layers this expression will get bigger ok? but its nothing its a very organized way of doing mathematics because of which even though this is a very complex architecture but it is getting simplified so my suggestion to you will be that if you are not able to understand this or if there is any point left pick up your copy pen once draw a neural network architecture you can start from this small one and write its matrix math that how this prediction is happening you will understand so that was the video guys i hope you understood things i tried to explain it in a very easy way i will request you that if you want to understand this topic well so once on your copy using your pen make a neural network architecture and then from scratch try to make a prediction of it the practice that you will do that will help you more rather than watching this video so i hope you liked the video and if you didn't like it then please do like it also do subscribe my channel it motivates me a lot we will slowly complete deep learning so that's it from my side let's meet in the next video bye"
+}
