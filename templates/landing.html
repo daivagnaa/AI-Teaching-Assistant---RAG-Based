@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Teaching Assistant</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/landing.css') }}">
+
+</head>
+
+<body>
+
+<div class="background-gradient"></div>
+
+<div class="floating-circle circle-1"></div>
+<div class="floating-circle circle-2"></div>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="ri-book-open-line"></i>
+
+        </div>
+
+        <span>
+
+            AI Teaching Assistant
+
+        </span>
+
+    </div>
+
+    <nav>
+
+        <a href="#features">Features</a>
+
+        <a href="#workflow">How it Works</a>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <div class="badge">
+
+            <i class="ri-sparkling-line"></i>
+
+            Semantic Search Powered by Gemini
+
+        </div>
+
+        <h1>
+
+            Learn Smarter.<br>
+
+            Jump Directly To The<br>
+
+            Exact Explanation.
+
+        </h1>
+
+        <p>
+
+            Ask questions naturally.
+
+            AI Teaching Assistant searches your complete
+
+            Deep Learning course using semantic retrieval
+
+            and instantly finds the most relevant
+
+            explanations with timestamped videos.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/search"
+               class="primary-btn"
+               id="start-btn">
+
+                Get Started
+
+                <i class="ri-arrow-right-line"></i>
+
+            </a>
+
+            <a href="#workflow"
+               class="secondary-btn">
+
+                Learn More
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- ================= AI CARD ================= -->
+
+    <div class="hero-right">
+
+        <div class="search-card">
+
+            <div class="card-top">
+
+                <div class="status">
+
+                    <span class="green-dot"></span>
+
+                    AI Ready
+
+                </div>
+
+            </div>
+
+            <h3>
+
+                Ask Anything
+
+            </h3>
+
+            <p>
+
+                Semantic search across your Deep Learning course
+
+            </p>
+
+            <div class="demo-search">
+
+                <i class="ri-search-line"></i>
+
+                <input
+                    type="text"
+                    id="demo-search"
+                    readonly
+                >
+
+            </div>
+
+            <div class="example-title">
+
+                Popular Searches
+
+            </div>
+
+            <div class="examples">
+
+                <span>
+
+                    What is CNN?
+
+                </span>
+
+                <span>
+
+                    Gradient Descent
+
+                </span>
+
+                <span>
+
+                    Explain MLP
+
+                </span>
+
+                <span>
+
+                    Vanishing Gradient
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUST SECTION ================= -->
+
+<section class="trust-section">
+
+    <div class="trust-item">
+
+        <h2>
+
+            17
+
+        </h2>
+
+        <p>
+
+            Deep Learning Videos
+
+        </p>
+
+    </div>
+
+    <div class="trust-item">
+
+        <h2>
+
+            1000+
+
+        </h2>
+
+        <p>
+
+            Transcript Chunks
+
+        </p>
+
+    </div>
+
+    <div class="trust-item">
+
+        <h2>
+
+            AI
+
+        </h2>
+
+        <p>
+
+            Semantic Retrieval
+
+        </p>
+
+    </div>
+
+    <div class="trust-item">
+
+        <h2>
+
+            Instant
+
+        </h2>
+
+        <p>
+
+            Timestamp Navigation
+
+        </p>
+
+    </div>
+
+</section>
+<!-- ================= FEATURES ================= -->
+
+<section class="features" id="features">
+
+    <div class="section-heading">
+
+        <span>
+
+            FEATURES
+
+        </span>
+
+        <h2>
+
+            Designed To Make Learning
+            <br>
+            Faster & Simpler
+
+        </h2>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                <i class="ri-search-eye-line"></i>
+
+            </div>
+
+            <h3>
+
+                Semantic Search
+
+            </h3>
+
+            <p>
+
+                Ask questions naturally without remembering
+                lecture names or timestamps.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                <i class="ri-youtube-line"></i>
+
+            </div>
+
+            <h3>
+
+                Direct YouTube Navigation
+
+            </h3>
+
+            <p>
+
+                Open the exact explanation directly
+                at the correct timestamp.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                <i class="ri-brain-line"></i>
+
+            </div>
+
+            <h3>
+
+                AI Summaries
+
+            </h3>
+
+            <p>
+
+                Understand the concept before
+                watching the complete lecture.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                <i class="ri-book-open-line"></i>
+
+            </div>
+
+            <h3>
+
+                Course Navigation
+
+            </h3>
+
+            <p>
+
+                Instantly locate every topic
+                across the entire playlist.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="workflow" id="workflow">
+
+    <div class="section-heading">
+
+        <span>
+
+            HOW IT WORKS
+
+        </span>
+
+        <h2>
+
+            Three Steps To
+            Find Any Concept
+
+        </h2>
+
+    </div>
+
+    <div class="workflow-container">
+
+        <div class="workflow-card">
+
+            <div class="step">
+
+                01
+
+            </div>
+
+            <i class="ri-question-answer-line"></i>
+
+            <h3>
+
+                Ask
+
+            </h3>
+
+            <p>
+
+                Type your Deep Learning
+                question naturally.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            <i class="ri-arrow-right-line"></i>
+
+        </div>
+
+        <div class="workflow-card">
+
+            <div class="step">
+
+                02
+
+            </div>
+
+            <i class="ri-ai-generate"></i>
+
+            <h3>
+
+                AI Searches
+
+            </h3>
+
+            <p>
+
+                Gemini understands your
+                intent and retrieves the
+                most relevant lectures.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            <i class="ri-arrow-right-line"></i>
+
+        </div>
+
+        <div class="workflow-card">
+
+            <div class="step">
+
+                03
+
+            </div>
+
+            <i class="ri-play-circle-line"></i>
+
+            <h3>
+
+                Continue Learning
+
+            </h3>
+
+            <p>
+
+                Jump directly to the
+                correct timestamp on
+                YouTube.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="cta-card">
+
+        <span>
+
+            READY TO START?
+
+        </span>
+
+        <h2>
+
+            Find The Exact Explanation
+            <br>
+            In Seconds.
+
+        </h2>
+
+        <p>
+
+            AI Teaching Assistant combines semantic retrieval,
+            transcript understanding and Gemini to help you
+            learn more efficiently.
+
+        </p>
+
+        <a
+            href="/search"
+            class="primary-btn large-btn"
+        >
+
+            Launch AI Teaching Assistant
+
+            <i class="ri-arrow-right-line"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="about">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <div class="logo-icon">
+
+                <i class="ri-book-open-line"></i>
+
+            </div>
+
+            <h3>
+
+                AI Teaching Assistant
+
+            </h3>
+
+        </div>
+
+        <p>
+
+            Semantic Video Retrieval System
+
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">
+
+                Documentation
+
+            </a>
+
+            <a href="#">
+
+                GitHub
+
+            </a>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>© 2026 AI Teaching Assistant</p>
+            <p><strong>Note:</strong> This is a personal project for educational purposes and not affiliated with any organization.</p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+
+</body>
+
+</html>
