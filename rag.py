@@ -17,6 +17,15 @@ df = None
 embedding_matrix = None
 
 
+def get_api_key():
+    env_key = os.getenv("GEMINI_API_KEY")
+    if env_key:
+        return env_key
+    if API_KEY:
+        return API_KEY
+    return None
+
+
 def _load_embeddings():
     global df, embedding_matrix
 
@@ -51,7 +60,8 @@ def get_client():
     if client is not None:
         return client
 
-    api_key = os.getenv("GEMINI_API_KEY") or API_KEY
+    api_key = get_api_key()
+    print(f"Using Gemini API key from environment: {'yes' if api_key else 'no'}")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not found. Set it in your environment or Vercel settings.")
 
