@@ -1,11 +1,17 @@
 import json
 import os
+from types import SimpleNamespace
 import numpy as np
 import pandas as pd
+import requests
 from dotenv import load_dotenv
-from google import genai
 from sklearn.metrics.pairwise import cosine_similarity
 from video_link import VIDEO_LINKS
+
+try:
+    from google import genai as google_genai
+except Exception:
+    google_genai = None
 
 # Load Environment Variables
 
@@ -54,6 +60,46 @@ def _load_embeddings():
     embedding_matrix = np.vstack(df["embedding"].values)
 
 
+def _post_gemini(path, payload):
+    api_key = get_api_key()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY not found. Set it in your environment or Vercel settings.")
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{path}?key={api_key}"
+    response = requests.post(url, json=payload, timeout=90)
+    response.raise_for_status()
+    return response.json()
+
+
+class RestGeminiClient:
+    def __init__(self, api_key):
+        self.api_key = api_key
+        self.models = self
+
+    def generate_content(self, model, contents):
+        prompt = contents if isinstance(contents, str) else contents[0] if isinstance(contents, list) and len(contents) > 0 else str(contents)
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}]
+        }
+        data = _post_gemini(f"{model}:generateContent", payload)
+        candidate = data.get("candidates", [{}])[0]
+        parts = candidate.get("content", {}).get("parts", [])
+        text = parts[0].get("text", "") if parts else ""
+        return SimpleNamespace(text=text)
+
+    def embed_content(self, model, contents, config=None):
+        text = contents[0] if isinstance(contents, list) and len(contents) > 0 else str(contents)
+        payload = {
+            "model": f"models/{model}",
+            "content": {"parts": [{"text": text}]},
+        }
+        if config and config.get("task_type"):
+            payload["taskType"] = config["task_type"]
+        data = _post_gemini(f"{model}:embedContent", payload)
+        values = data.get("embedding", {}).get("values", [])
+        return SimpleNamespace(embeddings=[SimpleNamespace(values=values)])
+
+
 def get_client():
     global client
 
@@ -65,7 +111,10 @@ def get_client():
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not found. Set it in your environment or Vercel settings.")
 
-    client = genai.Client(api_key=api_key)
+    if google_genai is not None:
+        client = google_genai.Client(api_key=api_key)
+    else:
+        client = RestGeminiClient(api_key)
     return client
 
 # Embedding Function

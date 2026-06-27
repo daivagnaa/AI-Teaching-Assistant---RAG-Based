@@ -23,10 +23,10 @@ def ask():
         from rag import ask_question
 
         answer = ask_question(question)
-        return jsonify({"results": answer})
+        return jsonify({"results": answer, "error": None})
     except Exception as e:
         print(f"Server error in /ask: {e}")
-        return jsonify({"results": []})
+        return jsonify({"results": [], "error": str(e)})
 
 
 if __name__ == "__main__":
