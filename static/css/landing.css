@@ -1210,6 +1210,8 @@ footer{
 
     flex-direction:column;
 
+    gap:20px;
+
     align-items:flex-start;
 
     padding:22px 0;
@@ -1220,7 +1222,7 @@ nav{
 
     width:100%;
 
-    gap:16px;
+    gap:14px;
 
     justify-content:flex-start;
 
@@ -1236,7 +1238,7 @@ nav{
 
 .hero h1{
 
-    font-size:52px;
+    font-size:46px;
 
     text-wrap:balance;
 
@@ -1244,7 +1246,7 @@ nav{
 
 .hero p{
 
-    font-size:16px;
+    font-size:15px;
 
 }
 
@@ -1283,6 +1285,8 @@ nav{
     margin-top:70px;
 
     margin-bottom:100px;
+
+    grid-template-columns:1fr;
 
 }
 
@@ -1333,28 +1337,6 @@ nav{
     font-size:40px;
 
     text-wrap:balance;
-
-}
-
-.navbar{
-
-    flex-direction:column;
-
-    gap:25px;
-
-    align-items:flex-start;
-
-}
-
-nav{
-
-    gap:20px;
-
-}
-
-.trust-section{
-
-    grid-template-columns:1fr;
 
 }
 
@@ -1482,7 +1464,7 @@ body{
 
     opacity:0;
 
-    transition:.5s;
+    transition:opacity .5s ease;
 
 }
 
@@ -1495,6 +1477,27 @@ body.loaded{
 body.fade-out{
 
     opacity:0;
+
+}
+
+/* Fallback: if JS fails, ensure page is visible */
+
+@media (scripting: none){
+
+    body{ opacity:1 !important; }
+
+}
+
+noscript + body,
+body:not(.loaded):not(.fade-out){
+
+    animation:forceShow 0s 2s forwards;
+
+}
+
+@keyframes forceShow{
+
+    to{ opacity:1; }
 
 }
 
@@ -1519,4 +1522,3 @@ body.fade-out{
     caret-color:transparent;
 
 }
-

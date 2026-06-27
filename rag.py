@@ -228,51 +228,72 @@ Return ONLY JSON.
 import json
 
 def generate_answer(prompt):
-
-    response = client.models.generate_content(
-
-        model="gemini-2.5-flash",
-
-        contents=prompt
-
-    )
-
-    text = response.text.strip()
-
-    if text.startswith("```json"):
-        text = text.replace("```json", "").replace("```", "").strip()
-    print("\nGemini Response:\n")
-    print(text)
-    return json.loads(text)
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+        
+        # Check if the response was blocked or has no text
+        if not response.text:
+            print("\nGemini Response was empty or blocked by safety filters.")
+            return []
+            
+        text = response.text.strip()
+        if text.startswith("```json"):
+            text = text.replace("```json", "").replace("```", "").strip()
+        print("\nGemini Response:\n")
+        print(text)
+        
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            print("\nGemini Response was not valid JSON.")
+            return []
+    except Exception as e:
+        print(f"\nError generating answer: {e}")
+        return []
 
 
 # Main Function Called by Flask
 
 def ask_question(question):
-
-    retrieved_chunks = retrieve_chunks(question)
+    try:
+        retrieved_chunks = retrieve_chunks(question)
+    except Exception as e:
+        print(f"\nError retrieving chunks (possibly due to embedding block): {e}")
+        return []
 
     print("\nRetrieved Chunks:")
     import pprint
     pprint.pp(retrieved_chunks)
 
-    prompt = build_prompt(question, retrieved_chunks)
+    # If no chunks are retrieved, we don't even need to call Gemini
+    if not retrieved_chunks:
+        return []
 
+    prompt = build_prompt(question, retrieved_chunks)
     results = generate_answer(prompt)
+
+    # In case generate_answer returned an empty list due to an exception/safety block
+    if not results or not isinstance(results, list):
+        return []
 
     # Remove videos that have no timestamps
     results = [
         result
         for result in results
-        if result.get("timestamps") and len(result["timestamps"]) > 0
+        if isinstance(result, dict) and result.get("timestamps") and len(result["timestamps"]) > 0
     ]
 
     for result in results:
+        try:
+            first_timestamp = result["timestamps"][0]["seconds"]
+            result["youtube_url"] = (
+                f"{VIDEO_LINKS[result['video_number']]}?t={int(first_timestamp)}"
+            )
+        except (KeyError, IndexError, ValueError) as e:
+            print(f"Error building youtube URL for video card: {e}")
+            continue
 
-        first_timestamp = result["timestamps"][0]["seconds"]
-
-        result["youtube_url"] = (
-            f"{VIDEO_LINKS[result['video_number']]}?t={int(first_timestamp)}"
-        )
-
-    return results
+    return results

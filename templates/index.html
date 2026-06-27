@@ -8,6 +8,8 @@
 
     <title>AI Teaching Assistant</title>
 
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +148,7 @@
 
                     </div>
 
-                    <textarea id="question" placeholder="Where is Backpropagation taught?" rows="1"></textarea>
+                    <textarea id="question" placeholder="Ask A Question..." rows="1"></textarea>
 
                     <button id="send-btn">
 
@@ -288,9 +290,9 @@
 
                 <p>
 
-                    All lecture transcripts used in this project are sourced from the
+                    All lecture transcripts used in this project are sourced from 17 videos of the
                     excellent <strong>100 Days of Deep Learning</strong> playlist by
-                    CampusX.
+                    <a class="inline-link" href="https://www.youtube.com/@campusx-official" target="_blank">CampusX</a>.
 
                 </p>
 

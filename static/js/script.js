@@ -173,7 +173,7 @@ function displayCards(results) {
 
             <div class="message-content">
 
-                No relevant videos found.
+                No relevant videos for this question.
 
             </div>
 
@@ -435,3 +435,63 @@ if (aboutBtn && aboutModal && closeAbout) {
     });
 
 }
+
+
+// ========================================
+// Mobile Sidebar Management
+// ========================================
+
+function isMobile() {
+    return window.innerWidth <= 992;
+}
+
+// Backdrop element for mobile sidebar overlay
+const sidebarBackdrop = document.createElement("div");
+sidebarBackdrop.classList.add("sidebar-backdrop", "hidden");
+document.body.appendChild(sidebarBackdrop);
+
+function closeSidebarMobile() {
+    if (!sidebar.classList.contains("collapsed")) {
+        sidebar.classList.add("collapsed");
+        main.classList.add("expanded");
+        app.classList.add("sidebar-collapsed");
+    }
+    sidebarBackdrop.classList.add("hidden");
+}
+
+// Auto-collapse sidebar on mobile load
+if (isMobile()) {
+    closeSidebarMobile();
+}
+
+// Show/hide backdrop when toggle is clicked on mobile
+toggle.addEventListener("click", () => {
+    if (isMobile()) {
+        if (!sidebar.classList.contains("collapsed")) {
+            sidebarBackdrop.classList.remove("hidden");
+        } else {
+            sidebarBackdrop.classList.add("hidden");
+        }
+    }
+});
+
+// Close sidebar when backdrop is clicked
+sidebarBackdrop.addEventListener("click", closeSidebarMobile);
+
+// Close sidebar when any nav link is clicked on mobile
+sidebar.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        if (isMobile()) {
+            closeSidebarMobile();
+        }
+    });
+});
+
+// Collapse sidebar when resizing down to mobile
+window.addEventListener("resize", () => {
+    if (isMobile()) {
+        closeSidebarMobile();
+    } else {
+        sidebarBackdrop.classList.add("hidden");
+    }
+});

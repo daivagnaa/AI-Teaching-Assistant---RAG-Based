@@ -16,17 +16,17 @@ def search():
 
 @app.route("/ask", methods=["POST"])
 def ask():
-
-    question = request.json["question"]
-
-    answer = ask_question(question)
-
-    return jsonify({
-
-    "results": answer
-
-})
+    try:
+        question = request.json.get("question", "")
+        if not question:
+            return jsonify({"results": []})
+        answer = ask_question(question)
+        return jsonify({"results": answer})
+    except Exception as e:
+        print(f"Server error in /ask: {e}")
+        return jsonify({"results": []})
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
+    #     app.run(debug=True)
