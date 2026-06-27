@@ -255,18 +255,17 @@ def generate_answer(prompt):
             model="gemini-2.5-flash",
             contents=prompt
         )
-        
-        # Check if the response was blocked or has no text
+
         if not response.text:
             print("\nGemini Response was empty or blocked by safety filters.")
             return []
-            
+
         text = response.text.strip()
         if text.startswith("```json"):
             text = text.replace("```json", "").replace("```", "").strip()
         print("\nGemini Response:\n")
         print(text)
-        
+
         try:
             return json.loads(text)
         except json.JSONDecodeError:
@@ -275,6 +274,31 @@ def generate_answer(prompt):
     except Exception as e:
         print(f"\nError generating answer: {e}")
         return []
+
+
+def build_fallback_results(retrieved_chunks):
+    fallback_results = []
+
+    for chunk_group in retrieved_chunks:
+        try:
+            first_chunk = chunk_group["chunks"][0]
+            first_timestamp = int(first_chunk.get("start", 0))
+        except (IndexError, TypeError, ValueError):
+            continue
+
+        fallback_results.append({
+            "video_number": int(chunk_group.get("number", 0)),
+            "video_title": chunk_group.get("title", "Relevant Video"),
+            "timestamps": [
+                {
+                    "seconds": first_timestamp,
+                    "description": "Relevant explanation found in the retrieved transcript chunks."
+                }
+            ],
+            "youtube_url": f"{VIDEO_LINKS.get(int(chunk_group.get('number', 0)), '')}?t={first_timestamp}"
+        })
+
+    return fallback_results
 
 
 # Main Function Called by Flask
@@ -290,18 +314,15 @@ def ask_question(question):
     import pprint
     pprint.pp(retrieved_chunks)
 
-    # If no chunks are retrieved, we don't even need to call Gemini
     if not retrieved_chunks:
         return []
 
     prompt = build_prompt(question, retrieved_chunks)
     results = generate_answer(prompt)
 
-    # In case generate_answer returned an empty list due to an exception/safety block
     if not results or not isinstance(results, list):
-        return []
+        results = build_fallback_results(retrieved_chunks)
 
-    # Remove videos that have no timestamps
     results = [
         result
         for result in results
