@@ -1,3 +1,4 @@
+import json
 import os
 import numpy as np
 import pandas as pd
@@ -11,40 +12,58 @@ from video_link import VIDEO_LINKS
 load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY")
+client = None
+df = None
+embedding_matrix = None
 
-if not API_KEY:
-    raise ValueError("GEMINI_API_KEY not found.")
 
-# Gemini Client (Load Once)
+def _load_embeddings():
+    global df, embedding_matrix
 
-client = genai.Client(api_key=API_KEY)
+    if df is not None and embedding_matrix is not None:
+        return
 
-# Load Embeddings Once
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-EMBEDDING_PATH = os.path.join(
-    BASE_DIR,
-    "Embeddings",
-    "gemini_embeddings.pkl"
-)
-
-df = pd.read_pickle(EMBEDDING_PATH)
-
-# Remove invalid embeddings only once
-df = df[
-    df["embedding"].apply(
-        lambda x: isinstance(x, list) and len(x) == 3072
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    EMBEDDING_PATH = os.path.join(
+        BASE_DIR,
+        "Embeddings",
+        "gemini_embeddings.pkl"
     )
-].reset_index(drop=True)
 
-embedding_matrix = np.vstack(df["embedding"].values)
+    if not os.path.exists(EMBEDDING_PATH):
+        raise FileNotFoundError(f"Embedding file not found: {EMBEDDING_PATH}")
+
+    loaded_df = pd.read_pickle(EMBEDDING_PATH)
+
+    loaded_df = loaded_df[
+        loaded_df["embedding"].apply(
+            lambda x: isinstance(x, list) and len(x) == 3072
+        )
+    ].reset_index(drop=True)
+
+    df = loaded_df
+    embedding_matrix = np.vstack(df["embedding"].values)
+
+
+def get_client():
+    global client
+
+    if client is not None:
+        return client
+
+    api_key = os.getenv("GEMINI_API_KEY") or API_KEY
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY not found. Set it in your environment or Vercel settings.")
+
+    client = genai.Client(api_key=api_key)
+    return client
 
 # Embedding Function
 
 def create_query_embedding(question):
+    model_client = get_client()
 
-    response = client.models.embed_content(
+    response = model_client.models.embed_content(
         model="gemini-embedding-001",
         contents=[question],
         config={
@@ -58,8 +77,12 @@ def create_query_embedding(question):
 # Retrieve Relevant Chunks
 
 def retrieve_chunks(question, top_k=15):
-
-    question_embedding = create_query_embedding(question)
+    try:
+        _load_embeddings()
+        question_embedding = create_query_embedding(question)
+    except Exception as e:
+        print(f"\nError retrieving chunks: {e}")
+        return []
 
     similarities = cosine_similarity(
         embedding_matrix,
@@ -225,11 +248,10 @@ Return ONLY JSON.
 
 # Gemini Answer Generation
 
-import json
-
 def generate_answer(prompt):
     try:
-        response = client.models.generate_content(
+        model_client = get_client()
+        response = model_client.models.generate_content(
             model="gemini-2.5-flash",
             contents=prompt
         )
@@ -296,4 +318,4 @@ def ask_question(question):
             print(f"Error building youtube URL for video card: {e}")
             continue
 
-    return results
+    return results

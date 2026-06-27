@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from rag import ask_question
 
 app = Flask(__name__)
 
@@ -20,6 +19,9 @@ def ask():
         question = request.json.get("question", "")
         if not question:
             return jsonify({"results": []})
+
+        from rag import ask_question
+
         answer = ask_question(question)
         return jsonify({"results": answer})
     except Exception as e:
