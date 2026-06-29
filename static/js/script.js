@@ -101,7 +101,12 @@ async function askQuestion() {
 
         hideLoading();
 
-        displayCards(data.results);
+        // Check if server returned an error
+        if (data.error) {
+            displayError(data.error);
+        } else {
+            displayCards(data.results);
+        }
 
         textarea.value = "";
         textarea.style.height = "auto";
@@ -270,7 +275,7 @@ function displayCards(results) {
 
 function displayError(error) {
 
-    resultCount.innerText = "";
+    resultCount.innerText = "Error";
 
     chatBox.innerHTML = `
 
@@ -285,6 +290,12 @@ function displayError(error) {
             <div class="message-content">
 
                 ${escapeHtml(error)}
+
+            </div>
+
+            <div class="message-content" style="margin-top: 8px; font-size: 0.85em; opacity: 0.7;">
+
+                Check the Vercel Function Logs for more details.
 
             </div>
 

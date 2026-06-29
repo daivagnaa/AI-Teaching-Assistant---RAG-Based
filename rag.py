@@ -66,7 +66,10 @@ def _post_gemini(path, payload):
         raise RuntimeError("GEMINI_API_KEY not found. Set it in your environment or Vercel settings.")
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{path}?key={api_key}"
+    print(f"[DEBUG] POST {url}")
     response = requests.post(url, json=payload, timeout=90)
+    if not response.ok:
+        print(f"[ERROR] Gemini API returned {response.status_code}: {response.text[:500]}")
     response.raise_for_status()
     return response.json()
 
@@ -136,12 +139,8 @@ def create_query_embedding(question):
 # Retrieve Relevant Chunks
 
 def retrieve_chunks(question, top_k=15):
-    try:
-        _load_embeddings()
-        question_embedding = create_query_embedding(question)
-    except Exception as e:
-        print(f"\nError retrieving chunks: {e}")
-        return []
+    _load_embeddings()
+    question_embedding = create_query_embedding(question)
 
     similarities = cosine_similarity(
         embedding_matrix,
@@ -153,16 +152,29 @@ def retrieve_chunks(question, top_k=15):
 
     retrieved["similarity"] = similarities
 
-    # Keep only sufficiently similar chunks
-    retrieved = retrieved[
-        retrieved["similarity"] >= 0.65
-    ]
-
-    # Sort by similarity
+    # Sort by similarity first
     retrieved = retrieved.sort_values(
         "similarity",
         ascending=False
-    ).head(top_k)
+    )
+
+    # Log top similarities for debugging
+    top_sims = retrieved["similarity"].head(10).tolist()
+    print(f"[DEBUG] Top 10 similarities: {[round(s, 4) for s in top_sims]}")
+
+    # Filter by threshold
+    above_threshold = retrieved[
+        retrieved["similarity"] >= 0.45
+    ]
+
+    # If threshold filters everything out, take top results anyway
+    if len(above_threshold) == 0:
+        print(f"[WARN] No chunks above 0.45 threshold. Using top {min(5, len(retrieved))} results.")
+        above_threshold = retrieved.head(5)
+
+    retrieved = above_threshold.head(top_k)
+
+    print(f"[DEBUG] Retrieved {len(retrieved)} chunks for question: {question[:80]}")
 
     # Create YouTube URLs
     retrieved["youtube_url"] = retrieved.apply(
@@ -316,22 +328,31 @@ def generate_answer(prompt):
         )
 
         if not response.text:
-            print("\nGemini Response was empty or blocked by safety filters.")
+            print("[WARN] Gemini Response was empty or blocked by safety filters.")
             return []
 
         text = response.text.strip()
+        # Strip markdown code fences if present
         if text.startswith("```json"):
-            text = text.replace("```json", "").replace("```", "").strip()
-        print("\nGemini Response:\n")
-        print(text)
+            text = text[len("```json"):]
+        if text.startswith("```"):
+            text = text[3:]
+        if text.endswith("```"):
+            text = text[:-3]
+        text = text.strip()
+
+        print(f"[DEBUG] Gemini Response (first 500 chars): {text[:500]}")
 
         try:
             return json.loads(text)
-        except json.JSONDecodeError:
-            print("\nGemini Response was not valid JSON.")
+        except json.JSONDecodeError as e:
+            print(f"[ERROR] Gemini Response was not valid JSON: {e}")
+            print(f"[ERROR] Raw text: {text[:1000]}")
             return []
     except Exception as e:
-        print(f"\nError generating answer: {e}")
+        print(f"[ERROR] Error generating answer: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 
@@ -363,23 +384,21 @@ def build_fallback_results(retrieved_chunks):
 # Main Function Called by Flask
 
 def ask_question(question):
-    try:
-        retrieved_chunks = retrieve_chunks(question)
-    except Exception as e:
-        print(f"\nError retrieving chunks (possibly due to embedding block): {e}")
-        return []
+    print(f"\n[INFO] === Processing question: {question} ===")
 
-    print("\nRetrieved Chunks:")
-    import pprint
-    pprint.pp(retrieved_chunks)
+    retrieved_chunks = retrieve_chunks(question)
+
+    print(f"[INFO] Retrieved {len(retrieved_chunks)} chunk groups")
 
     if not retrieved_chunks:
+        print("[WARN] No chunks retrieved at all")
         return []
 
     prompt = build_prompt(question, retrieved_chunks)
     results = generate_answer(prompt)
 
     if not results or not isinstance(results, list):
+        print("[WARN] Gemini returned no valid results, using fallback")
         results = build_fallback_results(retrieved_chunks)
 
     results = [
@@ -392,10 +411,11 @@ def ask_question(question):
         try:
             first_timestamp = result["timestamps"][0]["seconds"]
             result["youtube_url"] = (
-                f"{VIDEO_LINKS[result['video_number']]}?t={int(first_timestamp)}"
+                f"{VIDEO_LINKS.get(result['video_number'], '')}?t={int(first_timestamp)}"
             )
         except (KeyError, IndexError, ValueError) as e:
-            print(f"Error building youtube URL for video card: {e}")
+            print(f"[ERROR] Error building youtube URL for video card: {e}")
             continue
 
+    print(f"[INFO] Returning {len(results)} final results")
     return results
