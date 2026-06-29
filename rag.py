@@ -120,6 +120,36 @@ def get_client():
         client = RestGeminiClient(api_key)
     return client
 
+
+FORBIDDEN_TERMS = [
+    "sex", "sexual", "nude", "naked", "porn", "explicit", "adult", "xxx",
+    "horny", "fuck", "bitch", "dick", "pussy", "boobs", "breasts", "erotic"
+]
+
+
+def is_irrelevant_or_unsafe(question):
+    if not question or not isinstance(question, str):
+        return True
+
+    normalized = question.lower().strip()
+    if not normalized:
+        return True
+
+    if any(term in normalized for term in FORBIDDEN_TERMS):
+        return True
+
+    allowed_topics = [
+        "deep learning", "neural network", "perceptron", "mlp", "cnn", "backpropagation",
+        "gradient descent", "loss function", "ann", "activation", "transformer", "tensorflow",
+        "keras", "pytorch", "classification", "regression", "overfitting", "underfitting",
+        "feature", "dataset", "epoch", "batch", "optimizer", "model", "ai", "machine learning"
+    ]
+
+    if any(topic in normalized for topic in allowed_topics):
+        return False
+
+    return True
+
 # Embedding Function
 
 def create_query_embedding(question):
@@ -395,6 +425,10 @@ def build_fallback_results(retrieved_chunks):
 # Main Function Called by Flask
 
 def ask_question(question):
+    if is_irrelevant_or_unsafe(question):
+        print(f"[INFO] Rejected question as irrelevant or unsafe: {question}")
+        return []
+
     print(f"\n[INFO] === Processing question: {question} ===")
 
     retrieved_chunks = retrieve_chunks(question)
