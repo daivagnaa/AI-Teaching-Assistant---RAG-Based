@@ -196,9 +196,22 @@ AI-Teaching-Assistant/
 
 ---
 
+## Implementation Approaches
+
+This project can be implemented in two ways depending on your use case:
+
+| Approach | Embeddings | LLM Response | Deployment |
+|----------|-----------|--------------|------------|
+| **API-Based (Current)** | Gemini Embedding API | Gemini 2.5 Flash API | Works both locally and in production (Vercel, etc.) |
+| **Local Models** | BGE-M3 | Any local LLM (LLaMA, Mistral, etc.) | Limited to local usage only |
+
+**API-Based** is recommended for production deployments since it requires no GPU and works on any serverless platform. The **Local Models** approach is ideal for offline usage, full privacy, or when you want to avoid API costs — but it requires sufficient hardware and cannot be deployed to serverless platforms like Vercel.
+
+---
+
 ## Learning Resource
 
-All lecture transcripts are sourced from the **100 Days of Deep Learning** playlist by [CampusX](https://www.youtube.com/@campusx-official) — an excellent resource covering deep learning fundamentals.
+All lecture transcripts are sourced from the sample size of 17 videos from **100 Days of Deep Learning** playlist by [CampusX](https://www.youtube.com/@campusx-official) — an excellent resource covering deep learning fundamentals.
 
 [![YouTube Playlist](https://img.shields.io/badge/YouTube-100_Days_of_Deep_Learning-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/playlist?list=PLGMBjWR7dGL_XFUbQQhJIaojuDhWF35yk&si=eIeeIz_EarAnOnVI)
 
@@ -212,8 +225,6 @@ All lecture transcripts are sourced from the **100 Days of Deep Learning** playl
 - [x] Deployed on Vercel
 - [ ] Search History
 - [ ] Bookmarks
-- [ ] Expanded course coverage
-
 ---
 
 ## Developer
@@ -225,15 +236,15 @@ All lecture transcripts are sourced from the **100 Days of Deep Learning** playl
   </tr>
   <tr>
     <td><b>Email</b></td>
-    <td><a href="">Email</a></td>
+    <td><a href="mailto:devparmar1895@gmail.com">Email</a></td>
   </tr>
   <tr>
     <td><b>LinkedIn</b></td>
-    <td><a href="">LinkedIn</a></td>
+    <td><a href="https://www.linkedin.com/in/daivagna-parmar-949315316">LinkedIn</a></td>
   </tr>
   <tr>
     <td><b>GitHub</b></td>
-    <td><a href="">GitHub</a></td>
+    <td><a href="https://github.com/daivagnaa">GitHub</a></td>
   </tr>
 </table>
 
