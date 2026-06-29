@@ -381,7 +381,7 @@ function rotateSuggestion(){
 
 }
 
-setInterval(rotateSuggestion,10000);
+setInterval(rotateSuggestion,5000);
 
 const bottomBtn = document.getElementById("bottom-search-btn");
 
@@ -505,4 +505,4 @@ window.addEventListener("resize", () => {
     } else {
         sidebarBackdrop.classList.add("hidden");
     }
-});
+});
