@@ -5,7 +5,9 @@
       "src": "app.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb"
+        "maxLambdaSize": "50mb",
+        "memory": 1024,
+        "maxDuration": 60
       }
     }
   ],
@@ -14,11 +16,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "functions": {
-    "app.py": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  }
+  ]
 }
