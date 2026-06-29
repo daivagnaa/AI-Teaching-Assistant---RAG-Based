@@ -162,12 +162,18 @@ def retrieve_chunks(question, top_k=15):
     top_sims = retrieved["similarity"].head(10).tolist()
     print(f"[DEBUG] Top 10 similarities: {[round(s, 4) for s in top_sims]}")
 
+    # Relevance floor: if the BEST match is below 0.30, the question is
+    # completely off-topic (e.g. unrelated to deep learning) — return nothing
+    if top_sims and top_sims[0] < 0.30:
+        print(f"[INFO] Best similarity {top_sims[0]:.4f} is below relevance floor 0.30. Question is off-topic.")
+        return []
+
     # Filter by threshold
     above_threshold = retrieved[
         retrieved["similarity"] >= 0.45
     ]
 
-    # If threshold filters everything out, take top results anyway
+    # If nothing passes 0.45 but best is above floor, use top results
     if len(above_threshold) == 0:
         print(f"[WARN] No chunks above 0.45 threshold. Using top {min(5, len(retrieved))} results.")
         above_threshold = retrieved.head(5)
@@ -313,6 +319,11 @@ DO NOT include it.
 ✓ If no timestamp exists, omit that video completely.
 
 ✓ Return at most 8 videos.
+
+✓ If the student's question is NOT about Deep Learning, Neural Networks,
+  Machine Learning, AI, or related technical topics, return an EMPTY array: []
+  Do NOT try to match unrelated questions to course content.
+
 Return ONLY JSON.
 """
 
