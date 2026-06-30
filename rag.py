@@ -185,23 +185,16 @@ def retrieve_chunks(question, top_k=15):
     top_sims = retrieved["similarity"].head(10).tolist()
     print(f"[DEBUG] Top 10 similarities: {[round(s, 4) for s in top_sims]}")
 
-    # Relevance floor: if the BEST match is below 0.30, the question is
-    # completely off-topic (e.g. unrelated to deep learning) — return nothing
-    if top_sims and top_sims[0] < 0.30:
-        print(f"[INFO] Best similarity {top_sims[0]:.4f} is below relevance floor 0.30. Question is off-topic.")
-        return []
-
-    # Filter by threshold
-    above_threshold = retrieved[
-        retrieved["similarity"] >= 0.45
+    # Only keep chunks with strong similarity
+    retrieved = retrieved[
+        retrieved["similarity"] >= 0.50
     ]
 
-    # If nothing passes 0.45 but best is above floor, use top results
-    if len(above_threshold) == 0:
-        print(f"[WARN] No chunks above 0.45 threshold. Using top {min(5, len(retrieved))} results.")
-        above_threshold = retrieved.head(5)
+    if len(retrieved) == 0:
+        print(f"[INFO] No chunks above 0.50 threshold. Returning empty.")
+        return []
 
-    retrieved = above_threshold.head(top_k)
+    retrieved = retrieved.head(top_k)
 
     print(f"[DEBUG] Retrieved {len(retrieved)} chunks for question: {question[:80]}")
 
