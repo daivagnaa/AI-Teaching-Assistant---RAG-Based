@@ -128,6 +128,9 @@ FORBIDDEN_TERMS = [
 
 
 def is_irrelevant_or_unsafe(question):
+    """Only block explicitly inappropriate/unsafe questions.
+    All other questions pass through — the embedding similarity score
+    and relevance floor (0.30) naturally filter off-topic queries."""
     if not question or not isinstance(question, str):
         return True
 
@@ -138,17 +141,7 @@ def is_irrelevant_or_unsafe(question):
     if any(term in normalized for term in FORBIDDEN_TERMS):
         return True
 
-    allowed_topics = [
-        "deep learning", "neural network", "perceptron", "mlp", "cnn", "backpropagation",
-        "gradient descent", "loss function", "ann", "activation", "transformer", "tensorflow",
-        "keras", "pytorch", "classification", "regression", "overfitting", "underfitting",
-        "feature", "dataset", "epoch", "batch", "optimizer", "model", "ai", "machine learning"
-    ]
-
-    if any(topic in normalized for topic in allowed_topics):
-        return False
-
-    return True
+    return False
 
 # Embedding Function
 
