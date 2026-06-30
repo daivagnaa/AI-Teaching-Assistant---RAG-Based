@@ -354,62 +354,117 @@ Return ONLY JSON.
 # Gemini Answer Generation
 
 def generate_answer(prompt):
-    try:
-        model_client = get_client()
-        response = model_client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt
-        )
+    """Call Gemini with retry on failure."""
+    last_error = None
 
-        if not response.text:
-            print("[WARN] Gemini Response was empty or blocked by safety filters.")
-            return []
-
-        text = response.text.strip()
-        # Strip markdown code fences if present
-        if text.startswith("```json"):
-            text = text[len("```json"):]
-        if text.startswith("```"):
-            text = text[3:]
-        if text.endswith("```"):
-            text = text[:-3]
-        text = text.strip()
-
-        print(f"[DEBUG] Gemini Response (first 500 chars): {text[:500]}")
-
+    for attempt in range(2):
         try:
-            return json.loads(text)
-        except json.JSONDecodeError as e:
-            print(f"[ERROR] Gemini Response was not valid JSON: {e}")
-            print(f"[ERROR] Raw text: {text[:1000]}")
-            return []
-    except Exception as e:
-        print(f"[ERROR] Error generating answer: {e}")
-        import traceback
-        traceback.print_exc()
-        return []
+            model_client = get_client()
+            response = model_client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
+
+            if not response.text:
+                print(f"[WARN] Gemini Response was empty (attempt {attempt + 1})")
+                last_error = "Empty response"
+                continue
+
+            text = response.text.strip()
+            # Strip markdown code fences if present
+            if text.startswith("```json"):
+                text = text[len("```json"):]
+            if text.startswith("```"):
+                text = text[3:]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+
+            print(f"[DEBUG] Gemini Response (first 500 chars): {text[:500]}")
+
+            try:
+                return json.loads(text)
+            except json.JSONDecodeError as e:
+                print(f"[ERROR] Gemini Response was not valid JSON (attempt {attempt + 1}): {e}")
+                print(f"[ERROR] Raw text: {text[:1000]}")
+                last_error = str(e)
+                continue
+
+        except Exception as e:
+            print(f"[ERROR] Error generating answer (attempt {attempt + 1}): {e}")
+            import traceback
+            traceback.print_exc()
+            last_error = str(e)
+            continue
+
+    print(f"[ERROR] All Gemini attempts failed. Last error: {last_error}")
+    return []
+
+
+def _summarize_chunk_text(text, max_words=12):
+    """Extract a short description from transcript chunk text."""
+    if not text or not isinstance(text, str):
+        return "Related content discussed in this segment."
+
+    # Clean up whitespace
+    cleaned = " ".join(text.split())
+
+    # Take the first meaningful sentence or phrase
+    words = cleaned.split()
+    if len(words) <= max_words:
+        summary = cleaned
+    else:
+        summary = " ".join(words[:max_words]) + "..."
+
+    # Capitalize first letter
+    if summary:
+        summary = summary[0].upper() + summary[1:]
+
+    return summary
 
 
 def build_fallback_results(retrieved_chunks):
     fallback_results = []
 
     for chunk_group in retrieved_chunks:
-        try:
-            first_chunk = chunk_group["chunks"][0]
-            first_timestamp = int(first_chunk.get("start", 0))
-        except (IndexError, TypeError, ValueError):
+        chunks = chunk_group.get("chunks", [])
+        if not chunks:
             continue
 
+        timestamps = []
+        for chunk in chunks:
+            try:
+                seconds = int(chunk.get("start", 0))
+                description = _summarize_chunk_text(chunk.get("text", ""))
+                timestamps.append({
+                    "seconds": seconds,
+                    "description": description
+                })
+            except (TypeError, ValueError):
+                continue
+
+        if not timestamps:
+            continue
+
+        # Deduplicate: keep only unique timestamps
+        seen = set()
+        unique_timestamps = []
+        for ts in timestamps:
+            if ts["seconds"] not in seen:
+                seen.add(ts["seconds"])
+                unique_timestamps.append(ts)
+
+        # Limit to 4 timestamps per video
+        unique_timestamps = unique_timestamps[:4]
+
+        video_number = int(chunk_group.get("number", 0))
+        first_timestamp = unique_timestamps[0]["seconds"]
+
         fallback_results.append({
-            "video_number": int(chunk_group.get("number", 0)),
+            "video_number": video_number,
             "video_title": chunk_group.get("title", "Relevant Video"),
-            "timestamps": [
-                {
-                    "seconds": first_timestamp,
-                    "description": "Relevant explanation found in the retrieved transcript chunks."
-                }
-            ],
-            "youtube_url": f"{VIDEO_LINKS.get(int(chunk_group.get('number', 0)), '')}?t={first_timestamp}"
+            "timestamps": unique_timestamps,
+            "youtube_url": f"{VIDEO_LINKS.get(video_number, '')}?t={first_timestamp}"
         })
 
     return fallback_results
