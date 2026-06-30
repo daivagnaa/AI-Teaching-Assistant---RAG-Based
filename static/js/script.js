@@ -4,6 +4,12 @@ const chatBox = document.getElementById("chat-box");
 const resultCount = document.getElementById("result-count");
 const suggestedQuestions = [
 
+    "How does ANN work?",
+
+    "What are Activation Functions?",
+
+    "Explain CNN in Deep Learning.",
+
     "What is Backpropagation?",
 
     "What is Gradient Descent?",
@@ -16,13 +22,8 @@ const suggestedQuestions = [
 
     "Explain Vanishing Gradient.",
 
-    "What is Binary Cross Entropy?",
+    "What is Binary Cross Entropy?"
 
-    "How does ANN work?",
-
-    "What are Activation Functions?",
-
-    "Explain CNN in Deep Learning."
 
 ];
 
